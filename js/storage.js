@@ -41,13 +41,19 @@
     return -1;
   }
 
+  function copyPicks() {
+    return picks.map(function (p) {
+      return { schoolId: p.schoolId, trackId: p.trackId };
+    });
+  }
+
   reloadFromDisk();
 
   PM.storage = {
     KEY: KEY,
     MEMO_KEY: MEMO_KEY,
 
-    getPicks: function () { return picks.slice(); },
+    getPicks: function () { return copyPicks(); },
 
     hasPick: function (schoolId, trackId) {
       return indexOfPick(schoolId, trackId) >= 0;
@@ -58,13 +64,13 @@
         picks.push({ schoolId: schoolId, trackId: trackId });
         savePicks();
       }
-      return picks.slice();
+      return copyPicks();
     },
 
     removePick: function (schoolId, trackId) {
       var i = indexOfPick(schoolId, trackId);
       if (i >= 0) { picks.splice(i, 1); savePicks(); }
-      return picks.slice();
+      return copyPicks();
     },
 
     getMemo: function (schoolId) {
