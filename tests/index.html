@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pm-admissions 테스트</title>
+  <style>
+    body { font: 14px/1.6 system-ui, sans-serif; margin: 16px; }
+    .pass { color: #17692f; }
+    .fail { color: #b3261e; white-space: pre-wrap; }
+    #summary { font-weight: 700; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <h1>pm-admissions 테스트</h1>
+  <div id="summary"></div>
+  <div id="results"></div>
+
+  <script src="../js/ns.js"></script>
+  <script src="runner.js"></script>
+  <script src="runner.test.js"></script>
+  <script>
+    T.run(document.getElementById('results'), document.getElementById('summary'));
+  </script>
+</body>
+</html>
