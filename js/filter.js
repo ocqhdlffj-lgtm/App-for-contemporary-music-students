@@ -44,6 +44,9 @@
       var tracks = (s.tracks || []).filter(function (t) { return trackMatches(t, c); });
       if (tracks.length === 0) return;
 
+      // 얕은 복사: copy.tracks는 새 배열이지만 그 원소(전형 객체)는
+      // 원본 데이터와 같은 참조를 공유한다. 호출자는 반환된 전형을
+      // 읽기 전용으로만 다루고 절대 변경해서는 안 된다.
       var copy = Object.assign({}, s);
       copy.tracks = tracks;
       out.push(copy);

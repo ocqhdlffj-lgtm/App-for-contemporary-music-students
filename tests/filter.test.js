@@ -93,8 +93,15 @@ T.test('조건 여러 개는 AND로 동작한다', function () {
 
 T.test('원본 학교 객체를 변경하지 않는다', function () {
   var s = school();
-  PM.filter.apply([s], { major: '보컬' });
-  T.eq(s.tracks.length, 1);
+  s.tracks.push({
+    id: 'jeongsi', season: '정시', name: '정시전형', majors: ['작곡'],
+    quota: { '작곡': 4 }, ratio: { '실기': 100, '내신': 0, '수능': 0 },
+    minCsat: null, practical: { songType: '자유곡' },
+    verification: { level: '확인됨' }
+  });
+  var r = PM.filter.apply([s], { major: '보컬' });
+  T.eq(s.tracks.length, 2);
+  T.assert(r[0] !== s, '반환된 학교는 원본과 다른 객체여야 함');
 });
 
 T.test('quotaOf는 전공 모집인원을 반환하고 없으면 null이다', function () {
