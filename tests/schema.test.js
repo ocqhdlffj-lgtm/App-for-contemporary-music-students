@@ -96,3 +96,52 @@ T.test('전형이 없으면 학교 등급은 미확인이다', function () {
   s.tracks = [];
   T.eq(PM.schema.schoolLevel(s), '미확인');
 });
+
+T.test('확인됨인데 quota가 빈 객체면 실패한다', function () {
+  var s = validSchool();
+  s.tracks[0].quota = {};
+  var r = PM.schema.validateSchool(s);
+  T.eq(r.ok, false);
+  T.assert(r.errors.join(' ').indexOf('quota') >= 0, 'quota 오류가 보고되어야 함');
+});
+
+T.test('확인됨인데 schedule이 빈 객체면 실패한다', function () {
+  var s = validSchool();
+  s.tracks[0].schedule = {};
+  var r = PM.schema.validateSchool(s);
+  T.eq(r.ok, false);
+  T.assert(r.errors.join(' ').indexOf('schedule') >= 0, 'schedule 오류가 보고되어야 함');
+});
+
+T.test('확인됨인데 practical이 빈 객체면 실패한다', function () {
+  var s = validSchool();
+  s.tracks[0].practical = {};
+  var r = PM.schema.validateSchool(s);
+  T.eq(r.ok, false);
+  T.assert(r.errors.join(' ').indexOf('practical') >= 0, 'practical 오류가 보고되어야 함');
+});
+
+T.test('확인됨인데 실기고사일(schedule.practical)이 없으면 실패한다', function () {
+  var s = validSchool();
+  s.tracks[0].schedule = { apply: ['2026-09-08', '2026-09-11'], announce: '2026-11-14' };
+  var r = PM.schema.validateSchool(s);
+  T.eq(r.ok, false);
+  T.assert(r.errors.join(' ').indexOf('practical') >= 0, 'schedule.practical 오류가 보고되어야 함');
+});
+
+T.test('반영비율에 숫자가 아닌 값이 있으면 실패한다', function () {
+  var s = validSchool();
+  s.tracks[0].ratio = { '실기': 100, '내신': 'garbage', '수능': 0 };
+  var r = PM.schema.validateSchool(s);
+  T.eq(r.ok, false);
+  T.assert(r.errors.join(' ').indexOf('내신') >= 0, '숫자가 아닌 항목 이름이 보고되어야 함');
+});
+
+T.test('미확인이면 빈 객체여도 통과한다', function () {
+  var s = validSchool();
+  s.tracks[0].quota = {};
+  s.tracks[0].schedule = {};
+  s.tracks[0].practical = {};
+  s.tracks[0].verification.level = '미확인';
+  T.eq(PM.schema.validateSchool(s).ok, true);
+});

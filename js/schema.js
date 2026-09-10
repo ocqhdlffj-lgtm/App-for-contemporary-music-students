@@ -30,8 +30,17 @@
 
     if (t.ratio != null) {
       var sum = 0;
-      Object.keys(t.ratio).forEach(function (k) { sum += Number(t.ratio[k]) || 0; });
-      if (sum !== 100) errors.push(at + '.ratio: 합계가 100이어야 함 (현재 ' + sum + ')');
+      var ratioInvalid = false;
+      Object.keys(t.ratio).forEach(function (k) {
+        var n = Number(t.ratio[k]);
+        if (!isFinite(n)) {
+          errors.push(at + '.ratio.' + k + ': 숫자가 아님 (' + t.ratio[k] + ')');
+          ratioInvalid = true;
+        } else {
+          sum += n;
+        }
+      });
+      if (!ratioInvalid && sum !== 100) errors.push(at + '.ratio: 합계가 100이어야 함 (현재 ' + sum + ')');
     }
 
     if (t.schedule != null) {
@@ -53,13 +62,22 @@
       }
     }
 
-    // 거짓 확신 차단
+    // 거짓 확신 차단 — 빈 객체({})는 null과 마찬가지로 값이 없는 것으로 취급한다
     if (v.level === '확인됨') {
       REQUIRED_WHEN_CONFIRMED.forEach(function (k) {
-        if (t[k] == null) {
-          errors.push(at + ': 확인됨인데 ' + k + '이(가) null — 등급을 낮추거나 값을 채울 것');
+        var val = t[k];
+        if (val == null || typeof val !== 'object' || Object.keys(val).length === 0) {
+          errors.push(at + ': 확인됨인데 ' + k + '이(가) 비어 있음 — 등급을 낮추거나 값을 채울 것');
         }
       });
+      if (t.schedule != null && typeof t.schedule === 'object') {
+        if (t.schedule.apply == null) {
+          errors.push(at + ': 확인됨인데 schedule.apply가 없음');
+        }
+        if (t.schedule.practical == null) {
+          errors.push(at + ': 확인됨인데 schedule.practical(실기고사일)이 없음 — 실기고사일 충돌 확인 불가');
+        }
+      }
       if (!v.source) errors.push(at + ': 확인됨인데 verification.source 없음');
     }
   }
