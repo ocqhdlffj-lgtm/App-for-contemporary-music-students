@@ -245,7 +245,13 @@ PC 화면부터 짜면 나중에 전부 뜯어고쳐야 한다.
 
 따라서 1단계는 **빌드 도구가 필요 없는 구성**으로 간다:
 
-- 순수 HTML + CSS + 바닐라 JS (ES 모듈), 빌드 단계 없음
+- 순수 HTML + CSS + 바닐라 JS, 빌드 단계 없음
+- **ES 모듈과 초기 로드 `fetch`를 쓰지 않는다.** Chrome은 `file://`에서 모듈
+  스크립트와 fetch를 CORS로 차단하는데, 로컬 서버를 띄울 런타임(Node/Python)이
+  없으므로 `file://`로 직접 열 수 있어야 한다. 모든 JS는 클래식 `<script src>`로
+  로드하고 `window.PM` 네임스페이스에 붙인다. 데이터는 `data/schools/*.json`이
+  정본이고, bash 스크립트가 이를 `data/snapshot.js`(전역 할당) 하나로 묶는다.
+  원격 fetch 경로는 구현하되 `location.protocol`이 http(s)일 때만 시도한다.
 - 프레임워크·번들러·npm 의존성 없음
 - 파일을 브라우저에서 바로 열어 확인
 
