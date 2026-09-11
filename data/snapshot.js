@@ -295,6 +295,32 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "dongshin",
+  "name": "동신대학교",
+  "type": "4년제",
+  "region": "전남",
+  "deptName": "뮤지컬·실용음악학과",
+  "admissionsUrl": "https://ipsi.dsu.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "dongwon",
   "name": "동원대학교",
   "type": "전문대",
@@ -353,6 +379,32 @@ window.PM.SNAPSHOT = {
   "region": "경기",
   "deptName": "실용음악과",
   "admissionsUrl": "https://ukp.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "gwangju-univ",
+  "name": "광주대학교",
+  "type": "4년제",
+  "region": "광주",
+  "deptName": "음악학과",
+  "admissionsUrl": "https://iphak.gwangju.ac.kr/",
   "guideUrl": null,
   "tracks": [
     {
@@ -825,6 +877,32 @@ window.PM.SNAPSHOT = {
   "region": "경기",
   "deptName": "보컬·K-POP콘텐츠과",
   "admissionsUrl": "https://iphak.osan.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "paekche",
+  "name": "백제예술대학교",
+  "type": "전문대",
+  "region": "전북",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://www.paekche.ac.kr/ict/ipsi_new/",
   "guideUrl": null,
   "tracks": [
     {
