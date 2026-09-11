@@ -1,0 +1,25 @@
+{
+  "id": "wsi",
+  "name": "우송정보대학",
+  "type": "전문대",
+  "region": "대전",
+  "deptName": "실용음악전공",
+  "admissionsUrl": "https://ent.wsi.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
