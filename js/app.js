@@ -6,12 +6,19 @@
   function renderList() {
     var host = screenEl();
     host.textContent = '';
+
+    host.appendChild(PM.ui.filterbar.render(state.schools, state.criteria, function (c) {
+      state.criteria = c;
+      renderList();
+    }));
+
     var shown = PM.filter.apply(state.schools, state.criteria);
     host.appendChild(PM.ui.list.render(shown, {
       major: state.criteria.major || '',
       onSelect: function (id) { console.log('선택:', id); }
     }));
     host.appendChild(PM.ui.disclaimerBar());
+
     document.getElementById('progress').textContent =
       PM.ui.progressText(state.schools) + ' · 기준일 ' + state.dataVersion;
   }
