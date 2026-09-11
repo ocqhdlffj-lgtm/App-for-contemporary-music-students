@@ -47,3 +47,21 @@ main { padding: 12px 16px; }
 .filter-checks { display: flex; gap: 14px; margin-top: 8px; flex-wrap: wrap; }
 .check { display: flex; align-items: center; gap: 4px; font-size: 14px; }
 .filter-note { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+
+.detail-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 8px 0 4px; }
+.detail-head h2 { font-size: 18px; margin: 0; }
+.muted { color: var(--muted); font-size: 13px; }
+.back-btn, .pick-btn { background: none; border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font-size: 13px; cursor: pointer; }
+.track { border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin: 12px 0; }
+.track-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.track-name { font-weight: 700; }
+.sec { margin-top: 12px; }
+.sec-title { font-size: 13px; color: var(--muted); margin: 0 0 4px; }
+.row { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px dotted var(--line); }
+.row-label { color: var(--muted); font-size: 13px; flex: 0 0 auto; }
+.row-value { text-align: right; min-width: 0; overflow-wrap: break-word; word-break: break-word; }
+.prep { border: 1px dashed #b28900; background: #fffbe6; border-radius: 10px; padding: 12px; margin: 12px 0; }
+.prep-tag { font-size: 11px; color: #7a5c00; font-weight: 700; margin-bottom: 6px; }
+.prep ul { margin: 0; padding-left: 18px; }
+.source-link { display: block; text-align: center; padding: 12px; background: var(--accent); color: #fff; border-radius: 8px; text-decoration: none; margin: 12px 0; }
+.source-missing { text-align: center; color: var(--muted); padding: 12px; }

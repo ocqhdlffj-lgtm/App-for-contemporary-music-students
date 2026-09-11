@@ -12,7 +12,7 @@
     var shown = PM.filter.apply(state.schools, state.criteria);
     listHost.appendChild(PM.ui.list.render(shown, {
       major: state.criteria.major || '',
-      onSelect: function (id) { console.log('선택:', id); }
+      onSelect: renderDetail
     }));
     listHost.appendChild(PM.ui.disclaimerBar());
 
@@ -43,6 +43,26 @@
     renderResults(listHost);
   }
 
+  // 상세 화면 진입점. #screen을 비우고 학교 하나의 상세 정보를 그린다.
+  // Task 11의 화면 전환(#screen 비우고 진입점 재호출)에도 안전하도록
+  // 모듈 스코프 DOM 참조를 두지 않고 매번 screenEl()로 다시 찾는다.
+  function renderDetail(schoolId) {
+    var school = state.schools.filter(function (s) { return s.id === schoolId; })[0];
+    if (!school) { renderList(); return; }
+
+    var host = screenEl();
+    host.textContent = '';
+    host.appendChild(PM.ui.detail.render(school, {
+      onBack: renderList,
+      onTogglePick: function (sid, tid) {
+        if (PM.storage.hasPick(sid, tid)) PM.storage.removePick(sid, tid);
+        else PM.storage.addPick(sid, tid);
+        renderDetail(sid);
+      }
+    }));
+    host.appendChild(PM.ui.disclaimerBar());
+  }
+
   function start() {
     PM.data.load().then(function (r) {
       state.schools = r.schools;
@@ -52,5 +72,5 @@
     });
   }
 
-  PM.app = { start: start, _state: state, _renderList: renderList };
+  PM.app = { start: start, _state: state, _renderList: renderList, _renderDetail: renderDetail };
 })(window.PM);
