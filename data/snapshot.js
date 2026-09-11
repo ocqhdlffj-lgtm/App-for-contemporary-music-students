@@ -1079,6 +1079,32 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "seoul-arts",
+  "name": "서울예술대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "음악학부 실용음악전공",
+  "admissionsUrl": "https://www.seoularts.ac.kr",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "shinansan",
   "name": "신안산대학교",
   "type": "전문대",
