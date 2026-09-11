@@ -63,7 +63,39 @@
     host.appendChild(PM.ui.disclaimerBar());
   }
 
+  // 내 지원 리스트 화면 진입점. renderDetail과 마찬가지로 매번 screenEl()로
+  // #screen을 다시 찾고 통째로 비운 뒤 새로 그린다 — 탭 전환으로 반복 재진입해도 안전하다.
+  function renderMyList() {
+    var host = screenEl();
+    host.textContent = '';
+    host.appendChild(PM.ui.mylist.render(state.schools, PM.storage.getPicks(), {
+      onSelect: renderDetail,
+      onRemove: function (sid, tid) { PM.storage.removePick(sid, tid); renderMyList(); }
+    }));
+    host.appendChild(PM.ui.disclaimerBar());
+  }
+
+  // 탭 이름 → 화면 진입점. Task 12가 탭을 추가할 때는 이 표에 항목 하나만
+  // 더하면 되고, bindTabs 자체를 손댈 필요가 없다.
+  var screens = {
+    list: renderList,
+    mylist: renderMyList
+  };
+
+  function bindTabs() {
+    var btns = document.querySelectorAll('nav.tabs button');
+    Array.prototype.forEach.call(btns, function (b) {
+      b.addEventListener('click', function () {
+        Array.prototype.forEach.call(btns, function (x) { x.classList.remove('active'); });
+        b.classList.add('active');
+        var tab = b.getAttribute('data-tab');
+        (screens[tab] || renderList)();
+      });
+    });
+  }
+
   function start() {
+    bindTabs();
     PM.data.load().then(function (r) {
       state.schools = r.schools;
       state.dataVersion = r.dataVersion;
@@ -72,5 +104,8 @@
     });
   }
 
-  PM.app = { start: start, _state: state, _renderList: renderList, _renderDetail: renderDetail };
+  PM.app = {
+    start: start, _state: state,
+    _renderList: renderList, _renderDetail: renderDetail, _renderMyList: renderMyList
+  };
 })(window.PM);
