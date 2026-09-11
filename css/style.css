@@ -80,3 +80,9 @@ nav.tabs { display: flex; border-bottom: 1px solid var(--line); }
 nav.tabs button { flex: 1; padding: 10px; background: none; border: none; border-bottom: 2px solid transparent; font-size: 14px; cursor: pointer; color: var(--muted); }
 nav.tabs button.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 700; }
 .mylist-loading { color: var(--muted); text-align: center; padding: 32px 0; }
+
+.table-scroll { overflow-x: auto; }
+.cmp-table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.cmp-table th, .cmp-table td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
+.cmp-table thead th { background: #f8f9fa; white-space: nowrap; }
+.cmp-name { background: none; border: none; font-weight: 700; font-size: 13px; cursor: pointer; color: var(--accent); padding: 0; }

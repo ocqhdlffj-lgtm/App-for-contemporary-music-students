@@ -92,11 +92,23 @@
     host.appendChild(PM.ui.disclaimerBar());
   }
 
+  // 비교 화면 진입점. renderDetail/renderMyList와 마찬가지로 매번 screenEl()로
+  // #screen을 다시 찾고 통째로 비운 뒤 새로 그린다 — 탭 전환으로 반복 재진입해도 안전하다.
+  function renderCompare() {
+    var host = screenEl();
+    host.textContent = '';
+    host.appendChild(PM.ui.compare.render(state.schools, PM.storage.getPicks(), {
+      onSelect: renderDetail
+    }));
+    host.appendChild(PM.ui.disclaimerBar());
+  }
+
   // 탭 이름 → 화면 진입점. Task 12가 탭을 추가할 때는 이 표에 항목 하나만
   // 더하면 되고, bindTabs 자체를 손댈 필요가 없다.
   var screens = {
     list: renderList,
-    mylist: renderMyList
+    mylist: renderMyList,
+    compare: renderCompare
   };
 
   // 탭 버튼의 active 클래스와 state.activeTab은 이 핸들러 하나에서만 함께
@@ -131,6 +143,7 @@
 
   PM.app = {
     start: start, _state: state,
-    _renderList: renderList, _renderDetail: renderDetail, _renderMyList: renderMyList
+    _renderList: renderList, _renderDetail: renderDetail, _renderMyList: renderMyList,
+    _renderCompare: renderCompare
   };
 })(window.PM);
