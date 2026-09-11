@@ -1,0 +1,40 @@
+:root {
+  --bg: #ffffff; --fg: #1b1b1f; --muted: #5f6368;
+  --line: #e3e3e7; --accent: #2b5cd9; --warn: #b3261e;
+  --ad-h: 50px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.6 system-ui, "Malgun Gothic", sans-serif;
+  padding-bottom: calc(var(--ad-h) + 44px);
+}
+header { padding: 12px 16px; border-bottom: 1px solid var(--line); }
+h1 { font-size: 18px; margin: 0; }
+#progress { color: var(--muted); font-size: 13px; }
+main { padding: 12px 16px; }
+
+.card { border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 10px; cursor: pointer; }
+.card:focus { outline: 2px solid var(--accent); }
+.card-head { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.card-name { font-weight: 700; }
+.card-meta { display: flex; gap: 10px; flex-wrap: wrap; color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+.badge { font-size: 11px; padding: 2px 6px; border-radius: 999px; border: 1px solid var(--line); }
+.badge.type { background: #eef2ff; }
+.badge.level-확인됨 { background: #e6f4ea; }
+.badge.level-부분확인 { background: #fef7e0; }
+.badge.level-미확인 { background: #f1f3f4; color: var(--muted); }
+
+.empty { color: var(--muted); text-align: center; padding: 32px 0; }
+
+.disclaimer {
+  position: fixed; left: 0; right: 0; bottom: var(--ad-h);
+  background: #fff4e5; color: #7a4100; font-size: 12px;
+  padding: 8px 16px; border-top: 1px solid var(--line);
+}
+/* 2단계 AdMob 배너 자리 — 지금은 비워 둔다 */
+#ad-slot {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  height: var(--ad-h); border-top: 1px solid var(--line);
+}
