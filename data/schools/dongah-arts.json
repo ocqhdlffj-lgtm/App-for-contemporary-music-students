@@ -1,0 +1,29 @@
+{
+  "id": "dongah-arts",
+  "name": "동아방송예술대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악학부",
+  "admissionsUrl": "https://ipsi.dima.ac.kr",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi-1",
+      "season": "수시",
+      "name": "수시 1차",
+      "majors": ["보컬", "기타", "베이스", "드럼", "건반", "작곡"],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": {
+        "level": "미확인",
+        "checkedAt": "2026-09-11",
+        "source": null
+      }
+    }
+  ],
+  "prepPoints": []
+}
