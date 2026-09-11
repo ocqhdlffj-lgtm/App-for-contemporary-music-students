@@ -55,7 +55,7 @@
       s.appendChild(row('반영비율', '미확인'));
     } else {
       Object.keys(t.ratio).forEach(function (k) {
-        s.appendChild(row(k, t.ratio[k] + '%'));
+        s.appendChild(row(k, fmt(t.ratio[k], '%')));
       });
     }
     s.appendChild(row('수능최저',
@@ -67,7 +67,7 @@
     var s = section('모집인원');
     if (!t.quota) { s.appendChild(row('모집인원', '미확인')); return s; }
     Object.keys(t.quota).forEach(function (m) {
-      s.appendChild(row(m, t.quota[m] + '명'));
+      s.appendChild(row(m, fmt(t.quota[m], '명')));
     });
     return s;
   }
@@ -80,7 +80,8 @@
     }
     t.competition.slice().sort(function (a, b) { return b.year - a.year; })
       .forEach(function (c) {
-        s.appendChild(row(c.year + ' ' + c.major, c.ratio + ' : 1'));
+        s.appendChild(row(fmt(c.year) + ' ' + fmt(c.major),
+          (c.ratio == null || c.ratio === '') ? '미확인' : (c.ratio + ' : 1')));
       });
     return s;
   }

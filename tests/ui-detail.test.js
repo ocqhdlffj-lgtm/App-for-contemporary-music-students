@@ -90,3 +90,30 @@ T.test('fmt는 null을 미확인으로 바꾼다', function () {
   T.eq(PM.ui.detail.fmt(null), '미확인');
   T.eq(PM.ui.detail.fmt(2, '곡'), '2곡');
 });
+
+T.test('반영비율 중 일부가 null이면 미확인으로 표시하고 null%을 노출하지 않는다', function () {
+  var s = detailSchool();
+  s.tracks[0].ratio = { '실기': 80, '내신': null, '수능': 20 };
+  var el = PM.ui.detail.render(s, {});
+  var txt = el.textContent;
+  T.assert(txt.indexOf('미확인') >= 0, '미확인이 표시되어야 함');
+  T.assert(txt.indexOf('null%') === -1, 'null%이 노출되면 안 됨');
+});
+
+T.test('모집인원 중 일부가 null이면 미확인으로 표시하고 null명을 노출하지 않는다', function () {
+  var s = detailSchool();
+  s.tracks[0].quota = { '보컬': null };
+  var el = PM.ui.detail.render(s, {});
+  var txt = el.textContent;
+  T.assert(txt.indexOf('미확인') >= 0, '미확인이 표시되어야 함');
+  T.assert(txt.indexOf('null명') === -1, 'null명이 노출되면 안 됨');
+});
+
+T.test('경쟁률의 ratio가 null이면 미확인으로 표시하고 null : 1을 노출하지 않는다', function () {
+  var s = detailSchool();
+  s.tracks[0].competition = [{ year: 2026, major: '보컬', ratio: null }];
+  var el = PM.ui.detail.render(s, {});
+  var txt = el.textContent;
+  T.assert(txt.indexOf('미확인') >= 0, '미확인이 표시되어야 함');
+  T.assert(txt.indexOf('null : 1') === -1, 'null : 1이 노출되면 안 됨');
+});
