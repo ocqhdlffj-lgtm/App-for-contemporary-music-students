@@ -1,5 +1,10 @@
 (function (PM) {
-  var state = { schools: [], criteria: {}, dataVersion: '', source: '' };
+  // activeTab: 현재 활성 탭 키('list'/'mylist'/...). 탭 버튼의 active 클래스와
+  // 이 값은 항상 같은 소스(bindTabs의 클릭 핸들러)에서만 갱신되므로 서로 어긋날 수 없다.
+  // loaded: PM.data.load()가 아직 해결되지 않은 동안은 false — 그 사이 state.schools는
+  // 빈 배열이므로, 이 값을 확인하지 않고 내 지원 리스트를 그리면 "찜한 학교가 없습니다"라는
+  // 거짓 안내가 나갈 수 있다(실제로는 데이터가 아직 안 왔을 뿐).
+  var state = { schools: [], criteria: {}, dataVersion: '', source: '', activeTab: 'list', loaded: false };
 
   function screenEl() { return document.getElementById('screen'); }
 
@@ -65,9 +70,21 @@
 
   // 내 지원 리스트 화면 진입점. renderDetail과 마찬가지로 매번 screenEl()로
   // #screen을 다시 찾고 통째로 비운 뒤 새로 그린다 — 탭 전환으로 반복 재진입해도 안전하다.
+  //
+  // state.loaded가 아직 false인 동안(= PM.data.load()가 진행 중인 동안)에는
+  // state.schools가 빈 배열이다. 이 상태에서 그냥 PM.ui.mylist.render를 부르면
+  // PM.conflict.entriesFrom([], picks)가 모든 픽을 못 찾아 entries가 0개가 되고,
+  // 실제로는 픽이 있는데도 "찜한 학교가 없습니다"라는 거짓 안내가 나간다 — 이 화면의
+  // 존재 이유(안전 신호를 거짓으로 주지 않는 것)를 정면으로 위배하므로, 그 대신
+  // 로딩 중임을 있는 그대로 알린다.
   function renderMyList() {
     var host = screenEl();
     host.textContent = '';
+    if (!state.loaded) {
+      host.appendChild(PM.ui.el('div', 'mylist-loading', '학교 데이터를 불러오는 중입니다. 잠시만 기다려주세요.'));
+      host.appendChild(PM.ui.disclaimerBar());
+      return;
+    }
     host.appendChild(PM.ui.mylist.render(state.schools, PM.storage.getPicks(), {
       onSelect: renderDetail,
       onRemove: function (sid, tid) { PM.storage.removePick(sid, tid); renderMyList(); }
@@ -82,25 +99,33 @@
     mylist: renderMyList
   };
 
+  // 탭 버튼의 active 클래스와 state.activeTab은 이 핸들러 하나에서만 함께
+  // 갱신된다 — 두 값을 따로 갱신하는 경로가 없으므로 "탭은 내 지원 리스트인데
+  // 화면은 학교 찾기"처럼 어긋날 수 없다.
   function bindTabs() {
     var btns = document.querySelectorAll('nav.tabs button');
     Array.prototype.forEach.call(btns, function (b) {
       b.addEventListener('click', function () {
         Array.prototype.forEach.call(btns, function (x) { x.classList.remove('active'); });
         b.classList.add('active');
-        var tab = b.getAttribute('data-tab');
-        (screens[tab] || renderList)();
+        state.activeTab = b.getAttribute('data-tab');
+        (screens[state.activeTab] || renderList)();
       });
     });
   }
 
+  // PM.data.load()는 원격 fetch가 실제로 걸리는 Phase 2(안드로이드 웹뷰)에서는
+  // 눈에 띄게 오래 걸릴 수 있다. 그 사이 사용자가 탭을 눌러 다른 화면으로
+  // 이동해 있을 수 있으므로, 로드가 끝난 뒤에는 무조건 renderList()가 아니라
+  // "그 시점에 활성화된 탭"을 다시 그린다 — 그래야 탭과 화면이 항상 일치한다.
   function start() {
     bindTabs();
     PM.data.load().then(function (r) {
       state.schools = r.schools;
       state.dataVersion = r.dataVersion;
       state.source = r.source;
-      renderList();
+      state.loaded = true;
+      (screens[state.activeTab] || renderList)();
     });
   }
 

@@ -70,3 +70,37 @@ T.test('행을 누르면 onSelect가 학교 id로 불린다', function () {
   el.querySelector('.pick-name').click();
   T.eq(got, 'a');
 });
+
+// 회귀 방지: 지금까지의 픽스처 학교는 전부 트랙이 하나뿐이라, 렌더링 쪽에서
+// 충돌 여부를 (실수로) schoolId만으로 재키잉해도 통과해버린다. 실제로는 같은
+// 학교라도 서로 다른 전형(수시/정시 등)에 각각 지원할 수 있고, 그 두 전형이
+// 같은 날짜에 겹치면 여전히 "한 곳만 응시 가능"한 진짜 충돌이다
+// (js/conflict.js의 find()는 schoolId+trackId로 dedup하므로 이 둘을 구분해서
+// 남긴다 — 렌더링이 그 판정을 그대로 반영하는지 확인한다).
+function mkTwoTrackSchool() {
+  function track(id, name, date) {
+    return {
+      id: id, season: id === 'susi' ? '수시' : '정시', name: name, majors: ['보컬'],
+      quota: null, schedule: { practical: [date] }, ratio: null, minCsat: null,
+      practical: null, competition: [],
+      verification: { level: '미확인', checkedAt: '2026-09-10', source: null }
+    };
+  }
+  return {
+    id: 'e', name: '마대', type: '4년제', region: '서울', deptName: '실용음악과',
+    admissionsUrl: 'https://x.ac.kr',
+    tracks: [track('susi', '수시전형', '2026-11-01'), track('jeongsi', '정시전형', '2026-11-01')],
+    prepPoints: []
+  };
+}
+
+T.test('같은 학교라도 전형이 다르면 같은 날짜 충돌로 표시된다', function () {
+  var picks = [{ schoolId: 'e', trackId: 'susi' }, { schoolId: 'e', trackId: 'jeongsi' }];
+  var el = PM.ui.mylist.render([mkTwoTrackSchool()], picks, {});
+
+  var w = el.querySelector('.conflict');
+  T.assert(w, '같은 학교라도 전형이 다르면 충돌 경고가 필요하다');
+  T.assert(w.textContent.indexOf('수시전형') >= 0 && w.textContent.indexOf('정시전형') >= 0,
+    '충돌 문구에 두 전형 이름이 모두 나와야 한다');
+  T.eq(el.querySelectorAll('.pick-row.has-conflict').length, 2);
+});
