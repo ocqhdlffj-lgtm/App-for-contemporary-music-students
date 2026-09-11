@@ -77,8 +77,9 @@
         } catch (e) { done(e); }
       }
 
+      // 결과는 DOM(resultsEl/summaryEl)에 렌더링된다.
+      // 실행은 비동기이므로 이 함수는 동기적으로 반환할 값이 없다.
       next();
-      return { passed: passed, failed: failed };
     }
   };
 })();

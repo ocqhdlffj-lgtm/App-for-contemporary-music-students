@@ -42,10 +42,12 @@
 
     function fromCacheOrSnapshot() {
       var cached = readCache();
-      if (cached && cached.schools && cached.schools.length) {
+      if (cached) {
         var c = sanitize(cached);
-        c.source = 'cache';
-        return c;
+        if (c.schools.length > 0) {
+          c.source = 'cache';
+          return c;
+        }
       }
       var s = sanitize(snapshot);
       s.source = 'snapshot';

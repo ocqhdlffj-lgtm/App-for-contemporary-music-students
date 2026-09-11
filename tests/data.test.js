@@ -102,3 +102,20 @@ T.test('스키마 위반 학교는 버리고 나머지는 살린다', function (
     done();
   }).catch(done);
 });
+
+T.test('캐시가 비어있지 않아도 전부 스키마 위반이면 스냅샷으로 폴백한다', function (done) {
+  var badCache = fakeBundle('2026-09-15', ['a', 'b', 'c']);
+  badCache.schools.forEach(function (s) { delete s.name; });   // 전부 깨진 레코드
+  PM.data.load({
+    protocol: 'https:',
+    fetchFn: failFetch(),
+    readCache: function () { return badCache; },
+    writeCache: function () {},
+    snapshot: fakeBundle('2026-09-10', ['a'])
+  }).then(function (r) {
+    T.eq(r.source, 'snapshot');
+    T.eq(r.schools.length, 1);
+    T.eq(r.schools[0].id, 'a');
+    done();
+  }).catch(done);
+});
