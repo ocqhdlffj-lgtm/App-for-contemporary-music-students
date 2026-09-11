@@ -1,0 +1,25 @@
+{
+  "id": "jeju-halla",
+  "name": "제주한라대학교",
+  "type": "전문대",
+  "region": "제주",
+  "deptName": "음악과",
+  "admissionsUrl": "https://ipsi.chu.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}

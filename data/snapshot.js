@@ -585,12 +585,64 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "jbnu",
+  "name": "전북대학교",
+  "type": "4년제",
+  "region": "전북",
+  "deptName": "음악과",
+  "admissionsUrl": "https://enter.jbnu.ac.kr/main.do",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "jei",
   "name": "재능대학교",
   "type": "전문대",
   "region": "인천",
   "deptName": "실용음악과",
   "admissionsUrl": "https://apply.jeiu.ac.kr:4443/apply/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "jeju-halla",
+  "name": "제주한라대학교",
+  "type": "전문대",
+  "region": "제주",
+  "deptName": "음악과",
+  "admissionsUrl": "https://ipsi.chu.ac.kr/",
   "guideUrl": null,
   "tracks": [
     {
@@ -799,6 +851,32 @@ window.PM.SNAPSHOT = {
   "region": "경기",
   "deptName": "실용음악과",
   "admissionsUrl": "https://iphak.kyungmin.ac.kr/music",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "mokpo-nu",
+  "name": "국립목포대학교",
+  "type": "4년제",
+  "region": "전남",
+  "deptName": "음악공연기획학부 공연음악전공",
+  "admissionsUrl": "https://ipsi.mokpo.ac.kr/",
   "guideUrl": null,
   "tracks": [
     {
