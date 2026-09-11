@@ -1,0 +1,25 @@
+{
+  "id": "yeonsung",
+  "name": "연성대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "K-POP과",
+  "admissionsUrl": "https://www.yeonsung.ac.kr/ipsi/cms/FR_CON/index.do?MENU_ID=580&CONTENTS_NO=1",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}

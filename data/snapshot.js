@@ -5,12 +5,90 @@ window.PM.SNAPSHOT = {
   "dataVersion": "2026-09-11",
   "schools": [
 {
+  "id": "anyang-univ",
+  "name": "안양대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://enter.anyang.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "baekseok-arts",
   "name": "백석예술대학교",
   "type": "전문대",
   "region": "서울",
   "deptName": "실용음악과",
   "admissionsUrl": "https://www.bau.ac.kr/admission/index.do",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "bucheon",
+  "name": "부천대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악전공",
+  "admissionsUrl": "https://ipsi.bc.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "cau-davinci",
+  "name": "중앙대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "실용음악전공",
+  "admissionsUrl": "https://admission.cau.ac.kr/",
   "guideUrl": null,
   "tracks": [
     {
@@ -67,6 +145,84 @@ window.PM.SNAPSHOT = {
   "region": "서울",
   "deptName": "실용음악전공",
   "admissionsUrl": "https://ipsi.dongduk.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "dongwon",
+  "name": "동원대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ipsi.tw.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "doowon",
+  "name": "두원공과대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://www.doowon.ac.kr/kr/690/subview.do",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "gimpo",
+  "name": "김포대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ukp.ac.kr/",
   "guideUrl": null,
   "tracks": [
     {
@@ -169,12 +325,272 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "hyupsung",
+  "name": "협성대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "실용음악전공",
+  "admissionsUrl": "https://iphak.uhs.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "jei",
+  "name": "재능대학교",
+  "type": "전문대",
+  "region": "인천",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://apply.jeiu.ac.kr:4443/apply/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "kbu",
+  "name": "경복대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://www.kbu.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "kiwu",
+  "name": "경인여자대학교",
+  "type": "전문대",
+  "region": "인천",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://start.kiwu.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "kookje",
+  "name": "국제대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "K-POP전공",
+  "admissionsUrl": "https://ipsi.kookje.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "kyunghee-global",
+  "name": "경희대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "PostModern음악학과",
+  "admissionsUrl": "https://iphak.khu.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "kyungmin",
+  "name": "경민대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://iphak.kyungmin.ac.kr/music",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "myongji-college",
   "name": "명지전문대학",
   "type": "전문대",
   "region": "서울",
   "deptName": "실용음악과",
   "admissionsUrl": "https://ipsi.mjc.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "myongji-univ",
+  "name": "명지대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "아트앤멀티미디어음악학부",
+  "admissionsUrl": "https://ipsi.mju.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "osan",
+  "name": "오산대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "보컬·K-POP콘텐츠과",
+  "admissionsUrl": "https://iphak.osan.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "ptu",
+  "name": "평택대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "실용음악학과",
+  "admissionsUrl": "https://entrance.ptu.ac.kr/",
   "guideUrl": null,
   "tracks": [
     {
@@ -221,6 +637,32 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "shinansan",
+  "name": "신안산대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://apply.sau.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "soongeui-women",
   "name": "숭의여자대학교",
   "type": "전문대",
@@ -247,12 +689,142 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "sungkyul",
+  "name": "성결대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ipsi.sungkyul.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "sungshin",
   "name": "성신여자대학교",
   "type": "4년제",
   "region": "서울",
   "deptName": "현대실용음악학과",
   "admissionsUrl": "https://ipsi.sungshin.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "yeoju",
+  "name": "여주대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ipsi.yit.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "yeonsung",
+  "name": "연성대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "K-POP과",
+  "admissionsUrl": "https://www.yeonsung.ac.kr/ipsi/cms/FR_CON/index.do?MENU_ID=580&CONTENTS_NO=1",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "yongin-univ",
+  "name": "용인대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ipsi.yongin.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "ysc",
+  "name": "용인예술과학대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ipsi.ysc.ac.kr/",
   "guideUrl": null,
   "tracks": [
     {

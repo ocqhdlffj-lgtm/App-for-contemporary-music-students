@@ -1,0 +1,25 @@
+{
+  "id": "doowon",
+  "name": "두원공과대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://www.doowon.ac.kr/kr/690/subview.do",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}

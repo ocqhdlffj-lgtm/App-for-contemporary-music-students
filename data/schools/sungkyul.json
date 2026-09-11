@@ -1,0 +1,25 @@
+{
+  "id": "sungkyul",
+  "name": "성결대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ipsi.sungkyul.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
