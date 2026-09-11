@@ -31,25 +31,53 @@
     },
 
     run: function (resultsEl, summaryEl) {
-      var passed = 0, failed = 0;
-      tests.forEach(function (t) {
+      var passed = 0, failed = 0, i = 0;
+
+      function report(t, err) {
         var div = document.createElement('div');
-        try {
-          t.fn();
+        if (err) {
+          failed++;
+          div.className = 'fail';
+          div.textContent = 'FAIL  ' + t.name + '\n' + (err.message || String(err));
+        } else {
           passed++;
           div.className = 'pass';
           div.textContent = 'PASS  ' + t.name;
-        } catch (e) {
-          failed++;
-          div.className = 'fail';
-          div.textContent = 'FAIL  ' + t.name + '\n' + e.message;
         }
         resultsEl.appendChild(div);
-      });
-      if (summaryEl) {
-        summaryEl.textContent = passed + ' passed, ' + failed + ' failed';
-        summaryEl.className = failed ? 'fail' : 'pass';
       }
+
+      function finish() {
+        if (summaryEl) {
+          summaryEl.textContent = passed + ' passed, ' + failed + ' failed';
+          summaryEl.className = failed ? 'fail' : 'pass';
+        }
+      }
+
+      function next() {
+        if (i >= tests.length) { finish(); return; }
+        var t = tests[i++];
+        var settled = false;
+
+        function done(err) {
+          if (settled) return;
+          settled = true;
+          report(t, err);
+          next();
+        }
+
+        try {
+          if (t.fn.length > 0) {
+            var timer = setTimeout(function () { done(new Error('타임아웃 2000ms')); }, 2000);
+            t.fn(function (err) { clearTimeout(timer); done(err); });
+          } else {
+            t.fn();
+            done(null);
+          }
+        } catch (e) { done(e); }
+      }
+
+      next();
       return { passed: passed, failed: failed };
     }
   };
