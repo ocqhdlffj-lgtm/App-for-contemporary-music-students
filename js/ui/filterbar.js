@@ -14,7 +14,7 @@
   function select(name, label, options, value, onPick) {
     var wrap = el('label', 'field');
     wrap.appendChild(el('span', 'field-label', label));
-    var sel = document.createElement('select');
+    var sel = el('select');
     sel.name = name;
     sel.appendChild(new Option('전체', ''));
     options.forEach(function (o) { sel.appendChild(new Option(o, o)); });
