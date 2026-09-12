@@ -2,7 +2,7 @@
 // 정본은 data/schools/*.json 입니다.
 window.PM = window.PM || {};
 window.PM.SNAPSHOT = {
-  "dataVersion": "2026-09-11",
+  "dataVersion": "2026-09-12",
   "schools": [
 {
   "id": "anyang-univ",
@@ -161,6 +161,32 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "changshin",
+  "name": "창신대학교",
+  "type": "4년제",
+  "region": "경남",
+  "deptName": "뮤직공연예술학과",
+  "admissionsUrl": "https://admission.cs.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "chungcheong",
   "name": "충청대학교",
   "type": "전문대",
@@ -233,6 +259,58 @@ window.PM.SNAPSHOT = {
       "practical": null,
       "competition": [],
       "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "deu",
+  "name": "동의대학교",
+  "type": "4년제",
+  "region": "부산",
+  "deptName": "음악학과",
+  "admissionsUrl": "https://ipsi.deu.ac.kr/main.do",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "donga",
+  "name": "동아대학교",
+  "type": "4년제",
+  "region": "부산",
+  "deptName": "음악학과 실용음악전공",
+  "admissionsUrl": "https://ent.donga.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
     }
   ],
   "prepPoints": []
