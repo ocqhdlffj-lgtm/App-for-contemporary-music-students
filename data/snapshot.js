@@ -369,6 +369,32 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "dkc",
+  "name": "대경대학교",
+  "type": "전문대",
+  "region": "경북",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://www.dkuway.com/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "donga",
   "name": "동아대학교",
   "type": "4년제",
@@ -549,6 +575,32 @@ window.PM.SNAPSHOT = {
       "practical": null,
       "competition": [],
       "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "gknu",
+  "name": "국립경국대학교",
+  "type": "4년제",
+  "region": "경북",
+  "deptName": "공연예술음악과 실용음악전공",
+  "admissionsUrl": "https://ipsi.gknu.ac.kr/admission/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
     }
   ],
   "prepPoints": []
@@ -813,6 +865,32 @@ window.PM.SNAPSHOT = {
       "practical": null,
       "competition": [],
       "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "kbsu",
+  "name": "경북과학대학교",
+  "type": "전문대",
+  "region": "경북",
+  "deptName": "뮤직프로덕션과",
+  "admissionsUrl": "https://www.kbsu.ac.kr/admission/main/index.htm",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
     }
   ],
   "prepPoints": []
