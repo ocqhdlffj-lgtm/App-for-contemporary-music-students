@@ -291,6 +291,58 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "daeshin",
+  "name": "대신대학교",
+  "type": "4년제",
+  "region": "경북",
+  "deptName": "교회실용음악학부 실용음악전공",
+  "admissionsUrl": "https://daeshin.ac.kr/html/02_admission/03_2.php",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "dcu",
+  "name": "대구가톨릭대학교",
+  "type": "4년제",
+  "region": "경북",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://www.cu.ac.kr/",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "deu",
   "name": "동의대학교",
   "type": "4년제",
@@ -839,6 +891,32 @@ window.PM.SNAPSHOT = {
       "practical": null,
       "competition": [],
       "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "kmu",
+  "name": "계명대학교",
+  "type": "4년제",
+  "region": "대구",
+  "deptName": "실용음악음향과",
+  "admissionsUrl": "https://www.gokmu.ac.kr/intro.htm",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
     }
   ],
   "prepPoints": []
