@@ -62,3 +62,7 @@ T.test('진행률 문구는 확인됨 학교 수를 센다', function () {
 T.test('면책 문구를 그린다', function () {
   T.assert(PM.ui.disclaimerBar().textContent.indexOf('입학처 원문을 확인') >= 0);
 });
+
+T.test('목록이 계속 추가되는 중임을 알리는 문구를 그린다', function () {
+  T.assert(PM.ui.expansionNotice().textContent.indexOf('계속 추가') >= 0);
+});

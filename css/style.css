@@ -12,6 +12,7 @@ body {
 header { padding: 12px 16px; border-bottom: 1px solid var(--line); }
 h1 { font-size: 18px; margin: 0; }
 #progress { color: var(--muted); font-size: 13px; }
+.expansion-notice { color: var(--muted); font-size: 12px; margin-top: 2px; }
 main { padding: 12px 16px; }
 
 .card { border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 10px; cursor: pointer; }

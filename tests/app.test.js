@@ -67,6 +67,8 @@ T.test('#screen을 비우고 다시 진입해도 필터바와 목록이 정상�
     T.assert(screen.querySelector('input[name="q"]'), '재진입 시 검색창이 다시 그려져야 한다');
     T.assert(screen.querySelector('.list'), '재진입 시 목록이 다시 그려져야 한다');
     T.assert(screen.querySelector('.disclaimer'), '재진입 시 면책 문구가 다시 그려져야 한다');
+    T.assert(progress.querySelector('.expansion-notice'),
+      '재진입 시 목록이 계속 추가되는 중이라는 고지가 진행률 영역에 다시 그려져야 한다');
   } finally {
     document.body.removeChild(screen);
     document.body.removeChild(progress);

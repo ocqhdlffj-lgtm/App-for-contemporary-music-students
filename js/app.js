@@ -21,8 +21,11 @@
     }));
     listHost.appendChild(PM.ui.disclaimerBar());
 
-    document.getElementById('progress').textContent =
-      PM.ui.progressText(state.schools) + ' · 기준일 ' + state.dataVersion;
+    var progressHost = document.getElementById('progress');
+    progressHost.textContent = '';
+    progressHost.appendChild(PM.ui.el('div', 'progress-line',
+      PM.ui.progressText(state.schools) + ' · 기준일 ' + state.dataVersion));
+    progressHost.appendChild(PM.ui.expansionNotice());
   }
 
   // 목록 화면 진입점. #screen을 비우고 필터바 호스트·목록 호스트를 각각
