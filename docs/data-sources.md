@@ -98,3 +98,5 @@
 | 2026-09-12 | 창신대학교 (changshin) | 뮤직공연예술학과(구 실용음악학과 계열) 실재, 지역(경남 창원), 입학처 URL 해석 확인 | music.cs.ac.kr (title: 창신대학교 뮤직공연예술학과), admission.cs.ac.kr (200, title: 창신대학교 입학안내 홈페이지) |
 | 2026-09-12 | 동의대학교 (deu) | 음악학과 내 실용음악 트랙 실재 확인, 지역(부산 부산진구), 입학처 URL 해석 확인 | deuhome.deu.ac.kr/music/sub01_03.do ("클래식, 실용음악 등으로 나뉘며" 서술 확인), ipsi.deu.ac.kr/main.do (200, title: 동의대학교 입학안내) |
 | 2026-09-12 | 동아대학교 (donga) | 음악학과 실용음악 전공 실재 확인, 지역(부산), 입학처 URL 해석 확인 | music.donga.ac.kr (title: 동아대학교 음악학과, "실용음악 전공" 메뉴 다수 확인), ent.donga.ac.kr (200, 동아대학교 입학처) — ipsi.donga.ac.kr는 ent.donga.ac.kr로 연결됨 |
+| 2026-09-12 | 부산보건대학교 (bhu) | 실용음악과 실재, 지역(부산 사하구), 입학처 URL 해석 확인 | am.bhu.ac.kr/am (title: 부산보건대학교 실용음악과), ipsi.bhu.ac.kr/ipsi (200, title: 부산보건대학교 입학안내) — 舊 동주대학교가 2022년 교명 변경한 학교로, 옛 dongju.ac.kr 도메인은 더 이상 해석되지 않음(DNS 오류 확인) — 별도 학교로 중복 등록하지 않도록 주의 |
+| 2026-09-12 | 부산예술대학교 (pia) | 실용음악과(3년제) 실재, 지역(부산 남구 대연동), 입학처 URL 해석 확인 | www.pia.ac.kr/page/subject10/index.php (title: 실용음악과(3년제)), www.pia.ac.kr/page/app/index.php (200, "입학안내" 확인) — 검색 결과에 등장한 www.busanarts.ac.kr는 DNS 해석 실패로 확인되어 사용하지 않음(실제 공식 도메인은 pia.ac.kr) |

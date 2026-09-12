@@ -109,6 +109,32 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
+  "id": "bhu",
+  "name": "부산보건대학교",
+  "type": "전문대",
+  "region": "부산",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ipsi.bhu.ac.kr/ipsi",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
   "id": "bucheon",
   "name": "부천대학교",
   "type": "전문대",
@@ -1099,6 +1125,32 @@ window.PM.SNAPSHOT = {
       "practical": null,
       "competition": [],
       "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+    }
+  ],
+  "prepPoints": []
+}
+,
+{
+  "id": "pia",
+  "name": "부산예술대학교",
+  "type": "전문대",
+  "region": "부산",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://www.pia.ac.kr/page/app/index.php",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "minCsat": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
     }
   ],
   "prepPoints": []
