@@ -5,21 +5,34 @@
   "region": "대전",
   "deptName": "실용음악전공",
   "admissionsUrl": "https://ipsi.pcu.ac.kr",
-  "guideUrl": null,
+  "guideUrl": "https://enter.pcu.ac.kr/enter/19/pdfViewer/CAT079",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
+      "name": "예술인재전형(공연예술학부 실용음악)",
+      "majors": ["보컬", "악기", "작곡"],
+      "quota": { "실용음악": 24 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-24"],
+        "announce": "2026-12-18"
+      },
       "ratio": null,
       "minCsat": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-16",
+        "source": "https://enter.pcu.ac.kr/enter/contents/315"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실용음악 전체(보컬·악기·작곡)를 합산해 24명을 선발하며 세부전공별 정원은 공개되어 있지 않음",
+    "실기고사일은 2026-10-24(토)로 확정되어 있으며, 원서접수는 2026-09-07~09-11",
+    "모든 전형·모집단위 공통으로 대학수학능력시험 최저학력기준이 없음(배재대 입학처 공지 확인)",
+    "실기고사 세부내용(자유곡/지정곡, 반주방식, 곡수, 반영비율)은 배재대 모집요강이 121MB 상당의 이미지 스캔 PDF(텍스트 레이어 없음)로만 제공되어 이번 조사에서 추출하지 못함 — 실기고사 임박 시(통상 개최 3주 전) 게시되는 '수시모집 실기고사[예술인재 전형] 안내' 공지(공지사항 게시판)를 재확인 필요"
+  ]
 }
