@@ -117,3 +117,4 @@
 | 날짜 | 학교 | 확인 항목 | 출처 |
 |---|---|---|---|
 | 2026-09-15 | 호원대학교 (howon) | 실용음악학부 전공별 모집인원, 원서접수/실기고사/발표 일정, 반영비율(실기중심 전공 실기71.4/내신28.6), 실기 세부내용(전공별 상이), 경쟁률(보컬 117.16대1, 기타 54.92대1, 일렉트로닉뮤직프로덕션 48.2대1) 확인. 사운드테크놀로지 2단계 반영비율은 원문 자체가 99.9%로 합산되어(반올림 오차 추정) 임의 보정하지 않고 null로 유지, 해당 트랙만 부분확인 | 2027학년도 수시모집 모집요강 PDF: https://howon.ac.kr/web/_admission/download_board.php?param=SDAzM6HcNDKh3DE3ODAyOTg0NDguaHdwodwxNzgwMjk4OTk1LnBkZqHc&gubun=pdf ; 경쟁률: https://www.veritas-a.com/news/articleView.html?idxno=627565 (베리타스알파, 2026-09-11 보도, 2027학년도 수시 원서접수 마감 직후 집계) |
+| 2026-09-15 | 서울예술대학교 (seoul-arts) | 음악학부 실용음악전공 수시(일반전형·실기우수) 세부선택별 모집인원, 원서접수/실기고사/발표 일정, 반영비율(실기70/학생부30), 실기 세부내용(세부선택별 상이) 확인 | 2027학년도 수시 전문학사학위과정 신입생 모집요강 PDF: https://www.seoularts.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000013731&fileSn=1 |
