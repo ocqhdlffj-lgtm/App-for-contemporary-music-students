@@ -5,25 +5,55 @@
   "region": "경기",
   "deptName": "실용음악학부",
   "admissionsUrl": "https://ipsi.dima.ac.kr",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.dima.ac.kr/dima/file/custFileDown.do?path=cust&fileId=FI000000000002581&fileSeq=1",
   "tracks": [
     {
       "id": "susi-1",
       "season": "수시",
       "name": "수시 1차",
-      "majors": ["보컬", "기타", "베이스", "드럼", "건반", "작곡"],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "majors": ["보컬", "기타", "베이스", "드럼", "건반", "작곡", "관악기·퍼커션"],
+      "quota": {
+        "건반": 7,
+        "기타": 7,
+        "베이스": 6,
+        "드럼": 7,
+        "관악기·퍼커션": 6,
+        "보컬": 27,
+        "작곡": 27
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": [
+          "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15",
+          "2026-10-16", "2026-10-17", "2026-10-18",
+          "2026-10-24", "2026-10-25"
+        ],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": null,
+        "notes": "실용음악학부(기악과·보컬과·작곡과)는 전공 공통으로 1단계(자유곡 1곡, 2분 내외)→2단계(1단계 합격자만 응시) 순으로 진행. 기악과 1단계는 무반주 또는 2인 이하 반주자 동반, 본인이 직접 작업한 노트북/컨트롤러 사용만 가능하고 MR 반주는 불가. 보컬과·작곡과(프로듀서·탑라이너·싱어송라이터 유형)는 직접반주·반주자 동반·MR 반주 모두 허용. 2단계는 기악과 자유곡 2곡+초견·즉흥연주+면접(10분 내외), 보컬과 자유곡 3곡(1곡 이상 한글가사, 악보 5부 제출)+면접(10분 내외), 작곡과는 유형별 상이(프로듀서 자유곡 2곡 연주/면담/음악이론·청음/화성 등 14~45분). 싱어송라이터·탑라이너 유형은 자작곡 악보 제출이 필요함."
+      },
       "competition": [],
       "verification": {
-        "level": "미확인",
-        "checkedAt": "2026-09-11",
-        "source": null
+        "level": "확인됨",
+        "checkedAt": "2026-09-12",
+        "source": "https://ipsi.dima.ac.kr/dima/file/custFileDown.do?path=cust&fileId=FI000000000002581&fileSeq=1"
       }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "전 세부전공 자유곡 위주 — 지정곡 없음",
+    "실기 80% + 내신 20%로 실기 비중이 절대적",
+    "기악과 1단계는 MR 반주가 금지되어 무반주 연주나 소규모 반주자 섭외를 미리 준비해야 함",
+    "1단계 합격자만 2단계(면접·초견·즉흥연주 포함)에 응시하므로 2곡 이상 추가 준비 필요",
+    "보컬과·싱어송라이터·탑라이너 유형은 악보 제출(3~5부)이 요구됨"
+  ]
 }
