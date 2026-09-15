@@ -2,7 +2,7 @@
 // 정본은 data/schools/*.json 입니다.
 window.PM = window.PM || {};
 window.PM.SNAPSHOT = {
-  "dataVersion": "2026-09-15",
+  "dataVersion": "2026-09-16",
   "schools": [
 {
   "id": "anyang-univ",
@@ -40,7 +40,7 @@ window.PM.SNAPSHOT = {
   "guideUrl": "https://www.bau.ac.kr/pdfView/admission/8/fileDownload.do",
   "tracks": [
     {
-      "id": "susi1",
+      "id": "susi",
       "season": "수시",
       "name": "수시1차 일반전형(실기) - 음악학부 실용음악과",
       "majors": ["보컬", "건반", "기타", "베이스", "드럼", "관악기및그외악기", "스튜디오뮤직프로덕션", "미디어뮤직프로덕션", "송라이팅프로덕션", "일렉트로닉뮤직프로덕션"],
