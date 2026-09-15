@@ -5,21 +5,54 @@
   "region": "서울",
   "deptName": "실용음악전공",
   "admissionsUrl": "https://admission.hongik.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://www.hongik.ac.kr/kr/admission/recruitment.do?mode=download&articleNo=152315&attachNo=91150",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "공연예술우수자전형(공연예술학부 실용음악전공)",
+      "majors": ["보컬", "드럼", "베이스", "기타", "피아노", "관악기", "작곡"],
+      "quota": {
+        "보컬": 8,
+        "드럼": 3,
+        "베이스": 3,
+        "기타": 5,
+        "피아노": 4,
+        "관악기": 2,
+        "작곡": 3
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": [
+          "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17",
+          "2026-10-31", "2026-11-01"
+        ],
+        "announce": "2026-11-07"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "1단계(실기100%, 지원자 전원 응시)→2단계(실기80%+교과10%+출결10%=100%, 1단계 합격자만 응시) 단계별 전형. 세부전공별로 구성이 크게 달라 공통 수치를 하나로 특정할 수 없어 songCount/songType/accompaniment/durationMin/sheetMusicRequired는 null로 유지함. 보컬: 1단계 자유곡 1곡(1분40초 이내, 한국어 가창만 허용, 반주는 MR·무반주·본인반주(키보드/어쿠스틱기타) 중 택일, 악보 제출 불필요) → 2단계 자유곡 2곡(한국어 가사곡 1곡+영어 가사곡 1곡, 각 1분30초 이내, 반주자 1인 동반 가능(키보드만), 악보 각 5부 제출). 기악(드럼·베이스·기타·피아노·관악기): 1단계 자유곡 1곡(1분40초 이내, MR 전면 금지, 무반주 또는 지정된 악기 반주자 1인 동반만 가능, 악보 각 3부 제출) → 2단계 자유곡 2곡(BPM90 이상 펑크 스타일 1곡 + 자유곡 1곡, 각 1분30초 이내, 악보 5부 제출). 작곡: 1단계 즉석 멜로디 작곡·연주(1분 내외, 40점)+자유연주곡 1곡 연주(1분 내외, 60점, MR·반주자 불가, 심사위원용 악보 3부 제출) → 2단계 2마디 모티브로 16마디 멜로디 작곡(오선지, 제한시간 20분)+자가 연주(80점). 수능최저학력기준 없음."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-16",
+        "source": "https://www.hongik.ac.kr/kr/admission/recruitment.do?mode=download&articleNo=152315&attachNo=91150"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "전 세부전공 자유곡 위주 — 지정곡 없음",
+    "실기 80% + 교과10%·출결10%(내신 20%)로 실기 비중이 절대적, 수능최저학력기준 없음",
+    "1단계(실기 100%)를 통과해야 2단계(교과·출결 포함)에 응시할 수 있는 단계별 전형이므로 세부전공별로 2곡 이상 추가 준비 필요",
+    "기악(드럼·베이스·기타·피아노·관악기) 1단계는 MR 반주가 전면 금지되어 무반주 연주나 소규모 반주자 섭외를 미리 준비해야 함",
+    "보컬·기악 2단계는 악보 5부 제출이 필요함"
+  ]
 }

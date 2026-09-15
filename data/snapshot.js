@@ -781,23 +781,56 @@ window.PM.SNAPSHOT = {
   "region": "서울",
   "deptName": "실용음악전공",
   "admissionsUrl": "https://admission.hongik.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://www.hongik.ac.kr/kr/admission/recruitment.do?mode=download&articleNo=152315&attachNo=91150",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "공연예술우수자전형(공연예술학부 실용음악전공)",
+      "majors": ["보컬", "드럼", "베이스", "기타", "피아노", "관악기", "작곡"],
+      "quota": {
+        "보컬": 8,
+        "드럼": 3,
+        "베이스": 3,
+        "기타": 5,
+        "피아노": 4,
+        "관악기": 2,
+        "작곡": 3
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": [
+          "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17",
+          "2026-10-31", "2026-11-01"
+        ],
+        "announce": "2026-11-07"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "1단계(실기100%, 지원자 전원 응시)→2단계(실기80%+교과10%+출결10%=100%, 1단계 합격자만 응시) 단계별 전형. 세부전공별로 구성이 크게 달라 공통 수치를 하나로 특정할 수 없어 songCount/songType/accompaniment/durationMin/sheetMusicRequired는 null로 유지함. 보컬: 1단계 자유곡 1곡(1분40초 이내, 한국어 가창만 허용, 반주는 MR·무반주·본인반주(키보드/어쿠스틱기타) 중 택일, 악보 제출 불필요) → 2단계 자유곡 2곡(한국어 가사곡 1곡+영어 가사곡 1곡, 각 1분30초 이내, 반주자 1인 동반 가능(키보드만), 악보 각 5부 제출). 기악(드럼·베이스·기타·피아노·관악기): 1단계 자유곡 1곡(1분40초 이내, MR 전면 금지, 무반주 또는 지정된 악기 반주자 1인 동반만 가능, 악보 각 3부 제출) → 2단계 자유곡 2곡(BPM90 이상 펑크 스타일 1곡 + 자유곡 1곡, 각 1분30초 이내, 악보 5부 제출). 작곡: 1단계 즉석 멜로디 작곡·연주(1분 내외, 40점)+자유연주곡 1곡 연주(1분 내외, 60점, MR·반주자 불가, 심사위원용 악보 3부 제출) → 2단계 2마디 모티브로 16마디 멜로디 작곡(오선지, 제한시간 20분)+자가 연주(80점). 수능최저학력기준 없음."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-16",
+        "source": "https://www.hongik.ac.kr/kr/admission/recruitment.do?mode=download&articleNo=152315&attachNo=91150"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "전 세부전공 자유곡 위주 — 지정곡 없음",
+    "실기 80% + 교과10%·출결10%(내신 20%)로 실기 비중이 절대적, 수능최저학력기준 없음",
+    "1단계(실기 100%)를 통과해야 2단계(교과·출결 포함)에 응시할 수 있는 단계별 전형이므로 세부전공별로 2곡 이상 추가 준비 필요",
+    "기악(드럼·베이스·기타·피아노·관악기) 1단계는 MR 반주가 전면 금지되어 무반주 연주나 소규모 반주자 섭외를 미리 준비해야 함",
+    "보컬·기악 2단계는 악보 5부 제출이 필요함"
+  ]
 }
 ,
 {
@@ -1750,23 +1783,53 @@ window.PM.SNAPSHOT = {
   "region": "서울",
   "deptName": "현대실용음악학과",
   "admissionsUrl": "https://ipsi.sungshin.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.sungshin.ac.kr/bbs/filedown.php?bbsid=dataroom&file_seq=2919&save_file_nm=dataroom_20260709164605_8099.pdf&user_file_nm=2027%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%84%B1%EC%8B%A0%EC%97%AC%EC%9E%90%EB%8C%80%ED%95%99%EA%B5%90%20%EC%8B%A0%EC%9E%85%EC%83%9D%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "실기/실적(일반학생전형)",
+      "majors": ["보컬", "피아노", "기타", "베이스기타", "드럼"],
+      "quota": {
+        "보컬": 6,
+        "피아노": 2,
+        "기타": 1,
+        "베이스기타": 1,
+        "드럼": 1
+      },
+      "schedule": {
+        "apply": ["2026-09-08", "2026-09-11"],
+        "practical": ["2026-10-15", "2026-10-16", "2026-10-17", "2026-10-18"],
+        "announce": "2026-11-13"
+      },
+      "ratio": { "실기": 70, "내신": 30, "수능": 0 },
       "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": false,
+        "notes": "자신의 개성과 장점을 가장 잘 표현할 수 있는 자유곡 1곡(2분 내외), 암보로 가창·연주해야 하며 악보는 제출하지 않음. 보컬은 반주MR 사용, 자가반주, 무반주 중 택일 가능(반주자 동행 불가), 피아노를 제외한 반주악기는 개인 지참. 악기(피아노·기타·베이스기타·드럼)는 피아노를 제외하고 반주MR 사용 가능(반주자 동행 불가), 노래 불가, 기타·베이스기타는 이펙터 사용 금지, 피아노·드럼 이외 악기는 개인 지참. 반주 형태가 MR/자가반주/무반주 중 택일로 다양해 accompaniment는 단일 값으로 특정하지 않고 null로 유지. 반주MR 사용자는 원서접수 후 2026.09.15.(화) 18:00까지 MP3 파일을 원서접수 사이트에 업로드해야 함. 실기고사 일자는 전공·악기별 원서접수 순으로 배정되며 개인별 변경 불가. 수능최저학력기준 없음."
+      },
+      "competition": [
+        { "전공": "현대실용음악학과 전체", "모집인원": 11, "지원인원": 854, "경쟁률": 77.64, "연도": "2027학년도 수시", "source": "https://www.seoul.co.kr/news/society/2026/09/14/20260914500060" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.sungshin.ac.kr/bbs/filedown.php?bbsid=dataroom&file_seq=2919&save_file_nm=dataroom_20260709164605_8099.pdf&user_file_nm=2027%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%84%B1%EC%8B%A0%EC%97%AC%EC%9E%90%EB%8C%80%ED%95%99%EA%B5%90%20%EC%8B%A0%EC%9E%85%EC%83%9D%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "전공 자유곡 1곡(2분 내외) — 지정곡 없음, 악보 제출 불필요, 수능최저학력기준 없음",
+    "실기 70% + 학생부 30%(교과27%+출석3%)로 실기 비중이 매우 높음",
+    "반주는 MR·자가반주·무반주 중 택일 가능하지만 반주자 동행은 전면 불가하므로 사전에 반주 방식을 확정해야 함",
+    "기타·베이스기타는 이펙터 사용이 금지되어 순수 톤으로 연주를 준비해야 함",
+    "2027학년도 수시 실기/실적전형 경쟁률 77.64대1(11명 모집·854명 지원)로 실용음악 계열 중에서도 매우 높은 편"
+  ]
 }
 ,
 {
