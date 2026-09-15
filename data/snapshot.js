@@ -175,23 +175,74 @@ window.PM.SNAPSHOT = {
   "region": "경기",
   "deptName": "실용음악전공",
   "admissionsUrl": "https://admission.cau.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://admission.cau.ac.kr/file/pdfDown.pdf?sfn=20260805051607003_0c37226bf7e64ad79adafec6f6fdc72c.pdf&ofn=%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84+%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A9%28%EC%B5%9C%EC%A2%85%29.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "실기/실적(실기형) 글로벌예술학부 실용음악전공 - 연주(기타/드럼/건반)",
+      "majors": ["기타", "드럼", "건반"],
+      "quota": { "기타": 1, "드럼": 1, "건반": 1 },
+      "schedule": {
+        "apply": ["2026-09-08", "2026-09-11"],
+        "practical": ["2026-10-31", "2026-11-01"],
+        "announce": "2026-11-17"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "MR",
+        "durationMin": 2,
+        "sheetMusicRequired": true,
+        "notes": "자신이 준비한 자유곡 1곡 연주(MR 사용 가능, 2분 내외). 전자키보드·드럼·앰프 외의 개인사용 악기는 본인이 직접 지참(반주자 동반 금지). 준비한 곡(부분)의 악보 5부를 고사 당일 제출. MR 사용 시 필요한 트랙만 녹음한 USB(MP3파일) 지참, 음원 재생 오류 시 무반주로 진행. 반영비율은 일괄합산 실기80%+학생부(교과)15%+비교과(출결)5%=100%(연주·보컬 공통). 수능최저학력기준 없음."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://admission.cau.ac.kr/file/pdfDown.pdf?sfn=20260805051607003_0c37226bf7e64ad79adafec6f6fdc72c.pdf&ofn=%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84+%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A9%28%EC%B5%9C%EC%A2%85%29.pdf"
+      }
+    },
+    {
+      "id": "susi-vocal",
+      "season": "수시",
+      "name": "실기/실적(실기형) 글로벌예술학부 실용음악전공 - 보컬",
+      "majors": ["보컬"],
+      "quota": { "보컬": 1 },
+      "schedule": {
+        "apply": ["2026-09-08", "2026-09-11"],
+        "practical": ["2026-10-31", "2026-11-01"],
+        "announce": "2026-11-17"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "자신이 준비한 자유곡 1곡 가창, 반주는 MR·무반주·본인반주 중 택1(연주 트랙과 달리 반주 방식이 지원자 선택제라 accompaniment 단일값 특정 안 함; 소요시간도 원문에 연주와 공유 표기되어 별도 명시가 불명확해 null 유지). 전자키보드·드럼·앰프 외의 개인사용 악기는 본인이 직접 지참(반주자 동반 금지). 준비한 곡(부분)의 악보 5부를 고사 당일 제출. MR 사용 시 필요한 트랙만 녹음한 USB(MP3파일) 지참, 음원 재생 오류 시 무반주로 진행. 반영비율은 일괄합산 실기80%+학생부(교과)15%+비교과(출결)5%=100%(연주·보컬 공통). 수능최저학력기준 없음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://admission.cau.ac.kr/file/pdfDown.pdf?sfn=20260805051607003_0c37226bf7e64ad79adafec6f6fdc72c.pdf&ofn=%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84+%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A9%28%EC%B5%9C%EC%A2%85%29.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "수능최저학력기준이 없어 수능 부담 없이 실기·학생부에 집중 가능",
+    "일괄합산 실기80%+학생부(교과)15%+비교과(출결)5%로 실기 비중이 절대적",
+    "반주자 동반이 전면 금지되어 연주·보컬 모두 사실상 본인 연주/MR/무반주로만 준비해야 함",
+    "연주(기타/드럼/건반)는 자유곡 1곡(2분 내외, MR 가능), 보컬은 자유곡 1곡을 MR·무반주·본인반주 중 택1로 준비하며 두 트랙 모두 악보 5부를 사전 준비해 제출해야 함",
+    "전공별 모집인원이 각 1명(기타/드럼/건반/보컬)으로 매우 적어 실질 경쟁이 치열할 것으로 예상됨(공시된 경쟁률 없음)"
+  ]
 }
 ,
 {
