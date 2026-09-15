@@ -547,23 +547,76 @@ window.PM.SNAPSHOT = {
   "region": "서울",
   "deptName": "실용음악전공",
   "admissionsUrl": "https://ipsi.dongduk.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.dongduk.ac.kr/afile/fileDownloadById/26062609418Nt2En.do",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
+      "name": "실기우수자전형(공연예술대학 실용음악전공)",
+      "majors": ["보컬", "피아노", "드럼", "베이스", "기타"],
+      "quota": { "보컬": 8, "피아노": 3, "드럼": 2, "베이스": 2, "기타": 2 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": [
+          "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-03", "2026-10-04", "2026-10-09"
+        ],
+        "announce": "2026-11-17"
+      },
       "ratio": null,
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": false,
+        "notes": "세부전공별로 구성이 크게 달라 songCount/durationMin/accompaniment/ratio는 공통값으로 특정할 수 없어 null로 유지함. 보컬: 1단계(2분 이내, 자유곡 1곡, 500%수 선발)→2단계(총 5분 이내, 자유곡 2곡·가요 1곡 필수)의 2단계 전형이며, 1단계는 실기80%+학생부교과20%=100%(1000점)이지만 최종 합격은 2단계 실기 100%(1000점)만으로 결정됨. 피아노·드럼·베이스·기타(기악): 단일 단계, 자유곡 2곡(총 5분 이내), 실기80%+학생부교과20%=100%(1000점). 전 세부전공 공통: 지정곡 없음(전곡 자유곡), 보컬은 MR(USB)/반주자 동반/자가반주/무반주 모두 가능(싱송보컬·자작곡 지원 가능), 기악은 MR(USB)/반주자 동반/무반주 가능. 악보 제출 없음(단, 자작곡을 연주·가창하는 경우에만 악보 5부 제출). 대학수학능력시험 최저학력기준 없음(전체 모집단위 공통)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.dongduk.ac.kr/afile/fileDownloadById/26062609418Nt2En.do"
+      }
+    },
+    {
+      "id": "susi-teukgija",
+      "season": "수시",
+      "name": "특기자 특별전형(공연예술대학 실용음악전공)",
+      "majors": ["보컬", "피아노", "기악"],
+      "quota": { "실용음악전공": 5 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-04"],
+        "announce": "2026-11-17"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 2,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 5,
+        "sheetMusicRequired": false,
+        "notes": "1단계 서류평가(입상·경력실적, 100%)로 500% 선발 후 2단계 실기80%+학생부교과20%=100%(1000점)으로 최종 선발. 실기내용은 보컬·피아노·기악 공통으로 자유곡 2곡(총 5분 이내, 장르구분 없음)+특기·질의응답. 보컬은 반주용 MR(USB)/반주자 동반/자가반주/무반주 모두 가능(싱송보컬 지원 가능), 기악은 MR(USB)/반주자 동반/무반주 가능하여 accompaniment는 하나로 특정할 수 없어 null 유지. 악보 제출 없음(단, 자작곡 연주·가창 시 악보 5부 제출). 지원자격: 현재 활동 중인 가수·연주자로 소속사 대표 추천 또는 가수협회 등 소속 협회장 추천이 필요하며, 방송사 오디션 10위 이내 입상/공중파·케이블 3회 이상 출연/음악순위 프로그램 15위 이내 수상/정규음반 1집 이상 발표 중 하나를 충족해야 함. 대학수학능력시험 최저학력기준 없음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.dongduk.ac.kr/afile/fileDownloadById/26062609418Nt2En.do"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기우수자전형 보컬은 1단계(2분·자유곡 1곡)→2단계(5분·자유곡 2곡, 가요 1곡 필수)의 2단계 구성이며 최종 합격은 2단계 실기 성적만으로 결정되므로, 1단계 통과 이후 별도의 2단계용 레퍼토리(가요 포함)를 준비해야 함",
+    "실기우수자전형 기악(피아노·드럼·베이스·기타)은 단일 단계로 자유곡 2곡(총 5분 이내)이며 실기80%+학생부교과20%로 반영됨",
+    "전 세부전공·전형 공통으로 지정곡이 없고 자유곡 중심이며, 악보는 자작곡 연주·가창 시에만 5부 제출하면 됨",
+    "특기자 특별전형은 이미 활동 중인 가수·연주자만 지원 가능(오디션 10위 이내 입상, 방송 3회 이상 출연, 음악순위 15위 이내, 정규음반 발표 등 중 하나 충족 필요)하므로 일반 수험생은 실기우수자전형을 준비해야 함",
+    "전체 모집단위 공통으로 대학수학능력시험 최저학력기준이 없음"
+  ]
 }
 ,
 {
