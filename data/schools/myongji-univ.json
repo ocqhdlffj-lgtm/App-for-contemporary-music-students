@@ -5,21 +5,130 @@
   "region": "경기",
   "deptName": "아트앤멀티미디어음악학부",
   "admissionsUrl": "https://ipsi.mju.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://iphak.mju.ac.kr/images/mojib/20260720164633_2.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "실기/실적(실기우수자전형) 건반음악전공 - 피아노",
+      "majors": ["피아노"],
+      "quota": { "피아노": 10 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-05"],
+        "announce": "2026-12-09"
+      },
+      "ratio": { "실기": 70, "내신": 30, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 2,
+        "songType": "혼합",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "Etude에 준하는 곡 1곡 + 자유곡 1곡(단, 자유곡이 소나타일 경우 느린 악장 제외). 반영비율은 일괄합산 실기70%+학생부(교과)20%+출결10%=100%(전 세부트랙 공통). 수능최저학력기준 없음. 고사장발표 2026.9.29, 실기고사장은 자연캠퍼스(용인)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://iphak.mju.ac.kr/images/mojib/20260720164633_2.pdf"
+      }
+    },
+    {
+      "id": "susi-vocal",
+      "season": "수시",
+      "name": "실기/실적(실기우수자전형) 보컬뮤직전공 - 성악",
+      "majors": ["성악"],
+      "quota": { "성악(남)": 5, "성악(여)": 5 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-17", "2026-10-18"],
+        "announce": "2026-12-09"
+      },
+      "ratio": { "실기": 70, "내신": 30, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 2,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "라이브",
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "이태리 가곡 또는 Opera Aria(Concerto Aria 포함) 1곡 + 독일 가곡 또는 Opera Aria(Concerto Aria 포함) 1곡(단, Opera Aria 연주 시 원조로 연주해야 하며 두 곡은 서로 다른 언어의 가곡이어야 함), 반주자 대동(본교 반주자 미제공, 지원자 개별 대동). 반영비율은 일괄합산 실기70%+학생부(교과)20%+출결10%=100%(전 세부트랙 공통). 수능최저학력기준 없음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://iphak.mju.ac.kr/images/mojib/20260720164633_2.pdf"
+      }
+    },
+    {
+      "id": "susi-ssw",
+      "season": "수시",
+      "name": "실기/실적(실기우수자전형) 보컬뮤직전공 - 싱어송라이터",
+      "majors": ["싱어송라이터"],
+      "quota": { "싱어송라이터": 7 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-24"],
+        "announce": "2026-12-09"
+      },
+      "ratio": { "실기": 70, "내신": 30, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 2,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "본인의 자작곡 2곡을 본인의 악기(피아노 또는 기타)로 직접 반주하며 노래(반주자 동반·MR 불가, 완전 본인연주). 심사위원에 따라 추가곡·코드·초견·간단한 질의응답 진행될 수 있음. 실기고사 당일 멜로디와 코드를 기입한 자작곡 악보 각 5부 준비·제출. 반영비율은 일괄합산 실기70%+학생부(교과)20%+출결10%=100%(전 세부트랙 공통). 수능최저학력기준 없음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://iphak.mju.ac.kr/images/mojib/20260720164633_2.pdf"
+      }
+    },
+    {
+      "id": "susi-composition",
+      "season": "수시",
+      "name": "실기/실적(실기우수자전형) 작곡전공",
+      "majors": ["작곡"],
+      "quota": { "작곡": 8 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-03", "2026-10-04", "2026-10-05", "2026-10-06"],
+        "announce": "2026-12-09"
+      },
+      "ratio": { "실기": 70, "내신": 30, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 120,
+        "sheetMusicRequired": null,
+        "notes": "노래 실기가 아닌 필기형 창작 실기: 주어진 동기(높은음자리표 2마디)로 16~24마디 멜로디 작곡(화성분석 또는 코드분석 포함), 기본 16마디 완성 후 24마디까지 연장 가능. 실기고사 시간 120분. 반영비율은 일괄합산 실기70%+학생부(교과)20%+출결10%=100%(전 세부트랙 공통). 수능최저학력기준 없음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://iphak.mju.ac.kr/images/mojib/20260720164633_2.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "전 세부트랙 공통으로 수능최저학력기준이 없어 수능 부담 없이 실기·학생부에 집중 가능",
+    "일괄합산 실기70%+학생부(교과)20%+출결10%로 실기 비중이 절대적",
+    "피아노는 Etude 1곡+자유곡 1곡, 성악은 이태리·독일 가곡(오페라 아리아 포함) 각 1곡을 서로 다른 언어로 준비해야 함",
+    "싱어송라이터는 반주자 동반·MR 사용이 전면 금지되어 본인 악기(피아노/기타)로 자작곡 2곡을 직접 반주하며 불러야 하고, 악보 5부 사전 준비 필요",
+    "작곡전공은 노래 실기가 아닌 120분 필기형 창작(주어진 동기로 16~24마디 멜로디 작곡) 시험이므로 준비 방식이 다른 세부트랙과 완전히 다름"
+  ]
 }
