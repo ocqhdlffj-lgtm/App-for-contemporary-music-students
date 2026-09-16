@@ -10,16 +10,48 @@
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 일반전형(실기)",
+      "majors": ["보컬", "컴퓨터음악/작곡", "기악(피아노/기타/베이스/드럼)"],
+      "quota": {
+        "정원내_일반전형(실기)": 13,
+        "정원내_특별전형_지역인재": 1,
+        "정원내_특별전형_고른기회": 5,
+        "정원외_특별전형(5종_각1명)": 5
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-16"],
+        "announce": "2026-10-30"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": true,
+        "notes": "분야별 실기 내용: 보컬은 자유곡 1곡 암보(반주자 동반 시 본인 외 1명, 또는 MR/USB/핸드폰 준비), 기악(피아노·기타·베이스·드럼 중 택1)은 자유곡 1곡 2분 이내(반주자 또는 MR 준비), 컴퓨터음악/작곡은 자작곡 1곡(MP3 음원+악보) 제출. 반주 형태는 MR 또는 반주자 동반 중 선택 가능하여 단일 값으로 표기 불가. 악보 사본 3부는 실기고사 당일 제출."
+      },
+      "competition": [
+        {
+          "연도": "2026",
+          "전형": "일반전형(실기)",
+          "경쟁률": 2.53,
+          "비고": "전년도(2026학년도) 모집요강에 게재된 참고 수치"
+        }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://apply.sau.ac.kr/portal/js/pdfjs-1.9.426-dist/web/files/apply_2027.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 반영비율이 80%로 매우 높아 실기 준비가 당락의 핵심",
+    "보컬/기악 모두 자유곡 1곡, 실기시간 2분 이내로 짧아 곡 편집이 중요",
+    "대학수학능력시험 성적은 반영하지 않음"
+  ]
 }
