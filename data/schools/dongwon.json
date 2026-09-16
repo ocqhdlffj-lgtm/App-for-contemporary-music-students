@@ -5,21 +5,74 @@
   "region": "경기",
   "deptName": "실용음악과",
   "admissionsUrl": "https://ipsi.tw.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.tw.ac.kr/uploads/CONTENTS/site/ipsi/2027_%EB%8F%99%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90_%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%9B%B9%EC%9A%A9.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
+      "name": "수시1차모집 일반전형",
       "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "quota": { "실용음악과": 25 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-14", "2026-10-15"],
+        "announce": "2026-10-30"
+      },
+      "ratio": { "실기": 0, "내신": 100, "수능": 0 },
       "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "모집요강 학과 소개 페이지(p.11)에는 성적반영이 '학생부 100%(1~3학년 중 가장 우수한 5개 학기 반영)'로 명시되어 있음. 한편 전형일정표(p.36)에는 실용음악과에 한해 별도 실기고사(2026.10.14~10.15)가 지정되어 있고 미응시자는 불합격 처리되며, 전형료 규정(p.37)에도 '실기포함 전형료 60,000원(실기고사료 30,000원 포함)'이 명시되어 실기고사가 응시 필수임. 곡 수·자유곡/지정곡 여부·반주 형태 등 실기 내용은 모집요강에 기재되어 있지 않아 확인 불가(추측 금지, null 유지). 수능최저학력기준에 대한 언급은 문서 전체에 없음(수능최저 없음으로 확인)."
+      },
+      "competition": [
+        { "전형": "일반전형(수시1차)", "경쟁률": 2.52, "연도": "2026학년도(전년도 참고자료)", "source": "https://ipsi.tw.ac.kr/uploads/CONTENTS/site/ipsi/2027_%EB%8F%99%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90_%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%9B%B9%EC%9A%A9.pdf" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.tw.ac.kr/uploads/CONTENTS/site/ipsi/2027_%EB%8F%99%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90_%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%9B%B9%EC%9A%A9.pdf"
+      }
+    },
+    {
+      "id": "susi2",
+      "season": "수시",
+      "name": "수시2차모집 일반전형",
+      "majors": [],
+      "quota": { "실용음악과": 12 },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-02", "2026-12-03"],
+        "announce": "2026-12-18"
+      },
+      "ratio": { "실기": 0, "내신": 100, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "수시1차와 동일하게 성적반영은 '학생부 100%'로 명시되어 있으나 실용음악과 전용 실기고사(2026.12.02~12.03)가 별도로 지정되어 있고 미응시시 불합격 처리됨. 실기 세부내용(곡 수·유형·반주 등)은 모집요강에 없어 null 유지."
+      },
+      "competition": [
+        { "전형": "일반전형(수시2차)", "경쟁률": 2.83, "연도": "2026학년도(전년도 참고자료)", "source": "https://ipsi.tw.ac.kr/uploads/CONTENTS/site/ipsi/2027_%EB%8F%99%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90_%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%9B%B9%EC%9A%A9.pdf" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.tw.ac.kr/uploads/CONTENTS/site/ipsi/2027_%EB%8F%99%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90_%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%9B%B9%EC%9A%A9.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "성적반영이 학생부 100%이지만 실용음악과에 한해 별도 실기고사가 필수이며 미응시 시 불합격 처리되므로, 실기고사를 반드시 응시해야 함(실기 반영비율 자체는 미공개)",
+    "수능최저학력기준이 없어 수능 성적 없이도 지원 가능",
+    "실기고사 세부내용(곡 수, 자유곡/지정곡, 반주형태)은 모집요강에 공개되지 않아 사전에 학과 사무실(031-760-0528) 확인이 필요함"
+  ]
 }
