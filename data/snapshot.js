@@ -1617,23 +1617,81 @@ window.PM.SNAPSHOT = {
   "region": "제주",
   "deptName": "음악과",
   "admissionsUrl": "https://ipsi.chu.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.chu.ac.kr/pdf/2027_susi.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차",
+      "majors": ["클래식(전악기)", "성악", "보컬 및 뮤지컬", "실용음악(전악기)"],
+      "quota": {
+        "일반전형": 16,
+        "정원내 특별전형(대학자체)": 1,
+        "계": 17
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17"],
+        "announce": "2026-10-30"
+      },
+      "ratio": { "실기": 60, "내신": 40, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": 5,
+        "sheetMusicRequired": true,
+        "notes": "2027학년도 수시모집요강 '실기고사 종목 및 내용' 정식 표(p.33) 기준. 4개 전공(클래식 전악기/성악/보컬 및 뮤지컬/실용음악 전악기) 모두 공통으로 자유곡 1곡, 5분 내외, 심사용 악보 1부 제출(실기전형 당일), 모든 연주는 암보로 진행. 반주는 '반주자 1인 동반 가능(MR사용, 무반주 가능)'으로 명시되어 MR/라이브(반주자 동반)/무반주 3가지가 모두 허용되므로 accompaniment는 단일값으로 특정하지 않고 null로 둠. 곡 장르는 보컬 및 뮤지컬 전공만 '팝, 재즈, 가요 중 자유곡'으로 한정되고 나머지는 장르 제한 없는 자유곡. 피아노·드럼·앰프 이외의 악기는 본인이 지참해야 함. 실기고사 미응시자는 불합격 처리됨. 반영비율은 'Ⅳ.전형방법 - 성적 반영 방법' 정식 규정표(p.28, 일반전형/고른기회Ⅱ 모두 음악과: 학생부성적40%(400점)+실기고사60%(600점)=100%(1,000점))로 확인, 학과소개 페이지에는 별도 반영비율 요약이 없어 대조할 요약 자료가 없었음(단일 출처, 규정표 자체에서 확인, 일반전형·고른기회Ⅱ 두 전형 간에도 서로 동일해 내부 모순 없음). 대학수학능력시험 최저학력기준 적용 대상 학과 표(p.29)에 음악과가 포함되어 있지 않아(간호학과·물리치료과만 해당, 그마저도 수시2차 일반전형에만 적용) minCsat: null(수능최저 없음 확정)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.chu.ac.kr/pdf/2027_susi.pdf"
+      }
+    },
+    {
+      "id": "susi2",
+      "season": "수시",
+      "name": "수시2차",
+      "majors": ["클래식(전악기)", "성악", "보컬 및 뮤지컬", "실용음악(전악기)"],
+      "quota": {
+        "일반전형": 2,
+        "계": 2
+      },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-03"],
+        "announce": "2026-12-17"
+      },
+      "ratio": { "실기": 60, "내신": 40, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": 5,
+        "sheetMusicRequired": true,
+        "notes": "실기고사 종목·내용·반영비율은 수시1차와 동일(수시1차 트랙 notes 참고). 수능최저학력기준 적용 대상 학과표(p.29)에 음악과가 없어 수시2차에도 minCsat: null(수능최저 없음)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.chu.ac.kr/pdf/2027_susi.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기60%+학생부40%로 실기 비중이 더 크므로 실기 완성도에 집중하되 내신 관리도 병행할 것",
+    "전공 불문 자유곡 1곡·5분 내외·전곡 암보가 공통 요건이며, 반주는 MR·반주자 동반·무반주 중 선택 가능",
+    "보컬 및 뮤지컬 전공은 곡 장르가 팝/재즈/가요로 한정되므로 해당 장르 내에서 곡을 선정할 것",
+    "수능최저학력기준이 없어 수능 성적과 무관하게 지원 가능",
+    "수시2차 모집인원(2명)이 수시1차(17명)보다 훨씬 적어 수시1차 지원이 절대적으로 유리함"
+  ]
 }
 ,
 {
