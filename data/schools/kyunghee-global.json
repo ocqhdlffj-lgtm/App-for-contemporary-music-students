@@ -5,21 +5,85 @@
   "region": "경기",
   "deptName": "PostModern음악학과",
   "admissionsUrl": "https://iphak.khu.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://kr.object.gov-ncloudstorage.com/khuiphakstorage/upload/20260513065257380_2027%ED%95%99%EB%85%84%EB%8F%84%20%EA%B2%BD%ED%9D%AC%EB%8C%80%ED%95%99%EA%B5%90%20%EC%88%98%EC%8B%9C%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EC%B5%9C%EC%A2%85.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "실기우수자전형 (연주: 보컬·관악기·현악기·국악기·베이스·드럼·타악기·피아노·기타)",
+      "majors": ["보컬", "관악기", "현악기", "국악기", "베이스", "드럼", "타악기", "피아노", "기타"],
+      "quota": {
+        "보컬": 5,
+        "관악기·현악기·국악기": 5,
+        "베이스": 5,
+        "드럼·타악기": 5,
+        "피아노": 5,
+        "기타": 6
+      },
+      "schedule": {
+        "apply": ["2026-09-08", "2026-09-11"],
+        "practical": ["2026-09-29"],
+        "announce": "2026-11-25"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "practical": {
+        "songCount": 2,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": false,
+        "notes": "실기 세부내용이 실기분야별로 상이해 accompaniment/durationMin은 공통값을 특정하지 않고 null로 둠(songCount=2곡, 자유곡, 악보 제출 없음은 전 분야 공통). 보컬: 서로 다른 스타일 자유곡 2곡(한국어 가사곡 1+외국어 가사곡 1), 반주는 본인반주/반주자(1인) 동반/반주음원(mp3) 재생 중 택1(반주악기는 피아노 또는 어쿠스틱기타), 곡당 1분 이내(도입부+클라이막스 포함). 관악기·현악기·국악기·베이스·드럼·타악기: 서로 다른 스타일 자유곡 2곡, 무반주/반주음원/반주자(1인) 동반 중 택1(반주악기 자율); 관악기·현악기·국악기는 2곡 중 1곡 이상 반드시 실용음악(Jazz·Latin·Funk·Pop 등) 영역 곡 선택; 베이스는 어쿠스틱·일렉트릭베이스 모두 해당. 피아노: 서로 다른 스타일 자유곡 2곡, 무반주(반주음원·반주자 동반 모두 불가). 기타(Guitar): 서로 다른 스타일 자유곡 2곡, 무반주 또는 반주자(1인) 동반 중 택1(반주음원 이용 불가); 어쿠스틱·일렉트릭기타 모두 해당. 실기고사일은 2026-09-29부터 시작(종료일은 모집요강에 미기재, 고사장 확인은 2026-09-23 대학 홈페이지 공지). 반주음원 제출기간: 2026-09-14~09-18. 서류제출 마감: 2026-09-15. 대학수학능력시험 최저학력기준: 없음(모집요강에 명시)."
+      },
+      "competition": [
+        { "전공": "PostModern음악학과 전체(전 실기분야 통합)", "모집인원": 36, "지원인원": 2003, "경쟁률": 55.64, "연도": "2027학년도 수시", "source": "https://www.veritas-a.com/news/articleView.html?idxno=627458" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://kr.object.gov-ncloudstorage.com/khuiphakstorage/upload/20260513065257380_2027%ED%95%99%EB%85%84%EB%8F%84%20%EA%B2%BD%ED%9D%AC%EB%8C%80%ED%95%99%EA%B5%90%20%EC%88%98%EC%8B%9C%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EC%B5%9C%EC%A2%85.pdf"
+      }
+    },
+    {
+      "id": "susi-composition",
+      "season": "수시",
+      "name": "실기우수자전형 (실용음악작곡)",
+      "majors": ["실용음악작곡"],
+      "quota": { "실용음악작곡": 5 },
+      "schedule": {
+        "apply": ["2026-09-08", "2026-09-11"],
+        "practical": ["2026-09-29"],
+        "announce": "2026-11-25"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": "혼합",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "연주 종목(보컬·악기)과 형식 자체가 달라 songCount/accompaniment/durationMin은 공통값으로 특정하지 않고 null 유지. 구성: ① 자작곡 1곡 연주(1분 이내, 노래곡·연주곡 모두 가능, 노래와 연주(반주) 모두 본인이 직접 수행, 반주는 피아노 또는 어쿠스틱기타 중 택1, 반주음원 이용 불가·반주자 동반 불가, 실기고사 당일 연주할 자작곡 악보 5부 제출) ② 즉석 멜로디 작곡 1곡(당일 주어진 24마디 화성진행을 30초 이내로 보고 피아노 또는 어쿠스틱기타 반주와 가창으로 즉석 멜로디 작곡, 1분 이내). 실기고사일은 2026-09-29부터 시작(종료일 미기재). 대학수학능력시험 최저학력기준: 없음(모집요강에 명시)."
+      },
+      "competition": [
+        { "전공": "PostModern음악학과 전체(전 실기분야 통합)", "모집인원": 36, "지원인원": 2003, "경쟁률": 55.64, "연도": "2027학년도 수시", "source": "https://www.veritas-a.com/news/articleView.html?idxno=627458" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://kr.object.gov-ncloudstorage.com/khuiphakstorage/upload/20260513065257380_2027%ED%95%99%EB%85%84%EB%8F%84%20%EA%B2%BD%ED%9D%AC%EB%8C%80%ED%95%99%EA%B5%90%20%EC%88%98%EC%8B%9C%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EC%B5%9C%EC%A2%85.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "전 실기분야 수능최저학력기준 없음 — 수능 부담 없이 실기·학생부에 집중 가능",
+    "반영비율이 실기80%+학생부(교과·출결/봉사)20%로 실기 비중이 절대적",
+    "보컬·관악기·현악기·국악기·베이스·드럼·타악기·피아노·기타는 서로 다른 스타일의 자유곡을 2곡씩 준비해야 하며 악보를 제출하지 않아도 됨(암보 필요)",
+    "관악기·현악기·국악기 지원자는 자유곡 2곡 중 1곡 이상을 반드시 실용음악(Jazz·Latin·Funk·Pop 등) 영역에서 선택해야 함",
+    "피아노는 무반주만 허용되어 반주음원·반주자를 전혀 활용할 수 없음",
+    "실용음악작곡 전공은 사전에 준비하는 자작곡 연주(악보 5부 제출)와 현장 즉석 멜로디 작곡을 모두 평가하므로 즉흥 화성 반주·가창 연습이 별도로 필요함",
+    "2027학년도 수시 기준 PostModern음악학과 전체 경쟁률 55.64대1(36명 모집/2,003명 지원)로 매우 높은 경쟁률을 기록해 철저한 준비가 필요함"
+  ]
 }
