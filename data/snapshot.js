@@ -24,10 +24,12 @@ window.PM.SNAPSHOT = {
       "minCsat": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": { "level": "미확인", "checkedAt": "2026-09-16", "source": null }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "⚠️ phantom-record 의심: 안양대학교 실용음악과(강화캠퍼스)는 2022학년도 신설 이후 충원율 저조로 모집이 중단(사실상 폐과)된 것으로 확인됨. 2027학년도 안양대 입학처 수시모집요강 PDF(https://enter.anyang.ac.kr/10000013, 2026-09-16 확인)의 학과소개 목차 및 모집단위·모집인원 표(예술학부 공연예술전공/음악융합예술전공, 스포츠과학과, 게임콘텐츠학과만 등재)에 실용음악과가 전혀 등장하지 않음. 학과 홈페이지(www.anyang.ac.kr/practical)는 남아있으나 신입생 모집과 무관한 잔존 페이지로 추정. 실기전형 데이터를 채우지 않고 미확인으로 유지 — 학과 폐지 여부를 학교 측에 직접 확인 후 레코드 존치/삭제를 재검토할 것."
+  ]
 }
 ,
 {
