@@ -2395,23 +2395,43 @@ window.PM.SNAPSHOT = {
   "region": "경기",
   "deptName": "실용음악과",
   "admissionsUrl": "https://ipsi.yit.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.yit.ac.kr/resources/PV/2027%ED%95%99%EB%85%84%EB%8F%84%20%EC%97%AC%EC%A3%BC%EB%8C%80%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95%20%EB%82%B4%EC%A7%80%20%EC%B5%9C%EC%A2%85_%EC%99%B8%EC%A7%80%ED%8F%AC%ED%95%A8.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
+      "name": "수시1차 일반전형",
       "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "quota": { "실용음악과": 96 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17", "2026-10-19"],
+        "announce": "2026-11-03"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "여주대학교 자체 모집요강 PDF는 폰트 인코딩 문제로 본문 텍스트를 프로그램적으로 추출할 수 없어(브라우저 화면 렌더링만 가능, 자동 텍스트 검색 불가), 대신 한국전문대학교육협의회(KCCE)가 운영하는 전문대학포털의 공식 대학별 전형방법 데이터베이스에서 여주대학교 실용음악과 2027학년도 수시1차 일반전형 모집인원(96명)과 반영비율(실기80%+학생부20%)을 확인함. 실기고사 일정은 여주대학교 입학정보 페이지의 전형일정 표에서 확인(면접 10.17, 실기 10.17~10.19). 곡 수·자유곡/지정곡 여부·반주형태·시간 등 실기 세부내용은 이 경로로 확인되지 않아 null 유지(모집요강 원문 PDF에서 직접 확인 필요, 텍스트 추출 실패로 미확인). 수능최저학력기준 여부는 확인하지 못해 minCsat 관련 서술 생략."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://www.procollege.kr/web/college/webCollegeInfo_ent.do?univcode=73098000"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 80% + 내신(학생부) 20%로 실기 비중이 절대적임",
+    "정시모집에도 동일 학과(84명, 실기80%+학생부20%)가 있어 수시 미충원 시 정시 지원 기회가 있음",
+    "실기고사 세부내용(곡 수, 자유곡/지정곡, 반주형태)은 모집요강 원문 PDF(텍스트 추출 불가)를 직접 열람하거나 학과 사무실을 통해 사전 확인이 필요함"
+  ]
 }
 ,
 {
