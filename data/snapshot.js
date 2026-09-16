@@ -1169,10 +1169,12 @@ window.PM.SNAPSHOT = {
       "minCsat": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": { "level": "미확인", "checkedAt": "2026-09-17", "source": null }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "⚠️ phantom-record 확인(폐과): 광주대학교 입학처가 2019-11-14 공식 Q&A 답변에서 '2020학년도부터 음악학과는 폐과로 지정되어 신입생을 모집하지 않습니다'라고 명시적으로 밝힘(https://www.gwangju.ac.kr/bbs/bbs_ajax?b_id=iphak_occasional_ac&site=iphak&mn=342&sc_category=정시&type=view&password_type=view&offset=30&page=3&per_page=15&num_links=5&bs_idx=24990). 2027학년도 수시모집요강 PDF(https://iphak.gwangju.ac.kr/index?d=lib&action=download&id=602, 2026-09-17 poppler pdftotext로 정상 텍스트 추출 확인, 45페이지 전체)의 모집단위 목록 어디에도 '음악학과'가 등장하지 않음을 직접 확인함 — 학생부교과 4개 전형(일반학생 p.20, 나눔인재 p.21, 지역학생 p.22, 수급자·차상위 p.27) 및 실기/실적(실기일반) 전형(p.23, 모집단위: 스포츠과학부/태권도학과/사진영상미디어학과/문예창작과)의 모집단위 표를 모두 확인했으나 음악 관련 모집단위는 전혀 없음. 다만 학과 자체 홈페이지(kjumusic.gwangju.ac.kr)는 현재도 살아있고 '피아노전공 실기시험 전곡 연주!' 등 최근 공지도 게시되어 있어(재학생 대상 활동으로 추정), 두원공과대(doowon)·극동대(kdu) 사례처럼 학과 웹페이지 자체는 남아있지만 신입생 모집단위에서는 완전히 빠진 경우로 판단해 레코드를 삭제하지 않고 미확인으로 유지함. 2020학년도부터 이미 폐과되었으므로 향후 재모집 가능성은 낮으나, 존치 여부는 다음 라운드에서 재검토할 것"
+  ]
 }
 ,
 {
