@@ -5,21 +5,41 @@
   "region": "경기",
   "deptName": "보컬·K-POP콘텐츠과",
   "admissionsUrl": "https://iphak.osan.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://iphak.osan.ac.kr/usr/upload/ftp/2027_full_web.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
+      "name": "수시1차 일반전형(실기)",
       "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "quota": { "보컬·K-POP콘텐츠과": 20 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-16", "2026-10-17"],
+        "announce": "2026-10-30"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 수시1차 모집요강(전형요약)에는 '일반(실기): 실기80%+학생부20%'로만 명시되어 있고, 곡 수·자유곡/지정곡 여부·반주형태·시간 등 실기고사 세부내용은 조사 시점(2026-09-16)까지 대학 홈페이지(면접/실기안내 게시판)에 공지되지 않음 — 실기고사일(2026-10-16~17)에 임박해 개별 공지될 예정. 정원 외 특별전형(농어촌 1명·기초생활수급자 및 차상위 1명·전문대이상졸업자 1명, 외국인전형은 인원제한 없음)은 모집요강 전형별 지원자격에 별도 규정."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://iphak.osan.ac.kr/?menuno=441"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 80% + 학생부 20%로 실기 비중이 절대적임",
+    "수능최저학력기준이 없어 수능 성적 없이도 지원 가능",
+    "실기고사 세부내용(곡 수, 자유곡/지정곡, 반주형태)은 실기고사일 임박 시 대학 홈페이지 '면접/실기안내' 게시판에 공지되므로 사전에 확인이 필요함"
+  ]
 }
