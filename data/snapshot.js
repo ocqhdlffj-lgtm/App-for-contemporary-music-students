@@ -2,7 +2,7 @@
 // 정본은 data/schools/*.json 입니다.
 window.PM = window.PM || {};
 window.PM.SNAPSHOT = {
-  "dataVersion": "2026-09-16",
+  "dataVersion": "2026-09-17",
   "schools": [
 {
   "id": "anyang-univ",
@@ -442,23 +442,49 @@ window.PM.SNAPSHOT = {
   "region": "경남",
   "deptName": "뮤직공연예술학과",
   "admissionsUrl": "https://admission.cs.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://admission.cs.ac.kr/api/guide/pdfview?GUBUN=1",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
       "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "majors": ["뮤직공연전공", "예술교육콘텐츠전공"],
+      "quota": {
+        "일반계고교": 7,
+        "창신인재면접": 18,
+        "계": 25,
+        "비고": "뮤직공연전공+예술교육콘텐츠전공 합계 인원. 2027학년도 모집요강 II.모집단위 및 모집인원(p.5)에는 전공별 세부 인원이 별도 표기되지 않음"
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": [],
+        "announce": "2026-11-20"
+      },
+      "ratio": { "실기": 0, "내신": 100, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "실기고사 없음. 2027학년도 수시모집은 학생부교과 전형(일반계고교/지역인재/성인학습자 — 학생부(교과90+출결10) 100%)과 창신인재면접 전형(학생부 60%+면접고사 40%)만 운영하며, 실기(연주) 시험을 실시하지 않음. 면접고사일은 2026-10-23(창신인재면접 전형만 해당, 실기고사 아님). 출처: 2027학년도 창신대학교 수시 모집요강 III.전형유형별 지원자격(p.6), V.전형방법(p.9)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://admission.cs.ac.kr/api/guide/pdfview?GUBUN=1"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "이 학과는 실기고사 없이 학생부(교과+출결) 100%로 선발되는 학생부교과 전형이 중심이므로 고교 내신 관리가 당락을 좌우함",
+    "창신인재면접 전형을 지원할 경우 학생부 60%에 면접고사 40%가 반영되므로 면접 대비가 중요함",
+    "수능 최저학력기준이 적용되지 않음",
+    "뮤직공연전공과 예술교육콘텐츠전공이 함께 모집되며 모집단위 합산 인원만 공개되어 있어 전공별 경쟁률은 별도 확인이 필요함"
+  ]
 }
 ,
 {
