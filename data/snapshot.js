@@ -650,24 +650,48 @@ window.PM.SNAPSHOT = {
   "type": "4년제",
   "region": "경북",
   "deptName": "실용음악과",
-  "admissionsUrl": "https://www.cu.ac.kr/",
+  "admissionsUrl": "https://ibsi.cu.ac.kr/kor.do",
   "guideUrl": null,
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "실기/실적(실기일반전형)",
+      "majors": ["보컬", "댄스(K-Pop)", "피아노", "기타", "베이스", "드럼", "그 외 악기", "싱어송라이터", "실용작곡", "미디작곡"],
+      "quota": {
+        "보컬/댄스(K-Pop)": 10,
+        "피아노/기타/베이스/드럼/그 외 악기": 10,
+        "싱어송라이터/실용작곡/미디작곡": 7
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-09"],
+        "announce": "2026-11-11"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": false,
+        "notes": "파트별로 실기 형식이 상이함: (연주 파트: 보컬/피아노/기타/베이스/드럼/그 외 악기) 자유곡 1곡(MR 또는 실연 반주); (댄스(K-Pop)) 2분 이내 자유 안무 실연(AR 또는 실연 반주); (작곡 파트: 싱어송라이터) 자작곡 1곡 본인 실연(무반주); (작곡 파트: 실용작곡/미디작곡) 자작곡 1곡(AR/MR 또는 실연 반주). 공통사항: 전 파트 암보 연주, AR/MR(wave 또는 mp3 파일)은 실기고사 당일 USB로 제출, 반주자는 응시자 외 2인까지 가능(반주자는 악보 사용 가능), 연주 후 전공 관련 추가 테스트가 있을 수 있음. 파트별 형식이 근본적으로 달라 accompaniment/durationMin 공통값은 null로 둠."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://ibsi.cu.ac.kr/cmm/fms/getPdf/FILE_000000000000011/155.do"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기고사는 파트별(연주/댄스/작곡)로 요구되는 곡·반주 형식이 완전히 다르므로, 지원 예정 파트(보컬·기타 등 악기 연주인지, 댄스인지, 작곡인지)에 맞는 준비가 필요함.",
+    "전 파트 공통으로 암보(악보 없이) 연주가 원칙이며, 반주 음원(AR/MR)은 wave 또는 mp3 파일로 실기 당일 USB에 담아 제출해야 하므로 사전에 포맷을 맞춰 준비할 것.",
+    "실기 80%+학생부 20%로 실기 비중이 절대적이며 수능최저학력기준이 없어(전 모집단위 공통) 실기 완성도가 당락을 좌우함."
+  ]
 }
 ,
 {
