@@ -1120,23 +1120,39 @@ window.PM.SNAPSHOT = {
   "region": "인천",
   "deptName": "실용음악과",
   "admissionsUrl": "https://apply.jeiu.ac.kr:4443/apply/",
-  "guideUrl": null,
+  "guideUrl": "https://apply.jeiu.ac.kr:4443/apply/pdfDownloadView.do?menuSeq=43",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "minCsat": null,
-      "practical": null,
+      "name": "수시1차 대학자체기준 실기전형",
+      "majors": ["보컬", "피아노", "베이스", "드럼", "기타", "관현악기", "싱어송라이터", "작곡/컴퓨터음악", "뮤직테크놀로지", "음향제작"],
+      "quota": { "실용음악과": 17 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17"],
+        "announce": "2026-10-30"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "세부전공별로 실기고사 형식이 근본적으로 달라 공통값을 특정할 수 없음. (보컬·피아노·베이스·드럼·기타·관현악기) 자유곡 1곡. (싱어송라이터·작곡/컴퓨터음악) 본인 자작곡 1곡, 자작곡 악보 5부를 실기고사 당일 제출. (뮤직테크놀로지) 본인 자작곡 1곡 음원 재생 및 질의응답, 자작곡 음원 및 작품설명서 5부 제출. (음향제작) 녹음·믹스 관련 포트폴리오 및 질의응답(기존곡 또는 자작곡의 레코딩·믹싱 음원, 제작설명서), 레코딩 및 믹싱음원·제작설명서 5부 제출. 반영비율(학생부(교과)20%+실기80%=100%)은 세부전공·수시1차/2차/정시/정원외 특별전형(기초생활수급자 및 차상위계층) 전형 전체에 공통 적용. 수능최저학력기준 관련 문구는 모집요강 전체에서 발견되지 않아 minCsat 키를 비워둠(추측 금지). 입학정원 34명 중 수시1차 17명, 수시2차 11명(원서접수 2026-11-11~11-25, 실기고사 2026-12-05, 발표 2026-12-18), 정시 6명(원서접수 2027-01-04~01-20, 실기고사 2027-01-30, 발표 2027-02-05), 정원외 특별전형(기초생활수급자 및 차상위계층) 4명(반영비율 동일)으로 각각 별도 모집. 공시된 경쟁률은 찾지 못함. 학과안내(학과 소개 페이지) 섹션에는 목차상 실용음악과 항목이 있으나 실제 PDF에는 소개 페이지 자체가 누락되어 있음(모집인원·전형방법 등 입시 데이터 자체는 정상 게재)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": { "level": "부분확인", "checkedAt": "2026-09-16", "source": "https://apply.jeiu.ac.kr:4443/apply/pdfDownloadView.do?menuSeq=43" }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "세부전공(보컬·기악/싱어송라이터·작곡/뮤직테크놀로지/음향제작)에 따라 실기 형식이 완전히 다르므로 지원 전 본인 세부전공의 실기 규정을 정확히 확인해야 한다.",
+    "싱어송라이터·작곡/컴퓨터음악·뮤직테크놀로지·음향제작 세부전공은 악보·음원·제작설명서 등 서류를 실기 당일 5부 제출해야 하므로 사전에 인쇄·복사본을 준비해야 한다.",
+    "반영비율이 실기80%+학생부(교과)20%로 실기 비중이 절대적이므로 실기 완성도에 집중하는 것이 유리하다.",
+    "수시1차(17명) 정원이 수시2차(11명)·정시(6명)보다 많으므로 수시1차 지원이 상대적으로 유리하다."
+  ]
 }
 ,
 {
@@ -1197,24 +1213,40 @@ window.PM.SNAPSHOT = {
   "type": "전문대",
   "region": "경기",
   "deptName": "실용음악과",
-  "admissionsUrl": "https://www.kbu.ac.kr/",
-  "guideUrl": null,
+  "admissionsUrl": "https://efms.kbu.ac.kr/efms/Main.do",
+  "guideUrl": "https://efms.kbu.ac.kr/efms/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciwyOTg1OCxZ",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "minCsat": null,
-      "practical": null,
+      "name": "수시1차 실기위주 일반전형",
+      "majors": ["보컬"],
+      "quota": { "보컬": 20 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-16"],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": "MR",
+        "durationMin": 2,
+        "sheetMusicRequired": true,
+        "notes": "가요·Pop 중 자유곡 1곡(2분 내외, 반복 구간은 편집으로 회피), 상황에 따라 장르가 다른 추가 곡을 요구할 수 있음. 모든 곡은 암보로 연주하되 악보 5부 제출. 실기반주는 USB로 준비(CD 제출 불가). 실기고사 성적 30점 이하는 불합격 처리. 학과명은 모집요강상 정식으로 \"실용음악과(보컬)\"이며 보컬 전공에 한하여 모집함(다른 세부전공 없음). 입학정원 33명 중 위 20명은 수시1차 몫이며, 나머지는 수시2차·정시로 이월 모집(수시2차 실기고사 2026-12-04, 정시 실기고사 2027-01-27, 반영비율은 수시1차와 동일). 정원 외 고른기회2 전형으로 1명 추가 모집(반영비율 동일). 수능최저학력기준 관련 문구는 모집요강 전체에서 발견되지 않아 minCsat 키를 비워둠(추측 금지). 공시된 경쟁률은 찾지 못함"
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": { "level": "확인됨", "checkedAt": "2026-09-16", "source": "https://efms.kbu.ac.kr/efms/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciwyOTg1OCxZ" }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기는 자유곡(가요·Pop) 1곡, 2분 내외로 준비하되 반복 구간을 편집해 시간 안에 압축하는 연습이 필요하다.",
+    "암보 연주가 원칙이지만 악보 5부를 제출해야 하므로 채보·악보 준비도 병행해야 한다.",
+    "실기반주는 USB(MR)로만 인정되므로 사전에 파일 형식과 재생 테스트를 반드시 확인해야 한다.",
+    "반영비율이 실기80%+학생부(교과)20%로 실기 비중이 절대적이므로 실기 완성도에 집중하는 것이 유리하다."
+  ]
 }
 ,
 {
@@ -1237,10 +1269,12 @@ window.PM.SNAPSHOT = {
       "minCsat": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": { "level": "미확인", "checkedAt": "2026-09-16", "source": null }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "⚠️ phantom-record 의심: 극동대학교 실용음악학과(음성군 감곡캠퍼스)는 2027학년도 수시모집요강(https://www.kdu.ac.kr/ipsi/board/download.do?mncd=1331&fno=35089&bid=00000518&did=00053036, 2026-09-16 확인, pdftoppm으로 페이지 이미지 렌더 후 시각 확인 — 60MB 이미지 스캔 PDF라 텍스트 추출 불가)의 '01.모집단위 및 모집인원' 표(글로벌융합학부·사회복지학부·군사학과·항공대학 4개과·해킹보안학과·의료보건과학대학 4개과·K-컬처혁신대학 3개과, 총 15개 모집단위, 합계 737명)에 전혀 등장하지 않음. 2027학년도 정시모집요강(https://www.kdu.ac.kr/ipsi/download/2027_KDU_JungSi_260826.pdf, 동일 방식 확인)의 모집단위 표(나군+다군, 동일 15개 모집단위, 합계 762명)에도 마찬가지로 등장하지 않아, 수시·정시 모두 2027학년도 신입생을 전혀 모집하지 않는 것으로 확인됨. 학과 자체 홈페이지(www.kdu.ac.kr/pmusic/main.do)는 살아있고 대학 홈페이지 푸터의 '대학/대학원' 학과 링크 목록에도 남아 있으나, 학과 공지사항·갤러리에는 '테스트'라는 제목의 더미 게시물(2025-08-04)만 있어 실질적인 학과 운영 흔적이 없음. 안양대학교(anyang-univ) 사례와 동일하게 학과 웹페이지 자체는 남아있지만 입시 모집단위에서는 완전히 빠진 경우로 판단해 레코드를 삭제하지 않고 미확인으로 유지 — 학과 폐지·모집중단 여부를 학교 측에 직접 확인 후 존치 여부를 재검토할 것."
+  ]
 }
 ,
 {
