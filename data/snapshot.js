@@ -1236,18 +1236,39 @@ window.PM.SNAPSHOT = {
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "실기우수자전형(예술대학)",
+      "majors": ["보컬", "CCM", "기악(기타/베이스/드럼/건반)", "작곡"],
+      "quota": { "실용음악전공": 4 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-09"],
+        "announce": "2026-12-18"
+      },
+      "ratio": { "실기": 90, "내신": 10, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "실용음악전공은 보컬/CCM/기악(기타·베이스·드럼·건반)/작곡 중 1개 분야를 선택해 응시하며 세부 요건이 상이하여 공통값으로 정리 불가. 보컬·CCM·기악: 자유곡 1곡, 2분 이내, 전곡 암보(연주/노래), 무반주 가능하며 반주 시 새 USB에 mp3 입시곡만 저장해 당일 제출(코러스·더블링 들어간 MR 사용 금지), 전주 최대 4마디, 악보 3부 당일 제출, 반주자는 1인만 가능. 작곡: 주어진 동기(Motive)에 의한 16마디 선율 작곡(화음기호 또는 코드 표기), 노래/연주 없음. 피아노(건반)·드럼·앰프 외 개인 악기는 본인 지참, 드럼은 페달·스네어·개인스틱에 한해 개인장비 사용 가능."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://iphak.uhs.ac.kr/file/pdfDown.pdf?ofn=2027%ED%95%99%EB%85%84%EB%8F%84+%ED%98%91%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90+%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95%28%EC%B5%9C%EC%A2%85%29.pdf&sfn=20260618015124570_2027%ED%95%99%EB%85%84%EB%8F%84+%ED%98%91%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90+%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95%28%EC%B5%9C%EC%A2%85%29.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실용음악전공 실기우수자전형은 실기 90% + 학생부(교과성적) 10%로 실기 비중이 절대적이므로 실기 준비에 집중하되 내신도 최소 관리가 필요하다.",
+    "보컬·CCM·기악은 자유곡 1곡(2분 이내)을 전곡 암보로 준비해야 하며, MR 반주 시 코러스·더블링이 들어간 트랙은 금지되므로 반주 음원을 사전에 직접 확인해야 한다.",
+    "작곡 분야는 노래나 연주가 아닌 주어진 동기(Motive)를 활용한 16마디 선율 작곡 시험이므로 화성학·코드 표기 연습이 필요하다.",
+    "수시모집 전체 전형에서 수능최저학력기준을 적용하지 않으므로(요강 명시), 수능 최저 부담 없이 실기와 학생부 준비에 집중할 수 있다."
+  ]
 }
 ,
 {
