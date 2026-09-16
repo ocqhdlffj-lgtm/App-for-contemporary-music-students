@@ -104,18 +104,38 @@ window.PM.SNAPSHOT = {
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차",
+      "majors": ["보컬전공", "건반전공", "기타전공", "베이스전공", "드럼전공", "컴퓨터음악작곡전공"],
+      "quota": { "실용음악학과(정원내 일반전형)": 57 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-14"],
+        "announce": "2026-10-28"
+      },
+      "ratio": { "실기": 60, "내신": 40, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": "MR",
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "실용음악학과는 보컬/기악(기타·베이스·드럼·건반)/컴퓨터음악작곡 중 1개 종목을 선택하여 응시. 보컬·기악: 자유곡 1곡(부르기 또는 연주), 연주 및 노래 악보 5매 당일 제출, 반주자 1인 대동 가능하며 MR 사용 시 USB 이동디스크 지참(무반주도 가능, 본교 제공 MR 없음). 컴퓨터음악작곡: ①자작곡 1곡 연주 또는 ②창작물 1곡 제출(3분 이내) 중 선택, 제작과정·코드진행·의도를 담은 설명서 A4 1~2장 이내 5매 제출. 반주는 이동디스크(USB) 지참이며 무반주 진행도 가능."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.bscu.ac.kr/pdfView/ipsi/getDownload.do?pdfSeq=160&type=pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기전형 반영비율은 학생부 40%(400점)+실기 60%(600점)로, 학생부 반영비중이 상대적으로 높은 편이므로 내신 관리도 소홀히 하면 안 된다.",
+    "보컬/기악 전공은 자유곡 1곡과 악보 5매 제출이 핵심이며, 반주는 본인이 준비한 MR(USB) 또는 무반주로만 가능하니 반주 형태를 사전에 결정해야 한다.",
+    "컴퓨터음악작곡전공 지원자는 자작곡 연주 또는 창작물(3분 이내) 제출 중 하나를 선택할 수 있으므로 본인의 강점에 맞는 방식을 골라 준비한다."
+  ]
 }
 ,
 {
