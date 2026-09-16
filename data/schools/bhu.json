@@ -5,21 +5,154 @@
   "region": "부산",
   "deptName": "실용음악과",
   "admissionsUrl": "https://ipsi.bhu.ac.kr/ipsi",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.bhu.ac.kr/site/resource/dongju/ipsi/file/2026/2027학년도_부산보건대_모집요강.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 (실용음악과 3년제)",
+      "majors": [
+        "보컬",
+        "기악",
+        "작곡",
+        "K-POP",
+        "음향",
+        "레코딩",
+        "예술경영",
+        "문화·예술콘텐츠 크리에이터"
+      ],
+      "quota": {
+        "일반고특별전형": 8,
+        "특성화고특별전형": 1,
+        "대학자체특별전형": 7,
+        "고른기회특별전형": 1
+      },
+      "schedule": {
+        "apply": [
+          "2026-09-07",
+          "2026-09-30"
+        ],
+        "practical": [
+          "2026-10-08",
+          "2026-10-09",
+          "2026-10-10"
+        ],
+        "announce": "2026-10-23"
+      },
+      "ratio": {
+        "실기": 90,
+        "내신": 10,
+        "수능": 0
+      },
       "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "전공별 실기 내용이 크게 달라 공통 songType/accompaniment/시간을 확정할 수 없어 세부값은 비워둠(모집요강 p.71~72). 보컬: 자유곡 1곡, 반주자 또는 MR(Audio CD/USB) 사용. 기악: 자유곡 1곡, 반주자 또는 MR(Audio CD/USB) 사용. 작곡(싱어송라이터·K-POP·힙합·EDM·컴퓨터음악·멀티미디어사운드디자인): 자신의 작품이나 자유곡 1곡 연주 또는 가창(자유곡 선택 시 반주자 또는 MR 사용 가능, Audio CD/USB). K-POP: 자유곡 가창이나 댄스 중 택1. 음향·레코딩·예술경영·문화·예술콘텐츠 크리에이터: 실기 없이 전공 관련 심층 면접(질의응답)으로 진행. 실기 반영비율은 모든 세부전공 공통 90%(교과성적8%+출석2%). 수시1차 지원 시 전형료(2만원)에 실기고사료(3만원)를 더해 총 5만원 결제. 학생부·수능 최저학력기준 없음."
+      },
+      "competition": [
+        {
+          "전형": "일반고특별전형",
+          "경쟁률": 2.8,
+          "평균등급": 5.5,
+          "합격등급": 6.9,
+          "연도": "2026학년도 수시1차",
+          "source": "https://ipsi.bhu.ac.kr/site/resource/dongju/ipsi/file/2026/2027학년도_부산보건대_모집요강.pdf"
+        },
+        {
+          "전형": "특성화고특별전형",
+          "경쟁률": 3.6,
+          "평균등급": 4.2,
+          "합격등급": 7.2,
+          "연도": "2026학년도 수시1차",
+          "source": "https://ipsi.bhu.ac.kr/site/resource/dongju/ipsi/file/2026/2027학년도_부산보건대_모집요강.pdf"
+        }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.bhu.ac.kr/site/resource/dongju/ipsi/file/2026/2027학년도_부산보건대_모집요강.pdf"
+      }
+    },
+    {
+      "id": "susi2",
+      "season": "수시",
+      "name": "수시2차 (실용음악과 3년제)",
+      "majors": [
+        "보컬",
+        "기악",
+        "작곡",
+        "K-POP",
+        "음향",
+        "레코딩",
+        "예술경영",
+        "문화·예술콘텐츠 크리에이터"
+      ],
+      "quota": {
+        "일반고특별전형": 1,
+        "특성화고특별전형": 1,
+        "대학자체특별전형": 1,
+        "고른기회특별전형": 1
+      },
+      "schedule": {
+        "apply": [
+          "2026-11-11",
+          "2026-11-25"
+        ],
+        "practical": [
+          "2026-11-28",
+          "2026-11-29"
+        ],
+        "announce": "2026-12-10"
+      },
+      "ratio": {
+        "실기": 90,
+        "내신": 10,
+        "수능": 0
+      },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "전공별 실기 내용이 크게 달라 공통 songType/accompaniment/시간을 확정할 수 없어 세부값은 비워둠(모집요강 p.71~72). 보컬: 자유곡 1곡, 반주자 또는 MR(Audio CD/USB) 사용. 기악: 자유곡 1곡, 반주자 또는 MR(Audio CD/USB) 사용. 작곡(싱어송라이터·K-POP·힙합·EDM·컴퓨터음악·멀티미디어사운드디자인): 자신의 작품이나 자유곡 1곡 연주 또는 가창(자유곡 선택 시 반주자 또는 MR 사용 가능, Audio CD/USB). K-POP: 자유곡 가창이나 댄스 중 택1. 음향·레코딩·예술경영·문화·예술콘텐츠 크리에이터: 실기 없이 전공 관련 심층 면접(질의응답)으로 진행. 실기 반영비율은 모든 세부전공 공통 90%(교과성적8%+출석2%). 수시1차 지원 시 전형료(2만원)에 실기고사료(3만원)를 더해 총 5만원 결제. 학생부·수능 최저학력기준 없음."
+      },
+      "competition": [
+        {
+          "전형": "일반고특별전형",
+          "경쟁률": 9.0,
+          "평균등급": 6.4,
+          "합격등급": 6.8,
+          "연도": "2026학년도 수시2차",
+          "source": "https://ipsi.bhu.ac.kr/site/resource/dongju/ipsi/file/2026/2027학년도_부산보건대_모집요강.pdf"
+        },
+        {
+          "전형": "특성화고특별전형",
+          "경쟁률": 7.0,
+          "평균등급": 5.3,
+          "합격등급": 6.4,
+          "연도": "2026학년도 수시2차",
+          "source": "https://ipsi.bhu.ac.kr/site/resource/dongju/ipsi/file/2026/2027학년도_부산보건대_모집요강.pdf"
+        }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.bhu.ac.kr/site/resource/dongju/ipsi/file/2026/2027학년도_부산보건대_모집요강.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 90%(교과성적8%+출석2%)로 실기 비중이 절대적이며 학생부·수능 최저학력기준 없음",
+    "보컬·기악·작곡(자유곡 선택 시)은 반주자 또는 MR(Audio CD/USB) 사용 가능, K-POP은 가창·댄스 중 택1, 음향·레코딩·예술경영·문화·예술콘텐츠 크리에이터는 실기 없이 심층 면접으로 진행되어 지원 전공에 따라 준비 방향이 크게 다름",
+    "수시1차 지원 시 전형료(2만원)에 실기고사료(3만원)가 추가되어 총 5만원을 결제해야 함",
+    "수시2차 정원(전형별 1명)이 수시1차보다 훨씬 적어(전형별 7~8명) 수시1차 집중 지원이 유리함"
+  ]
 }
