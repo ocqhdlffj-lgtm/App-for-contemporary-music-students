@@ -18,8 +18,10 @@
       "minCsat": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": { "level": "미확인", "checkedAt": "2026-09-16", "source": null }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "⚠️ phantom-record 의심: 경인여자대학교 실용음악과(주간)는 2013.7.2. 학과 신설 이력이 확인되나(한국어 위키백과·나무위키 연혁), 2027학년도 경인여대 입학홈페이지 신입학 모집요강 PDF(https://start.kiwu.ac.kr/new_start/kiwu/file/2027_susi.pdf?ver=20260904, 2026-09-16 확인)의 '03.모집학과 및 모집인원' 표(수시1차 p.17, 수시2차 p.19)와 '2026학년도 수시1차 지난 입시결과' 표(p.18) 어디에도 실용음악과가 등장하지 않음 — 보건복지계열/K-Culture계열/정원외전담학과를 포함한 전체 모집단위 목록에 부재. 즉 2026학년도(전년도)부터 이미 모집이 중단된 것으로 보임. 실기전형 데이터를 채우지 않고 미확인으로 유지 — 학과 폐지 여부를 학교 측에 직접 확인 후 레코드 존치/삭제를 재검토할 것."
+  ]
 }
