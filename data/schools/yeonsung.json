@@ -5,21 +5,71 @@
   "region": "경기",
   "deptName": "K-POP과",
   "admissionsUrl": "https://www.yeonsung.ac.kr/ipsi/cms/FR_CON/index.do?MENU_ID=580&CONTENTS_NO=1",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.yeonsung.ac.kr/ipsi/pdffile/pdf/FI000000000006166/2027%EC%97%B0%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90-%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EB%82%B1%EC%9E%A5.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "minCsat": null,
-      "practical": null,
+      "name": "수시1차 정원내 일반전형",
+      "majors": ["보컬", "댄스퍼포먼스", "랩", "미디어싱어송라이터"],
+      "quota": { "K-POP과": 27 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17", "2026-10-25"],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": null,
+        "notes": "K-POP과는 실기 시행학과(면접 없음)로 세부 평가영역이 보컬/댄스퍼포먼스/랩/미디어싱어송라이터 4개로 나뉨. 보컬: 자유곡 1곡, 2분 이내, 반주는 무반주·MR·자가반주(전자피아노 제공, 기타는 본인 지참)·반주자 동반(1명 제한) 중 선택. 댄스퍼포먼스: 자유댄스 1곡+자유곡 1곡을 각 2분 이내로 모두 응시(두 분야 동시 평가), 보컬 부분은 무반주로 진행. 랩: 자유곡 1곡, 2분 이내, MR 전주는 10초 이내로 편집. 미디어싱어송라이터: 자작곡 1곡, 2분 이내, 본인이 작업한 MR에 가창. 반주 형태가 영역별로 다르고 댄스퍼포먼스는 곡 구성 자체가 달라 accompaniment는 공통값으로 특정하지 않고 null 유지. MR/AR은 MP3 파일로 저장해 고사 당일 USB 제출, 코러스·보컬 더빙 불가. 악보 제출 관련 언급은 모집요강 전체에서 찾지 못해 sheetMusicRequired는 null 유지. 수시1차 정원 27명(정원내 일반전형, 정원외 특별전형은 모집 없음)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.yeonsung.ac.kr/ipsi/pdffile/pdf/FI000000000006166/2027%EC%97%B0%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90-%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EB%82%B1%EC%9E%A5.pdf"
+      }
+    },
+    {
+      "id": "susi2",
+      "season": "수시",
+      "name": "수시2차 정원내 일반전형",
+      "majors": ["보컬", "댄스퍼포먼스", "랩", "미디어싱어송라이터"],
+      "quota": { "K-POP과": 15 },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-02", "2026-12-06"],
+        "announce": "2026-12-17"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": null,
+        "notes": "실기고사 평가영역·방법은 수시1차(susi 트랙)와 동일(보컬/댄스퍼포먼스/랩/미디어싱어송라이터). 수시1차 결원 발생 시 수시2차로 이월 모집하며, 수시2차 정원 15명(정원내 일반전형). 세부 실기 규정은 susi 트랙 notes 참조."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.yeonsung.ac.kr/ipsi/pdffile/pdf/FI000000000006166/2027%EC%97%B0%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90-%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EB%82%B1%EC%9E%A5.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 80% + 학생부 20%(수능 미반영)로 실기 비중이 절대적",
+    "K-POP과는 보컬·댄스퍼포먼스·랩·미디어싱어송라이터 4개 평가영역이 있으며 지원 시 하나를 선택해 응시(댄스퍼포먼스는 춤과 노래를 모두 준비해야 하는 이중 부담이 있음)",
+    "모든 곡은 2분 이내로 준비하고 MR/AR은 MP3 파일로 저장해 고사 당일 USB로 제출해야 함(코러스·보컬 더빙 불가, 전주는 10초 이내로 편집)",
+    "보컬은 무반주·MR·자가반주(전자피아노 제공)·반주자 동반(1명 제한) 중 선택할 수 있어 본인에게 유리한 반주 방식을 사전에 정해야 함",
+    "수시1차 모집인원(27명)이 수시2차(15명)보다 많으므로 수시1차 지원이 상대적으로 유리할 수 있음",
+    "수능최저학력기준에 대한 명시적 언급을 모집요강 전체에서 찾지 못해 minCsat은 미기재로 남김 — 지원 전 입학처에 재확인 필요"
+  ]
 }

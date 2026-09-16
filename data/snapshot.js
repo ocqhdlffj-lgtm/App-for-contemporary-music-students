@@ -1826,23 +1826,104 @@ window.PM.SNAPSHOT = {
   "region": "경기",
   "deptName": "실용음악학과",
   "admissionsUrl": "https://entrance.ptu.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://entrance.ptu.ac.kr/bbs/entrance/255/23099/download.do",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "PTU실기전형 - 보컬",
+      "majors": ["보컬"],
+      "quota": { "보컬": 5 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-23"],
+        "announce": "2026-11-20"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 3,
+        "sheetMusicRequired": null,
+        "notes": "자유곡 1곡, 반주는 MR·기타·피아노 중 선택 가능(반주 형태가 택1 다양 옵션이라 accompaniment 단일값 특정 안 함). 실용음악학과 공통 유의사항: 모든 곡은 암보(외워서 연주), 연주시간 3분 내외(심사위원 판단시 중단 가능), 필요시 심사위원 질의응답 있음, 배경음악/MR은 반드시 USB로 지참(CD 재생 불가), 반주자 동반 가능. 보컬 항목에는 악보 제출에 대한 명시적 언급이 없음(기악의 건반 세부전공만 '연주 악보 5부 제출'이 명문화되어 있음) — 명시적 '제출 불요' 문구가 아니므로 추측하지 않고 sheetMusicRequired는 null로 유지."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://entrance.ptu.ac.kr/bbs/entrance/255/23099/download.do"
+      }
+    },
+    {
+      "id": "susi-instrumental",
+      "season": "수시",
+      "name": "PTU실기전형 - 기악(건반·기타·드럼·베이스·프로페셔널뮤직)",
+      "majors": ["건반", "기타", "드럼", "베이스", "프로페셔널뮤직"],
+      "quota": { "기악": 7 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-23"],
+        "announce": "2026-11-20"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 3,
+        "sheetMusicRequired": null,
+        "notes": "세부전공(건반/기타/드럼/베이스/프로페셔널뮤직) 공통으로 자유곡 1곡이나, 건반만 '연주 악보 5부 제출'이 추가로 명시되고 나머지 세부전공은 악보 제출 언급이 없어 sheetMusicRequired는 세부전공별로 달라 null로 유지(건반=제출, 그 외=미제출로 추정되나 명문 부재). 프로페셔널뮤직은 '자유악기'로 연주. 실용음악학과 공통 유의사항: 모든 곡 암보, 연주시간 3분 내외, 심사위원 질의응답 가능, 배경음악/MR은 USB 지참 필수, 반주자 동반 가능. 5개 세부전공 통합 7명 모집(전공별 세부 배분 비공개)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-16",
+        "source": "https://entrance.ptu.ac.kr/bbs/entrance/255/23099/download.do"
+      }
+    },
+    {
+      "id": "susi-composition",
+      "season": "수시",
+      "name": "PTU실기전형 - 작곡(뮤직프로덕션·실용작곡·영상음악)",
+      "majors": ["뮤직프로덕션", "실용작곡", "영상음악"],
+      "quota": { "작곡": 5 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-23"],
+        "announce": "2026-11-20"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 3,
+        "sheetMusicRequired": null,
+        "notes": "세부전공별 형식이 근본적으로 다름: 뮤직프로덕션(3분 내외 자작곡, USB 제출 + 곡 설명 5부 제출, 악보 불요), 실용작곡(3분 내외 자작곡 연주, 악보와 곡 설명 각 5부 제출), 영상음악(3분 내외 영상 작품 제출·USB, BGM은 자작곡, 작품 설명 5부 제출, 악보 불요) — 악보 제출 여부가 세부전공마다 달라 sheetMusicRequired는 null 유지. 실용음악학과 공통 유의사항(암보, 연주시간 3분 내외, 질의응답 가능, USB 지참, 반주자 동반 가능)은 뮤직프로덕션·영상음악에는 '자작곡 연주' 성격이 아니라 일부 항목(암보 등)이 그대로 적용되지 않을 수 있음에 유의."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-16",
+        "source": "https://entrance.ptu.ac.kr/bbs/entrance/255/23099/download.do"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "PTU실기전형은 실기 100%만 반영(학생부·수능 미반영)하며, 전형(모든 전형)에 수능최저학력기준이 없음",
+    "실용음악학과는 보컬(5명)·기악(7명)·작곡(5명) 3개 전공구분으로 나뉘어 모집하며 통합선발이 아니므로 지원 시 세부전공을 명확히 선택해야 함",
+    "모든 세부전공 공통으로 연주는 암보(외워서)로 진행하고 연주시간은 3분 내외이며, 배경음악·MR은 반드시 USB로 준비해야 함(CD 불가)",
+    "기악 중 건반 세부전공만 연주 악보 5부 제출이 추가로 필요하므로 준비물 확인 필요",
+    "작곡 세부전공(뮤직프로덕션/실용작곡/영상음악)은 각각 제출 형식(자작곡 USB, 악보+곡설명, 영상 작품)이 크게 달라 지원 전공에 맞는 사전 준비가 필수",
+    "실기고사일은 2026-10-23(금)이 기본이나 지원자가 많을 경우 10-23~10-25 사이로 분산 실시될 수 있어 정확한 일정은 고사 1주일 전 공지를 재확인해야 함"
+  ]
 }
 ,
 {
@@ -2179,23 +2260,73 @@ window.PM.SNAPSHOT = {
   "region": "경기",
   "deptName": "K-POP과",
   "admissionsUrl": "https://www.yeonsung.ac.kr/ipsi/cms/FR_CON/index.do?MENU_ID=580&CONTENTS_NO=1",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.yeonsung.ac.kr/ipsi/pdffile/pdf/FI000000000006166/2027%EC%97%B0%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90-%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EB%82%B1%EC%9E%A5.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "minCsat": null,
-      "practical": null,
+      "name": "수시1차 정원내 일반전형",
+      "majors": ["보컬", "댄스퍼포먼스", "랩", "미디어싱어송라이터"],
+      "quota": { "K-POP과": 27 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17", "2026-10-25"],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": null,
+        "notes": "K-POP과는 실기 시행학과(면접 없음)로 세부 평가영역이 보컬/댄스퍼포먼스/랩/미디어싱어송라이터 4개로 나뉨. 보컬: 자유곡 1곡, 2분 이내, 반주는 무반주·MR·자가반주(전자피아노 제공, 기타는 본인 지참)·반주자 동반(1명 제한) 중 선택. 댄스퍼포먼스: 자유댄스 1곡+자유곡 1곡을 각 2분 이내로 모두 응시(두 분야 동시 평가), 보컬 부분은 무반주로 진행. 랩: 자유곡 1곡, 2분 이내, MR 전주는 10초 이내로 편집. 미디어싱어송라이터: 자작곡 1곡, 2분 이내, 본인이 작업한 MR에 가창. 반주 형태가 영역별로 다르고 댄스퍼포먼스는 곡 구성 자체가 달라 accompaniment는 공통값으로 특정하지 않고 null 유지. MR/AR은 MP3 파일로 저장해 고사 당일 USB 제출, 코러스·보컬 더빙 불가. 악보 제출 관련 언급은 모집요강 전체에서 찾지 못해 sheetMusicRequired는 null 유지. 수시1차 정원 27명(정원내 일반전형, 정원외 특별전형은 모집 없음)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.yeonsung.ac.kr/ipsi/pdffile/pdf/FI000000000006166/2027%EC%97%B0%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90-%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EB%82%B1%EC%9E%A5.pdf"
+      }
+    },
+    {
+      "id": "susi2",
+      "season": "수시",
+      "name": "수시2차 정원내 일반전형",
+      "majors": ["보컬", "댄스퍼포먼스", "랩", "미디어싱어송라이터"],
+      "quota": { "K-POP과": 15 },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-02", "2026-12-06"],
+        "announce": "2026-12-17"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": null,
+        "notes": "실기고사 평가영역·방법은 수시1차(susi 트랙)와 동일(보컬/댄스퍼포먼스/랩/미디어싱어송라이터). 수시1차 결원 발생 시 수시2차로 이월 모집하며, 수시2차 정원 15명(정원내 일반전형). 세부 실기 규정은 susi 트랙 notes 참조."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.yeonsung.ac.kr/ipsi/pdffile/pdf/FI000000000006166/2027%EC%97%B0%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90-%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95-%EB%82%B1%EC%9E%A5.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 80% + 학생부 20%(수능 미반영)로 실기 비중이 절대적",
+    "K-POP과는 보컬·댄스퍼포먼스·랩·미디어싱어송라이터 4개 평가영역이 있으며 지원 시 하나를 선택해 응시(댄스퍼포먼스는 춤과 노래를 모두 준비해야 하는 이중 부담이 있음)",
+    "모든 곡은 2분 이내로 준비하고 MR/AR은 MP3 파일로 저장해 고사 당일 USB로 제출해야 함(코러스·보컬 더빙 불가, 전주는 10초 이내로 편집)",
+    "보컬은 무반주·MR·자가반주(전자피아노 제공)·반주자 동반(1명 제한) 중 선택할 수 있어 본인에게 유리한 반주 방식을 사전에 정해야 함",
+    "수시1차 모집인원(27명)이 수시2차(15명)보다 많으므로 수시1차 지원이 상대적으로 유리할 수 있음",
+    "수능최저학력기준에 대한 명시적 언급을 모집요강 전체에서 찾지 못해 minCsat은 미기재로 남김 — 지원 전 입학처에 재확인 필요"
+  ]
 }
 ,
 {

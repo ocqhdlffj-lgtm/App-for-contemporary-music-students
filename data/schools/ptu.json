@@ -5,21 +5,102 @@
   "region": "경기",
   "deptName": "실용음악학과",
   "admissionsUrl": "https://entrance.ptu.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://entrance.ptu.ac.kr/bbs/entrance/255/23099/download.do",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "PTU실기전형 - 보컬",
+      "majors": ["보컬"],
+      "quota": { "보컬": 5 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-23"],
+        "announce": "2026-11-20"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 3,
+        "sheetMusicRequired": null,
+        "notes": "자유곡 1곡, 반주는 MR·기타·피아노 중 선택 가능(반주 형태가 택1 다양 옵션이라 accompaniment 단일값 특정 안 함). 실용음악학과 공통 유의사항: 모든 곡은 암보(외워서 연주), 연주시간 3분 내외(심사위원 판단시 중단 가능), 필요시 심사위원 질의응답 있음, 배경음악/MR은 반드시 USB로 지참(CD 재생 불가), 반주자 동반 가능. 보컬 항목에는 악보 제출에 대한 명시적 언급이 없음(기악의 건반 세부전공만 '연주 악보 5부 제출'이 명문화되어 있음) — 명시적 '제출 불요' 문구가 아니므로 추측하지 않고 sheetMusicRequired는 null로 유지."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://entrance.ptu.ac.kr/bbs/entrance/255/23099/download.do"
+      }
+    },
+    {
+      "id": "susi-instrumental",
+      "season": "수시",
+      "name": "PTU실기전형 - 기악(건반·기타·드럼·베이스·프로페셔널뮤직)",
+      "majors": ["건반", "기타", "드럼", "베이스", "프로페셔널뮤직"],
+      "quota": { "기악": 7 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-23"],
+        "announce": "2026-11-20"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 3,
+        "sheetMusicRequired": null,
+        "notes": "세부전공(건반/기타/드럼/베이스/프로페셔널뮤직) 공통으로 자유곡 1곡이나, 건반만 '연주 악보 5부 제출'이 추가로 명시되고 나머지 세부전공은 악보 제출 언급이 없어 sheetMusicRequired는 세부전공별로 달라 null로 유지(건반=제출, 그 외=미제출로 추정되나 명문 부재). 프로페셔널뮤직은 '자유악기'로 연주. 실용음악학과 공통 유의사항: 모든 곡 암보, 연주시간 3분 내외, 심사위원 질의응답 가능, 배경음악/MR은 USB 지참 필수, 반주자 동반 가능. 5개 세부전공 통합 7명 모집(전공별 세부 배분 비공개)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-16",
+        "source": "https://entrance.ptu.ac.kr/bbs/entrance/255/23099/download.do"
+      }
+    },
+    {
+      "id": "susi-composition",
+      "season": "수시",
+      "name": "PTU실기전형 - 작곡(뮤직프로덕션·실용작곡·영상음악)",
+      "majors": ["뮤직프로덕션", "실용작곡", "영상음악"],
+      "quota": { "작곡": 5 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-23"],
+        "announce": "2026-11-20"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 3,
+        "sheetMusicRequired": null,
+        "notes": "세부전공별 형식이 근본적으로 다름: 뮤직프로덕션(3분 내외 자작곡, USB 제출 + 곡 설명 5부 제출, 악보 불요), 실용작곡(3분 내외 자작곡 연주, 악보와 곡 설명 각 5부 제출), 영상음악(3분 내외 영상 작품 제출·USB, BGM은 자작곡, 작품 설명 5부 제출, 악보 불요) — 악보 제출 여부가 세부전공마다 달라 sheetMusicRequired는 null 유지. 실용음악학과 공통 유의사항(암보, 연주시간 3분 내외, 질의응답 가능, USB 지참, 반주자 동반 가능)은 뮤직프로덕션·영상음악에는 '자작곡 연주' 성격이 아니라 일부 항목(암보 등)이 그대로 적용되지 않을 수 있음에 유의."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-16",
+        "source": "https://entrance.ptu.ac.kr/bbs/entrance/255/23099/download.do"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "PTU실기전형은 실기 100%만 반영(학생부·수능 미반영)하며, 전형(모든 전형)에 수능최저학력기준이 없음",
+    "실용음악학과는 보컬(5명)·기악(7명)·작곡(5명) 3개 전공구분으로 나뉘어 모집하며 통합선발이 아니므로 지원 시 세부전공을 명확히 선택해야 함",
+    "모든 세부전공 공통으로 연주는 암보(외워서)로 진행하고 연주시간은 3분 내외이며, 배경음악·MR은 반드시 USB로 준비해야 함(CD 불가)",
+    "기악 중 건반 세부전공만 연주 악보 5부 제출이 추가로 필요하므로 준비물 확인 필요",
+    "작곡 세부전공(뮤직프로덕션/실용작곡/영상음악)은 각각 제출 형식(자작곡 USB, 악보+곡설명, 영상 작품)이 크게 달라 지원 전공에 맞는 사전 준비가 필수",
+    "실기고사일은 2026-10-23(금)이 기본이나 지원자가 많을 경우 10-23~10-25 사이로 분산 실시될 수 있어 정확한 일정은 고사 1주일 전 공지를 재확인해야 함"
+  ]
 }
