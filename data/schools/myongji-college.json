@@ -10,16 +10,42 @@
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 정원내 일반전형(실기위주)",
+      "majors": ["가창", "연주(악기별 응시)"],
+      "quota": {
+        "정원내_일반전형(실기위주)": 38,
+        "정원외_전문대학이상졸업자": 15,
+        "정원외_농어촌학생": 3,
+        "정원외_기회균형": 1,
+        "합계": 57
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-09", "2026-10-12"],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "지원 전공(가창/연주)에 따라 실기 내용이 다름. 가창: 팝/재즈/국내 대중가요 중 자유곡 2곡(택2), 실기시간 2분 내외, 두 번째 곡은 무반주 진행, 반주용 MR 2개 이상 지참(USB/클라우드/웹하드, 휴대용MP3·데이터CD·MD 불가), 악보 3부 지참, 반주자 1인 동반 허용, 마이크 사용 불허. 연주(악기별 응시): 자유곡 1곡, 실기시간 3분 내외. 실용음악과 연주과목은 악기별로 실기고사 실시."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.mjc.ac.kr/recruit/ipsiFileDown.do?recruit_idx=2&type=2"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 반영비율이 80%로 매우 높아 실기 준비가 당락의 핵심",
+    "가창 지원 시 자유곡 2곡 중 두 번째 곡은 무반주로 준비해야 함",
+    "대학수학능력시험 성적은 반영하지 않음"
+  ]
 }
