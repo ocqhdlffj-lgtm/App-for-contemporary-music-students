@@ -1997,18 +1997,44 @@ window.PM.SNAPSHOT = {
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 정원내 일반전형(실기위주)",
+      "majors": ["가창", "연주(악기별 응시)"],
+      "quota": {
+        "정원내_일반전형(실기위주)": 38,
+        "정원외_전문대학이상졸업자": 15,
+        "정원외_농어촌학생": 3,
+        "정원외_기회균형": 1,
+        "합계": 57
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-09", "2026-10-12"],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "지원 전공(가창/연주)에 따라 실기 내용이 다름. 가창: 팝/재즈/국내 대중가요 중 자유곡 2곡(택2), 실기시간 2분 내외, 두 번째 곡은 무반주 진행, 반주용 MR 2개 이상 지참(USB/클라우드/웹하드, 휴대용MP3·데이터CD·MD 불가), 악보 3부 지참, 반주자 1인 동반 허용, 마이크 사용 불허. 연주(악기별 응시): 자유곡 1곡, 실기시간 3분 내외. 실용음악과 연주과목은 악기별로 실기고사 실시."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://ipsi.mjc.ac.kr/recruit/ipsiFileDown.do?recruit_idx=2&type=2"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 반영비율이 80%로 매우 높아 실기 준비가 당락의 핵심",
+    "가창 지원 시 자유곡 2곡 중 두 번째 곡은 무반주로 준비해야 함",
+    "대학수학능력시험 성적은 반영하지 않음"
+  ]
 }
 ,
 {
@@ -2521,18 +2547,50 @@ window.PM.SNAPSHOT = {
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 일반전형(실기)",
+      "majors": ["보컬", "컴퓨터음악/작곡", "기악(피아노/기타/베이스/드럼)"],
+      "quota": {
+        "정원내_일반전형(실기)": 13,
+        "정원내_특별전형_지역인재": 1,
+        "정원내_특별전형_고른기회": 5,
+        "정원외_특별전형(5종_각1명)": 5
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-16"],
+        "announce": "2026-10-30"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": true,
+        "notes": "분야별 실기 내용: 보컬은 자유곡 1곡 암보(반주자 동반 시 본인 외 1명, 또는 MR/USB/핸드폰 준비), 기악(피아노·기타·베이스·드럼 중 택1)은 자유곡 1곡 2분 이내(반주자 또는 MR 준비), 컴퓨터음악/작곡은 자작곡 1곡(MP3 음원+악보) 제출. 반주 형태는 MR 또는 반주자 동반 중 선택 가능하여 단일 값으로 표기 불가. 악보 사본 3부는 실기고사 당일 제출."
+      },
+      "competition": [
+        {
+          "연도": "2026",
+          "전형": "일반전형(실기)",
+          "경쟁률": 2.53,
+          "비고": "전년도(2026학년도) 모집요강에 게재된 참고 수치"
+        }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://apply.sau.ac.kr/portal/js/pdfjs-1.9.426-dist/web/files/apply_2027.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 반영비율이 80%로 매우 높아 실기 준비가 당락의 핵심",
+    "보컬/기악 모두 자유곡 1곡, 실기시간 2분 이내로 짧아 곡 편집이 중요",
+    "대학수학능력시험 성적은 반영하지 않음"
+  ]
 }
 ,
 {
@@ -2547,18 +2605,42 @@ window.PM.SNAPSHOT = {
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 일반전형(실기위주)",
+      "majors": ["보컬", "K-pop아티스트(가창/랩/댄스/미디작곡 중 택1)"],
+      "quota": { "보컬": 16, "K-pop아티스트": 8, "합계": 24 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17", "2026-10-18"],
+        "announce": "2026-11-03"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": null,
+        "notes": "모집분야 1개만 선택. 보컬: 가창 자유곡 1곡, 2분 이내. K-pop아티스트: 가창/랩/댄스/미디작곡 중 택1 - 가창·랩은 자유곡 1곡, 댄스는 자유댄스 1곡, 미디작곡은 자작곡 1곡, 모두 2분 이내. 반주는 MR(반주용원)/반주자 1인 동반/무반주 중 택1(합주 불가, 악기 선택 시 1개만 사용). 악보 제출 여부는 전공에 따라 다름(보컬은 악보 3부 필수, 다른 전공은 제출 안 함으로 안내됨 - 원문 표현이 불명확하여 사실 확인 필요)."
+      },
+      "competition": [
+        { "연도": "2026", "전형": "수시1차 일반전형(보컬)", "모집인원": 16, "지원인원": 54, "경쟁률": 3.38 },
+        { "연도": "2026", "전형": "수시1차 일반전형(K-pop아티스트)", "모집인원": 8, "지원인원": 25, "경쟁률": 3.13 }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://www.sewu.ac.kr/_attach/sewc/file/2026/08/DVLLdGFVyaqvUIHdBHZyjfZyZa.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 반영비율이 80%(800점)로 매우 높아 실기 준비가 당락의 핵심",
+    "모집분야(보컬/K-pop아티스트)를 1개만 선택해야 하며, K-pop아티스트 내에서도 가창/랩/댄스/미디작곡 중 택1",
+    "실기시간이 2분 이내로 짧아 자유곡 편곡·편집이 중요",
+    "대학수학능력시험 성적은 반영하지 않음"
+  ]
 }
 ,
 {

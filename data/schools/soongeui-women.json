@@ -10,16 +10,40 @@
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 일반전형(실기위주)",
+      "majors": ["보컬", "K-pop아티스트(가창/랩/댄스/미디작곡 중 택1)"],
+      "quota": { "보컬": 16, "K-pop아티스트": 8, "합계": 24 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17", "2026-10-18"],
+        "announce": "2026-11-03"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": null,
+        "notes": "모집분야 1개만 선택. 보컬: 가창 자유곡 1곡, 2분 이내. K-pop아티스트: 가창/랩/댄스/미디작곡 중 택1 - 가창·랩은 자유곡 1곡, 댄스는 자유댄스 1곡, 미디작곡은 자작곡 1곡, 모두 2분 이내. 반주는 MR(반주용원)/반주자 1인 동반/무반주 중 택1(합주 불가, 악기 선택 시 1개만 사용). 악보 제출 여부는 전공에 따라 다름(보컬은 악보 3부 필수, 다른 전공은 제출 안 함으로 안내됨 - 원문 표현이 불명확하여 사실 확인 필요)."
+      },
+      "competition": [
+        { "연도": "2026", "전형": "수시1차 일반전형(보컬)", "모집인원": 16, "지원인원": 54, "경쟁률": 3.38 },
+        { "연도": "2026", "전형": "수시1차 일반전형(K-pop아티스트)", "모집인원": 8, "지원인원": 25, "경쟁률": 3.13 }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-16",
+        "source": "https://www.sewu.ac.kr/_attach/sewc/file/2026/08/DVLLdGFVyaqvUIHdBHZyjfZyZa.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 반영비율이 80%(800점)로 매우 높아 실기 준비가 당락의 핵심",
+    "모집분야(보컬/K-pop아티스트)를 1개만 선택해야 하며, K-pop아티스트 내에서도 가창/랩/댄스/미디작곡 중 택1",
+    "실기시간이 2분 이내로 짧아 자유곡 편곡·편집이 중요",
+    "대학수학능력시험 성적은 반영하지 않음"
+  ]
 }
