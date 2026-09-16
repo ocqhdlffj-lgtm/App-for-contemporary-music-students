@@ -924,17 +924,36 @@ window.PM.SNAPSHOT = {
       "id": "susi",
       "season": "수시",
       "name": "수시모집",
-      "majors": [],
+      "majors": ["보컬", "연주(악기)", "댄스", "연기"],
       "quota": null,
-      "schedule": null,
+      "schedule": {
+        "apply": null,
+        "practical": ["2025-10-15"],
+        "announce": null
+      },
       "ratio": null,
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2026학년도 수시모집 면접(실기)평가 안내 공지에 따르면 뮤지컬·실용음악학과는 연기(독백)/댄스/보컬/연주(악기) 중 1개 항목을 선택하여 응시한다. 실기고사일은 2025-10-15(광주·나주지역 고교 졸업예정자는 오전반 10:10, 그 외는 오후반 13:30). 곡 종류(자유곡/지정곡), 반주 형식(MR/라이브), 시간 제한, 악보 지참 여부는 해당 공지 및 요강 요약본에 명시되어 있지 않아 확인 불가(원문 PDF 23MB는 미리보기 텍스트 추출이 불가능하여 세부 항목 미확인). 반영비율·모집인원·원서접수/발표일은 학과 홍보용 입시박람회 페이지에서만 발견되었으나 해당 자료는 2022학년도 예시 데이터로 확인되어(전형일정이 2022.9~11로 표기됨) 2026학년도 수치로 신뢰할 수 없어 채택하지 않음. 규정집(성적반영방법 및 등급별 환산점수표)은 원문 PDF 내부에 있을 것으로 추정되나 대용량 PDF 제한으로 열람하지 못했다."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.dsu.ac.kr/ipsi/?CgCode=S&idx=10936&mode=view&pCode=notice"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기고사는 연기(독백)/댄스/보컬/연주(악기) 중 1개 항목을 선택하는 방식이므로, 본인의 주력 분야를 명확히 정하고 해당 항목에 맞춰 준비할 것.",
+    "정확한 반영비율과 모집인원, 원서접수 일정은 공식 요강 PDF(ipsi.dsu.ac.kr) 또는 입학처(061-330-3333)를 통해 반드시 재확인할 것."
+  ]
 }
 ,
 {
