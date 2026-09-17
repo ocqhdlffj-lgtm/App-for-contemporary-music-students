@@ -123,9 +123,21 @@
     return LEVELS[lowest];
   }
 
+  // 확인됨 등급이면서 schedule.practical이 빈 배열이면 "실기고사가 없다"는
+  // 확인된 사실이다 — 날짜를 모른다는 뜻(미확인)과는 다르다. 이 둘을 구분해야
+  // list/mylist 화면이 "실기일 미확인"으로 뭉뚱그려 재확인을 요구하지 않는다.
+  // 순수 판정 로직이라 schema.js에 둔다(DOM을 모르는 계층 — conflict.js가 이를
+  // 참조하므로 UI 네임스페이스에 두면 순수 로직 모듈이 UI에 의존하게 된다).
+  function isPracticalConfirmedNone(track) {
+    return !!(track && track.verification && track.verification.level === '확인됨' &&
+      track.schedule && Array.isArray(track.schedule.practical) &&
+      track.schedule.practical.length === 0);
+  }
+
   PM.schema = {
     LEVELS: LEVELS,
     validateSchool: validateSchool,
-    schoolLevel: schoolLevel
+    schoolLevel: schoolLevel,
+    isPracticalConfirmedNone: isPracticalConfirmedNone
   };
 })(window.PM);

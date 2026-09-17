@@ -44,7 +44,7 @@
 
     var dates = practicalDates(school);
     var noExamText = (school.tracks || []).length &&
-      (school.tracks || []).every(PM.ui.isPracticalConfirmedNone)
+      (school.tracks || []).every(PM.schema.isPracticalConfirmedNone)
       ? '실기 없음' : '실기일 미확인';
     meta.appendChild(el('span', null,
       dates.length ? '실기 ' + dates.join(', ') : noExamText));

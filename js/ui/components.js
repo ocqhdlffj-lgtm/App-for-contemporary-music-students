@@ -41,20 +41,10 @@
       '학교 목록을 계속 추가하는 중입니다. 찾는 학교가 없으면 입학처에서 직접 확인하세요.');
   }
 
-  // 확인됨 등급이면서 schedule.practical이 빈 배열이면 "실기고사가 없다"는
-  // 확인된 사실이다 — 날짜를 모른다는 뜻(미확인)과는 다르다. 이 둘을 구분해야
-  // list/mylist 화면이 "실기일 미확인"으로 뭉뚱그려 재확인을 요구하지 않는다.
-  function isPracticalConfirmedNone(track) {
-    return !!(track && track.verification && track.verification.level === '확인됨' &&
-      track.schedule && Array.isArray(track.schedule.practical) &&
-      track.schedule.practical.length === 0);
-  }
-
   PM.ui.el = el;
   PM.ui.badge = badge;
   PM.ui.levelBadge = levelBadge;
   PM.ui.disclaimerBar = disclaimerBar;
   PM.ui.progressText = progressText;
   PM.ui.expansionNotice = expansionNotice;
-  PM.ui.isPracticalConfirmedNone = isPracticalConfirmedNone;
 })(window.PM);

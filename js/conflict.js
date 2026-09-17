@@ -21,7 +21,7 @@
         schoolName: school.name,
         trackName: track.name,
         dates: dates,
-        practicalConfirmedNone: PM.ui.isPracticalConfirmedNone(track)
+        practicalConfirmedNone: PM.schema.isPracticalConfirmedNone(track)
       });
     });
     return out;

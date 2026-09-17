@@ -48,6 +48,7 @@ main { padding: 12px 16px; }
 .filter-checks { display: flex; gap: 14px; margin-top: 8px; flex-wrap: wrap; }
 .check { display: flex; align-items: center; gap: 4px; font-size: 14px; }
 .filter-note { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.season-notice { font-size: 12px; color: var(--muted); margin: 4px 0 0; }
 
 .detail-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 8px 0 4px; }
 .detail-head h2 { font-size: 18px; margin: 0; }
