@@ -5,21 +5,47 @@
   "region": "강원",
   "deptName": "실용음악학과",
   "admissionsUrl": "https://ipsi.cku.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://www.cku.ac.kr/sites/iphak/atchmnfl/pdfView/6/temp_1780905720656100.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
       "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "majors": ["실용음악전공"],
+      "quota": {
+        "일반전형": 16,
+        "지역인재전형": 5,
+        "계": 21,
+        "비고": "정원내 학생부교과 전형만 운영(예체능계열 실용음악전공, 교직 이수 가능). 정원외로 기초생활및차상위전형 4명이내가 별도 있음(p.25)."
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": [],
+        "announce": "2026-11-02"
+      },
+      "ratio": { "실기": 0, "내신": 93.1, "수능": 0, "출결": 6.9 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "실기고사 없음. 2027학년도 수시모집에서 실용음악전공은 학생부교과 전형(일반전형/지역인재전형)으로만 선발되며, 실기/실적 전형(실기고사 일정표, p.26)에는 스포츠레저학전공·스포츠재활의학전공·체육교육과만 있고 실용음악전공은 포함되지 않음. 전형요소 반영비율은 전 모집단위 공통 교과 93.1%(900점)+출결 6.9%(100점)이며 실기·면접·수능 요소가 없음. 출처: 2027학년도 가톨릭관동대학교 수시 모집요강 I.전형요약(p.22), II.전형별 모집인원(p.24), VI.학생부교과(일반전형)(p.32-33), 학생부교과(지역인재전형)(p.34-35)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://www.cku.ac.kr/sites/iphak/atchmnfl/pdfView/6/temp_1780905720656100.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "이 전공은 실기고사 없이 학생부교과(교과 93.1%+출결 6.9%) 100%로 선발되므로 고교 내신 관리가 당락을 좌우함",
+    "일반전형(16명)과 지역인재전형(5명, 강원특별자치도 소재 고교 졸업자 대상)으로 나뉘며 전형방법은 동일함",
+    "수능 최저학력기준이 적용되지 않음(의학과·간호학과만 별도 적용)",
+    "실용음악 실기 역량을 평가하는 전형이 아니므로, 실기 중심 학과를 목표로 한다면 이 학과의 선발 방식이 맞는지 별도로 확인이 필요함"
+  ]
 }

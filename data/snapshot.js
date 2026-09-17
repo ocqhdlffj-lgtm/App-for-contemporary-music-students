@@ -599,23 +599,49 @@ window.PM.SNAPSHOT = {
   "region": "강원",
   "deptName": "실용음악학과",
   "admissionsUrl": "https://ipsi.cku.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://www.cku.ac.kr/sites/iphak/atchmnfl/pdfView/6/temp_1780905720656100.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
       "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "majors": ["실용음악전공"],
+      "quota": {
+        "일반전형": 16,
+        "지역인재전형": 5,
+        "계": 21,
+        "비고": "정원내 학생부교과 전형만 운영(예체능계열 실용음악전공, 교직 이수 가능). 정원외로 기초생활및차상위전형 4명이내가 별도 있음(p.25)."
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": [],
+        "announce": "2026-11-02"
+      },
+      "ratio": { "실기": 0, "내신": 93.1, "수능": 0, "출결": 6.9 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "실기고사 없음. 2027학년도 수시모집에서 실용음악전공은 학생부교과 전형(일반전형/지역인재전형)으로만 선발되며, 실기/실적 전형(실기고사 일정표, p.26)에는 스포츠레저학전공·스포츠재활의학전공·체육교육과만 있고 실용음악전공은 포함되지 않음. 전형요소 반영비율은 전 모집단위 공통 교과 93.1%(900점)+출결 6.9%(100점)이며 실기·면접·수능 요소가 없음. 출처: 2027학년도 가톨릭관동대학교 수시 모집요강 I.전형요약(p.22), II.전형별 모집인원(p.24), VI.학생부교과(일반전형)(p.32-33), 학생부교과(지역인재전형)(p.34-35)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://www.cku.ac.kr/sites/iphak/atchmnfl/pdfView/6/temp_1780905720656100.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "이 전공은 실기고사 없이 학생부교과(교과 93.1%+출결 6.9%) 100%로 선발되므로 고교 내신 관리가 당락을 좌우함",
+    "일반전형(16명)과 지역인재전형(5명, 강원특별자치도 소재 고교 졸업자 대상)으로 나뉘며 전형방법은 동일함",
+    "수능 최저학력기준이 적용되지 않음(의학과·간호학과만 별도 적용)",
+    "실용음악 실기 역량을 평가하는 전형이 아니므로, 실기 중심 학과를 목표로 한다면 이 학과의 선발 방식이 맞는지 별도로 확인이 필요함"
+  ]
 }
 ,
 {
@@ -625,23 +651,49 @@ window.PM.SNAPSHOT = {
   "region": "경북",
   "deptName": "교회실용음악학부 실용음악전공",
   "admissionsUrl": "https://daeshin.ac.kr/html/02_admission/03_2.php",
-  "guideUrl": null,
+  "guideUrl": "https://daeshin.ac.kr/upfile/data/2026/07/2027 수시모집요강 (2).hwp",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
       "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "majors": ["실용음악 전공(워십리더, 보컬, 재즈피아노, 기타, 베이스기타, 드럼, 실용작곡, 색소폰)"],
+      "quota": {
+        "신학과_일반전형": 35,
+        "신학과_대학독자적전형(목사추천)": 5,
+        "비고": "2027학년도 현재 '교회실용음악학부'라는 별도 모집단위는 존재하지 않으며, '실용음악 전공'은 신학과(정원내 일반전형 35명 + 대학독자적전형/목사추천 5명, 그 외 기회균형전형 소수)에 입학한 뒤 입학 후 선택하는 12개 세부전공 중 하나임. 세부전공(실용음악 전공)만의 별도 모집인원은 공시되지 않음. 출처: 2027학년도 대신대학교 수시 신입생 모집요강 '1.모집인원'."
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": [],
+        "announce": null
+      },
+      "ratio": { "실기": 0, "학생부": 70, "면접": 30, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "실기(연주)고사 없음. 신학과 지원자는 학생부(70%, 350점)+면접·구술고사(30%, 150점)=100%(500점)로만 평가되며, 악기·보컬 연주 실기시험은 모집요강 어디에도 명시되어 있지 않음. 면접고사(2026-10-19 13:30)는 지원동기/의사표현·태도/신앙생활·인성/일반상식및수학능력을 보는 일반 면접이며 실기 연주 평가가 아님. 신학과 지원자는 공통으로 '기독교인으로 세례 받은 자'이어야 함. 출처: 2027학년도 대신대학교 수시 신입생 모집요강 '4.전형일정', '7.전형방법'."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://daeshin.ac.kr/upfile/data/2026/07/2027 수시모집요강 (2).hwp"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "'실용음악 전공'은 신학과 입학 후 선택하는 세부전공으로, 별도의 음악 실기(연주)고사가 없고 학생부(70%)+면접(30%)으로만 평가됨",
+    "신학과 지원자는 공통으로 기독교인으로서 세례를 받은 자여야 하며, 면접에서 신앙생활 및 인성 항목이 포함됨",
+    "대학독자적전형(목사추천)으로 지원하려면 목사 추천서가 필요하며 정원내 5명으로 소수임",
+    "수능 응시 여부와 무관하게 지원 가능하며 수능최저학력기준이 없음",
+    "모집요강 내 합격자 발표일이 '4.전형일정' 항목(2026-11-17)과 '15.합격자 발표' 항목(2026-12-18)에서 서로 다르게 기재되어 있어 정확한 발표일은 학교 홈페이지 공지로 재확인이 필요함"
+  ]
 }
 ,
 {
