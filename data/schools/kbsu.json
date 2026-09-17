@@ -4,22 +4,73 @@
   "type": "전문대",
   "region": "경북",
   "deptName": "뮤직프로덕션과",
-  "admissionsUrl": "https://www.kbsu.ac.kr/admission/main/index.htm",
-  "guideUrl": null,
+  "admissionsUrl": "https://ipsi.kbsu.ac.kr/",
+  "guideUrl": "https://ipsi.kbsu.ac.kr/admission/cmsware/bbs_download.php?type=0&download=h&seq=0&mv_data=JmlkeD0xJnRhYmxlPWNzX2lic2lfcGRm||",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시모집(1차) 고른기회2전형",
+      "majors": ["작곡전공", "컴퓨터음악및음향엔지니어전공", "악기전공", "싱어송라이팅전공", "보컬전공"],
+      "quota": { "뮤직프로덕션과": 41 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17"],
+        "announce": "2026-10-23"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "뮤직프로덕션과는 5개 세부전공별로 실기 방식이 전혀 달라 공통값을 낼 수 없음(추측 금지, 세부사항만 기록). 배점 산출은 항목별 합산점수×3.2(만점 320점, 실기 항목별 100점 만점 기준). 작곡전공: 자작곡 제출(40)+즉흥작곡(20분, 30)+기초화성학(30), 즉흥작곡은 주어진 코드 진행 위에서 20~30분간 작곡하며 자신의 악기 또는 피아노 사용 가능, 자작곡 미제출시 즉흥작곡 비율을 70점으로 상향(기초화성학 30점은 동일). 컴퓨터음악및음향엔지니어전공: 자작곡 제출(40, 미디시퀀싱 또는 음악믹싱 프로그램 편집물)+즉흥작곡(20분,30)+기초화성학(30), 제출물 없거나 작업경험이 없는 경우 작곡전공과 동일하게 즉흥작곡(70%)+화성학(30%)으로 평가. 악기전공: 자유곡 1곡(70, MR 또는 대동한 반주자와 연주하며 리듬감·테크닉·곡 해석능력 평가)+초견능력(15)+기초스케일및코드(15), 악보를 보고 멜로디와 코드를 파악하고 리듬섹션(Kick Time) 또는 필인(Fill in)을 연주해야 하며 드럼과 피아노를 제외한 자신의 악기 지참. 싱어송라이팅전공: 자작곡연주(40, 즉흥작곡 20분)+즉흥작곡(30)+화성학지식(30), 자신의 자작곡을 연주 또는 노래하며 평가받고 화성학지식(30%)도 함께 평가. 보컬전공: 음정(40)+박자(30)+테크닉(20)+무대매너(10), 자신이 선택한 기성곡 또는 자작곡 한 곡만 평가받으며 MR이나 반주자 대동 가능, 악보 4장 준비. 수시2차(2026.11.11~11.25 접수, 실기 2026.11.28, 발표 2026.12.04)에도 동일 전형(고른기회2, 실기80%+학생부20%)으로 3명 추가 모집. 정원내 41명 외에 정원외(대학졸업자·농어촌·만학도 등)로 추가 모집단위가 있어 학과 전체 정원은 45명. 면접(실기)고사 불참 시 최하점수 부여. 수능최저학력기준 없음."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.kbsu.ac.kr/admission/cmsware/bbs_download.php?type=0&download=h&seq=0&mv_data=JmlkeD0xJnRhYmxlPWNzX2lic2lfcGRm||"
+      }
+    },
+    {
+      "id": "susi2",
+      "season": "수시",
+      "name": "수시모집(2차) 고른기회2전형",
+      "majors": ["작곡전공", "컴퓨터음악및음향엔지니어전공", "악기전공", "싱어송라이팅전공", "보컬전공"],
+      "quota": { "뮤직프로덕션과": 3 },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-11-28"],
+        "announce": "2026-12-04"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "수시1차와 동일한 전형방법 및 실기 세부내용 적용(susi 트랙 practical.notes 참조). 수시1차 미충원 인원이 수시2차로 이월될 수 있음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.kbsu.ac.kr/admission/cmsware/bbs_download.php?type=0&download=h&seq=0&mv_data=JmlkeD0xJnRhYmxlPWNzX2lic2lfcGRm||"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "뮤직프로덕션과는 실기 80% + 학생부(내신80%+출결20%) 20%로 실기 비중이 절대적",
+    "세부전공(작곡·컴퓨터음악및음향엔지니어·악기·싱어송라이팅·보컬)별 배점 항목이 전혀 달라 지원 전공에 맞는 실기 준비가 필요함(예: 작곡·컴퓨터음악·싱어송라이팅은 즉흥작곡·화성학 비중이 크고, 악기전공은 초견·스케일, 보컬전공은 음정·박자·테크닉·무대매너로 세분 배점)",
+    "정원내 고른기회2전형으로만 모집하며 정원외(대학졸업자·농어촌 등)로 소수 추가 모집",
+    "수능최저학력기준이 없어 수능 성적 부담 없이 실기 준비에 집중할 수 있음",
+    "면접(실기)고사 불참 시 최하점수가 부여되므로 반드시 응시해야 함"
+  ]
 }
