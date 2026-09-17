@@ -1791,32 +1791,6 @@ window.PM.SNAPSHOT = {
 }
 ,
 {
-  "id": "jbnu",
-  "name": "전북대학교",
-  "type": "4년제",
-  "region": "전북",
-  "deptName": "음악과",
-  "admissionsUrl": "https://enter.jbnu.ac.kr/main.do",
-  "guideUrl": null,
-  "tracks": [
-    {
-      "id": "susi",
-      "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "minCsat": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
-    }
-  ],
-  "prepPoints": []
-}
-,
-{
   "id": "jei",
   "name": "재능대학교",
   "type": "전문대",
