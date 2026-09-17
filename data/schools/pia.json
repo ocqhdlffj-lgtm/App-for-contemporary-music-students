@@ -15,7 +15,6 @@
       "quota": null,
       "schedule": null,
       "ratio": null,
-      "minCsat": null,
       "practical": null,
       "competition": [],
       "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }

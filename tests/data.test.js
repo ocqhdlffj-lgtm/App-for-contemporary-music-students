@@ -7,7 +7,7 @@ function fakeBundle(version, ids) {
         deptName: '실용음악과', admissionsUrl: 'https://x.ac.kr', guideUrl: null,
         tracks: [{
           id: 'susi', season: '수시', name: '전형', majors: ['보컬'],
-          quota: null, schedule: null, ratio: null, minCsat: null,
+          quota: null, schedule: null, ratio: null,
           practical: null, competition: [],
           verification: { level: '미확인', checkedAt: '2026-09-10', source: null }
         }],

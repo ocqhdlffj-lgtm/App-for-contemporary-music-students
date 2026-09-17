@@ -28,6 +28,13 @@
     }
     if (!isDate(v.checkedAt)) errors.push(at + '.verification.checkedAt: YYYY-MM-DD');
 
+    // 미확인 등급은 minCsat 키 자체를 가질 수 없음 — 추측 금지.
+    // 필터/상세 화면은 'minCsat' in t 로 존재 여부를 판단하므로,
+    // 값이 null이어도 키가 있으면 "확인됨: 수능최저 없음"으로 오인된다.
+    if (v.level === '미확인' && 'minCsat' in t) {
+      errors.push(at + ': 미확인 전형은 minCsat을 가질 수 없음(추측 금지) — 확인 안 됐으면 키 자체를 생략할 것');
+    }
+
     if (t.ratio != null) {
       var sum = 0;
       var ratioInvalid = false;

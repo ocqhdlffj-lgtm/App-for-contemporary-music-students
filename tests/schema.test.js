@@ -79,6 +79,7 @@ T.test('미확인이면 항목이 null이어도 통과한다', function () {
   s.tracks[0].schedule = null;
   s.tracks[0].practical = null;
   s.tracks[0].quota = null;
+  delete s.tracks[0].minCsat;
   s.tracks[0].verification.level = '미확인';
   T.eq(PM.schema.validateSchool(s).ok, true);
 });
@@ -137,11 +138,28 @@ T.test('반영비율에 숫자가 아닌 값이 있으면 실패한다', functio
   T.assert(r.errors.join(' ').indexOf('내신') >= 0, '숫자가 아닌 항목 이름이 보고되어야 함');
 });
 
+T.test('미확인 전형이 minCsat: null을 가지면 실패한다', function () {
+  var s = validSchool();
+  s.tracks[0].verification.level = '미확인';
+  s.tracks[0].minCsat = null;
+  var r = PM.schema.validateSchool(s);
+  T.eq(r.ok, false);
+  T.assert(r.errors.join(' ').indexOf('minCsat') >= 0, 'minCsat 오류가 보고되어야 함');
+});
+
+T.test('미확인 전형이 minCsat 키 자체가 없으면 통과한다', function () {
+  var s = validSchool();
+  s.tracks[0].verification.level = '미확인';
+  delete s.tracks[0].minCsat;
+  T.eq(PM.schema.validateSchool(s).ok, true);
+});
+
 T.test('미확인이면 빈 객체여도 통과한다', function () {
   var s = validSchool();
   s.tracks[0].quota = {};
   s.tracks[0].schedule = {};
   s.tracks[0].practical = {};
+  delete s.tracks[0].minCsat;
   s.tracks[0].verification.level = '미확인';
   T.eq(PM.schema.validateSchool(s).ok, true);
 });
