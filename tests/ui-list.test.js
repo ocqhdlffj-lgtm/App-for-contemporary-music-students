@@ -99,3 +99,21 @@ T.test('면책 문구를 그린다', function () {
 T.test('목록이 계속 추가되는 중임을 알리는 문구를 그린다', function () {
   T.assert(PM.ui.expansionNotice().textContent.indexOf('계속 추가') >= 0);
 });
+
+T.test('formatDates: 날짜가 정확히 2개면 시작~끝 기간으로 표시한다', function () {
+  T.eq(PM.ui.formatDates(['2026-10-01', '2026-10-11']), '2026-10-01 ~ 2026-10-11');
+});
+
+T.test('formatDates: 날짜가 3개 이상이면 콤마로 나열한다', function () {
+  T.eq(PM.ui.formatDates(['2026-10-08', '2026-10-09', '2026-12-04']),
+    '2026-10-08, 2026-10-09, 2026-12-04');
+});
+
+T.test('formatDates: 날짜가 1개면 그대로 반환한다', function () {
+  T.eq(PM.ui.formatDates(['2026-10-09']), '2026-10-09');
+});
+
+T.test('formatDates: 빈 배열이나 없으면 null을 반환한다', function () {
+  T.eq(PM.ui.formatDates([]), null);
+  T.eq(PM.ui.formatDates(null), null);
+});

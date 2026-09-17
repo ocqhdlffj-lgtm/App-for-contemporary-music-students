@@ -44,7 +44,7 @@
     s.appendChild(row('원서접수',
       (sc.apply && sc.apply.length === 2) ? sc.apply[0] + ' ~ ' + sc.apply[1] : '미확인'));
     s.appendChild(row('실기고사',
-      (sc.practical && sc.practical.length) ? sc.practical.join(', ') : '미확인'));
+      (sc.practical && sc.practical.length) ? PM.ui.formatDates(sc.practical) : '미확인'));
     s.appendChild(row('합격발표', fmt(sc.announce)));
     return s;
   }

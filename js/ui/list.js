@@ -47,7 +47,7 @@
       (school.tracks || []).every(PM.schema.isPracticalConfirmedNone)
       ? '실기 없음' : '실기일 미확인';
     meta.appendChild(el('span', null,
-      dates.length ? '실기 ' + dates.join(', ') : noExamText));
+      dates.length ? '실기 ' + PM.ui.formatDates(dates) : noExamText));
     c.appendChild(meta);
 
     function fire() { if (opts.onSelect) opts.onSelect(school.id); }

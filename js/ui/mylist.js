@@ -33,7 +33,7 @@
     r.appendChild(name);
 
     r.appendChild(el('span', 'pick-dates',
-      entry.dates.length ? entry.dates.join(', ') : '실기일 미확인'));
+      entry.dates.length ? PM.ui.formatDates(entry.dates) : '실기일 미확인'));
 
     if (conflicted) r.appendChild(el('span', 'conflict-tag', '겹침'));
 

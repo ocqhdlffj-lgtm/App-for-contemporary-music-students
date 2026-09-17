@@ -19,7 +19,7 @@
     { label: '반주',      get: function (s, t) { return t.practical ? fmt(t.practical.accompaniment) : '미확인'; } },
     { label: '실기 비율', get: function (s, t) { return t.ratio ? fmt(t.ratio['실기'], '%') : '미확인'; } },
     { label: '수능최저',  get: function (s, t) { return ('minCsat' in t) ? (t.minCsat === null ? '없음' : t.minCsat) : '미확인'; } },
-    { label: '실기고사일', get: function (s, t) { return (t.schedule && t.schedule.practical && t.schedule.practical.length) ? t.schedule.practical.join(', ') : '미확인'; } },
+    { label: '실기고사일', get: function (s, t) { return (t.schedule && t.schedule.practical && t.schedule.practical.length) ? PM.ui.formatDates(t.schedule.practical) : '미확인'; } },
     { label: '모집인원',  get: function (s, t) {
         if (!t.quota) return '미확인';
         var keys = Object.keys(t.quota);
