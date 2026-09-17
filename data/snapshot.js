@@ -2313,7 +2313,7 @@ window.PM.SNAPSHOT = {
         "practical": [],
         "announce": "2026-11-05"
       },
-      "ratio": null,
+      "ratio": { "서류": 100 },
       "minCsat": null,
       "practical": {
         "songCount": 0,
@@ -2322,11 +2322,11 @@ window.PM.SNAPSHOT = {
         "accompaniment": null,
         "durationMin": null,
         "sheetMusicRequired": null,
-        "notes": "학생부종합(고신희망) 전형도 음악콘텐츠학과에 실기고사가 없음(무실기). '전형요약'표(p.14)상 1단계 1000점(서류100%)으로 배수 선발 후 2단계 100점(면접20%+서류80%)으로 최종 선발하는 단계별 전형인데, 1단계·2단계 반영비율이 서로 달라 하나의 ratio 값으로 합산 표기할 수 없어(과잉단순화 금지) null로 남김. 수능최저학력기준 미적용(그 외 모집단위)."
+        "notes": "학생부종합(고신희망) 전형도 음악콘텐츠학과에 실기고사가 없음(무실기). '전형요약'표(p.14)에서 고신희망은 '일괄(단계 없음)' 전형으로 서류 100% 단일 평가임을 확인함(정정: 이전에는 같은 표의 자기추천/지역인재종합 행에 있는 1단계 서류100%→2단계 면접20%+서류80%의 단계별 구조를 고신희망에 잘못 적용했었음 — 리뷰에서 발견해 정정). 수능최저학력기준 미적용(그 외 모집단위)."
       },
       "competition": [],
       "verification": {
-        "level": "부분확인",
+        "level": "확인됨",
         "checkedAt": "2026-09-17",
         "source": "https://www.kosin.ac.kr/dream/index.php?pCode=MN7000055&mode=fdn&idx=2752&num=1"
       }
