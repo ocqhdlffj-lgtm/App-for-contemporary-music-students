@@ -2226,23 +2226,42 @@ window.PM.SNAPSHOT = {
   "region": "충남",
   "deptName": "실용음악학과",
   "admissionsUrl": "https://ipsi.kornu.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://cdn013.negagea.net/dgsmidc/omr/seoul/web/univ_info2026/%EB%82%98%EC%82%AC%EB%A0%9B%EB%8C%80%ED%95%99%EA%B5%90/%EB%82%98%EC%82%AC%EB%A0%9B%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84_%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "실기위주전형",
+      "majors": ["보컬", "싱어송라이터/작곡/MIDI", "기악"],
+      "quota": { "실용음악학과": 26 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-17"],
+        "announce": "2026-11-10"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "종목(사실상 세부전공)별 고사내용이 크게 달라 공통값을 낼 수 없어 세부사항만 기록(추측 금지). 보컬: 자유곡 1곡(가요/Pop/Jazz/뮤지컬/자작곡 등 모든 곡 가능), 악보 제출 불필요, 본인 또는 심사위원 요청 시 후렴부터 노래 가능, 전주(Intro)를 길게 하지 말 것, 반주는 본인 직접 연주 또는 반주자 1인 동반 또는 무반주 모두 허용, 고사장 마이크만 사용(본인 지참 마이크 불가). 싱어송라이터/작곡/MIDI: 자작곡 1곡, 코드/리듬/Blues/Scale 등 다른 장르로 변주 요청 가능, 본인 또는 동반자가 직접 노래(연주)하며 연주(반주)자는 2인까지 동반 허용, 악보 사본 5부 제출(암보 안 해도 됨), MIDI 포트폴리오 지참 가능(5부). 기악(Piano/Synthesizer/Drum/Bass/Guitar/Horns/String/Percussion): 자유곡 1곡, 악보 제출 불필요, MR·포트폴리오 음원은 일반 Audio CD 또는 USB(MP3/WAV)에 저장해 지참(스마트폰 저장 MR 진행 불가), 반주용 MR이 재생되지 않으면 무반주로 진행, 드럼 연주자는 본인 스네어/페달/심벌 사용 가능(심벌 제외 규정 있음), 기타/베이스 연주자 본인 이펙터 사용 가능, 연주(반주)자 2인까지 동반 가능. 평가영역(공통): 연주자세·곡 이해도·곡 완성도·음정·박자. 평가위원 전원에게 실기고사 50점 미만을 받으면 예비번호 없이 불합격. 전 모집단위 수능최저학력기준 미적용."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://cdn013.negagea.net/dgsmidc/omr/seoul/web/univ_info2026/%EB%82%98%EC%82%AC%EB%A0%9B%EB%8C%80%ED%95%99%EA%B5%90/%EB%82%98%EC%82%AC%EB%A0%9B%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84_%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 100% 반영이며 학생부·수능 반영이 전혀 없어(反映無) 실기 준비도가 합격을 좌우한다.",
+    "보컬/싱어송라이터/기악 세 종목의 고사 방식이 서로 크게 달라 지원 종목에 맞는 곡·반주 준비가 필수다(예: 싱어송라이터는 악보 사본 5부 필요, 기악은 MR을 USB/CD로만 지참 가능)."
+  ]
 }
 ,
 {
