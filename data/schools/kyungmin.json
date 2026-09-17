@@ -5,21 +5,71 @@
   "region": "경기",
   "deptName": "실용음악과",
   "admissionsUrl": "https://iphak.kyungmin.ac.kr/music",
-  "guideUrl": null,
+  "guideUrl": "https://iphak.kyungmin.ac.kr/department/music",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 (일반전형)",
+      "majors": ["보컬", "기악", "AI작곡", "작곡(컴퓨터음악/싱어송라이터)", "음향·A&R", "뮤직크리에이터"],
+      "quota": { "일반전형": 15 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-17"],
+        "announce": "2026-10-30"
+      },
+      "ratio": { "학생부": 20, "실기": 80 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 경민대학교 신입생 모집요강 '8.면접/실기고사' 실기고사 내용표(실용음악과) 기준. 세부전공별로 고사 방식이 전혀 달라 공통값을 낼 수 없음: 보컬=자유곡 1곡(장르불문); 기악(기타/베이스/드럼/건반/관악파트(색소폰,트럼펫 등))=자유곡 1곡(장르불문); AI작곡=지원자가 직접 기획·제작한 AI 기반 창작곡 1곡(사용 AI 툴 및 프롬프트 제작 과정 제출 필수); 작곡(컴퓨터음악, 싱어송라이터)=자작곡 1곡; 음향·A&R=작품(mp3) 및 작품설명서 제출+면접평가(관련 실무경력 보유 시 심사에 참고); 뮤직크리에이터=포트폴리오 및 음악 콘텐츠(SNS/유튜브/틱톡/사운드클라우드 등) 실적 자료. 반주(MR/라이브) 방식, 시간 제한, 악보 제출 여부는 원문에 명시되어 있지 않아 null 처리. 실기 불참자 및 실기점수 100점 만점 기준 60점 미만은 불합격 처리됨(원문 '비고'란)."
+      },
+      "competition": [
+        { "연도": "2026학년도 수시1차(참고용, 전년도 결과)", "전형": "일반전형", "경쟁률": 3.4, "최저": 7.4, "평균": 5.5 }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://iphak.kyungmin.ac.kr/department/music"
+      }
+    },
+    {
+      "id": "susi2",
+      "season": "수시",
+      "name": "수시2차 (일반전형)",
+      "majors": ["보컬", "기악", "AI작곡", "작곡(컴퓨터음악/싱어송라이터)", "음향·A&R", "뮤직크리에이터"],
+      "quota": { "일반전형": 13 },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-05"],
+        "announce": "2026-12-17"
+      },
+      "ratio": { "학생부": 20, "실기": 80 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "수시1차와 동일한 실기고사 기준 적용(2027학년도 모집요강 '8.면접/실기고사'표에 수시1차·2차 구분 없이 동일 내용 게재). 세부전공별 고사 방식이 상이해 공통값은 null 처리 — susi 트랙 practical.notes 참고."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://iphak.kyungmin.ac.kr/department/music"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "경민대학교 실용음악과는 세부전공(보컬/기악/AI작곡/작곡(컴퓨터음악·싱어송라이터)/음향·A&R/뮤직크리에이터)마다 실기고사 방식이 완전히 다르므로, 지원 전 반드시 본인 세부전공의 고사내용을 정확히 확인할 것 — 특히 AI작곡 전공은 AI 툴 활용 및 프롬프트 제작 과정 제출이 별도로 요구됨.",
+    "실기 배점은 100점 만점 기준 60점 미만이면 실기 응시 여부와 무관하게 불합격 처리되므로 절대점수 기준을 유의할 것."
+  ]
 }
