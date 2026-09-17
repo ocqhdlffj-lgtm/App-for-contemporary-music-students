@@ -56,6 +56,12 @@ T.test('기존 조건이 화면에 반영된다', function () {
   T.eq(el.querySelector('select[name="type"]').value, '전문대');
 });
 
+T.test('정시 데이터가 아직 없다는 안내 문구를 그린다', function () {
+  var el = PM.ui.filterbar.render(fbSchools(), PM.filter.DEFAULTS, function () {});
+  T.assert(el.textContent.indexOf('정시') >= 0 && el.textContent.indexOf('수집되지 않았') >= 0,
+    '정시 데이터 미수집 안내가 있어야 함');
+});
+
 T.test('onChange는 기존 조건을 보존한 새 객체를 넘긴다', function () {
   var got = null;
   var el = PM.ui.filterbar.render(fbSchools(), { major: '보컬' }, function (c) { got = c; });

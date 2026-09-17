@@ -63,6 +63,11 @@
     row.appendChild(select('songType', '실기곡', SONG_TYPES, current.songType, pick));
     bar.appendChild(row);
 
+    // 정시 데이터는 아직 조사가 시작되지 않았다 — 안내 없이 "정시" 필터를 선택하면
+    // "전국에 정시 실용음악과가 없다"는 거짓 신호로 읽힐 수 있어 상시 고지한다.
+    bar.appendChild(el('p', 'season-notice',
+      '※ 정시(定時) 데이터는 아직 수집되지 않았습니다. 현재 목록은 모두 수시 기준입니다.'));
+
     var checks = el('div', 'filter-checks');
     checks.appendChild(checkbox('noMinCsat', '수능최저 없음', current.noMinCsat, pick));
     checks.appendChild(checkbox('practicalOnly', '실기 100%', current.practicalOnly, pick));
