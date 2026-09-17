@@ -5,21 +5,42 @@
   "region": "경기",
   "deptName": "K-POP전공",
   "admissionsUrl": "https://ipsi.kookje.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://lifelong.kookje.ac.kr/ipsi/index.php?pCode=tnotice&mode=fdn&idx=25136&num=1",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시1차 일반전형(실기전형)",
+      "majors": ["보컬", "랩", "댄스보컬", "댄스", "싱어송라이터", "미디"],
+      "quota": { "K-POP전공": 45 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-21", "2026-10-24"],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "K-POP전공은 세부전공별 실기 방식이 서로 달라 공통값을 낼 수 없음(추측 금지, 세부사항만 기록). 보컬: 자유곡 1곡(가요·팝 등 2분 이내), 반주MR·댄스MR은 휴대폰(비행기모드) 또는 USB(.mp3)로 준비하거나 자가반주(피아노·기타)/반주자 대동 가능. 랩: 자유곡 1곡(자작랩 또는 기성곡, 2분 이내). 댄스보컬: 자유곡 1곡 가창(1분 이내) 후 댄스 1곡 수행(1분 이내, 장르무관). 댄스: 자유댄스 1작품(K-POP 댄스 또는 장르 불문, 2분 이내). 싱어송라이터: 자작곡을 직접 연주하며 가창(2분 이내), 전자피아노는 학교 비치품 사용 가능하나 그 외 악기는 직접 준비. 미디: 포트폴리오(자작곡)를 오디오파일로 USB에 저장해 당일 제출 후 모니터링 및 질의응답. 정원내 일반전형(실기전형)은 실기 100%로 성적이 반영되며 실기고사 미응시 시 불합격 처리됨. 수능최저학력기준 없음(정시 실기전형과 동일하게 수능 반영 없음)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.kookje.ac.kr/ipsi/index.php?pCode=interplan&mode=fdn&idx=25147&num=1"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "K-POP전공은 실기 100%로만 선발되며 실기고사 미응시 시 총점 처리 없이 바로 불합격 처리되므로 반드시 응시해야 함",
+    "세부전공(보컬·랩·댄스보컬·댄스·싱어송라이터·미디)별로 준비물과 시연 방식이 크게 달라 지원 전공을 먼저 확정한 뒤 그에 맞는 곡·음원·포트폴리오를 준비해야 함",
+    "보컬·랩은 반주 없이도 응시 가능(MR/자가반주/반주자 대동 모두 허용)하지만 미디 전공은 실연 대신 자작곡 포트폴리오와 질의응답으로 평가되므로 완전히 다른 준비가 필요함",
+    "수능최저학력기준이 없어 수능 성적 부담 없이 실기 준비에 집중할 수 있음"
+  ]
 }
