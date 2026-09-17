@@ -18,8 +18,14 @@
       "minCsat": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "미확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.gknu.ac.kr/data/mojib/202609041112146a9a28fe35992.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "주의: 2027학년도 수시모집요강(국립경국대학교 입학협력처, 2026.9.4. 정정판)의 '모집단위 및 모집인원' 전체 표(96페이지 중 6p, 18p)에 공연예술음악과/실용음악전공이 전혀 등장하지 않음. 학과 홈페이지(music.gknu.ac.kr)는 존재하고 안동대학교 시절 공연예술음악과가 실재했던 것으로 확인되나, 2027학년도 신입생 모집 대상에서는 빠져 있어 현재 모집을 하지 않을 가능성이 있음(phantom 의심). 삭제하지 않고 미확인으로 유지."
+  ]
 }

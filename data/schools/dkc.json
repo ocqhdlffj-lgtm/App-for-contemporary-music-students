@@ -3,23 +3,42 @@
   "name": "대경대학교",
   "type": "전문대",
   "region": "경북",
-  "deptName": "실용음악과",
+  "deptName": "K-실용음악과",
   "admissionsUrl": "https://www.dkuway.com/",
-  "guideUrl": null,
+  "guideUrl": "https://www.dkuway.com/guide2027.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시모집 1차 (일반전형)",
+      "majors": ["K-POP전공", "K-실용음악전공"],
+      "quota": { "K-실용음악과": 30 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-08", "2026-10-09"],
+        "announce": "2026-10-16"
+      },
+      "ratio": { "실기": 70, "내신": 30, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "모집단위는 K-실용음악과 하나이며 K-POP전공/K-실용음악전공 두 세부전공으로 구성(정원 통합 30명, 세부전공별 정원 비공개). 전형요강 표에는 '면접/실기'로 표기되며, K-실용음악과는 실기고사 실시 모집단위로 명시되어 있으나 곡수·곡종·반주 형태 등 구체 실기 기준은 공개된 모집요강(48p)에 기재되어 있지 않아 확인 불가. 학생부 30%(300점, 기본점수 180점)+실기 70%(700점), 실질반영비율은 학생부 14.6%/실기 85.4%."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://www.dkuway.com/guide2027.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 반영비율이 명목상 70%이나 등급간 점수 차를 적용한 실질반영비율은 실기 85.4%로 사실상 실기 중심 전형이다.",
+    "수능최저학력기준이 없다."
+  ]
 }

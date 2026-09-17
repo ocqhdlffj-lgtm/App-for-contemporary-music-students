@@ -779,25 +779,44 @@ window.PM.SNAPSHOT = {
   "name": "대구예술대학교",
   "type": "4년제",
   "region": "경북",
-  "deptName": "실용음악전공",
+  "deptName": "공연융합예술학과 음악전공",
   "admissionsUrl": "https://ipsi.dgau.ac.kr/",
   "guideUrl": null,
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시모집 실기/실적위주(실기전형)",
+      "majors": ["음악전공"],
+      "quota": { "음악전공": 40 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-15"],
+        "announce": "2026-10-21"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": "MR/무반주",
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "세부전공야: 서양음악(기악,성악,보컬,뮤지컬,타악,작곡) 또는 한국음악(기악,성악,타악,작곡) 중 선택. 반주음원(USB) 지참 또는 무반주 응시 가능. 2027학년도 모집요강에는 '실용음악전공'이라는 명칭이 없고 '공연융합예술학과 음악전공'으로 운영되며, 그 안에 보컬 등 실용음악 분야가 세부전공으로 포함되어 있음(2026학년도와 동일하게 유지)."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.dgau.ac.kr/cfgpage/ear/log.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기고사 없이 자유곡 1곡으로 평가하며 반주는 USB 반주음원 또는 무반주 중 선택 가능하다.",
+    "수능최저학력기준이 없어 실기 100%로만 선발된다."
+  ]
 }
 ,
 {
@@ -805,25 +824,44 @@ window.PM.SNAPSHOT = {
   "name": "대경대학교",
   "type": "전문대",
   "region": "경북",
-  "deptName": "실용음악과",
+  "deptName": "K-실용음악과",
   "admissionsUrl": "https://www.dkuway.com/",
-  "guideUrl": null,
+  "guideUrl": "https://www.dkuway.com/guide2027.pdf",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "name": "수시모집 1차 (일반전형)",
+      "majors": ["K-POP전공", "K-실용음악전공"],
+      "quota": { "K-실용음악과": 30 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-08", "2026-10-09"],
+        "announce": "2026-10-16"
+      },
+      "ratio": { "실기": 70, "내신": 30, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "모집단위는 K-실용음악과 하나이며 K-POP전공/K-실용음악전공 두 세부전공으로 구성(정원 통합 30명, 세부전공별 정원 비공개). 전형요강 표에는 '면접/실기'로 표기되며, K-실용음악과는 실기고사 실시 모집단위로 명시되어 있으나 곡수·곡종·반주 형태 등 구체 실기 기준은 공개된 모집요강(48p)에 기재되어 있지 않아 확인 불가. 학생부 30%(300점, 기본점수 180점)+실기 70%(700점), 실질반영비율은 학생부 14.6%/실기 85.4%."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://www.dkuway.com/guide2027.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실기 반영비율이 명목상 70%이나 등급간 점수 차를 적용한 실질반영비율은 실기 85.4%로 사실상 실기 중심 전형이다.",
+    "수능최저학력기준이 없다."
+  ]
 }
 ,
 {
@@ -1296,10 +1334,16 @@ window.PM.SNAPSHOT = {
       "minCsat": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": {
+        "level": "미확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://ipsi.gknu.ac.kr/data/mojib/202609041112146a9a28fe35992.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "주의: 2027학년도 수시모집요강(국립경국대학교 입학협력처, 2026.9.4. 정정판)의 '모집단위 및 모집인원' 전체 표(96페이지 중 6p, 18p)에 공연예술음악과/실용음악전공이 전혀 등장하지 않음. 학과 홈페이지(music.gknu.ac.kr)는 존재하고 안동대학교 시절 공연예술음악과가 실재했던 것으로 확인되나, 2027학년도 신입생 모집 대상에서는 빠져 있어 현재 모집을 하지 않을 가능성이 있음(phantom 의심). 삭제하지 않고 미확인으로 유지."
+  ]
 }
 ,
 {
