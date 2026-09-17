@@ -55,6 +55,21 @@ T.test('실기일 미확인 학교는 별도로 안내한다', function () {
   T.assert(u.textContent.indexOf('라대') >= 0);
 });
 
+T.test('확인됨+실기고사 없음 전형은 별도의 중립 안내로 분리된다', function () {
+  var schools = mySchools();
+  // 'd'(라대)는 dates: [] — 확인됨으로 바꿔 "확인된 실기 없음" 케이스로 만든다
+  schools[3].tracks[0].verification.level = '확인됨';
+  var el = PM.ui.mylist.render(schools, ALL, {});
+
+  var none = el.querySelector('.unknown-dates-none');
+  T.assert(none, '실기 없음 중립 안내 박스가 필요함');
+  T.assert(none.textContent.indexOf('라대') >= 0, '라대가 중립 안내에 있어야 함');
+  T.assert(none.textContent.indexOf('충돌 검사 대상 아님') >= 0);
+
+  var stillUnknown = el.querySelectorAll('.unknown-dates:not(.unknown-dates-none)');
+  T.eq(stillUnknown.length, 0, '진짜 미확인 항목이 없으면 기존 경고 박스는 없어야 함');
+});
+
 T.test('삭제 버튼이 onRemove를 호출한다', function () {
   var got = null;
   var el = PM.ui.mylist.render(mySchools(), [{ schoolId: 'a', trackId: 'susi' }],

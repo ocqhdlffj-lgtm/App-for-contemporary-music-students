@@ -20,7 +20,8 @@
         trackId: track.id,
         schoolName: school.name,
         trackName: track.name,
-        dates: dates
+        dates: dates,
+        practicalConfirmedNone: PM.ui.isPracticalConfirmedNone(track)
       });
     });
     return out;

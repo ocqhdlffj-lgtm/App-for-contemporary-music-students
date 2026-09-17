@@ -53,6 +53,39 @@ T.test('카드를 누르면 onSelect에 학교 id가 전달된다', function () 
   T.eq(got, 'a');
 });
 
+T.test('확인됨이면서 실기고사가 없는 전형은 실기 없음으로 표시한다', function () {
+  var s = {
+    id: 'a', name: '가대', type: '4년제', region: '서울', deptName: '실용음악과',
+    admissionsUrl: 'https://x.ac.kr',
+    tracks: [{
+      id: 'susi', season: '수시', name: '전형', majors: ['보컬'],
+      quota: null, schedule: { practical: [] },
+      ratio: null, minCsat: null, practical: null, competition: [],
+      verification: { level: '확인됨', checkedAt: '2026-09-10', source: 'x' }
+    }],
+    prepPoints: []
+  };
+  var el = PM.ui.list.render([s], {});
+  T.assert(el.textContent.indexOf('실기 없음') >= 0, '실기 없음 표시 필요');
+  T.assert(el.textContent.indexOf('실기일 미확인') < 0, '미확인 문구가 나오면 안 됨');
+});
+
+T.test('실기고사일이 확인되지 않은 학교는 여전히 실기일 미확인으로 표시한다', function () {
+  var s = {
+    id: 'a', name: '가대', type: '4년제', region: '서울', deptName: '실용음악과',
+    admissionsUrl: 'https://x.ac.kr',
+    tracks: [{
+      id: 'susi', season: '수시', name: '전형', majors: ['보컬'],
+      quota: null, schedule: null,
+      ratio: null, minCsat: null, practical: null, competition: [],
+      verification: { level: '미확인', checkedAt: '2026-09-10', source: null }
+    }],
+    prepPoints: []
+  };
+  var el = PM.ui.list.render([s], {});
+  T.assert(el.textContent.indexOf('실기일 미확인') >= 0, '실기일 미확인 표시 필요');
+});
+
 T.test('진행률 문구는 확인됨 학교 수를 센다', function () {
   var s = [listSchool('a', '가대', '확인됨', { '보컬': 1 }),
            listSchool('b', '나대', '미확인', null)];

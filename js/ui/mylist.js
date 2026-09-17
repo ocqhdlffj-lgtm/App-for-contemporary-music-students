@@ -74,13 +74,27 @@
     });
 
     if (result.unknown.length) {
-      var u = el('div', 'unknown-dates');
-      u.appendChild(el('div', null,
-        '아래 학교는 실기고사일이 아직 확인되지 않아 충돌 검사에서 빠졌습니다. 입학처 원문을 확인하세요.'));
-      result.unknown.forEach(function (e) {
-        u.appendChild(el('div', null, '· ' + e.schoolName + ' · ' + e.trackName));
-      });
-      wrap.appendChild(u);
+      var noExam = result.unknown.filter(function (e) { return e.practicalConfirmedNone; });
+      var stillUnknown = result.unknown.filter(function (e) { return !e.practicalConfirmedNone; });
+
+      if (noExam.length) {
+        var n = el('div', 'unknown-dates unknown-dates-none');
+        n.appendChild(el('div', null, '실기고사가 없는 전형입니다 — 충돌 검사 대상 아님'));
+        noExam.forEach(function (e) {
+          n.appendChild(el('div', null, '· ' + e.schoolName + ' · ' + e.trackName));
+        });
+        wrap.appendChild(n);
+      }
+
+      if (stillUnknown.length) {
+        var u = el('div', 'unknown-dates');
+        u.appendChild(el('div', null,
+          '아래 학교는 실기고사일이 아직 확인되지 않아 충돌 검사에서 빠졌습니다. 입학처 원문을 확인하세요.'));
+        stillUnknown.forEach(function (e) {
+          u.appendChild(el('div', null, '· ' + e.schoolName + ' · ' + e.trackName));
+        });
+        wrap.appendChild(u);
+      }
     }
 
     return wrap;

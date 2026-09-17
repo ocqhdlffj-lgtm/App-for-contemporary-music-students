@@ -67,3 +67,29 @@ T.test('entriesFrom은 schedule이 null이면 dates를 빈 배열로 만든다',
   var e = PM.conflict.entriesFrom(schools, [{ schoolId: 'u1', trackId: 'susi' }]);
   T.eq(e[0].dates, []);
 });
+
+T.test('entriesFrom은 확인됨+실기고사 없음 전형에 practicalConfirmedNone: true를 붙인다', function () {
+  var schools = [{
+    id: 'u1', name: '대학1',
+    tracks: [{
+      id: 'susi', name: '수시',
+      schedule: { practical: [] },
+      verification: { level: '확인됨' }
+    }]
+  }];
+  var e = PM.conflict.entriesFrom(schools, [{ schoolId: 'u1', trackId: 'susi' }]);
+  T.eq(e[0].practicalConfirmedNone, true);
+});
+
+T.test('entriesFrom은 실기일이 그냥 미확인인 전형에 practicalConfirmedNone: false를 붙인다', function () {
+  var schools = [{
+    id: 'u1', name: '대학1',
+    tracks: [{
+      id: 'susi', name: '수시',
+      schedule: null,
+      verification: { level: '미확인' }
+    }]
+  }];
+  var e = PM.conflict.entriesFrom(schools, [{ schoolId: 'u1', trackId: 'susi' }]);
+  T.eq(e[0].practicalConfirmedNone, false);
+});
