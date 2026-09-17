@@ -1379,25 +1379,73 @@ window.PM.SNAPSHOT = {
   "name": "강릉영동대학교",
   "type": "전문대",
   "region": "강원",
-  "deptName": "실용음악예술과",
+  "deptName": "라이프콘텐츠계열 휴먼레저음악전공",
   "admissionsUrl": "https://www.gyu.ac.kr/ipsi/index.do",
-  "guideUrl": null,
+  "guideUrl": "https://www.gyu.ac.kr/ipsi/downloadBbsFile.do?atchmnflNo=28840",
   "tracks": [
     {
       "id": "susi",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
+      "name": "수시모집(1차)",
+      "majors": ["휴먼레저음악전공"],
       "quota": null,
-      "schedule": null,
-      "ratio": null,
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": [],
+        "announce": "2026-10-13"
+      },
+      "ratio": { "실기": 0, "내신": 100, "수능": 0 },
       "minCsat": null,
-      "practical": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 모집요강(전형요소별 반영비율표, p.14) 기준 수시모집은 전체학과 공통으로 학교생활기록부 100%(400점)만 반영하며 실기고사 항목 자체가 없음(수능/실기/면접 배점 모두 '-'). 학과가 기존 '실용음악예술과'에서 '라이프콘텐츠계열-휴먼레저음악전공'으로 개편되어(부록5 학과소개, p.27) 웰빙·힐링 중심의 성인학습자 대상 음악교육과정(실버음악지도, 음악치유, 합창 등)으로 성격이 변경됨. 대중음악 연주자 양성 목적의 실기 오디션 기반 실용음악과와는 더 이상 부합하지 않을 가능성이 있어 scope 재검토가 필요함."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://www.gyu.ac.kr/ipsi/downloadBbsFile.do?atchmnflNo=28840"
+      }
+    },
+    {
+      "id": "susi2",
+      "season": "수시",
+      "name": "수시모집(2차)",
+      "majors": ["휴먼레저음악전공"],
+      "quota": null,
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": [],
+        "announce": "2026-12-02"
+      },
+      "ratio": { "실기": 0, "내신": 100, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "수시2차도 1차와 동일하게 학교생활기록부 100% 반영, 실기고사 없음(2027학년도 모집요강 V.전형요소별 반영비율, p.14)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-17",
+        "source": "https://www.gyu.ac.kr/ipsi/downloadBbsFile.do?atchmnflNo=28840"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "2027학년도부터 실기고사가 폐지되고 학생부(학교생활기록부) 100%로만 선발하므로 실기 준비보다 내신 관리가 당락을 좌우함.",
+    "학과명이 '실용음악예술과'에서 '라이프콘텐츠계열-휴먼레저음악전공'으로 바뀌며 교육과정이 웰빙·힐링·성인교육 중심으로 재편되었으니, 대중음악 연주/작곡 중심 진로를 원하는 지원자는 실제 교육과정과 목표 진로(실버음악지도사, 음악치유 등)가 부합하는지 반드시 확인 후 지원할 것."
+  ]
 }
 ,
 {
