@@ -6,14 +6,38 @@
     noMinCsat: false, practicalOnly: false
   };
 
+  // 학교마다 전공명을 표기하는 방식이 제각각이라("재즈기타/관현악", "기악(기타)",
+  // "베이스기타", "작편곡", "재즈피아노" 등) 필터의 6개 표준 전공명과 문자열이
+  // 정확히 일치하는 경우가 드물다. 그래서 정확히 일치(===)가 아니라 표준
+  // 전공명이 원문 전공명 문자열에 부분 포함되는지로 판정한다. 건반↔피아노,
+  // 작곡↔편곡처럼 표준명과 원문 표기가 아예 다른 동의어만 별도로 등록한다.
+  var MAJOR_ALIASES = {
+    '건반': ['건반', '피아노'],
+    '작곡': ['작곡', '편곡']
+  };
+
+  function majorMatches(rawMajor, filterMajor) {
+    if (!rawMajor) return false;
+    var needles = MAJOR_ALIASES[filterMajor] || [filterMajor];
+    for (var i = 0; i < needles.length; i++) {
+      if (rawMajor.indexOf(needles[i]) >= 0) return true;
+    }
+    return false;
+  }
+
   function quotaOf(track, major) {
     if (!track || !track.quota) return null;
-    var v = track.quota[major];
-    return (typeof v === 'number') ? v : null;
+    var keys = Object.keys(track.quota).filter(function (k) { return majorMatches(k, major); });
+    if (!keys.length) return null;
+    var sum = 0, found = false;
+    keys.forEach(function (k) {
+      if (typeof track.quota[k] === 'number') { sum += track.quota[k]; found = true; }
+    });
+    return found ? sum : null;
   }
 
   function trackMatches(track, c) {
-    if (c.major && (track.majors || []).indexOf(c.major) < 0) return false;
+    if (c.major && !(track.majors || []).some(function (m) { return majorMatches(m, c.major); })) return false;
     if (c.season && track.season !== c.season) return false;
 
     if (c.songType) {
@@ -54,5 +78,5 @@
     return out;
   }
 
-  PM.filter = { DEFAULTS: DEFAULTS, apply: apply, quotaOf: quotaOf };
+  PM.filter = { DEFAULTS: DEFAULTS, apply: apply, quotaOf: quotaOf, majorMatches: majorMatches };
 })(window.PM);

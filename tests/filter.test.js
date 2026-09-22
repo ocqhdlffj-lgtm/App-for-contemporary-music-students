@@ -110,3 +110,39 @@ T.test('quotaOf는 전공 모집인원을 반환하고 없으면 null이다', fu
   T.eq(PM.filter.quotaOf(t, '드럼'), null);
   T.eq(PM.filter.quotaOf({ quota: null }, '보컬'), null);
 });
+
+T.test('전공 필터는 원문 전공명이 표준 전공명을 포함하기만 해도 매칭된다', function () {
+  var s = school({ tracks: [{
+    id: 'susi', season: '수시', name: '실기전형',
+    majors: ['재즈기타/관현악', '기악(드럼)', '베이스기타'],
+    quota: { '재즈기타/관현악': 7, '기악(드럼)': 6, '베이스기타': 3 },
+    ratio: { '실기': 100, '내신': 0, '수능': 0 },
+    minCsat: null, practical: { songType: '자유곡' },
+    verification: { level: '확인됨' }
+  }] });
+  T.eq(PM.filter.apply([s], { major: '기타' }).length, 1);
+  T.eq(PM.filter.apply([s], { major: '드럼' }).length, 1);
+  T.eq(PM.filter.apply([s], { major: '베이스' }).length, 1);
+  T.eq(PM.filter.apply([s], { major: '건반' }).length, 0);
+});
+
+T.test('전공 필터는 건반↔피아노, 작곡↔편곡을 동의어로 매칭한다', function () {
+  var s = school({ tracks: [{
+    id: 'susi', season: '수시', name: '실기전형',
+    majors: ['재즈피아노', '작편곡'],
+    quota: { '재즈피아노': 5, '작편곡': 4 },
+    ratio: { '실기': 100, '내신': 0, '수능': 0 },
+    minCsat: null, practical: { songType: '자유곡' },
+    verification: { level: '확인됨' }
+  }] });
+  T.eq(PM.filter.apply([s], { major: '건반' }).length, 1);
+  T.eq(PM.filter.apply([s], { major: '작곡' }).length, 1);
+});
+
+T.test('quotaOf도 부분 일치하는 전공명의 모집인원을 합산해 반환한다', function () {
+  var t = {
+    quota: { '기악(기타)': 3, '베이스기타': 2, '드럼': 4 }
+  };
+  T.eq(PM.filter.quotaOf(t, '기타'), 5); // 기악(기타) + 베이스기타 둘 다 "기타"를 포함
+  T.eq(PM.filter.quotaOf(t, '드럼'), 4);
+});
