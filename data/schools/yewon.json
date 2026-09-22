@@ -1,0 +1,77 @@
+{
+  "id": "yewon",
+  "name": "예원예술대학교",
+  "type": "4년제",
+  "region": "경기",
+  "deptName": "실용음악학과",
+  "admissionsUrl": "https://admission.yewon.ac.kr/main/?menu=320",
+  "guideUrl": "https://admission.yewon.ac.kr/main/filedown.php?menu=328&no=1376",
+  "tracks": [
+    {
+      "id": "susi-ilban",
+      "season": "수시",
+      "name": "수시모집 일반전형",
+      "majors": ["보컬", "기악", "싱어송라이터", "뮤직프로덕션", "힙합(랩)"],
+      "quota": { "실용음악": 7 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-09-12", "2026-12-17"],
+        "announce": "2026-12-18"
+      },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "반주자 동반 또는 MR 제출 가능(보컬·기악은 암보 연주/가창, 랩은 반주자 또는 MR 사용)",
+        "durationMin": 5,
+        "sheetMusicRequired": true,
+        "notes": "세부전공 5종 중 택1(보컬/기악/싱어송라이터/뮤직프로덕션(컴퓨터음악·작곡)/힙합(랩)). 보컬·기악: 자유곡 1곡(암보 가창·연주, 반주자 동반 또는 MR 제출, 악보 5부 제출), 곡당 5분 이내. 싱어송라이터: 자작곡 가창 + 기초악전 질의응답(5분), 자작곡 악보 및 곡 설명 제출(5부). 뮤직프로덕션(컴퓨터음악/작곡): 자작곡 1곡 악기연주 또는 자작곡 음원(MP3) 제출 + 기초악전 질의응답, 자작곡 악보 및 곡 설명 제출(5부). 힙합(랩): 자유곡 1곡, 암보 가창, 반주자 또는 MR 사용, 가사지 5부 제출. 실기 100% 반영, 최저학력기준 없음. 학교폭력 조치사항에 따라 전형총점 감점(1~4호) 또는 불합격(5~9호) 적용."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-23",
+        "source": "https://admission.yewon.ac.kr/main/filedown.php?menu=328&no=1376"
+      }
+    },
+    {
+      "id": "jeongsi-dagun",
+      "season": "정시",
+      "name": "정시모집 다군 일반전형",
+      "majors": ["보컬", "기악", "싱어송라이터", "뮤직프로덕션", "힙합(랩)"],
+      "quota": { "실용음악": 1 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-07"],
+        "practical": ["2027-01-25", "2027-01-31"],
+        "announce": "2027-02-05"
+      },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "반주자 동반 또는 MR 제출 가능(보컬·기악은 암보 연주/가창, 랩은 반주자 또는 MR 사용)",
+        "durationMin": 5,
+        "sheetMusicRequired": true,
+        "notes": "수시와 동일한 세부전공·실기 방식이 정시(다군)에도 적용되는 것으로 모집요강에 명시됨(실기 100%, 최저학력기준 없음). 세부 실기내용은 수시 일반전형과 동일 항목으로 기재되어 있음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-23",
+        "source": "https://admission.yewon.ac.kr/main/filedown.php?menu=328&no=1376"
+      }
+    }
+  ],
+  "prepPoints": [
+    "실기 100% 반영, 학생부·수능 미반영, 최저학력기준 없음 — 실기 경쟁력이 절대적",
+    "세부전공(보컬/기악/싱어송라이터/뮤직프로덕션/힙합(랩)) 중 택1로 지원·응시",
+    "보컬·기악은 자유곡 1곡을 암보로 연주하며 반주자 동반 또는 MR 제출이 모두 허용됨",
+    "싱어송라이터·뮤직프로덕션은 자작곡 악보와 곡 설명서 제출(5부)이 필수이며 기초악전 질의응답이 포함됨",
+    "정원이 매우 작은 학과(2027학년도 기준 모집정원 8명, 수시 7명·정시 다군 1명)로 경쟁률·정원 변동을 최신 공지로 재확인 필요",
+    "경기 양주캠퍼스 소속 학과이며, 임실(전북) 캠퍼스와는 별개이므로 지원 시 캠퍼스 위치 확인 권장"
+  ]
+}

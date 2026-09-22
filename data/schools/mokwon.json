@@ -1,0 +1,47 @@
+{
+  "id": "mokwon",
+  "name": "목원대학교",
+  "type": "4년제",
+  "region": "대전",
+  "deptName": "실용음악학부",
+  "admissionsUrl": "https://enter.mokwon.ac.kr/enter/",
+  "guideUrl": "https://enter.mokwon.ac.kr/_prog/download/?file_id=jxua1ik09j8jbmfvs4fy3wkrs2bizp",
+  "tracks": [
+    {
+      "id": "susi-silgi",
+      "season": "수시",
+      "name": "실기",
+      "majors": ["보컬전공", "기악전공"],
+      "quota": null,
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-10"],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "무반주 또는 MR 사용 가능(다른 학과(부)와 달리 실용음악학부는 반주자 동반 의무 없음)",
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "음악대학 공통 실기고사(2026-10-10 실시, 배점 1,000점, 실기 100% 일괄합산). 보컬전공은 자유곡 1곡. 기악전공은 세부영역(기타·재즈피아노·베이스·드럼·색소폰)별 자유곡 1곡이며, 베이스는 베이스기타·콘트라베이스 중 택1 가능. 기악전공 내 M.P.(뮤직프로덕션: 컴퓨터음악·레코딩·믹싱·마스터링·공연기획·음향 및 조명·음반 프로듀싱)는 곡 연주 대신 본인 작업물 1곡(오디오 파일, USB 제출)과 질의응답으로 평가. 모든 실기고사 과제곡은 암보 연주(노래)해야 함. MR 사용 시 오디오파일 형식 USB와 여분 오디오파일을 준비해 시험 당일 제출. 수시모집 모든 전형은 수능최저학력기준 미적용. 모집단위별 모집인원표 상 실용음악학부 모집인원은 정원내 30명(보컬전공·기악전공 합산으로 표기되어 세부전공별 인원 구분은 모집요강에 명시되어 있지 않음)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-23",
+        "source": "https://enter.mokwon.ac.kr/_prog/download/?file_id=jxua1ik09j8jbmfvs4fy3wkrs2bizp"
+      }
+    }
+  ],
+  "prepPoints": [
+    "2027학년도 수시모집 기준 실용음악학부 모집인원은 정원내 30명(보컬전공+기악전공 합산). 세부전공별 정확한 인원 배분은 모집요강에 명시되지 않아 미확인",
+    "실기 100% 반영이며 수능최저학력기준이 없어 실기 준비에 집중 가능",
+    "다른 음대 전공(성악·뮤지컬, 국악, 관현악, 피아노)과 달리 실용음악학부는 반주자 동반 의무가 없고 무반주 또는 MR 사용이 허용됨 — MR 사용 시 USB에 오디오파일과 여분 파일을 준비해야 함",
+    "기악전공 지원 시 M.P.(뮤직프로덕션) 트랙은 연주가 아닌 본인 작업물 제출+질의응답으로 평가되므로 포트폴리오 성격의 작업물을 미리 준비해야 함",
+    "모든 과제곡은 악보를 보지 않고(암보) 연주해야 함"
+  ]
+}

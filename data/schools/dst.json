@@ -1,0 +1,28 @@
+{
+  "id": "dst",
+  "name": "대전과학기술대학교",
+  "type": "전문대",
+  "region": "대전",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://ipsi.dst.ac.kr",
+  "guideUrl": "https://ipsi.dst.ac.kr/attach/CONTENTS/PDF/ContentMgr/PDFViewer/2026/9/ZWwrR2ZUciN6gOsY.PDF",
+  "tracks": [
+    {
+      "id": "susi",
+      "season": "수시",
+      "name": "수시모집",
+      "majors": [],
+      "quota": null,
+      "schedule": null,
+      "ratio": null,
+      "practical": null,
+      "competition": [],
+      "verification": { "level": "미확인", "checkedAt": "2026-09-23", "source": null }
+    }
+  ],
+  "prepPoints": [
+    "2027학년도(2026. 9. 발간) 신입생 모집요강의 '계열 및 학과 전형별 모집인원' 전체 목록(수시1차·수시2차·정시1차 공통)에 실용음악과/실용음악전공이 존재하지 않음 — 간호학부, 보건·생명과학부(물리치료학과·임상병리과·치위생과·반려동물학과·원예치유조경학과·뷰티디자인계열·외식조리제빵계열·자율전공학과), 미래공학부, 사회·교육학부, 예·체능학부(스포츠건강관리학과), 미래생활융합학부(문헌정보과·문화유산보존기술과·미래문화콘텐츠과·부동산재테크과·케어복지상담과)만 모집 중",
+    "과거 'applied.dst.ac.kr' 실용음악전공 학과 홈페이지와 Facebook 페이지(hcmusiclife)가 검색으로 확인되었으나, applied.dst.ac.kr 도메인은 현재 접속 불가(DNS 미등록)로 폐과 또는 학과 개편(미래문화콘텐츠과 등으로 통합) 가능성이 있음",
+    "학생에게 노출하기 전 대전과학기술대학교 입학처(042-580-6111~2) 또는 학과 사무실(042-580-6360으로 검색됨, 미확인)에 실용음악과 모집 여부를 반드시 재확인 필요"
+  ]
+}

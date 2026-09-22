@@ -1,0 +1,118 @@
+{
+  "id": "jangan",
+  "name": "장안대학교",
+  "type": "전문대",
+  "region": "경기",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://iphak.jangan.ac.kr",
+  "guideUrl": "https://iphak.jangan.ac.kr/kor/service/2027학년도모집요강.pdf",
+  "tracks": [
+    {
+      "id": "susi-1",
+      "season": "수시",
+      "name": "수시 1차 일반전형",
+      "majors": ["보컬", "미디 및 싱어송라이터", "기악"],
+      "quota": {
+        "보컬": 20,
+        "미디 및 싱어송라이터": 10,
+        "기악": 5
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17"],
+        "announce": "2026-10-30"
+      },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "MR(USB만 가능) 또는 반주자 동반 가능 (미디 및 싱어송라이터 전공은 자기반주 필수)",
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "실용음악과는 보컬전공/미디 및 싱어송라이터전공/기악전공 3개 세부전공으로 모집. 공통 준비물: 수험표, 신분증, 자유곡 MR(USB만 가능), 악보 3부(실기고사 당일 제출), 반주자 동반 가능. 보컬전공: 자유곡 1곡, 평가항목은 가창력·음정&리듬감(30), 표현 및 곡 해석능력(30), 악기연주 또는 작사·작곡 능력 여부(20), 예비튜닝 및 발전가능성(20). 미디 및 싱어송라이터전공: 미디는 자작곡 1곡, 싱어송라이터는 자작곡을 직접 피아노 또는 기타로 반주하며 노래(자기반주 필수), 작품설명서 3부 추가 제출(미디만 해당); 평가항목은 작곡&작사(25), 가창력 및 음색의 매력(25), 메인악기 연주능력(25), 예비튜닝 및 발전가능성(25). 기악전공: 피아노(재즈피아노), 기타(일렉/어쿠스틱), 베이스(일렉/콘트라베이스), 드럼(세트드럼·퍼커션), 관악기 등 그 외 악기 지원 가능, 자유곡 1곡 및 필요시 초견·즉흥연주; 평가항목은 자유곡 연주 테크닉(30), 타임킵(30), 장르별 즉흥연주(30), 예비튜닝 및 발전가능성(10). 수능최저학력기준 없음(대학 전체 공통 미적용)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-23",
+        "source": "https://iphak.jangan.ac.kr/kor/service/2027학년도모집요강.pdf"
+      }
+    },
+    {
+      "id": "susi-2",
+      "season": "수시",
+      "name": "수시 2차 일반전형",
+      "majors": ["보컬", "미디 및 싱어송라이터", "기악"],
+      "quota": {
+        "보컬": 10,
+        "미디 및 싱어송라이터": 7,
+        "기악": 5
+      },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-02", "2026-12-03", "2026-12-04", "2026-12-05"],
+        "announce": "2026-12-18"
+      },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "MR(USB만 가능) 또는 반주자 동반 가능 (미디 및 싱어송라이터 전공은 자기반주 필수)",
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "수시1차와 평가항목·준비물·전형방법 동일(실기 100%). 세부전공별 실기 내용은 수시1차 트랙 practical.notes 참조."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-23",
+        "source": "https://iphak.jangan.ac.kr/kor/service/2027학년도모집요강.pdf"
+      }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시 일반전형",
+      "majors": ["보컬", "미디 및 싱어송라이터", "기악"],
+      "quota": {
+        "보컬": 5,
+        "미디 및 싱어송라이터": 3,
+        "기악": 5
+      },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": ["2027-01-28", "2027-01-29", "2027-01-30"],
+        "announce": "2027-02-05"
+      },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "MR(USB만 가능) 또는 반주자 동반 가능 (미디 및 싱어송라이터 전공은 자기반주 필수)",
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "정시도 수시와 동일하게 실기 100% 반영이며(수능·학생부 미반영), 평가항목·준비물은 수시1차 트랙 practical.notes와 동일."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-23",
+        "source": "https://iphak.jangan.ac.kr/kor/service/2027학년도모집요강.pdf"
+      }
+    }
+  ],
+  "prepPoints": [
+    "전 전형·전 세부전공 실기 100% 반영 — 수능·학생부는 실용음악과에 한해 미반영됨",
+    "전 세부전공 자유곡 1곡 기준이며 지정곡 없음 (기악전공은 필요시 초견·즉흥연주 추가)",
+    "미디 및 싱어송라이터전공은 자기반주가 필수이며 작품설명서(미디만 3부) 제출이 요구됨",
+    "보컬·기악전공은 자유곡 MR(USB만 가능) 사용 또는 반주자 동반이 모두 허용됨",
+    "수능최저학력기준이 없어 실기 완성도에 당락이 좌우됨",
+    "수시1차(20/10/5) 대비 수시2차·정시로 갈수록 세부전공별 모집인원이 줄어드는 경향이 있어 수시1차 지원이 유리함"
+  ]
+}

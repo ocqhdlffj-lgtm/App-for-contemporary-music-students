@@ -1,0 +1,47 @@
+{
+  "id": "hanseo",
+  "name": "한서대학교",
+  "type": "4년제",
+  "region": "충남",
+  "deptName": "뮤직프로덕션학과",
+  "admissionsUrl": "https://helper.hanseo.ac.kr",
+  "guideUrl": "https://helper.hanseo.ac.kr/Upl/kr/hdbook/susi_admission.pdf?ver=20220602_01",
+  "tracks": [
+    {
+      "id": "susi-ilban",
+      "season": "수시",
+      "name": "실기위주 일반전형",
+      "majors": ["뮤직프로듀싱", "뮤직퍼포먼스"],
+      "quota": { "뮤직프로덕션학과": 11 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-15"],
+        "announce": "2026-11-20"
+      },
+      "ratio": { "학생부": 10, "실기": 90 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "반주자 동반 가능(피아노·드럼·앰프 외 악기는 본인 지참)",
+        "durationMin": 3,
+        "sheetMusicRequired": true,
+        "notes": "뮤직프로덕션학과는 지원 시 '뮤직프로듀싱' 또는 '뮤직퍼포먼스' 분야 중 택1하여 응시. [뮤직프로듀싱] DAW 등을 활용해 제작한 음악 작업물 1곡(자작곡 또는 기존 곡 프로듀싱, 3분 이내) 및 관련 포트폴리오·작품설명서(기본 곡 정보·제작 과정 요약) 제출 후 질의응답. [뮤직퍼포먼스] 보컬·싱어송라이터·기타·건반·베이스·드럼·DJ 중 택1하여 자유곡 1곡 연주(3분 이내) 후 질의응답. 두 분야 공통으로 실기 평가용 악보 5부, 음원 및 MR(MP3, USB) 제출 필요하며, 정원(11명)은 두 분야 통합 선발로 세부 분야별 정원 구분은 확인되지 않음. 대리응시자·불참자는 불합격 처리."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-23",
+        "source": "https://helper.hanseo.ac.kr/Upl/kr/hdbook/susi_admission.pdf?ver=20220602_01"
+      }
+    }
+  ],
+  "prepPoints": [
+    "뮤직프로듀싱과 뮤직퍼포먼스 두 분야 중 하나를 선택해 지원 — 본인 강점에 맞는 분야 선택이 중요",
+    "뮤직프로듀싱 지원자는 DAW로 제작한 작업물(자작곡 또는 기존 곡 프로듀싱) 1곡과 작품설명서 준비 필요",
+    "뮤직퍼포먼스는 보컬·기타·건반·베이스·드럼·DJ·싱어송라이터 중 택1, 자유곡 3분 이내로 준비",
+    "수능최저학력기준 없음 — 실기(90%) 비중이 절대적이며 학생부는 10%에 불과",
+    "실기 평가용 악보 5부와 음원·MR(MP3, USB)을 사전에 준비해 제출해야 함"
+  ]
+}

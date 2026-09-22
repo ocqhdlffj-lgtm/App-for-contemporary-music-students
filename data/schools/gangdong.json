@@ -1,0 +1,40 @@
+{
+  "id": "gangdong",
+  "name": "강동대학교",
+  "type": "전문대",
+  "region": "충북",
+  "deptName": "실용음악과",
+  "admissionsUrl": "https://www.gangdong.ac.kr/ipsi/main/index.do",
+  "guideUrl": null,
+  "tracks": [
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시모집",
+      "majors": ["보컬", "싱어송"],
+      "quota": null,
+      "schedule": { "apply": null, "practical": [], "announce": null },
+      "ratio": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 2,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 공식 모집요강 미공개(2026-09-23 기준 입학처 해당 게시판 '페이지 준비중'). 참고로 2024학년도 정시 기준(비공식 입시학원 게시글, gangdong.ac.kr 원문 아님) 보컬+싱어송 통합 10명 모집, 학생부 20%+실기 80%, 보컬은 자유곡 1곡(장르 불문, 반주자/무반주/MR 가능), 싱어송은 자작곡 1곡 자가 반주 필수, 전 곡 암보 연주·2분 이내였음. 연도가 다르므로 수치는 참고용이며 최신 요강 공개 시 재확인 필요."
+      },
+      "competition": [],
+      "verification": {
+        "level": "미확인",
+        "checkedAt": "2026-09-23",
+        "source": "https://www.gangdong.ac.kr/ipsi/main/index.do"
+      }
+    }
+  ],
+  "prepPoints": [
+    "2027학년도 모집요강이 아직 입학처 홈페이지에 게시되지 않음(2026-09-23 확인 시점 기준) — 공개 후 재확인 필요",
+    "과거(2024학년도) 정시 기준으로는 보컬·싱어송 두 세부전공만 모집했고 실기 비중이 80%로 매우 높았음(공식 원문 아닌 입시학원 게시글 기준, 참고용)",
+    "싱어송 지원자는 자작곡을 자가 반주로 가창해야 했던 것으로 확인(과거 요강 기준)"
+  ]
+}

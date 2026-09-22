@@ -1,0 +1,206 @@
+{
+  "id": "jeonghwa",
+  "name": "정화예술대학교",
+  "type": "전문대",
+  "region": "서울",
+  "deptName": "실용음악학부",
+  "admissionsUrl": "https://ipsi.jb.ac.kr",
+  "guideUrl": "https://ipsi.jb.ac.kr/api/file/getPdf?path=board/202509//0038ec64-9245-4bcb-94e1-c6c864b615c9.pdf&destFilename=%EC%A0%95%ED%99%94%EC%98%88%EC%88%A0%EB%8C%80_%EC%8B%A0%EC%9E%85%EC%83%9D%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%ED%86%B5%ED%95%A9%EB%B3%B8_%EC%9B%B9%EC%9A%A9_%EC%88%98%EC%A0%95%EB%B3%B8.pdf",
+  "tracks": [
+    {
+      "id": "susi1-silgi",
+      "season": "수시",
+      "name": "수시 1차 (보컬·힙합·작편곡·기악·싱어송라이터·뮤직테크놀로지·탑라이너)",
+      "majors": ["보컬", "힙합", "작편곡", "건반", "기타", "베이스", "드럼", "싱어송라이터", "뮤직테크놀로지", "탑라이너"],
+      "quota": {
+        "보컬": 111,
+        "힙합": 12,
+        "작편곡": 16,
+        "건반": 8,
+        "기타": 9,
+        "베이스": 7,
+        "드럼": 8,
+        "싱어송라이터": 12,
+        "뮤직테크놀로지": 124,
+        "탑라이너": 15
+      },
+      "schedule": {
+        "apply": null,
+        "practical": [],
+        "announce": null
+      },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "전공별 상이 - 보컬/기악(건반·기타·베이스·드럼): 악보(3부)/MR(USB)/반주자 1인 대동/본인반주/무반주 모두 가능. 작편곡: MR 또는 반주자 1인 대동 가능(본인 직접 연주 시 제외). 힙합: 자작랩 1곡(MR 필수, 코러스·보컬 더빙 금지, 전주 10초 이내). 싱어송라이터: 자작곡 연주하며 가창(피아노·기타·베이스에 한함), 마이크 사용 가능, 반주자·MR 사용 불가. 탑라이너: 보컬 창작곡 본인 가창 녹음 필수(AR 또는 MR 위에 실연 가능), 반주자·MR 사용 불가.",
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "⚠ 날짜는 2026학년도(직전 회차) 기준이라 이미 지났으므로 제외함(2027학년도 요강 미발표). 보컬: 자유곡 1곡(장르불문) 1분30초 내외, 마이크 사용 불가. 힙합: 자작랩 1곡(작사 필수, 비속어·욕설 금지). 작편곡: 자작곡 1곡(장르불문), 랩 포함 시 가사·MR 별도 준비. 기악(건반/기타/베이스/드럼): 자유곡 1곡(장르불문), MR 사용 시 USB에 시험곡만 저장, 오버드라이브·디스토션 계열 이펙터만 허용(코러스·딜레이·리버브 등 공간계 이펙터 사용금지). 뮤직테크놀로지: 창작곡(가창 또는 연주) 1곡 제출 + 2분 이내 본인 작품설명(질의응답 포함), 작품설명서 3부, 음악생성AI로 제작된 곡 제출 불가, mp3/wav(영상은 mp4/mov) 중 택1 제출. 탑라이너: 보컬 창작곡 1곡 제출(본인 가창 녹음 필수) + 2분 이내 작품설명, 악보 3부(멜로디·가사·코드 포함). 싱어송라이터: 2~3분 내외 자작곡을 악기(피아노/기타/베이스) 연주하며 가창, 악보 3부. 면접/실기고사는 1지망 모집단위에서 1회만 응시. 보컬·뮤직테크놀로지전공은 1·2지망 교차지원 불가."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-23",
+        "source": "https://ipsi.jb.ac.kr/api/file/getPdf?path=board/202509//0038ec64-9245-4bcb-94e1-c6c864b615c9.pdf&destFilename=2026%ED%95%99%EB%85%84%EB%8F%84+%EC%8B%A0%EC%9E%85%EC%83%9D%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%ED%86%B5%ED%95%A9%EB%B3%B8.pdf"
+      }
+    },
+    {
+      "id": "susi1-eumhyang",
+      "season": "수시",
+      "name": "수시 1차 (음향제작전공, 신설)",
+      "majors": ["음향제작"],
+      "quota": { "음향제작": 12 },
+      "schedule": { "apply": null, "practical": [], "announce": null },
+      "ratio": { "학생부": 50, "면접": 50 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 5,
+        "sheetMusicRequired": false,
+        "notes": "⚠ 날짜는 2026학년도(직전 회차) 기준이라 이미 지났으므로 제외함(2027학년도 요강 미발표). 실기고사 없이 면접고사로만 평가(학생부 50%+면접 50%). 면접은 자기소개 및 지원동기를 포함한 본인 발표(5분 이내), 포트폴리오 지참은 선택사항(자율양식)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-23",
+        "source": "https://ipsi.jb.ac.kr/api/file/getPdf?path=board/202509//0038ec64-9245-4bcb-94e1-c6c864b615c9.pdf&destFilename=2026%ED%95%99%EB%85%84%EB%8F%84+%EC%8B%A0%EC%9E%85%EC%83%9D%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%ED%86%B5%ED%95%A9%EB%B3%B8.pdf"
+      }
+    },
+    {
+      "id": "susi2-silgi",
+      "season": "수시",
+      "name": "수시 2차 (보컬·힙합·작편곡·기악·싱어송라이터·뮤직테크놀로지·탑라이너)",
+      "majors": ["보컬", "힙합", "작편곡", "건반", "기타", "베이스", "드럼", "싱어송라이터", "뮤직테크놀로지", "탑라이너"],
+      "quota": {
+        "보컬": 88,
+        "힙합": 12,
+        "작편곡": 12,
+        "건반": 5,
+        "기타": 7,
+        "베이스": 3,
+        "드럼": 5,
+        "싱어송라이터": 12,
+        "뮤직테크놀로지": 100,
+        "탑라이너": 12
+      },
+      "schedule": { "apply": null, "practical": [], "announce": null },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "수시 1차와 동일(전공별 상이 - susi1-silgi 트랙 참고)",
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "⚠ 날짜는 2026학년도(직전 회차) 기준이라 이미 지났으므로 제외함(2027학년도 요강 미발표). 실기고사 방식 및 준비사항은 수시 1차와 동일. 모집인원만 상이(수시1차 미충원 인원 이월모집)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-23",
+        "source": "https://ipsi.jb.ac.kr/api/file/getPdf?path=board/202509//0038ec64-9245-4bcb-94e1-c6c864b615c9.pdf&destFilename=2026%ED%95%99%EB%85%84%EB%8F%84+%EC%8B%A0%EC%9E%85%EC%83%9D%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%ED%86%B5%ED%95%A9%EB%B3%B8.pdf"
+      }
+    },
+    {
+      "id": "susi2-eumhyang",
+      "season": "수시",
+      "name": "수시 2차 (음향제작전공, 신설)",
+      "majors": ["음향제작"],
+      "quota": { "음향제작": 12 },
+      "schedule": { "apply": null, "practical": [], "announce": null },
+      "ratio": { "학생부": 50, "면접": 50 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 5,
+        "sheetMusicRequired": false,
+        "notes": "⚠ 날짜는 2026학년도(직전 회차) 기준이라 이미 지났으므로 제외함(2027학년도 요강 미발표). 실기고사 없이 면접고사로만 평가. 방식은 수시 1차와 동일."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-23",
+        "source": "https://ipsi.jb.ac.kr/api/file/getPdf?path=board/202509//0038ec64-9245-4bcb-94e1-c6c864b615c9.pdf&destFilename=2026%ED%95%99%EB%85%84%EB%8F%84+%EC%8B%A0%EC%9E%85%EC%83%9D%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%ED%86%B5%ED%95%A9%EB%B3%B8.pdf"
+      }
+    },
+    {
+      "id": "jeongsi-silgi",
+      "season": "정시",
+      "name": "정시모집 (보컬·힙합·작편곡·기악·싱어송라이터·뮤직테크놀로지·탑라이너)",
+      "majors": ["보컬", "힙합", "작편곡", "건반", "기타", "베이스", "드럼", "싱어송라이터", "뮤직테크놀로지", "탑라이너"],
+      "quota": {
+        "보컬": 23,
+        "힙합": 6,
+        "작편곡": 12,
+        "건반": 8,
+        "기타": 6,
+        "베이스": 5,
+        "드럼": 9,
+        "싱어송라이터": 6,
+        "뮤직테크놀로지": 24,
+        "탑라이너": 3
+      },
+      "schedule": { "apply": null, "practical": [], "announce": null },
+      "ratio": { "실기": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "수시와 동일(전공별 상이 - susi1-silgi 트랙 참고)",
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "⚠ 날짜는 2025학년도 정시(직전 회차) 기준이라 이미 지났으므로 제외함(2027학년도 요강 미발표). 실기고사 방식 및 준비사항은 수시모집과 동일. 직전 회차 기준 보컬/힙합/작편곡/기악/싱어송라이터는 정시 실기 1~2일차, 뮤직테크놀로지/탑라이너는 그 다음 주에 진행됨(정확한 날짜는 재확인 필요)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-23",
+        "source": "https://ipsi.jb.ac.kr/api/file/getPdf?path=board/202509//0038ec64-9245-4bcb-94e1-c6c864b615c9.pdf&destFilename=2026%ED%95%99%EB%85%84%EB%8F%84+%EC%8B%A0%EC%9E%85%EC%83%9D%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%ED%86%B5%ED%95%A9%EB%B3%B8.pdf"
+      }
+    },
+    {
+      "id": "jeongsi-eumhyang",
+      "season": "정시",
+      "name": "정시모집 (음향제작전공, 신설)",
+      "majors": ["음향제작"],
+      "quota": { "음향제작": 6 },
+      "schedule": { "apply": null, "practical": [], "announce": null },
+      "ratio": { "학생부": 50, "면접": 50 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": 5,
+        "sheetMusicRequired": false,
+        "notes": "⚠ 날짜는 2025학년도 정시(직전 회차) 기준이라 이미 지났으므로 제외함(2027학년도 요강 미발표). 실기고사 없이 면접고사로만 평가. 방식은 수시와 동일."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-23",
+        "source": "https://ipsi.jb.ac.kr/api/file/getPdf?path=board/202509//0038ec64-9245-4bcb-94e1-c6c864b615c9.pdf&destFilename=2026%ED%95%99%EB%85%84%EB%8F%84+%EC%8B%A0%EC%9E%85%EC%83%9D%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%ED%86%B5%ED%95%A9%EB%B3%B8.pdf"
+      }
+    }
+  ],
+  "prepPoints": [
+    "실기 위주 전공(보컬/힙합/작편곡/기악/싱어송라이터/뮤직테크놀로지/탑라이너)은 학생부·면접 없이 실기 100%로 당락이 결정됨",
+    "2026학년도부터 음향제작전공·탑라이너전공이 신설됨 — 음향제작전공만 유일하게 실기고사가 없고 학생부 50%+면접 50%로 선발",
+    "실용음악학부 내 전공 간 1·2지망 교차지원이 가능하나, 보컬전공과 뮤직테크놀로지전공은 2지망 지원이 불가함",
+    "기악전공(건반/기타/베이스/드럼)은 공간계 이펙터(코러스·딜레이·리버브 등) 사용이 금지되고 드라이브 계열(오버드라이브·디스토션)만 허용됨",
+    "뮤직테크놀로지·탑라이너 전공은 음악생성 AI로 제작한 창작곡 제출이 금지됨",
+    "모집인원·반영비율·실기조건은 2026학년도(2025.09~2026.01 시행) 모집요강 기준. 원서접수·실기고사·발표 날짜는 2026-09-23 확인 시점까지 2027학년도 요강이 게시되지 않아 이미 지난 직전 회차 날짜를 넣지 않고 비워둠 — 지원 전 정화예술대학교 입학처(ipsi.jb.ac.kr)에서 최신 요강으로 반드시 재확인 필요"
+  ]
+}
