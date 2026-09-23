@@ -106,12 +106,21 @@
     host.appendChild(PM.ui.disclaimerBar());
   }
 
+  // 초견진행 화면 진입점. 학교 데이터와 무관한 정적 연습 자료라 state를
+  // 전혀 참조하지 않는다 — loaded 여부와 상관없이 바로 그릴 수 있다.
+  function renderSightReading() {
+    var host = screenEl();
+    host.textContent = '';
+    host.appendChild(PM.ui.sightreading.render());
+  }
+
   // 탭 이름 → 화면 진입점. Task 12가 탭을 추가할 때는 이 표에 항목 하나만
   // 더하면 되고, bindTabs 자체를 손댈 필요가 없다.
   var screens = {
     list: renderList,
     mylist: renderMyList,
-    compare: renderCompare
+    compare: renderCompare,
+    sightreading: renderSightReading
   };
 
   // 탭 버튼의 active 클래스와 state.activeTab은 이 핸들러 하나에서만 함께
@@ -147,6 +156,6 @@
   PM.app = {
     start: start, _state: state,
     _renderList: renderList, _renderDetail: renderDetail, _renderMyList: renderMyList,
-    _renderCompare: renderCompare
+    _renderCompare: renderCompare, _renderSightReading: renderSightReading
   };
 })(window.PM);
