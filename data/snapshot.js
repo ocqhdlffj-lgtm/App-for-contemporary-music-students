@@ -2,7 +2,7 @@
 // 정본은 data/schools/*.json 입니다.
 window.PM = window.PM || {};
 window.PM.SNAPSHOT = {
-  "dataVersion": "2026-09-23",
+  "dataVersion": "2026-09-29",
   "schools": [
 {
   "id": "anyang-univ",
@@ -3878,10 +3878,15 @@ window.PM.SNAPSHOT = {
       "ratio": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-12", "source": null }
+      "verification": { "level": "미확인", "checkedAt": "2026-09-29", "source": null }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "⚠️ phantom-record 의심(폐교 확정 — 다른 학교들의 '학과 폐지'와는 차원이 다른, 학교法人 자체의 자진폐교 사례): 부산예술대학교(학교법인 원곡학원)는 2025-09-19~30 이사회에서 자진폐교(안)를 상정·의결했고, 2025-09-14 사학진흥재단에 폐교 이행계획서를 제출했으며, 2027년 2월 폐교를 목표로 절차가 진행 중임이 다수 언론(부산일보, 국제신문, 부산MBC, 한국시민기자협회 등, 2025-11~2026-04 보도)으로 확인됨. 사유는 개교(1994) 이래 전문대학 기관평가인증을 한 차례도 통과하지 못해 2024-12 교육부로부터 국가장학금·학자금대출 지원이 전면 중단된 것. 이 여파로 2026학년도 수시모집 자체를 진행하지 못했고(총장이 공식 발표), 2027학년도 신입생 모집 여부는 '불투명'하다고 보도됨 — 사실상 신규 모집이 이루어지지 않을 것으로 판단됨(폐교 절차가 2027년 2월 종료를 목표로 진행 중인데 그 시점에 신입생을 새로 받는 것은 상식적으로 불가능).",
+    "실제 홈페이지(www.pia.ac.kr) 입시요강 페이지(/page/sub03/sub01.php?TREE_NO=1176)에서 발견되는 입시요강 PDF(data/sub03/20250709030932.pdf, 2025-07-09 게시)는 2026학년도용으로 추정되며, 그마저도 위 보도에 따르면 실제 수시모집이 중단되어 집행되지 않은 것으로 보임 — 이 PDF를 근거로 quota/schedule/ratio를 채우는 것은 이미 무효화된 계획을 실제 모집 정보인 것처럼 제공하는 것이므로 채우지 않음.",
+    "재학생 처우: 2026-04 보도 기준 실용음악과 재학생(약 30명 포함 전교생 406명)의 부산보건대학 편입 또는 실용음악과 3년제→2년제 학칙 개정을 통한 자체 졸업 방안이 논의 중이며 아직 확정되지 않음 — 이는 신입생 모집과 무관한 재학생 구제 대책임.",
+    "따라서 이 레코드는 삭제하지 않고 quota/schedule/ratio/practical 전부 null, verification.level '미확인'으로 유지함. 향후 학교 측이 폐교를 철회하거나 신입생 모집을 재개한다는 공식 발표가 나오면 재확인 필요."
+  ]
 }
 ,
 {
@@ -4411,22 +4416,103 @@ window.PM.SNAPSHOT = {
   "region": "대전",
   "deptName": "실용음악전공",
   "admissionsUrl": "https://ent.wsi.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://ent.wsi.ac.kr/site/ent/image/wsi2027.pdf",
   "tracks": [
     {
-      "id": "susi",
+      "id": "susi-1",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
+      "name": "수시 1차",
+      "majors": ["보컬", "작곡", "기악"],
       "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "practical": null,
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-13"],
+        "announce": "2026-10-23"
+      },
+      "ratio": { "실기": 80, "학생부": 20 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "보컬: MR반주 또는 본인의 실연 악기 반주(반주자 동반 가능) 필수 — 곡은 1분 30초 이전에 종료되도록 구성. 기악: MR(반주음원) 사용 가능하나 응시자 본인과 동일한 악기가 반주음원에 포함되면 안 됨. 반주 음원에 코러스 삽입은 전 전공 공통 금지. 작곡전공은 반주 없이(본인작 반주로 진행 시 암보) 진행.",
+        "durationMin": 1.5,
+        "sheetMusicRequired": true,
+        "notes": "글로벌실용예술학부(실용음악전공/실용댄스전공/K-ART전공 통합 모집단위) 내 실용음악전공은 보컬·작곡·기악 3개 세부 트랙 중 1개를 선택해 응시. 보컬: 자유곡 1곡(1분30초 이내, 가요/팝/OST/재즈/뮤지컬/랩/가스펠 등), 랩 응시 시 악보 대신 가사지 제출 가능. 작곡: 멜로디가 있는 창작곡 1곡 또는 사운드 디자인 1곡, 작품설명서+악보(또는 멜로디·가사·코드·섹션 포함 악보) 2개 PDF를 학부 공식이메일로 제출. 기악: 자유곡 1곡(1분30초 이내), 기타/베이스기타/피아노/드럼 악기만 가능. 전 트랙 공통: 악보는 온라인(PDF, woosongart@wsi.ac.kr)으로 사전 제출하며 시험은 암보로 진행, 실기고사 결시자·총점 0점자는 불합격 처리, 신분증(사진 부착) 필수 지참. 출처: 2027학년도 신입생 모집요강 PDF 24~25쪽 '글로벌실용예술학부 실기고사 안내'."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-29",
+        "source": "https://ent.wsi.ac.kr/site/ent/image/wsi2027.pdf"
+      }
+    },
+    {
+      "id": "susi-2",
+      "season": "수시",
+      "name": "수시 2차",
+      "majors": ["보컬", "작곡", "기악"],
+      "quota": null,
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-03"],
+        "announce": "2026-12-11"
+      },
+      "ratio": { "실기": 80, "학생부": 20 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "보컬: MR반주 또는 본인의 실연 악기 반주(반주자 동반 가능) 필수 — 곡은 1분 30초 이전에 종료되도록 구성. 기악: MR(반주음원) 사용 가능하나 응시자 본인과 동일한 악기가 반주음원에 포함되면 안 됨. 반주 음원에 코러스 삽입은 전 전공 공통 금지. 작곡전공은 반주 없이(본인작 반주로 진행 시 암보) 진행.",
+        "durationMin": 1.5,
+        "sheetMusicRequired": true,
+        "notes": "글로벌실용예술학부(실용음악전공/실용댄스전공/K-ART전공 통합 모집단위) 내 실용음악전공은 보컬·작곡·기악 3개 세부 트랙 중 1개를 선택해 응시. 실기고사 내용은 수시1차와 동일(수시1차 practical.notes 참조). 출처: 2027학년도 신입생 모집요강 PDF 24~25쪽."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-29",
+        "source": "https://ent.wsi.ac.kr/site/ent/image/wsi2027.pdf"
+      }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시모집",
+      "majors": ["보컬", "작곡", "기악"],
+      "quota": null,
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": ["2027-01-22"],
+        "announce": "2027-01-29"
+      },
+      "ratio": { "실기": 80, "학생부": 20 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "보컬: MR반주 또는 본인의 실연 악기 반주(반주자 동반 가능) 필수 — 곡은 1분 30초 이전에 종료되도록 구성. 기악: MR(반주음원) 사용 가능하나 응시자 본인과 동일한 악기가 반주음원에 포함되면 안 됨. 반주 음원에 코러스 삽입은 전 전공 공통 금지. 작곡전공은 반주 없이(본인작 반주로 진행 시 암보) 진행.",
+        "durationMin": 1.5,
+        "sheetMusicRequired": true,
+        "notes": "글로벌실용예술학부(실용음악전공/실용댄스전공/K-ART전공 통합 모집단위) 내 실용음악전공은 보컬·작곡·기악 3개 세부 트랙 중 1개를 선택해 응시. 실기고사 내용은 수시1차와 동일(수시1차 practical.notes 참조). 정시 전형은 학생부 200점(20%)+실기 800점(80%)=1,000점(100%)이며 수능 성적은 전혀 반영되지 않음(요강 12쪽 '3) 실기학과' 표). 출처: 2027학년도 신입생 모집요강 PDF 12쪽, 24~25쪽."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-29",
+        "source": "https://ent.wsi.ac.kr/site/ent/image/wsi2027.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실용음악전공은 '글로벌실용예술학부'(실용음악전공·실용댄스전공·K-ART전공 통합 모집단위)로 모집되며, 학과 자체 정원은 공개되지 않음 — 학부 전체 정원(수시1차 일반전형 54명 / 수시2차 4명 / 정시 2명, 3개 전공 합산)만 확인되어 quota를 null로 둠. 학부 정원 중 실제 실용음악전공 선발 인원은 대학 측(042-629-6274~5) 확인 필요",
+    "실기 80% + 학생부 20%로 실기 비중이 절대적이며, 수능 성적은 정시에서도 전혀 반영되지 않음(전형방법 표에 수능 항목 자체가 없어 minCsat은 확인된 사실로서 null 처리)",
+    "보컬·작곡·기악 3개 세부 트랙 중 1개 선택 응시 — 자유곡 1곡, 1분 30초 이내로 짧으므로 곡 전체가 아닌 하이라이트 구간 편집이 핵심",
+    "악보(보컬은 랩일 경우 가사지 대체 가능)를 온라인(PDF, woosongart@wsi.ac.kr)으로 사전 제출하고 시험은 암보로 진행 — 제출 기한을 놓치면 불이익 가능성이 크므로 원서접수 마감 직후 대학 홈페이지 공지를 반드시 확인해야 함",
+    "기악전공은 MR 반주 시 본인과 동일 악기가 반주음원에 포함되면 안 되고, 전 트랙 공통으로 반주 음원에 코러스 삽입이 금지됨"
+  ]
 }
 ,
 {
@@ -4635,23 +4721,78 @@ window.PM.SNAPSHOT = {
   "type": "4년제",
   "region": "경기",
   "deptName": "실용음악과",
-  "admissionsUrl": "https://ipsi.yongin.ac.kr/",
-  "guideUrl": null,
+  "admissionsUrl": "https://ipsi.yongin.ac.kr",
+  "guideUrl": "https://cdn013.negagea.net/dgsmidc/omr/seoul/web/univ_info2026/%EC%9A%A9%EC%9D%B8%EB%8C%80%ED%95%99%EA%B5%90/%EC%9A%A9%EC%9D%B8%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84_%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf",
   "tracks": [
     {
-      "id": "susi",
+      "id": "susi-general",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "practical": null,
+      "name": "일반학생 전형",
+      "majors": ["보컬", "작곡", "기악(피아노·기타·베이스·드럼)", "국악(현악·관악·성악·타악)"],
+      "quota": {
+        "보컬": 4,
+        "작곡": 2,
+        "기악(피아노·기타·베이스·드럼)": 8,
+        "국악(현악·관악·성악·타악)": 8
+      },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-02", "2026-10-03", "2026-10-04", "2026-10-05"],
+        "announce": "2026-10-16"
+      },
+      "ratio": { "학생부": 30, "실기": 70 },
+      "practical": {
+        "songCount": null,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "전공별 상이 — 보컬/기타/베이스/드럼은 무반주 또는 MR 반주 가능(USB 제출), 피아노와 국악(현악·관악·성악·타악)은 전 세부전공 반주 없이 진행, 작곡은 실기고사장 비치 업라이트 피아노 또는 어쿠스틱 기타로 본인 연주",
+        "durationMin": null,
+        "sheetMusicRequired": false,
+        "notes": "세부전공별 실기 요강이 상이함(2027학년도 모집요강 p.26 기준). 보컬: 자유곡 2곡(가요 1곡+팝 1곡, 각 1분 이내), 무반주 또는 MR 사용 가능(USB 1번 트랙 가요·2번 트랙 팝, MR파일만 저장), 실기고사장 비치 업라이트 피아노와 개인 지참 어쿠스틱 기타 외 악기 사용 불가, 연주자 대동 불가. 작곡: ①자작곡 1곡(업라이트 피아노 또는 어쿠스틱 기타, 2분 이내, 악보·MR·배경음악 사용불가, 본인에 한해 멜로디 가창만 허용) ②당일 제시 4마디 내외 코드 진행을 보고 즉석 멜로디 작곡 및 자가 연주(가창자·연주자 대동 불가). 기악: 피아노(①자유곡 1곡 2분 이내 무반주, 업라이트 피아노만 사용, MR 불가 ②당일 제시 8마디 내외 악보 즉흥연주), 기타(①자유곡 1곡 2분 이내 무반주 또는 MR 가능, 일렉/어쿠스틱 기타 사용가능·이펙터 불가 ②즉흥연주), 베이스(①자유곡 1곡 2분 이내 무반주 또는 MR 가능, 개인 베이스 지참·이펙터 불가 ②즉흥연주), 드럼(①자유곡 1곡 2분 이내 무반주 또는 MR 가능, 실기고사장 비치 드럼 사용·스네어 등 개인악기 지참 불가(페달·스틱은 지참 가능) ②즉흥연주). 기악 전 세부전공 연주자 대동 불가, 배점 200(①)+150(②)=350. 국악(현악·관악·성악·타악): 자유곡 1곡(3분 이내), 전 세부전공 반주 없이 실시, 반드시 암보 연주/가창, 악기는 본인 지참(현악: 가야금·거문고·아쟁 / 관악: 피리·대금·해금 / 성악: 정가·경서도창·판소리 계열). 전형방법: 학생부(교과) 30%+전공실기 70%, 500점 만점. 전형일정은 단계별전형 미실시학과 일괄전형(연극학과 제외 전 예체능계열 공통) — 2026.10.2.(금)~10.5.(월) 사이 지원자별 세부 일시는 2026.9.22.(화) 15:00 이후 입학관리실 홈페이지 공지."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-29",
+        "source": "https://cdn013.negagea.net/dgsmidc/omr/seoul/web/univ_info2026/%EC%9A%A9%EC%9D%B8%EB%8C%80%ED%95%99%EA%B5%90/%EC%9A%A9%EC%9D%B8%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84_%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf"
+      }
+    },
+    {
+      "id": "susi-giheohyeong",
+      "season": "수시",
+      "name": "기회균형 특별전형",
+      "majors": [],
+      "quota": { "실용음악과 전체(세부전공 구분 없음)": 2 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-10-02", "2026-10-03", "2026-10-04", "2026-10-05"],
+        "announce": "2026-10-16"
+      },
+      "ratio": { "학생부": 30, "실기": 70 },
+      "practical": {
+        "songCount": null,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "일반학생 전형과 동일(세부전공별 상이 — 실기고사 요강 자체는 일반학생 전형과 동일 적용, 본 모집요강 p.7 '실기/실적 위주 전형' 반영비율표에 일반학생전형과 함께 기재됨)",
+        "durationMin": null,
+        "sheetMusicRequired": false,
+        "notes": "전형방법·실기고사 요강은 일반학생 전형과 동일(학생부 30%+실기 70%). 모집인원표(모집요강 p.1)에는 실용음악과 기회균형특별전형 정원이 세부전공 구분 없이 '2명'으로 통합 표기되어 있어, 보컬/작곡/기악/국악 중 어느 세부전공으로 지원 가능한지(정원 배분)는 표에서 확인되지 않음 — 지원 시 유의."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-29",
+        "source": "https://cdn013.negagea.net/dgsmidc/omr/seoul/web/univ_info2026/%EC%9A%A9%EC%9D%B8%EB%8C%80%ED%95%99%EA%B5%90/%EC%9A%A9%EC%9D%B8%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84_%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "2027학년도 기준 실용음악과는 정상 모집 중 — 보컬(4명)·작곡(2명)·기악[피아노·기타·베이스·드럼 통합 8명]·국악[현악·관악·성악·타악 통합 8명] 세부전공으로 구성되며, 2027학년도부터 기존 별도 학과였던 '국악과'가 폐지되고 실용음악과 내 '국악' 전공으로 편입됨(모집요강 p.3 주요변경사항 참조) — 실용음악 계열이지만 국악 전공은 전통악기/성악 실기이므로 지원 시 혼동 주의",
+    "전형방법은 전 세부전공 공통 학생부(교과) 30% + 실기 70%(500점 만점)로 실기 비중이 절대적",
+    "보컬은 유일하게 자유곡 2곡(가요 1곡+팝 1곡)을 요구하며 나머지 세부전공(작곡 자작곡, 기악 각 악기, 국악)은 자유곡 1곡이 기본 — 다만 기악·작곡은 추가로 당일 제시 악보 즉흥연주/즉석 작곡이 있어 2단계 준비가 필요함",
+    "기악(피아노·기타·베이스·드럼)과 작곡은 연주자·가창자 대동이 전면 금지되어 반드시 본인이 직접 연주해야 하며, 피아노·드럼은 실기고사장 비치 악기만 사용 가능(학교에서 준비)",
+    "국악 전공(현악·관악·성악·타악)은 전 세부전공 반주 없이 진행되고 반드시 암보(악보 없이) 연주·가창해야 함 — 실용음악 계열 중 이례적으로 전통 국악 레퍼토리(가야금·거문고·아쟁·피리·대금·해금·정가·경서도창·판소리 등) 준비가 필요"
+  ]
 }
 ,
 {
@@ -4661,22 +4802,205 @@ window.PM.SNAPSHOT = {
   "region": "경기",
   "deptName": "실용음악과",
   "admissionsUrl": "https://ipsi.ysc.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ",
   "tracks": [
     {
-      "id": "susi",
+      "id": "susi1-gyogwa",
       "season": "수시",
-      "name": "수시모집",
+      "name": "수시 1차 일반전형(교과)",
       "majors": [],
-      "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "practical": null,
-      "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "quota": { "실용음악과": 4 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": [],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "학생부": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "실용음악과는 같은 라운드 안에서 '일반전형(교과)'와 '일반전형(실기)' 두 트랙으로 동시에 모집인원이 배정됨(모집요강 p.10 표). 교과 트랙은 면접·실기고사 없이 학교생활기록부 교과성적 100%로만 선발함(p.15 면접 및 실기고사 일정표에 실용음악과는 '실기' 항목에만 등재되어 있고 '면접' 항목에는 없음; p.20 성적반영비율표의 수시 '교과 100%' 열에 해당)."
+      },
+      "competition": [
+        { "전형": "수시1차 일반전형(교과) 참고", "경쟁률": 18.0, "연도": "2026학년도(전년도 참고자료)", "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-29",
+        "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ"
+      }
+    },
+    {
+      "id": "susi1-silgi",
+      "season": "수시",
+      "name": "수시 1차 일반전형(실기)",
+      "majors": ["보컬", "작곡", "싱어송라이터", "미디작곡"],
+      "quota": { "실용음악과": 16 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-16"],
+        "announce": "2026-11-06"
+      },
+      "ratio": { "실기": 90, "학생부": 10 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "보컬: MR(USB) 또는 반주자 대동, 무반주, 본인반주 중 택1(악기는 1개만 사용 가능). MR 사용 시 코러스 삽입 금지, 전주는 5초 이내로 편집. 작곡/싱어송라이터: 반주자 혹은 가창자 대동 중 선택 가능(악기 1개만). 모든 수험생은 암보로 연주해야 함(반주자는 악보 지참 허용). 실기곡은 '클래식, 뮤지컬'을 제외한 모든 장르 가능. MR은 반드시 USB로 제출(CD·휴대폰 재생 불가, FAT32/exFAT/NTFS 포맷).",
+        "durationMin": 2,
+        "sheetMusicRequired": true,
+        "notes": "고사방법(모집요강 p.17): [공통] 실기곡은 클래식·뮤지컬 제외 전 장르 가능, 전원 암보 연주, MR은 USB 제출만 허용(CD/휴대폰 불가), 심사위원용 악보 4부(작곡부문은 작곡요약서 1부 포함)는 A4 사이즈로만 제출(반환 안 됨). [보컬] 실용(대중)음악 자유곡 1곡 가창(2분 내외), 반주 방식 택1. [작곡] 자작곡 1곡 연주 및 가창(2분 내외). [싱어송라이터] 자작곡 1곡 연주(2분 내외), MR 또는 본인반주 중 택1하여 가창. [미디작곡] DAW로 만든 자작곡 1곡 음원 재생(2분 내외) 및 제작과정 등 질의응답. 자작곡이 기존곡과 유사할 경우 합격 취소될 수 있음. 실기시험 미응시·중도포기 시 성적과 무관하게 불합격 처리(p.10 표 하단 각주)."
+      },
+      "competition": [
+        { "전형": "수시1차 일반전형(실기) 참고", "경쟁률": 2.4, "연도": "2026학년도(전년도 참고자료)", "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-29",
+        "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ"
+      }
+    },
+    {
+      "id": "susi2-gyogwa",
+      "season": "수시",
+      "name": "수시 2차 일반전형(교과)",
+      "majors": [],
+      "quota": { "실용음악과": 1 },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": [],
+        "announce": "2026-12-17"
+      },
+      "ratio": { "학생부": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "수시1차 교과 트랙과 동일하게 면접·실기 없이 학교생활기록부 교과성적 100%로 선발(모집요강 p.10, p.15, p.20)."
+      },
+      "competition": [
+        { "전형": "수시2차 일반전형(교과) 참고", "경쟁률": 6.0, "연도": "2026학년도(전년도 참고자료)", "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-29",
+        "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ"
+      }
+    },
+    {
+      "id": "susi2-silgi",
+      "season": "수시",
+      "name": "수시 2차 일반전형(실기)",
+      "majors": ["보컬", "작곡", "싱어송라이터", "미디작곡"],
+      "quota": { "실용음악과": 5 },
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-04"],
+        "announce": "2026-12-17"
+      },
+      "ratio": { "실기": 90, "학생부": 10 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "수시1차 일반전형(실기)와 동일 기준(모집요강 p.17): 보컬은 MR/반주자대동/무반주/본인반주 중 택1(악기 1개), 작곡·싱어송라이터는 반주자 또는 가창자 대동 선택, 전원 암보 연주, MR은 USB로만 제출.",
+        "durationMin": 2,
+        "sheetMusicRequired": true,
+        "notes": "수시1차 일반전형(실기)와 동일한 고사방법 적용(모집요강 p.17, 학과·전형 공통 규정). [보컬] 자유곡 1곡 가창(2분 내외). [작곡] 자작곡 1곡 연주·가창(2분 내외). [싱어송라이터] 자작곡 1곡 연주(2분 내외). [미디작곡] 자작곡 1곡 음원 재생(2분 내외)+질의응답. 실기시험 미응시·중도포기 시 불합격 처리."
+      },
+      "competition": [
+        { "전형": "수시2차 일반전형(실기) 참고", "경쟁률": 4.1, "연도": "2026학년도(전년도 참고자료)", "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-29",
+        "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ"
+      }
+    },
+    {
+      "id": "jeongsi-suneung",
+      "season": "정시",
+      "name": "정시 일반전형(수능)",
+      "majors": [],
+      "quota": { "실용음악과": 1 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": [],
+        "announce": "2027-02-04"
+      },
+      "ratio": { "수능": 100 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "면접·실기 없이 대학수학능력시험 성적 100%(국/수/영/탐구 중 우수한 2개 영역 백분위)로 선발. 수능최저학력기준은 적용하지 않음(모집요강 p.21, 전형 공통)."
+      },
+      "competition": [
+        { "전형": "정시 일반전형(수능) 참고", "경쟁률": 7.0, "연도": "2026학년도(전년도 참고자료)", "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-29",
+        "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ"
+      }
+    },
+    {
+      "id": "jeongsi-silgi",
+      "season": "정시",
+      "name": "정시 일반전형(실기)",
+      "majors": ["보컬", "작곡", "싱어송라이터", "미디작곡"],
+      "quota": { "실용음악과": 3 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": ["2027-01-26"],
+        "announce": "2027-02-04"
+      },
+      "ratio": { "실기": 90, "학생부": 10 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "수시 실기전형과 동일 기준(모집요강 p.17, p.20 성적반영비율표에 정시 실기도 '실기90%+교과10%'로 명시): 보컬은 MR/반주자대동/무반주/본인반주 중 택1, 작곡·싱어송라이터는 반주자 또는 가창자 대동 선택, 전원 암보 연주, MR은 USB로만 제출.",
+        "durationMin": 2,
+        "sheetMusicRequired": true,
+        "notes": "정시임에도 실기 트랙은 수능이 아닌 실기90%+학생부교과10%로 반영됨(모집요강 p.20). [보컬] 자유곡 1곡 가창(2분 내외). [작곡] 자작곡 1곡 연주·가창(2분 내외). [싱어송라이터] 자작곡 1곡 연주(2분 내외). [미디작곡] 자작곡 1곡 음원 재생(2분 내외)+질의응답. 실기시험 미응시·중도포기 시 불합격 처리."
+      },
+      "competition": [
+        { "전형": "정시 일반전형(실기) 참고", "경쟁률": 5.7, "연도": "2026학년도(전년도 참고자료)", "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ" }
+      ],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-09-29",
+        "source": "https://ipsi.ysc.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciw0MTI4MCxZ"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실용음악과는 같은 모집 라운드(수시1차/수시2차/정시) 안에서 '일반전형(교과 또는 수능)'과 '일반전형(실기)' 두 경로로 동시에 모집인원이 배정됨 — 교과·수능 트랙은 면접·실기 없이 서류/수능 성적만으로 선발하고, 실기 트랙만 실기고사를 치름(2027학년도 모집요강 p.10, p.15)",
+    "실기 트랙 반영비율은 수시·정시 모두 '실기 90% + 학생부교과 10%'로 동일함(정시 실기 트랙도 수능을 반영하지 않음, p.20)",
+    "수능최저학력기준은 대학 전체 공통으로 적용하지 않음(p.21)",
+    "실기고사는 보컬/작곡/싱어송라이터/미디작곡 중 택1하여 응시하며, 전원 자유곡 1곡(2분 내외)을 암보로 연주해야 함(반주자는 악보 지참 가능). 클래식·뮤지컬 장르는 실기곡으로 사용 불가",
+    "MR은 USB(FAT32/exFAT/NTFS)로만 제출 가능하며 CD·휴대폰 재생은 불가, MR 사용 시 코러스 삽입 금지·전주 5초 이내 편집 규정이 있음",
+    "작곡·싱어송라이터·미디작곡 지원자는 심사위원용 악보 4부(A4 사이즈 한정, 반환 불가) 및 작곡요약서 1부를 제출해야 하며, 자작곡이 기존 곡과 유사할 경우 합격이 취소될 수 있음",
+    "실기고사 결시·중도포기 시 성적과 무관하게 불합격 처리되므로 응시가 사실상 필수",
+    "전년도(2026학년도) 참고 경쟁률: 수시1차 교과 18.0:1 / 실기 2.4:1, 수시2차 교과 6.0:1 / 실기 4.1:1, 정시 수능 7.0:1 / 실기 5.7:1 — 교과·수능 트랙의 정원이 매우 적어(1~4명) 체감 경쟁률이 더 높을 수 있음에 유의"
+  ]
 }
 ,
 {
@@ -4698,10 +5022,15 @@ window.PM.SNAPSHOT = {
       "ratio": null,
       "practical": null,
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": { "level": "미확인", "checkedAt": "2026-09-29", "source": null }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "⚠️ phantom-record 의심(폐지 추정): 유원대학교 공식 '2027학년도 대학입학전형계획' PDF(www.u1.ac.kr/ipsi/data/plan.do?mode=download&articleNo=20344&attachNo=1227) 2페이지 '전형유형별 모집인원' 표는 영동캠퍼스·아산캠퍼스 전 모집단위(정원내·정원외 포함, 계 875명)를 캠퍼스별로 빠짐없이 나열하고 있으나, 실용음악학과·방송연예학과 등 음악 관련 학과는 어디에도 없음. 아산캠퍼스에는 미래자동차학과, 드론로봇응용학과, AI소프트웨어학과, 미디어콘텐츠학과, 뷰티케어학과, 경찰·소방행정학부, 국방인재개발학과, 유아교육과, 초등/중등특수교육과, 작업치료학과, 문화복지융합학과, 미래라이프융합학부, 창의설계학부, 한국어학과, 뷰티산업학과, 반도체융합학과, AI모빌리티학과, 문화복지학과만 등재됨.",
+    "학과 자체는 과거 실재했던 것으로 보임 — 학과 전용 홈페이지(behappy.u1.ac.kr, 페이지 제목 '유원대학교 | 실용음악과(방송연예학과)', 아산캠퍼스 소속)가 남아있으나 게시판 최신 글이 2018-01-11('2018 쏘스뮤직 전국 투어 오디션')이고 나머지 게시물도 2017년 작성 — 최소 2018학년도 이후 장기간 실질적으로 운영·업데이트가 중단된 것으로 추정됨. 즉 안양대(anyang-univ)·극동대(kdu)처럼 '표에서 최근에 빠짐'이 아니라 훨씬 이전(2018년 전후)에 사실상 폐지·모집중단된 것으로 보이는 사례.",
+    "입학처 '전형일정 및 모집단위'(ipsi.u1.ac.kr/ipsi/foreigner/recruitment.do)에서도 실용음악학과/방송연예학과 명시 없음. 대학입학전형계획 원문은 캠퍼스 확정 근거로도 사용함 — 실용음악(구 방송연예)학과는 아산캠퍼스(충남 아산시 음봉면) 소속이었음이 학과 홈페이지로 확인되어, 기존 region '충남' 표기는 정확함(영동캠퍼스=충북과 혼동 없음).",
+    "부천대(bucheon, 학과 자체가 존재한 적 없음)와는 다른 패턴이며, 두원공과대(doowon, 모집요강 원문에 폐지 명시)만큼 확정적이지는 않지만 안양대/극동대 패턴(실재했으나 현재 모집단위 표에서 완전히 빠짐)에 해당하므로 레코드를 삭제하지 않고 미확인으로 유지. 모집 재개 여부는 학교 측(입학처 1877-9760, 043-740-1321~1324) 확인 필요"
+  ]
 }
 
   ]

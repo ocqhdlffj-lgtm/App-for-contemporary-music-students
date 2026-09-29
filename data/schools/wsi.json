@@ -5,20 +5,101 @@
   "region": "대전",
   "deptName": "실용음악전공",
   "admissionsUrl": "https://ent.wsi.ac.kr/",
-  "guideUrl": null,
+  "guideUrl": "https://ent.wsi.ac.kr/site/ent/image/wsi2027.pdf",
   "tracks": [
     {
-      "id": "susi",
+      "id": "susi-1",
       "season": "수시",
-      "name": "수시모집",
-      "majors": [],
+      "name": "수시 1차",
+      "majors": ["보컬", "작곡", "기악"],
       "quota": null,
-      "schedule": null,
-      "ratio": null,
-      "practical": null,
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-30"],
+        "practical": ["2026-10-13"],
+        "announce": "2026-10-23"
+      },
+      "ratio": { "실기": 80, "학생부": 20 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "보컬: MR반주 또는 본인의 실연 악기 반주(반주자 동반 가능) 필수 — 곡은 1분 30초 이전에 종료되도록 구성. 기악: MR(반주음원) 사용 가능하나 응시자 본인과 동일한 악기가 반주음원에 포함되면 안 됨. 반주 음원에 코러스 삽입은 전 전공 공통 금지. 작곡전공은 반주 없이(본인작 반주로 진행 시 암보) 진행.",
+        "durationMin": 1.5,
+        "sheetMusicRequired": true,
+        "notes": "글로벌실용예술학부(실용음악전공/실용댄스전공/K-ART전공 통합 모집단위) 내 실용음악전공은 보컬·작곡·기악 3개 세부 트랙 중 1개를 선택해 응시. 보컬: 자유곡 1곡(1분30초 이내, 가요/팝/OST/재즈/뮤지컬/랩/가스펠 등), 랩 응시 시 악보 대신 가사지 제출 가능. 작곡: 멜로디가 있는 창작곡 1곡 또는 사운드 디자인 1곡, 작품설명서+악보(또는 멜로디·가사·코드·섹션 포함 악보) 2개 PDF를 학부 공식이메일로 제출. 기악: 자유곡 1곡(1분30초 이내), 기타/베이스기타/피아노/드럼 악기만 가능. 전 트랙 공통: 악보는 온라인(PDF, woosongart@wsi.ac.kr)으로 사전 제출하며 시험은 암보로 진행, 실기고사 결시자·총점 0점자는 불합격 처리, 신분증(사진 부착) 필수 지참. 출처: 2027학년도 신입생 모집요강 PDF 24~25쪽 '글로벌실용예술학부 실기고사 안내'."
+      },
       "competition": [],
-      "verification": { "level": "미확인", "checkedAt": "2026-09-11", "source": null }
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-29",
+        "source": "https://ent.wsi.ac.kr/site/ent/image/wsi2027.pdf"
+      }
+    },
+    {
+      "id": "susi-2",
+      "season": "수시",
+      "name": "수시 2차",
+      "majors": ["보컬", "작곡", "기악"],
+      "quota": null,
+      "schedule": {
+        "apply": ["2026-11-11", "2026-11-25"],
+        "practical": ["2026-12-03"],
+        "announce": "2026-12-11"
+      },
+      "ratio": { "실기": 80, "학생부": 20 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "보컬: MR반주 또는 본인의 실연 악기 반주(반주자 동반 가능) 필수 — 곡은 1분 30초 이전에 종료되도록 구성. 기악: MR(반주음원) 사용 가능하나 응시자 본인과 동일한 악기가 반주음원에 포함되면 안 됨. 반주 음원에 코러스 삽입은 전 전공 공통 금지. 작곡전공은 반주 없이(본인작 반주로 진행 시 암보) 진행.",
+        "durationMin": 1.5,
+        "sheetMusicRequired": true,
+        "notes": "글로벌실용예술학부(실용음악전공/실용댄스전공/K-ART전공 통합 모집단위) 내 실용음악전공은 보컬·작곡·기악 3개 세부 트랙 중 1개를 선택해 응시. 실기고사 내용은 수시1차와 동일(수시1차 practical.notes 참조). 출처: 2027학년도 신입생 모집요강 PDF 24~25쪽."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-29",
+        "source": "https://ent.wsi.ac.kr/site/ent/image/wsi2027.pdf"
+      }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시모집",
+      "majors": ["보컬", "작곡", "기악"],
+      "quota": null,
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": ["2027-01-22"],
+        "announce": "2027-01-29"
+      },
+      "ratio": { "실기": 80, "학생부": 20 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "보컬: MR반주 또는 본인의 실연 악기 반주(반주자 동반 가능) 필수 — 곡은 1분 30초 이전에 종료되도록 구성. 기악: MR(반주음원) 사용 가능하나 응시자 본인과 동일한 악기가 반주음원에 포함되면 안 됨. 반주 음원에 코러스 삽입은 전 전공 공통 금지. 작곡전공은 반주 없이(본인작 반주로 진행 시 암보) 진행.",
+        "durationMin": 1.5,
+        "sheetMusicRequired": true,
+        "notes": "글로벌실용예술학부(실용음악전공/실용댄스전공/K-ART전공 통합 모집단위) 내 실용음악전공은 보컬·작곡·기악 3개 세부 트랙 중 1개를 선택해 응시. 실기고사 내용은 수시1차와 동일(수시1차 practical.notes 참조). 정시 전형은 학생부 200점(20%)+실기 800점(80%)=1,000점(100%)이며 수능 성적은 전혀 반영되지 않음(요강 12쪽 '3) 실기학과' 표). 출처: 2027학년도 신입생 모집요강 PDF 12쪽, 24~25쪽."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-09-29",
+        "source": "https://ent.wsi.ac.kr/site/ent/image/wsi2027.pdf"
+      }
     }
   ],
-  "prepPoints": []
+  "prepPoints": [
+    "실용음악전공은 '글로벌실용예술학부'(실용음악전공·실용댄스전공·K-ART전공 통합 모집단위)로 모집되며, 학과 자체 정원은 공개되지 않음 — 학부 전체 정원(수시1차 일반전형 54명 / 수시2차 4명 / 정시 2명, 3개 전공 합산)만 확인되어 quota를 null로 둠. 학부 정원 중 실제 실용음악전공 선발 인원은 대학 측(042-629-6274~5) 확인 필요",
+    "실기 80% + 학생부 20%로 실기 비중이 절대적이며, 수능 성적은 정시에서도 전혀 반영되지 않음(전형방법 표에 수능 항목 자체가 없어 minCsat은 확인된 사실로서 null 처리)",
+    "보컬·작곡·기악 3개 세부 트랙 중 1개 선택 응시 — 자유곡 1곡, 1분 30초 이내로 짧으므로 곡 전체가 아닌 하이라이트 구간 편집이 핵심",
+    "악보(보컬은 랩일 경우 가사지 대체 가능)를 온라인(PDF, woosongart@wsi.ac.kr)으로 사전 제출하고 시험은 암보로 진행 — 제출 기한을 놓치면 불이익 가능성이 크므로 원서접수 마감 직후 대학 홈페이지 공지를 반드시 확인해야 함",
+    "기악전공은 MR 반주 시 본인과 동일 악기가 반주음원에 포함되면 안 되고, 전 트랙 공통으로 반주 음원에 코러스 삽입이 금지됨"
+  ]
 }
