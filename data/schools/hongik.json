@@ -40,10 +40,18 @@
         "sheetMusicRequired": null,
         "notes": "1단계(실기100%, 지원자 전원 응시)→2단계(실기80%+교과10%+출결10%=100%, 1단계 합격자만 응시) 단계별 전형. 세부전공별로 구성이 크게 달라 공통 수치를 하나로 특정할 수 없어 songCount/songType/accompaniment/durationMin/sheetMusicRequired는 null로 유지함. 보컬: 1단계 자유곡 1곡(1분40초 이내, 한국어 가창만 허용, 반주는 MR·무반주·본인반주(키보드/어쿠스틱기타) 중 택일, 악보 제출 불필요) → 2단계 자유곡 2곡(한국어 가사곡 1곡+영어 가사곡 1곡, 각 1분30초 이내, 반주자 1인 동반 가능(키보드만), 악보 각 5부 제출). 기악(드럼·베이스·기타·피아노·관악기): 1단계 자유곡 1곡(1분40초 이내, MR 전면 금지, 무반주 또는 지정된 악기 반주자 1인 동반만 가능, 악보 각 3부 제출) → 2단계 자유곡 2곡(BPM90 이상 펑크 스타일 1곡 + 자유곡 1곡, 각 1분30초 이내, 악보 5부 제출). 작곡: 1단계 즉석 멜로디 작곡·연주(1분 내외, 40점)+자유연주곡 1곡 연주(1분 내외, 60점, MR·반주자 불가, 심사위원용 악보 3부 제출) → 2단계 2마디 모티브로 16마디 멜로디 작곡(오선지, 제한시간 20분)+자가 연주(80점). 수능최저학력기준 없음."
       },
-      "competition": [],
+      "competition": [
+        { "전공": "보컬", "모집인원": 8, "지원인원": 2547, "경쟁률": 318.38, "연도": "2027학년도 수시", "source": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720891.html" },
+        { "전공": "기악(드럼)", "모집인원": 3, "지원인원": 389, "경쟁률": 129.67, "연도": "2027학년도 수시", "source": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720891.html" },
+        { "전공": "기악(베이스)", "모집인원": 3, "지원인원": 387, "경쟁률": 129.00, "연도": "2027학년도 수시", "source": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720891.html" },
+        { "전공": "기악(기타)", "모집인원": 5, "지원인원": 619, "경쟁률": 123.80, "연도": "2027학년도 수시", "source": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720891.html" },
+        { "전공": "기악(피아노)", "모집인원": 4, "지원인원": 254, "경쟁률": 63.50, "연도": "2027학년도 수시", "source": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720891.html" },
+        { "전공": "기악(관악기)", "모집인원": 2, "지원인원": 17, "경쟁률": 8.50, "연도": "2027학년도 수시", "source": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720891.html" },
+        { "전공": "작곡", "모집인원": 3, "지원인원": 236, "경쟁률": 78.67, "연도": "2027학년도 수시", "source": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720891.html" }
+      ],
       "verification": {
         "level": "부분확인",
-        "checkedAt": "2026-09-16",
+        "checkedAt": "2026-09-29",
         "source": "https://www.hongik.ac.kr/kr/admission/recruitment.do?mode=download&articleNo=152315&attachNo=91150"
       }
     }
