@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Music&display=swap">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2b5cd9">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="실용음악 요강">
 </head>
 <body>
   <header>
@@ -38,5 +47,15 @@
   <script src="js/ui/sightreading.js"></script>
   <script src="js/app.js"></script>
   <script>PM.app.start();</script>
+  <script>
+    // 서비스워커 등록은 index.html이 완전히 뜬 뒤에 걸어서, 등록
+    // 과정 자체가 첫 화면 로딩을 늦추지 않게 한다. GitHub Pages는 HTTPS라
+    // 서비스워커 등록 조건(보안 컨텍스트)을 이미 만족한다.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js').catch(function () {});
+      });
+    }
+  </script>
 </body>
 </html>
