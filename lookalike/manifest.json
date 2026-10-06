@@ -1,0 +1,17 @@
+{
+  "name": "닮은꼴 스타일 — 닮은 연예인 & 베스트 스타일링",
+  "short_name": "닮은꼴 스타일",
+  "description": "얼굴 특징으로 동물상과 닮은꼴 연예인을 찾고, 내 얼굴형에 맞는 헤어·메이크업·패션·컬러를 추천해 주는 앱",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff7fa",
+  "theme_color": "#ff4f8b",
+  "lang": "ko",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

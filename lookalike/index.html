@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>닮은꼴 스타일</title>
+  <meta name="description" content="얼굴 특징으로 동물상과 닮은꼴 연예인을 찾고, 내 얼굴형에 맞는 베스트 스타일링까지 추천해 주는 앱">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff4f8b">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="닮은꼴 스타일">
+</head>
+<body>
+  <header>
+    <h1>닮은꼴 스타일</h1>
+    <p class="tagline">닮은 연예인 찾고, 베스트 스타일링까지</p>
+  </header>
+  <main id="screen"></main>
+
+  <script src="js/ns.js"></script>
+  <script src="js/features.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/styling.js"></script>
+  <script src="js/match.js"></script>
+  <script src="data/celebs.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/detector.js"></script>
+  <script src="js/ui/components.js"></script>
+  <script src="js/ui/home.js"></script>
+  <script src="js/ui/photo.js"></script>
+  <script src="js/ui/quiz.js"></script>
+  <script src="js/ui/color.js"></script>
+  <script src="js/ui/result.js"></script>
+  <script src="js/app.js"></script>
+  <script>LA.app.start();</script>
+  <script>
+    // 루트의 입시 앱과 같은 출처(origin)를 쓰지만 서비스워커 범위는
+    // lookalike/ 아래로 한정된다(스크립트 위치 기준). 등록은 첫 화면이 뜬 뒤에.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js').catch(function () {});
+      });
+    }
+  </script>
+</body>
+</html>

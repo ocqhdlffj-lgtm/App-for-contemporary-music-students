@@ -40,7 +40,9 @@ self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(
-        keys.filter(function (k) { return k !== SHELL_CACHE; })
+        // 같은 출처에 lookalike/ 앱의 캐시(la-shell-*)도 있으므로 이 앱의
+        // 옛 캐시(pm-shell-*)만 지운다.
+        keys.filter(function (k) { return k.indexOf('pm-shell-') === 0 && k !== SHELL_CACHE; })
           .map(function (k) { return caches.delete(k); })
       );
     }).then(function () { return self.clients.claim(); })

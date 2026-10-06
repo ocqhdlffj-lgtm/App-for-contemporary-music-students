@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>닮은꼴 스타일 테스트</title>
+  <style>
+    body { font: 14px/1.6 system-ui, sans-serif; margin: 16px; }
+    .pass { color: #17692f; }
+    .fail { color: #b3261e; white-space: pre-wrap; }
+    #summary { font-weight: 700; margin-bottom: 12px; }
+    #screen { display: none; }
+  </style>
+</head>
+<body>
+  <h1>닮은꼴 스타일 테스트</h1>
+  <div id="summary"></div>
+  <div id="results"></div>
+  <main id="screen"></main>
+
+  <!-- 러너는 루트 입시 앱과 공유한다(같은 저장소, 같은 결과 형식 — scripts/run-tests.sh가 읽음) -->
+  <script src="../../tests/runner.js"></script>
+  <script src="../js/ns.js"></script>
+  <script src="../js/features.js"></script>
+  <script src="../js/profile.js"></script>
+  <script src="../js/styling.js"></script>
+  <script src="../js/match.js"></script>
+  <script src="../data/celebs.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/detector.js"></script>
+  <script src="../js/ui/components.js"></script>
+  <script src="../js/ui/home.js"></script>
+  <script src="../js/ui/photo.js"></script>
+  <script src="../js/ui/quiz.js"></script>
+  <script src="../js/ui/color.js"></script>
+  <script src="../js/ui/result.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="fixtures/canonical-face.js"></script>
+  <script src="features.test.js"></script>
+  <script src="profile.test.js"></script>
+  <script src="match.test.js"></script>
+  <script src="styling.test.js"></script>
+  <script src="storage.test.js"></script>
+  <script src="ui.test.js"></script>
+  <script>
+    T.run(document.getElementById('results'), document.getElementById('summary'));
+  </script>
+</body>
+</html>
