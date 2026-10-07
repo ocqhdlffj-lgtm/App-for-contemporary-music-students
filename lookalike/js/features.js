@@ -110,18 +110,47 @@
     return v;
   }
 
+  // 표정 점수(MediaPipe blendshapes, 0~1). 웃으면 눈이 가늘어지고 입이
+  // 옆으로 늘어나서 눈 둥글기·입술 두께가 실제보다 작게 측정된다. 이 경우
+  // 값을 버리지 않고 "믿기 어려운 축"으로 표시해, 확인 화면에서 사용자가
+  // 직접 고르도록 유도한다(값을 임의로 보정하면 근거 없는 숫자가 된다).
+  var SMILE_LIMIT = 0.4, BLINK_LIMIT = 0.5;
+
+  function expressionOf(blendshapes) {
+    if (!blendshapes) return null;
+    function avg(a, b) { return ((blendshapes[a] || 0) + (blendshapes[b] || 0)) / 2; }
+    return {
+      smile: avg('mouthSmileLeft', 'mouthSmileRight'),
+      blink: avg('eyeBlinkLeft', 'eyeBlinkRight')
+    };
+  }
+
   // 사진 분석 결과 전체. warnings는 화면에 그대로 보여줄 문장들이다.
-  function fromLandmarks(landmarks, width, height) {
+  // blendshapes: { 이름: 점수 } (없으면 표정 검사를 건너뛴다)
+  function fromLandmarks(landmarks, width, height, blendshapes) {
     if (!landmarks || landmarks.length < 468) throw new Error('랜드마크가 부족합니다');
     var m = measure(landmarks, width, height);
     var warnings = [];
+    var unreliable = [];
     if (Math.abs(m.pose.yaw - 0.5) > 0.08) {
       warnings.push('얼굴이 옆으로 돌아가 있어 결과가 부정확할 수 있어요. 정면 사진을 권장해요.');
     }
     if (Math.abs(m.pose.rollDeg) > 20) {
       warnings.push('고개가 많이 기울어 있어요. 똑바로 찍은 사진이면 더 정확해요.');
     }
-    return { vector: normalize(m.raw), raw: m.raw, pose: m.pose, warnings: warnings };
+    var ex = expressionOf(blendshapes);
+    if (ex && ex.smile > SMILE_LIMIT) {
+      warnings.push('웃는 표정이라 눈이 가늘고 입술이 얇게 측정됐을 수 있어요. 다음 화면에서 직접 확인해 주세요.');
+      unreliable.push('eyeRound', 'lipFull');
+    }
+    if (ex && ex.blink > BLINK_LIMIT) {
+      warnings.push('눈을 감고 있거나 찡그린 사진이라 눈 측정이 부정확할 수 있어요.');
+      ['eyeRound', 'eyeSize'].forEach(function (d) { if (unreliable.indexOf(d) < 0) unreliable.push(d); });
+    }
+    return {
+      vector: normalize(m.raw), raw: m.raw, pose: m.pose,
+      expression: ex, unreliable: unreliable, warnings: warnings
+    };
   }
 
   // 얼굴형은 얼굴 길이·턱 폭 두 축으로만 정한다. 퀴즈의 얼굴형 선택지가
@@ -138,6 +167,7 @@
   LA.features = {
     IDX: IDX, BASE: BASE, DIMS: DIMS,
     measure: measure, normalize: normalize, fromLandmarks: fromLandmarks,
+    expressionOf: expressionOf,
     faceShapeOf: faceShapeOf
   };
 })(window.LA);

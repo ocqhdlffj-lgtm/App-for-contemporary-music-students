@@ -55,3 +55,23 @@
     T.eq(d[3].neutral, true);
   });
 })();
+
+(function () {
+  var P = LA.profile;
+
+  T.test('측정 벡터 → 확인 화면 기본 선택', function () {
+    T.eq(P.answersFromVector({ faceLength: 0.7, jawWidth: 0, eyeTilt: -0.5, eyeRound: 0.1, eyeSize: 0.5, lipFull: -0.4 }),
+      { faceShape: 'long', eyeTilt: 'down', eyeRound: 'mid', eyeSize: 'high', lipFull: 'low' });
+  });
+
+  T.test('확인 화면에서 바꾼 문항만 덮어쓰고 나머지는 측정값을 유지한다', function () {
+    var v = { faceLength: 0.12, jawWidth: -0.1, eyeTilt: 0.2, eyeRound: -0.5, eyeSize: 0.05, lipFull: -0.45 };
+    var a = P.answersFromVector(v);
+    T.eq(P.applyCorrections(v, a), v, '안 바꾸면 그대로');
+    a.eyeRound = 'high';
+    var c = P.applyCorrections(v, a);
+    T.eq(c.eyeRound, 0.6);
+    T.eq(c.lipFull, -0.45);
+    T.eq(c.faceLength, 0.12);
+  });
+})();

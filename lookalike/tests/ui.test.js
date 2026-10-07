@@ -143,6 +143,19 @@
     });
   });
 
+  T.test('확인 화면: 측정값이 미리 선택되고, 바꾼 답이 결과 벡터에 반영된다', function () {
+    var a = LA.features.fromLandmarks(window.LA_FIXTURE_CANONICAL, 1, 1, { mouthSmileLeft: 0.9, mouthSmileRight: 0.9 });
+    var got = null;
+    var root = LA.ui.review.render(a, { onBack: function () {}, onDone: function (v) { got = v; } });
+    var groups = root.querySelectorAll('.choices');
+    T.eq(groups[0].querySelector('.on').getAttribute('data-value'), 'oval');
+    T.eq(root.querySelectorAll('.check-me').length, 2, '눈 모양·입술 확인 필요');
+    click(groups[2].querySelector('[data-value="high"]'));
+    click(byText(root, 'button', '이대로 결과 보기'));
+    T.eq(got.eyeRound, 0.6);
+    T.eq(got.faceLength, a.vector.faceLength);
+  });
+
   T.test('앱: 앞 단계 데이터 없이 결과·컬러 화면으로 가면 홈으로 돌아간다', function () {
     var screen = document.getElementById('screen');
     LA.app._state.settings = { gender: 'F', scope: 'same' };
@@ -151,6 +164,9 @@
     LA.app._render('result');
     T.eq(LA.app._state.screen, 'home');
     LA.app._render('color');
+    T.eq(LA.app._state.screen, 'home');
+    LA.app._state.analysis = null;
+    LA.app._render('review');
     T.eq(LA.app._state.screen, 'home');
     T.assert(!!screen.querySelector('.home'), 'home 화면');
     screen.textContent = '';

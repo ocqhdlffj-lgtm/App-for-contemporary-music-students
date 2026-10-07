@@ -169,9 +169,33 @@
       .concat(['eyeTilt', 'eyeRound', 'eyeSize', 'lipFull'].map(function (d) { return traitOf(d, v[d]); }));
   }
 
+  // 측정 벡터 → 퀴즈 답 형식. 확인 화면에서 "사진으로는 이렇게 보였어요"를
+  // 미리 선택해 두는 데 쓴다. 경계값(±0.3)은 describe()와 같다.
+  function answersFromVector(v) {
+    function lv(x) { return x > 0.3 ? 'high' : x < -0.3 ? 'low' : 'mid'; }
+    return {
+      faceShape: LA.features.faceShapeOf(v),
+      eyeTilt: v.eyeTilt > 0.3 ? 'up' : v.eyeTilt < -0.3 ? 'down' : 'flat',
+      eyeRound: lv(v.eyeRound), eyeSize: lv(v.eyeSize), lipFull: lv(v.lipFull)
+    };
+  }
+
+  // 사용자가 확인 화면에서 바꾼 문항만 그 답의 값으로 덮어쓴다. 바꾸지 않은
+  // 문항은 사진에서 잰 연속값을 그대로 둔다(같은 "보통"이라도 측정값이
+  // 더 세밀하므로).
+  function applyCorrections(v, answers) {
+    var detected = answersFromVector(v);
+    var changed = {};
+    Object.keys(answers).forEach(function (k) {
+      if (answers[k] && answers[k] !== detected[k]) changed[k] = answers[k];
+    });
+    return vectorFromTags(changed, v);
+  }
+
   LA.profile = {
     QUESTIONS: QUESTIONS, ANIMALS: ANIMALS, ANIMAL_KEYS: ANIMAL_KEYS, FACE_SHAPES: FACE_SHAPES,
     WEIGHTS: WEIGHTS, distance: distance, vectorFromTags: vectorFromTags,
-    fromAnswers: fromAnswers, rankAnimals: rankAnimals, describe: describe
+    fromAnswers: fromAnswers, rankAnimals: rankAnimals, describe: describe,
+    answersFromVector: answersFromVector, applyCorrections: applyCorrections
   };
 })(window.LA);

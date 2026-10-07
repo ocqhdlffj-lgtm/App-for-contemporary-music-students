@@ -80,3 +80,26 @@
     T.throws(function () { F.fromLandmarks(null, 1, 1); });
   });
 })();
+
+(function () {
+  var F = LA.features;
+  var CANON = window.LA_FIXTURE_CANONICAL;
+
+  T.test('웃는 사진이면 경고하고 눈 둥글기·입술을 "확인 필요"로 표시한다', function () {
+    var r = F.fromLandmarks(CANON, 1, 1, { mouthSmileLeft: 0.8, mouthSmileRight: 0.7 });
+    T.eq(r.unreliable, ['eyeRound', 'lipFull']);
+    T.assert(r.warnings.some(function (w) { return w.indexOf('웃는 표정') >= 0; }), 'warning');
+  });
+
+  T.test('눈을 감은 사진이면 눈 축을 "확인 필요"로 표시한다', function () {
+    var r = F.fromLandmarks(CANON, 1, 1, { eyeBlinkLeft: 0.9, eyeBlinkRight: 0.9 });
+    T.eq(r.unreliable, ['eyeRound', 'eyeSize']);
+  });
+
+  T.test('무표정이거나 표정 점수가 없으면 확인 필요 표시가 없다', function () {
+    T.eq(F.fromLandmarks(CANON, 1, 1, { mouthSmileLeft: 0.1, mouthSmileRight: 0.1 }).unreliable, []);
+    var r = F.fromLandmarks(CANON, 1, 1);
+    T.eq(r.unreliable, []);
+    T.eq(r.expression, null);
+  });
+})();

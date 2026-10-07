@@ -35,21 +35,30 @@
         return window.Vision.FaceLandmarker.createFromOptions(fileset, {
           baseOptions: { modelAssetPath: MODEL, delegate: 'CPU' },
           runningMode: 'IMAGE',
-          numFaces: 1
+          numFaces: 1,
+          outputFaceBlendshapes: true
         });
       });
     pending.catch(function () { pending = null; });
     return pending;
   }
 
-  // canvas(또는 img) → { landmarks, width, height } | null(얼굴 없음)
+  // canvas(또는 img) → { landmarks, blendshapes, width, height } | null(얼굴 없음)
   function detect(source) {
     return load().then(function (landmarker) {
       var r = landmarker.detect(source);
       var faces = (r && r.faceLandmarks) || [];
       if (!faces.length) return null;
+      // 표정 점수: [{categoryName, score}] → { 이름: 점수 }
+      var shapes = null;
+      var bs = r.faceBlendshapes && r.faceBlendshapes[0];
+      if (bs && bs.categories) {
+        shapes = {};
+        bs.categories.forEach(function (c) { shapes[c.categoryName] = c.score; });
+      }
       return {
         landmarks: faces[0],
+        blendshapes: shapes,
         width: source.width || source.naturalWidth,
         height: source.height || source.naturalHeight
       };

@@ -5,7 +5,7 @@
 // 같은 출처에 루트의 입시 앱(pm-shell-*)도 있으므로, 정리할 때는 이 앱의
 // 접두어(la-shell-)가 붙은 옛 캐시만 지운다.
 var PREFIX = 'la-shell-';
-var SHELL_CACHE = PREFIX + 'v1';
+var SHELL_CACHE = PREFIX + 'v2';
 var SHELL_FILES = [
   './',
   './index.html',
@@ -23,6 +23,7 @@ var SHELL_FILES = [
   './js/ui/home.js',
   './js/ui/photo.js',
   './js/ui/quiz.js',
+  './js/ui/review.js',
   './js/ui/color.js',
   './js/ui/result.js',
   './js/app.js',

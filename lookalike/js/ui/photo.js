@@ -116,7 +116,7 @@
           fail('얼굴을 찾지 못했어요. 얼굴이 크게 나온 정면 사진으로 다시 시도해 주세요.', false);
           return;
         }
-        var analysis = LA.features.fromLandmarks(found.landmarks, found.width, found.height);
+        var analysis = LA.features.fromLandmarks(found.landmarks, found.width, found.height, found.blendshapes);
         drawPoints(canvas, found.landmarks);
         status.textContent = '분석 완료! 분홍 점이 측정에 쓴 위치예요.';
         status.className = 'status ok';

@@ -123,6 +123,9 @@ h3 { font-size: 16px; margin: 0 0 8px; }
   font-size: 12px; padding: 3px 10px; border-radius: 999px;
   background: var(--accent-soft); color: var(--fg);
 }
+.chip.warn { background: var(--warn-bg); color: var(--warn-fg); margin-left: 6px; font-weight: 600; }
+.question.check-me .choices { outline: 2px dashed var(--warn-fg); outline-offset: 4px; border-radius: 12px; }
+.review > .btn.primary { width: 100%; margin-top: 8px; }
 .chip.soft { background: transparent; border: 1px solid var(--line); color: var(--muted); }
 
 /* ── 결과: 닮은꼴 ── */

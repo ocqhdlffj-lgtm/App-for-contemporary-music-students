@@ -1,11 +1,12 @@
 (function (LA) {
-  // 화면 흐름: home → (photo | quiz) → color → result.
+  // 화면 흐름: home → (photo → review | quiz) → color → result.
   // 각 화면은 #screen을 비우고 새로 그린다. 화면 전환마다 history에 기록해
   // 안드로이드 뒤로가기·브라우저 뒤로가기가 앱 안에서 동작하게 한다.
   //
+  // analysis: 사진 분석 결과(확인 화면에서 사용자가 고치기 전)
   // pending: 사진/퀴즈로 얻은 특징 벡터(퍼스널컬러 체크 전 단계)
   // result:  결과 화면이 그리는 모델 전체. 저장되는 것도 이것뿐이다(사진 없음).
-  var state = { screen: 'home', settings: null, pending: null, result: null };
+  var state = { screen: 'home', settings: null, analysis: null, pending: null, result: null };
 
   function host() { return document.getElementById('screen'); }
 
@@ -59,7 +60,14 @@
       return LA.ui.photo.render({
         onBack: function () { go('home'); },
         onQuiz: function () { go('quiz'); },
-        onDone: function (a) { toColor({ vector: a.vector, warnings: a.warnings, source: 'photo' }); }
+        onDone: function (a) { state.analysis = a; go('review'); }
+      });
+    },
+    review: function () {
+      var a = state.analysis;
+      return LA.ui.review.render(a, {
+        onBack: function () { go('home'); },
+        onDone: function (v) { toColor({ vector: v, warnings: a.warnings, source: 'photo' }); }
       });
     },
     quiz: function () {
@@ -93,6 +101,7 @@
 
   // 앞 단계 데이터가 없는 화면(새로고침 후 뒤로가기 등)은 홈으로 돌린다.
   function render(name) {
+    if (name === 'review' && !state.analysis) name = 'home';
     if (name === 'color' && !state.pending) name = 'home';
     if (name === 'result' && !state.result) name = 'home';
     if (!SCREENS[name]) name = 'home';
