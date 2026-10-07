@@ -35,7 +35,7 @@
         return window.Vision.FaceLandmarker.createFromOptions(fileset, {
           baseOptions: { modelAssetPath: MODEL, delegate: 'CPU' },
           runningMode: 'IMAGE',
-          numFaces: 1,
+          numFaces: 2,
           outputFaceBlendshapes: true
         });
       });
@@ -43,7 +43,7 @@
     return pending;
   }
 
-  // canvas(또는 img) → { landmarks, blendshapes, width, height } | null(얼굴 없음)
+  // canvas(또는 img) → { landmarks, blendshapes, count, width, height } | null(얼굴 없음)
   function detect(source) {
     return load().then(function (landmarker) {
       var r = landmarker.detect(source);
@@ -59,6 +59,7 @@
       return {
         landmarks: faces[0],
         blendshapes: shapes,
+        count: faces.length,
         width: source.width || source.naturalWidth,
         height: source.height || source.naturalHeight
       };

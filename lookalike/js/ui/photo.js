@@ -117,6 +117,9 @@
           return;
         }
         var analysis = LA.features.fromLandmarks(found.landmarks, found.width, found.height, found.blendshapes);
+        if (found.count > 1) {
+          analysis.warnings.unshift('사진에 얼굴이 여러 개 있어요. 가장 크게 인식된 얼굴을 분석했는데, 다르면 한 명만 나온 사진으로 다시 시도해 주세요.');
+        }
         drawPoints(canvas, found.landmarks);
         status.textContent = '분석 완료! 분홍 점이 측정에 쓴 위치예요.';
         status.className = 'status ok';

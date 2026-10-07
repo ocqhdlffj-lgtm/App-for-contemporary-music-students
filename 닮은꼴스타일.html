@@ -899,7 +899,19 @@ window.LA = window.LA || {};
     return Math.max(0, Math.min(100, Math.round(100 * (1 - d / ZERO_AT))));
   }
 
+  // 사진에서 직접 잰 값(data/celebs-measured.js)이 있으면 그걸 쓴다. 사용자
+  // 사진과 같은 방식으로 잰 값이라 인상 태그로 만든 값보다 훨씬 정확하다.
+  // 없는 연예인만 태그 값으로 대신한다.
+  function measuredOf(c) {
+    var m = (LA.CELEB_MEASURED || {})[c.id];
+    if (!m || !m.vector) return null;
+    var ok = LA.features.DIMS.every(function (d) { return typeof m.vector[d] === 'number'; });
+    return ok ? m.vector : null;
+  }
+
   function celebVector(c) {
+    var measured = measuredOf(c);
+    if (measured) return measured;
     var animal = LA.profile.ANIMALS[c.animal];
     if (!animal) throw new Error('알 수 없는 동물상: ' + c.animal + ' (' + c.id + ')');
     return LA.profile.vectorFromTags(c, animal.proto);
@@ -927,7 +939,7 @@ window.LA = window.LA || {};
       .map(function (c) {
         var cv = celebVector(c);
         var d = LA.profile.distance(v, cv);
-        return { celeb: c, vector: cv, distance: d, score: scoreOf(d), common: commonTraits(v, cv) };
+        return { celeb: c, vector: cv, measured: !!measuredOf(c), distance: d, score: scoreOf(d), common: commonTraits(v, cv) };
       })
       .sort(function (x, y) { return x.distance - y.distance; })
       .slice(0, opts.limit || 3);
@@ -955,7 +967,7 @@ window.LA = window.LA || {};
     return errors;
   }
 
-  LA.match = { rank: rank, celebVector: celebVector, scoreOf: scoreOf, commonTraits: commonTraits, validate: validate };
+  LA.match = { rank: rank, celebVector: celebVector, measuredOf: measuredOf, scoreOf: scoreOf, commonTraits: commonTraits, validate: validate };
 })(window.LA);
 </script>
   <script>
@@ -973,37 +985,49 @@ window.LA = window.LA || {};
 //   faceShape oval/round/square/long/heart — 있으면 얼굴 길이·턱 축을 덮어쓴다.
 //   eyeTilt   up/flat/down, eyeRound·eyeSize·lipFull high/mid/low — 있으면 해당 축을 덮어쓴다.
 //             확신이 없는 태그는 비워 두고 동물상 원형 값을 그대로 쓴다.
+//   en        영문 이름. 측정 도구(tools/measure-celebs.html)가 위키미디어 커먼즈 검색에 쓴다.
 //   mood      스타일링 화면의 "OO처럼 연출하기"에 쓰는 무드 키(js/styling.js의 MOODS).
 //
 // 추가·수정 후에는 lookalike/tests/index.html을 열어 검증 테스트가 통과하는지 본다.
 window.LA = window.LA || {};
 window.LA.CELEBS = [
   // ── 여성 ──
-  { id: 'park-boyoung', name: '박보영', gender: 'F', job: '배우', animal: 'dog', faceShape: 'round', eyeTilt: 'down', eyeRound: 'high', eyeSize: 'high', mood: 'lovely' },
-  { id: 'han-hyojoo', name: '한효주', gender: 'F', job: '배우', animal: 'dog', faceShape: 'oval', eyeTilt: 'down', mood: 'pure' },
-  { id: 'suzy', name: '수지', gender: 'F', job: '가수·배우', animal: 'dog', faceShape: 'oval', eyeSize: 'high', mood: 'pure' },
-  { id: 'jennie', name: '제니', gender: 'F', job: 'BLACKPINK', animal: 'cat', eyeTilt: 'up', mood: 'hip' },
-  { id: 'han-yeseul', name: '한예슬', gender: 'F', job: '배우', animal: 'cat', faceShape: 'oval', eyeTilt: 'up', eyeSize: 'high', lipFull: 'high', mood: 'glam' },
-  { id: 'lee-hyori', name: '이효리', gender: 'F', job: '가수', animal: 'cat', faceShape: 'oval', eyeTilt: 'up', lipFull: 'high', mood: 'confident' },
-  { id: 'yeji', name: '예지', gender: 'F', job: 'ITZY', animal: 'fox', faceShape: 'heart', eyeTilt: 'up', eyeRound: 'low', mood: 'girlcrush' },
-  { id: 'nayeon', name: '나연', gender: 'F', job: 'TWICE', animal: 'rabbit', faceShape: 'round', eyeRound: 'high', eyeSize: 'high', mood: 'fresh' },
-  { id: 'yoona', name: '윤아', gender: 'F', job: '소녀시대', animal: 'deer', faceShape: 'oval', eyeSize: 'high', eyeRound: 'high', mood: 'elegant' },
-  { id: 'go-ara', name: '고아라', gender: 'F', job: '배우', animal: 'deer', faceShape: 'oval', eyeSize: 'high', mood: 'natural' },
+  { id: 'park-boyoung', en: 'Park Bo-young', name: '박보영', gender: 'F', job: '배우', animal: 'dog', faceShape: 'round', eyeTilt: 'down', eyeRound: 'high', eyeSize: 'high', mood: 'lovely' },
+  { id: 'han-hyojoo', en: 'Han Hyo-joo', name: '한효주', gender: 'F', job: '배우', animal: 'dog', faceShape: 'oval', eyeTilt: 'down', mood: 'pure' },
+  { id: 'suzy', en: 'Bae Suzy', name: '수지', gender: 'F', job: '가수·배우', animal: 'dog', faceShape: 'oval', eyeSize: 'high', mood: 'pure' },
+  { id: 'jennie', en: 'Jennie Kim', name: '제니', gender: 'F', job: 'BLACKPINK', animal: 'cat', eyeTilt: 'up', mood: 'hip' },
+  { id: 'han-yeseul', en: 'Han Ye-seul', name: '한예슬', gender: 'F', job: '배우', animal: 'cat', faceShape: 'oval', eyeTilt: 'up', eyeSize: 'high', lipFull: 'high', mood: 'glam' },
+  { id: 'lee-hyori', en: 'Lee Hyori', name: '이효리', gender: 'F', job: '가수', animal: 'cat', faceShape: 'oval', eyeTilt: 'up', lipFull: 'high', mood: 'confident' },
+  { id: 'yeji', en: 'Hwang Ye-ji', name: '예지', gender: 'F', job: 'ITZY', animal: 'fox', faceShape: 'heart', eyeTilt: 'up', eyeRound: 'low', mood: 'girlcrush' },
+  { id: 'nayeon', en: 'Im Na-yeon', name: '나연', gender: 'F', job: 'TWICE', animal: 'rabbit', faceShape: 'round', eyeRound: 'high', eyeSize: 'high', mood: 'fresh' },
+  { id: 'yoona', en: 'Im Yoon-ah', name: '윤아', gender: 'F', job: '소녀시대', animal: 'deer', faceShape: 'oval', eyeSize: 'high', eyeRound: 'high', mood: 'elegant' },
+  { id: 'go-ara', en: 'Go Ara', name: '고아라', gender: 'F', job: '배우', animal: 'deer', faceShape: 'oval', eyeSize: 'high', mood: 'natural' },
 
   // ── 남성 ──
-  { id: 'song-joongki', name: '송중기', gender: 'M', job: '배우', animal: 'dog', faceShape: 'oval', eyeTilt: 'down', eyeRound: 'high', mood: 'boyish' },
-  { id: 'park-bogum', name: '박보검', gender: 'M', job: '배우', animal: 'dog', faceShape: 'oval', eyeTilt: 'down', mood: 'clean' },
-  { id: 'kang-daniel', name: '강다니엘', gender: 'M', job: '가수', animal: 'dog', eyeTilt: 'down', eyeSize: 'mid', mood: 'boyish' },
-  { id: 'baekhyun', name: '백현', gender: 'M', job: 'EXO', animal: 'dog', eyeTilt: 'down', mood: 'boyish' },
-  { id: 'jung-haein', name: '정해인', gender: 'M', job: '배우', animal: 'dog', faceShape: 'oval', eyeTilt: 'down', mood: 'warm' },
-  { id: 'kang-dongwon', name: '강동원', gender: 'M', job: '배우', animal: 'cat', eyeTilt: 'up', mood: 'chic' },
-  { id: 'lee-joongi', name: '이준기', gender: 'M', job: '배우', animal: 'fox', faceShape: 'heart', eyeTilt: 'up', eyeRound: 'low', mood: 'charisma' },
-  { id: 'jungkook', name: '정국', gender: 'M', job: 'BTS', animal: 'rabbit', eyeRound: 'high', eyeSize: 'high', mood: 'fresh' },
-  { id: 'ma-dongseok', name: '마동석', gender: 'M', job: '배우', animal: 'bear', faceShape: 'square', mood: 'sturdy' },
-  { id: 'cho-jinwoong', name: '조진웅', gender: 'M', job: '배우', animal: 'bear', faceShape: 'round', mood: 'sturdy' },
-  { id: 'kim-woobin', name: '김우빈', gender: 'M', job: '배우', animal: 'dino', faceShape: 'long', mood: 'intense' },
-  { id: 'gong-yoo', name: '공유', gender: 'M', job: '배우', animal: 'dino', faceShape: 'long', eyeTilt: 'down', mood: 'dandy' }
+  { id: 'song-joongki', en: 'Song Joong-ki', name: '송중기', gender: 'M', job: '배우', animal: 'dog', faceShape: 'oval', eyeTilt: 'down', eyeRound: 'high', mood: 'boyish' },
+  { id: 'park-bogum', en: 'Park Bo-gum', name: '박보검', gender: 'M', job: '배우', animal: 'dog', faceShape: 'oval', eyeTilt: 'down', mood: 'clean' },
+  { id: 'kang-daniel', en: 'Kang Daniel', name: '강다니엘', gender: 'M', job: '가수', animal: 'dog', eyeTilt: 'down', eyeSize: 'mid', mood: 'boyish' },
+  { id: 'baekhyun', en: 'Byun Baek-hyun', name: '백현', gender: 'M', job: 'EXO', animal: 'dog', eyeTilt: 'down', mood: 'boyish' },
+  { id: 'jung-haein', en: 'Jung Hae-in', name: '정해인', gender: 'M', job: '배우', animal: 'dog', faceShape: 'oval', eyeTilt: 'down', mood: 'warm' },
+  { id: 'kang-dongwon', en: 'Gang Dong-won', name: '강동원', gender: 'M', job: '배우', animal: 'cat', eyeTilt: 'up', mood: 'chic' },
+  { id: 'lee-joongi', en: 'Lee Joon-gi', name: '이준기', gender: 'M', job: '배우', animal: 'fox', faceShape: 'heart', eyeTilt: 'up', eyeRound: 'low', mood: 'charisma' },
+  { id: 'jungkook', en: 'Jeon Jung-kook', name: '정국', gender: 'M', job: 'BTS', animal: 'rabbit', eyeRound: 'high', eyeSize: 'high', mood: 'fresh' },
+  { id: 'ma-dongseok', en: 'Ma Dong-seok', name: '마동석', gender: 'M', job: '배우', animal: 'bear', faceShape: 'square', mood: 'sturdy' },
+  { id: 'cho-jinwoong', en: 'Cho Jin-woong', name: '조진웅', gender: 'M', job: '배우', animal: 'bear', faceShape: 'round', mood: 'sturdy' },
+  { id: 'kim-woobin', en: 'Kim Woo-bin', name: '김우빈', gender: 'M', job: '배우', animal: 'dino', faceShape: 'long', mood: 'intense' },
+  { id: 'gong-yoo', en: 'Gong Yoo', name: '공유', gender: 'M', job: '배우', animal: 'dino', faceShape: 'long', eyeTilt: 'down', mood: 'dandy' }
 ];
+</script>
+  <script>
+/* data/celebs-measured.js */
+// 연예인 사진에서 직접 잰 특징 벡터. tools/measure-celebs.html이 만들어 주는
+// 파일로 통째로 바꿔 넣는다. 사진은 저장하지 않고, 위키미디어 커먼즈의 자유
+// 라이선스 사진에서 잰 숫자와 출처·저작자·라이선스만 남긴다.
+//
+// 여기 값이 있는 연예인은 data/celebs.js의 인상 태그 대신 이 측정값으로
+// 비교한다(사용자 사진 측정값과 같은 기준이라 훨씬 정확하다).
+window.LA = window.LA || {};
+window.LA.CELEB_MEASURED = {};
 </script>
   <script>
 /* js/storage.js */
@@ -1093,7 +1117,7 @@ window.LA.CELEBS = [
         return window.Vision.FaceLandmarker.createFromOptions(fileset, {
           baseOptions: { modelAssetPath: MODEL, delegate: 'CPU' },
           runningMode: 'IMAGE',
-          numFaces: 1,
+          numFaces: 2,
           outputFaceBlendshapes: true
         });
       });
@@ -1101,7 +1125,7 @@ window.LA.CELEBS = [
     return pending;
   }
 
-  // canvas(또는 img) → { landmarks, blendshapes, width, height } | null(얼굴 없음)
+  // canvas(또는 img) → { landmarks, blendshapes, count, width, height } | null(얼굴 없음)
   function detect(source) {
     return load().then(function (landmarker) {
       var r = landmarker.detect(source);
@@ -1117,6 +1141,7 @@ window.LA.CELEBS = [
       return {
         landmarks: faces[0],
         blendshapes: shapes,
+        count: faces.length,
         width: source.width || source.naturalWidth,
         height: source.height || source.naturalHeight
       };
@@ -1367,6 +1392,9 @@ window.LA.CELEBS = [
           return;
         }
         var analysis = LA.features.fromLandmarks(found.landmarks, found.width, found.height, found.blendshapes);
+        if (found.count > 1) {
+          analysis.warnings.unshift('사진에 얼굴이 여러 개 있어요. 가장 크게 인식된 얼굴을 분석했는데, 다르면 한 명만 나온 사진으로 다시 시도해 주세요.');
+        }
         drawPoints(canvas, found.landmarks);
         status.textContent = '분석 완료! 분홍 점이 측정에 쓴 위치예요.';
         status.className = 'status ok';

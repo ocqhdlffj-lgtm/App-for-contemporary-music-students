@@ -12,7 +12,19 @@
     return Math.max(0, Math.min(100, Math.round(100 * (1 - d / ZERO_AT))));
   }
 
+  // 사진에서 직접 잰 값(data/celebs-measured.js)이 있으면 그걸 쓴다. 사용자
+  // 사진과 같은 방식으로 잰 값이라 인상 태그로 만든 값보다 훨씬 정확하다.
+  // 없는 연예인만 태그 값으로 대신한다.
+  function measuredOf(c) {
+    var m = (LA.CELEB_MEASURED || {})[c.id];
+    if (!m || !m.vector) return null;
+    var ok = LA.features.DIMS.every(function (d) { return typeof m.vector[d] === 'number'; });
+    return ok ? m.vector : null;
+  }
+
   function celebVector(c) {
+    var measured = measuredOf(c);
+    if (measured) return measured;
     var animal = LA.profile.ANIMALS[c.animal];
     if (!animal) throw new Error('알 수 없는 동물상: ' + c.animal + ' (' + c.id + ')');
     return LA.profile.vectorFromTags(c, animal.proto);
@@ -40,7 +52,7 @@
       .map(function (c) {
         var cv = celebVector(c);
         var d = LA.profile.distance(v, cv);
-        return { celeb: c, vector: cv, distance: d, score: scoreOf(d), common: commonTraits(v, cv) };
+        return { celeb: c, vector: cv, measured: !!measuredOf(c), distance: d, score: scoreOf(d), common: commonTraits(v, cv) };
       })
       .sort(function (x, y) { return x.distance - y.distance; })
       .slice(0, opts.limit || 3);
@@ -68,5 +80,5 @@
     return errors;
   }
 
-  LA.match = { rank: rank, celebVector: celebVector, scoreOf: scoreOf, commonTraits: commonTraits, validate: validate };
+  LA.match = { rank: rank, celebVector: celebVector, measuredOf: measuredOf, scoreOf: scoreOf, commonTraits: commonTraits, validate: validate };
 })(window.LA);
