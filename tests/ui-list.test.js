@@ -86,6 +86,36 @@ T.test('실기고사일이 확인되지 않은 학교는 여전히 실기일 미
   T.assert(el.textContent.indexOf('실기일 미확인') >= 0, '실기일 미확인 표시 필요');
 });
 
+function twoTrackSchool(datesA, datesB) {
+  var s = listSchool('a', '가대', '확인됨', null);
+  s.tracks[0].schedule = { practical: datesA };
+  s.tracks.push({
+    id: 'susi2', season: '수시', name: '수시2차', majors: ['보컬'],
+    quota: null, schedule: { practical: datesB },
+    ratio: null, minCsat: null, practical: null, competition: [],
+    verification: { level: '확인됨', checkedAt: '2026-09-10', source: 'x' }
+  });
+  return s;
+}
+
+T.test('카드: 서로 다른 전형의 단일 실기일 두 개를 가짜 기간(~)으로 붙이지 않는다', function () {
+  var el = PM.ui.list.render([twoTrackSchool(['2026-10-17'], ['2026-12-03'])], {});
+  T.assert(el.textContent.indexOf('실기 2026-10-17, 2026-12-03') >= 0, '날짜를 콤마로 나열해야 함');
+  T.assert(el.textContent.indexOf('2026-10-17 ~ 2026-12-03') < 0, '두 전형 사이를 기간으로 표시하면 안 됨');
+});
+
+T.test('카드: 한 전형 안의 시작·끝 두 날짜는 기간(~)으로, 전형 사이는 콤마로 표시한다', function () {
+  var el = PM.ui.list.render([twoTrackSchool(['2026-10-15', '2026-10-25'], ['2027-01-27', '2027-02-01'])], {});
+  T.assert(el.textContent.indexOf('실기 2026-10-15 ~ 2026-10-25, 2027-01-27 ~ 2027-02-01') >= 0,
+    '전형별 기간이 각각 유지되어야 함');
+});
+
+T.test('카드: 전형이 달라도 표시 문자열이 같으면 한 번만 보여준다', function () {
+  var el = PM.ui.list.render([twoTrackSchool(['2026-10-17'], ['2026-10-17'])], {});
+  T.assert(el.textContent.indexOf('실기 2026-10-17') >= 0);
+  T.assert(el.textContent.indexOf('2026-10-17, 2026-10-17') < 0, '중복 표시 금지');
+});
+
 T.test('진행률 문구는 확인됨 학교 수를 센다', function () {
   var s = [listSchool('a', '가대', '확인됨', { '보컬': 1 }),
            listSchool('b', '나대', '미확인', null)];
