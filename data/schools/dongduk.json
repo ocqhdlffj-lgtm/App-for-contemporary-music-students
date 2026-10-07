@@ -8,11 +8,11 @@
   "guideUrl": "https://ipsi.dongduk.ac.kr/afile/fileDownloadById/26062609418Nt2En.do",
   "tracks": [
     {
-      "id": "susi",
+      "id": "susi-vocal",
       "season": "수시",
-      "name": "실기우수자전형(공연예술대학 실용음악전공)",
-      "majors": ["보컬", "피아노", "드럼", "베이스", "기타"],
-      "quota": { "보컬": 8, "피아노": 3, "드럼": 2, "베이스": 2, "기타": 2 },
+      "name": "실기우수자전형(공연예술대학 실용음악전공 보컬)",
+      "majors": ["보컬"],
+      "quota": { "보컬": 8 },
       "schedule": {
         "apply": ["2026-09-07", "2026-09-11"],
         "practical": [
@@ -20,21 +20,50 @@
         ],
         "announce": "2026-11-17"
       },
-      "ratio": null,
+      "ratio": { "실기": 100, "학생부": 0, "수능": 0 },
       "minCsat": null,
       "practical": {
-        "songCount": null,
+        "songCount": 2,
         "songType": "자유곡",
         "designatedSongs": [],
-        "accompaniment": null,
-        "durationMin": null,
+        "accompaniment": "MR(USB)/반주자 동반/자가반주/무반주 모두 가능(싱어송보컬·자작곡 지원 가능)",
+        "durationMin": 5,
         "sheetMusicRequired": false,
-        "notes": "세부전공별로 구성이 크게 달라 songCount/durationMin/accompaniment/ratio는 공통값으로 특정할 수 없어 null로 유지함. 보컬: 1단계(2분 이내, 자유곡 1곡, 500%수 선발)→2단계(총 5분 이내, 자유곡 2곡·가요 1곡 필수)의 2단계 전형이며, 1단계는 실기80%+학생부교과20%=100%(1000점)이지만 최종 합격은 2단계 실기 100%(1000점)만으로 결정됨. 피아노·드럼·베이스·기타(기악): 단일 단계, 자유곡 2곡(총 5분 이내), 실기80%+학생부교과20%=100%(1000점). 전 세부전공 공통: 지정곡 없음(전곡 자유곡), 보컬은 MR(USB)/반주자 동반/자가반주/무반주 모두 가능(싱송보컬·자작곡 지원 가능), 기악은 MR(USB)/반주자 동반/무반주 가능. 악보 제출 없음(단, 자작곡을 연주·가창하는 경우에만 악보 5부 제출). 대학수학능력시험 최저학력기준 없음(전체 모집단위 공통)."
+        "notes": "2단계 전형. 1단계(2026-09-29~10-04): 자유곡 1곡(2분 이내)으로 모집인원의 500%수 선발(1단계 성적은 실기80%+학생부교과20%=1000점). 2단계(2026-10-09, 입실장소/시간은 2026-10-07 17:00 입학처 공지 예정): 자유곡 2곡(총 5분 이내, 가요 1곡 필수). 최종 합격은 2단계 실기 100%(1000점)만으로 결정되어 ratio는 최종 기준으로 기재. 지정곡 없음. 악보 제출 없음(자작곡 연주·가창 시에만 5부 제출). 수능최저학력기준 없음. 2026-10-07 재확인: 입학처 '면접/논술/실기고사 일정 안내' PDF의 일정이 기존 기록과 동일. 기존 단일 트랙(susi)을 보컬/기악으로 분리함(반영비율·단계가 달라 공통값 불가했던 문제 해소)."
       },
       "competition": [],
       "verification": {
-        "level": "부분확인",
-        "checkedAt": "2026-09-16",
+        "level": "확인됨",
+        "checkedAt": "2026-10-07",
+        "source": "https://ipsi.dongduk.ac.kr/afile/fileDownloadById/26062609418Nt2En.do"
+      }
+    },
+    {
+      "id": "susi-instrument",
+      "season": "수시",
+      "name": "실기우수자전형(공연예술대학 실용음악전공 기악)",
+      "majors": ["피아노", "드럼", "베이스", "기타"],
+      "quota": { "피아노": 3, "드럼": 2, "베이스": 2, "기타": 2 },
+      "schedule": {
+        "apply": ["2026-09-07", "2026-09-11"],
+        "practical": ["2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02"],
+        "announce": "2026-11-17"
+      },
+      "ratio": { "실기": 80, "학생부": 20, "수능": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": 2,
+        "songType": "자유곡",
+        "designatedSongs": [],
+        "accompaniment": "MR(USB)/반주자 동반/무반주 가능",
+        "durationMin": 5,
+        "sheetMusicRequired": false,
+        "notes": "단일 단계 전형. 자유곡 2곡(총 5분 이내), 실기80%+학생부교과20%=100%(1000점). 실기고사일: 피아노 09-29~09-30, 드럼/베이스/기타 10-01~10-02. 지정곡 없음. 악보 제출 없음(자작곡 연주 시에만 5부 제출). 수능최저학력기준 없음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-10-07",
         "source": "https://ipsi.dongduk.ac.kr/afile/fileDownloadById/26062609418Nt2En.do"
       }
     },
