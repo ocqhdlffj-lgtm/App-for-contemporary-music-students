@@ -104,11 +104,13 @@
   // 표정에 따라 잘 흔들리는 입술은 가볍게 본다.
   var WEIGHTS = { faceLength: 1, jawWidth: 1, eyeTilt: 1.4, eyeRound: 1.1, eyeSize: 1, lipFull: 0.6 };
 
-  function distance(a, b) {
+  // w를 생략하면 WEIGHTS를 쓴다. 측정값과 비교할 때는 match.js가 다른 가중치를 준다.
+  function distance(a, b, w) {
+    w = w || WEIGHTS;
     var s = 0;
     LA.features.DIMS.forEach(function (d) {
       var diff = (a[d] || 0) - (b[d] || 0);
-      s += WEIGHTS[d] * diff * diff;
+      s += w[d] * diff * diff;
     });
     return Math.sqrt(s);
   }

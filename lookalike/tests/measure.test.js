@@ -75,27 +75,82 @@
     T.eq(data.a.sources.map(function (s) { return s.page; }), ['p1', 'p2']);
   });
 
+  // 실제 측정 데이터가 들어 있어도 이 테스트들이 값을 지우지 않게 원래 값을 복원한다.
+  function withMeasured(data, fn) {
+    var orig = LA.CELEB_MEASURED, origUse = LA.USE_MEASURED;
+    LA.CELEB_MEASURED = data;
+    LA.USE_MEASURED = true;
+    try { fn(); } finally { LA.CELEB_MEASURED = orig; LA.USE_MEASURED = origUse; }
+  }
+  function findCeleb(id) { return LA.CELEBS.filter(function (c) { return c.id === id; })[0]; }
+
   T.test('측정값이 있는 연예인은 태그 값 대신 측정값으로 비교한다', function () {
-    var c = LA.CELEBS[0];
-    var tagVec = LA.match.celebVector(c);
+    var c = findCeleb('jennie');
+    var tagVec;
+    withMeasured({}, function () { tagVec = LA.match.celebVector(c); });
     var fake = { faceLength: 0.5, jawWidth: -0.5, eyeTilt: 0.5, eyeRound: -0.5, eyeSize: 0.5, lipFull: -0.5 };
-    LA.CELEB_MEASURED = {};
-    LA.CELEB_MEASURED[c.id] = { vector: fake, n: 1, sources: [] };
-    try {
+    var data = {}; data[c.id] = { vector: fake, n: 1, sources: [] };
+    withMeasured(data, function () {
       T.eq(LA.match.celebVector(c), fake);
       var r = LA.match.rank(fake, LA.CELEBS, { gender: 'all', limit: 1 });
       T.eq(r[0].celeb.id, c.id);
       T.eq(r[0].measured, true);
       T.eq(r[0].score, 100);
-    } finally { LA.CELEB_MEASURED = {}; }
-    T.eq(LA.match.celebVector(c), tagVec, '측정값 없으면 태그 값으로 복귀');
+    });
+    withMeasured({}, function () { T.eq(LA.match.celebVector(c), tagVec, '측정값 없으면 태그 값으로 복귀'); });
   });
 
+  T.test('스위치(USE_MEASURED)가 꺼져 있으면 측정값이 있어도 태그 값을 쓴다', function () {
+    var c = findCeleb('jennie');
+    var data = {}; data[c.id] = { vector: { faceLength: 1, jawWidth: 1, eyeTilt: 1, eyeRound: 1, eyeSize: 1, lipFull: 1 } };
+    var orig = LA.CELEB_MEASURED, origUse = LA.USE_MEASURED;
+    try {
+      LA.CELEB_MEASURED = data;
+      LA.USE_MEASURED = false;
+      T.eq(LA.match.measuredOf(c), null);
+      LA.USE_MEASURED = undefined;
+      T.eq(LA.match.measuredOf(c), null, '값이 없으면 꺼진 것으로 본다');
+    } finally { LA.CELEB_MEASURED = orig; LA.USE_MEASURED = origUse; }
+  });
+
+  T.test('배포 기본값은 꺼짐', function () { T.eq(LA.USE_MEASURED, false); });
+
   T.test('깨진 측정값은 무시하고 태그 값을 쓴다', function () {
-    var c = LA.CELEBS[0];
-    LA.CELEB_MEASURED = {};
-    LA.CELEB_MEASURED[c.id] = { vector: { faceLength: 'x' } };
-    try { T.eq(LA.match.measuredOf(c), null); } finally { LA.CELEB_MEASURED = {}; }
+    var c = findCeleb('jennie');
+    var data = {}; data[c.id] = { vector: { faceLength: 'x' } };
+    withMeasured(data, function () { T.eq(LA.match.measuredOf(c), null); });
+  });
+
+  T.test('실측 비교에서는 한쪽으로 몰린 얼굴 길이·눈 둥글기의 비중이 낮다', function () {
+    var W = LA.match.MEASURED_WEIGHTS;
+    T.assert(W.faceLength < LA.profile.WEIGHTS.faceLength, 'faceLength');
+    T.assert(W.eyeRound < LA.profile.WEIGHTS.eyeRound, 'eyeRound');
+    T.eq(W.eyeTilt, LA.profile.WEIGHTS.eyeTilt);
+    var c = findCeleb('jennie');
+    var base = { faceLength: 0, jawWidth: 0, eyeTilt: 0, eyeRound: 0, eyeSize: 0, lipFull: 0 };
+    var longer = Object.assign({}, base, { faceLength: 1 });
+    var data = {}; data[c.id] = { vector: base, n: 1, sources: [] };
+    withMeasured(data, function () {
+      var r = LA.match.rank(longer, [c], { gender: 'all' })[0];
+      T.eq(Math.round(r.distance * 100) / 100, 0.5, '얼굴 길이 차이 1 × 가중치 0.25 → 거리 0.5');
+    });
+  });
+
+  T.test('실측 데이터 파일: 모든 id가 연예인 목록에 있고 출처·라이선스·벡터가 온전하다', function () {
+    var ids = LA.CELEBS.map(function (c) { return c.id; });
+    Object.keys(LA.CELEB_MEASURED).forEach(function (id) {
+      var m = LA.CELEB_MEASURED[id];
+      T.assert(ids.indexOf(id) >= 0, id + ' 연예인 목록에 없음');
+      LA.features.DIMS.forEach(function (d) {
+        T.assert(typeof m.vector[d] === 'number' && m.vector[d] >= -1 && m.vector[d] <= 1, id + '.' + d);
+      });
+      T.assert(m.n >= 1 && m.sources.length === m.n, id + ' n과 sources 수 불일치');
+      m.sources.forEach(function (s) {
+        T.assert(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(s.page), id + ' 출처 주소');
+        T.assert(LA.measureTool.licenseOk(s.license), id + ' 라이선스 ' + s.license);
+        T.assert(s.author, id + ' 저작자');
+      });
+    });
   });
 
   T.test('모든 연예인에 영문 이름(측정 도구 검색용)이 있다', function () {
