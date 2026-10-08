@@ -22,14 +22,27 @@
     return (d.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 120);
   }
 
-  // API 응답 → 후보 목록(검색 순서 유지). 순수 함수라 테스트할 수 있다.
-  function parseCandidates(json) {
+  // 이름 비교용: 소문자 알파벳만 남긴다("Song Joong-ki" == "song joongki").
+  function norm(t) { return String(t || '').toLowerCase().replace(/[^a-z]/g, ''); }
+
+  // 파일 이름에 그 연예인 이름(또는 다른 표기)이 들어 있는가. 검색어가 파일
+  // 설명에만 있는 엉뚱한 사진(다른 사람)을 걸러내는 최소한의 신원 확인이다.
+  // 얼굴을 보고 누구인지 판단하는 게 아니라 파일 이름만 본다.
+  function titleHasName(title, celeb) {
+    var t = norm(title);
+    return [celeb.en].concat(celeb.alt || []).some(function (n) { return n && t.indexOf(norm(n)) >= 0; });
+  }
+
+  // API 응답 → 후보 목록(검색 순서 유지). celeb을 주면 파일 이름에 그 이름이
+  // 든 것만 남긴다. 순수 함수라 테스트할 수 있다.
+  function parseCandidates(json, celeb) {
     var pages = (json && json.query && json.query.pages) || {};
     return Object.keys(pages).map(function (k) { return pages[k]; })
       .sort(function (a, b) { return (a.index || 0) - (b.index || 0); })
       .map(function (p) {
         var ii = p.imageinfo && p.imageinfo[0];
         if (!ii) return null;
+        if (celeb && !titleHasName(p.title, celeb)) return null;
         var meta = ii.extmetadata || {};
         var license = meta.LicenseShortName && meta.LicenseShortName.value;
         if (!/^image\/(jpeg|png)$/.test(ii.mime || '')) return null;
@@ -158,7 +171,7 @@
     function processCeleb(r) {
       r.ui.st.textContent = '검색 중…';
       return fetch(searchUrl(r.celeb)).then(function (res) { return res.json(); }).then(function (json) {
-        r.cands = parseCandidates(json);
+        r.cands = parseCandidates(json, r.celeb);
         var i = 0, okCount = 0;
         function next() {
           if (i >= r.cands.length || okCount >= MAX_USED) return Promise.resolve();
@@ -220,7 +233,7 @@
   }
 
   LA.measureTool = {
-    start: start, parseCandidates: parseCandidates, buildExport: buildExport, licenseOk: licenseOk,
+    start: start, parseCandidates: parseCandidates, titleHasName: titleHasName, buildExport: buildExport, licenseOk: licenseOk,
     average: average, searchUrl: searchUrl, measureOne: measureOne
   };
 })(window.LA);

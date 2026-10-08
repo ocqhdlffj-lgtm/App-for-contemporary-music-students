@@ -35,6 +35,19 @@
     T.eq(M.parseCandidates({}), []);
   });
 
+  T.test('파일 이름에 연예인 이름이 있는 사진만 본인 후보로 본다(표기 차이는 허용)', function () {
+    var c = { en: 'Song Joong-ki', alt: ['Song Joongki'] };
+    T.eq(M.titleHasName('File:Song Joong Ki at Battleship Island.jpg', c), true);
+    T.eq(M.titleHasName('File:Song Joong-ki 3.jpg', c), true);
+    T.eq(M.titleHasName('File:Forencos (8).jpg', c), false);
+    T.eq(M.titleHasName('File:Song Hye-kyo.jpg', c), false);
+    var json = { query: { pages: { 1: page(0), 2: page(1) } } };
+    json.query.pages[1].title = 'File:Song Joong-ki 2016.jpg';
+    json.query.pages[2].title = 'File:Forencos (8).jpg';
+    T.eq(M.parseCandidates(json, c).map(function (x) { return x.title; }), ['File:Song Joong-ki 2016.jpg']);
+    T.eq(M.parseCandidates(json).length, 2, 'celeb 없으면 이름 검사 안 함');
+  });
+
   T.test('검색 주소: 이름을 따옴표로 묶고 비트맵만, CORS용 origin=*', function () {
     var u = M.searchUrl({ en: 'Song Joong-ki' });
     T.assert(u.indexOf('origin=*') >= 0, 'origin');
@@ -86,6 +99,6 @@
   });
 
   T.test('모든 연예인에 영문 이름(측정 도구 검색용)이 있다', function () {
-    LA.CELEBS.forEach(function (c) { T.assert(c.en && /^[A-Za-z .'-]+$/.test(c.en), c.id); });
+    LA.CELEBS.forEach(function (c) { T.assert(c.en && /^[A-Za-z .'-]+$/.test(c.en), c.id); T.assert(Array.isArray(c.alt), c.id + ' alt'); });
   });
 })();
