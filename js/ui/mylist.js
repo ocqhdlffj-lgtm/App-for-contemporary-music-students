@@ -47,12 +47,36 @@
     return r;
   }
 
+  // 찜한 전형이 데이터 갱신으로 사라진 경우 — 조용히 빼면 "원래 없던 것"처럼 보이므로 알린다.
+  function missingBox(missing, opts) {
+    var box = el('div', 'unknown-dates missing-picks');
+    box.appendChild(el('div', null,
+      '찜해 둔 전형 ' + missing.length + '개가 최신 데이터에서 사라져 이 리스트에 나오지 않습니다. 입학처 요강에서 전형이 바뀌었는지 확인하고, 필요하면 다시 찜해 주세요.'));
+    missing.forEach(function (p) {
+      var row = el('div', 'pick-row');
+      row.appendChild(el('span', 'pick-name', p.schoolId + ' · ' + p.trackId));
+      var rm = el('button', 'remove-btn', '삭제');
+      rm.type = 'button';
+      rm.addEventListener('click', function () {
+        if (opts.onRemove) opts.onRemove(p.schoolId, p.trackId);
+      });
+      row.appendChild(rm);
+      box.appendChild(row);
+    });
+    return box;
+  }
+
   function render(schools, picks, opts) {
     var o = opts || {};
     var wrap = el('div', 'mylist');
     wrap.appendChild(el('h2', null, '내 지원 리스트'));
 
     var entries = PM.conflict.entriesFrom(schools, picks || []);
+    var missing = PM.conflict.missingPicks(schools, picks || []);
+    if (entries.length === 0 && missing.length) {
+      wrap.appendChild(missingBox(missing, o));
+      return wrap;
+    }
     if (entries.length === 0) {
       wrap.appendChild(el('p', 'empty', '찜한 학교가 없습니다. 학교 상세에서 「찜하기」를 눌러보세요.'));
       return wrap;
@@ -96,6 +120,8 @@
         wrap.appendChild(u);
       }
     }
+
+    if (missing.length) wrap.appendChild(missingBox(missing, o));
 
     return wrap;
   }

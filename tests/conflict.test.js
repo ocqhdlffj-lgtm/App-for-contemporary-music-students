@@ -93,3 +93,17 @@ T.test('entriesFrom은 실기일이 그냥 미확인인 전형에 practicalConfi
   var e = PM.conflict.entriesFrom(schools, [{ schoolId: 'u1', trackId: 'susi' }]);
   T.eq(e[0].practicalConfirmedNone, false);
 });
+
+T.test('missingPicks는 사라진 학교·전형 id의 픽만 돌려준다', function () {
+  var schools = [{ id: 'u1', name: '대학1', tracks: [{ id: 'susi-vocal', name: '보컬' }] }];
+  var picks = [
+    { schoolId: 'u1', trackId: 'susi-vocal' },
+    { schoolId: 'u1', trackId: 'susi' },
+    { schoolId: 'gone', trackId: 'susi' }
+  ];
+  var m = PM.conflict.missingPicks(schools, picks);
+  T.eq(m.length, 2);
+  T.eq(m[0].trackId, 'susi');
+  T.eq(m[1].schoolId, 'gone');
+  T.eq(PM.conflict.missingPicks(schools, []), []);
+});

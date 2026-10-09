@@ -51,5 +51,16 @@
     return { conflicts: conflicts, unknown: unknown };
   }
 
-  PM.conflict = { entriesFrom: entriesFrom, find: find };
+  // 찜해 둔 전형이 데이터 갱신으로 사라졌는지(학교·전형 id 불일치) 찾는다.
+  // entriesFrom은 이런 픽을 조용히 버리므로, 호출 쪽이 사용자에게 알릴 수 있게 따로 돌려준다.
+  function missingPicks(schools, picks) {
+    var byId = {};
+    (schools || []).forEach(function (s) { byId[s.id] = s; });
+    return (picks || []).filter(function (p) {
+      var school = byId[p.schoolId];
+      return !school || !(school.tracks || []).some(function (t) { return t.id === p.trackId; });
+    });
+  }
+
+  PM.conflict = { entriesFrom: entriesFrom, find: find, missingPicks: missingPicks };
 })(window.PM);

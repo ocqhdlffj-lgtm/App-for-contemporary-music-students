@@ -119,3 +119,21 @@ T.test('같은 학교라도 전형이 다르면 같은 날짜 충돌로 표시�
     '충돌 문구에 두 전형 이름이 모두 나와야 한다');
   T.eq(el.querySelectorAll('.pick-row.has-conflict').length, 2);
 });
+
+T.test('데이터에서 사라진 전형을 찜해 뒀다면 조용히 빼지 않고 알린다', function () {
+  var removed = [];
+  var picks = ALL.concat([{ schoolId: 'a', trackId: 'susi-old' }]);
+  var el = PM.ui.mylist.render(mySchools(), picks, { onRemove: function (s, t) { removed.push(s + ':' + t); } });
+  var box = el.querySelector('.missing-picks');
+  T.assert(box, '사라진 찜 경고 필요');
+  T.assert(box.textContent.indexOf('1개') >= 0);
+  box.querySelector('.remove-btn').click();
+  T.eq(removed, ['a:susi-old']);
+  T.eq(el.querySelectorAll('.pick-row').length, 5); // 정상 4 + 경고 안의 1
+});
+
+T.test('찜이 전부 사라진 전형이면 "찜한 학교가 없습니다" 대신 경고만 보여준다', function () {
+  var el = PM.ui.mylist.render(mySchools(), [{ schoolId: 'a', trackId: 'gone' }], {});
+  T.assert(el.querySelector('.missing-picks'));
+  T.assert(el.textContent.indexOf('찜한 학교가 없습니다') < 0);
+});
