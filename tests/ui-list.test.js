@@ -155,3 +155,31 @@ T.test('formatDates: 빈 배열이나 없으면 null을 반환한다', function 
   T.eq(PM.ui.formatDates([]), null);
   T.eq(PM.ui.formatDates(null), null);
 });
+
+T.test('renderMissing: 정보가 없는 학교를 행으로 그리고 "없다는 뜻이 아님"을 알린다', function () {
+  var el = PM.ui.list.renderMissing([
+    { id: 'a', name: '가대', type: '4년제', region: '서울', deptName: '실용음악과', tracks: [] },
+    { id: 'b', name: '나대', type: '전문대', region: '경기', deptName: '뮤직과', tracks: [] }
+  ], { season: '정시' });
+  T.eq(el.querySelectorAll('.missing-row').length, 2);
+  T.assert(el.textContent.indexOf('정시 정보 없음 (2곳)') >= 0, '제목에 시기와 개수');
+  T.assert(el.textContent.indexOf('없다는 뜻이 아니') >= 0, '없다는 뜻이 아니라는 고지');
+  T.assert(el.textContent.indexOf('가대') >= 0 && el.textContent.indexOf('나대') >= 0);
+});
+
+T.test('renderMissing: 행을 누르면 onSelect에 학교 id가 전달된다', function () {
+  var got = null;
+  var el = PM.ui.list.renderMissing(
+    [{ id: 'a', name: '가대', type: '4년제', region: '서울', deptName: '실용음악과', tracks: [] }],
+    { season: '정시', onSelect: function (id) { got = id; } });
+  el.querySelector('.missing-row').click();
+  T.eq(got, 'a');
+});
+
+T.test('seasonNotice: 정시 정보가 있는 학교 수를 실제 수치로 알린다', function () {
+  var withJeongsi = { id: 'a', tracks: [{ season: '수시' }, { season: '정시' }] };
+  var onlySusi = { id: 'b', tracks: [{ season: '수시' }] };
+  var el = PM.ui.seasonNotice([withJeongsi, onlySusi, onlySusi], '정시');
+  T.assert(el.textContent.indexOf('3곳 중 1곳') >= 0, '실제 수치(3곳 중 1곳)가 보여야 함');
+  T.assert(el.textContent.indexOf('없다는 뜻이 아니') >= 0, '정시 화면에서는 오해 방지 문구');
+});

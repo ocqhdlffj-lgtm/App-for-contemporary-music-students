@@ -24,6 +24,39 @@
     return wrap;
   }
 
+  // 전체/수시/정시 버튼. 필터바 DOM은 조건이 바뀌어도 다시 만들지 않으므로(검색창
+  // 포커스 보존), 활성 표시는 버튼 자신이 직접 갱신한다.
+  function seasonToggle(value, onPick) {
+    var current = value || '';
+    var wrap = el('div', 'season-toggle');
+    wrap.setAttribute('role', 'group');
+    wrap.setAttribute('aria-label', '전형 시기');
+    var btns = [];
+
+    function paint() {
+      btns.forEach(function (b) {
+        var on = b.getAttribute('data-season') === current;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+
+    [['', '전체'], ['수시', '수시'], ['정시', '정시']].forEach(function (o) {
+      var b = el('button', 'season-btn', o[1]);
+      b.type = 'button';
+      b.setAttribute('data-season', o[0]);
+      b.addEventListener('click', function () {
+        current = o[0];
+        paint();
+        onPick('season', o[0]);
+      });
+      btns.push(b);
+      wrap.appendChild(b);
+    });
+    paint();
+    return wrap;
+  }
+
   function checkbox(name, label, checked, onPick) {
     var wrap = el('label', 'check');
     var cb = document.createElement('input');
@@ -55,18 +88,14 @@
     q.addEventListener('input', function () { pick('q', q.value); });
     bar.appendChild(q);
 
+    bar.appendChild(seasonToggle(current.season, pick));
+
     var row = el('div', 'filter-row');
     row.appendChild(select('major', '전공', MAJORS, current.major, pick));
     row.appendChild(select('type', '구분', ['4년제', '전문대'], current.type, pick));
     row.appendChild(select('region', '지역', regionsOf(schools), current.region, pick));
-    row.appendChild(select('season', '전형', ['수시', '정시'], current.season, pick));
     row.appendChild(select('songType', '실기곡', SONG_TYPES, current.songType, pick));
     bar.appendChild(row);
-
-    // 정시 데이터는 아직 조사가 시작되지 않았다 — 안내 없이 "정시" 필터를 선택하면
-    // "전국에 정시 실용음악과가 없다"는 거짓 신호로 읽힐 수 있어 상시 고지한다.
-    bar.appendChild(el('p', 'season-notice',
-      '※ 정시(定時) 데이터는 아직 수집되지 않았습니다. 현재 목록은 모두 수시 기준입니다.'));
 
     var checks = el('div', 'filter-checks');
     checks.appendChild(checkbox('noMinCsat', '수능최저 없음', current.noMinCsat, pick));

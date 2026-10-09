@@ -14,11 +14,39 @@
   function renderResults(listHost) {
     listHost.textContent = '';
 
-    var shown = PM.filter.apply(state.schools, state.criteria);
+    var c = state.criteria;
+    var season = c.season || '';
+    var shown = PM.filter.apply(state.schools, c);
+
+    // 수시 화면이 아니면 정시 정보가 실제로 얼마나 모였는지 먼저 알린다.
+    if (season !== '수시') {
+      listHost.appendChild(PM.ui.seasonNotice(state.schools, season));
+    }
+
     listHost.appendChild(PM.ui.list.render(shown, {
-      major: state.criteria.major || '',
+      major: c.major || '',
       onSelect: renderDetail
     }));
+
+    // 전형 시기를 고르면 그 시기 전형이 아예 없는 학교는 목록에서 사라진다. 그런데
+    // 정시처럼 아직 못 모은 데이터가 많을 땐 "전국에 정시가 없다"는 거짓 신호가 되므로,
+    // 사라진 학교를 따로 모아 "정보 없음(없다는 뜻이 아님)"으로 보여준다.
+    if (season) {
+      var lacking = PM.filter.apply(state.schools, { q: c.q, type: c.type, region: c.region })
+        .filter(function (s) {
+          return !(s.tracks || []).some(function (t) { return t.season === season; });
+        });
+      if (lacking.length) {
+        // 전공·실기곡·수능최저·실기비율은 전형별 값이라 정보가 없는 학교는 판정할 수 없다.
+        if (c.major || c.songType || c.noMinCsat || c.practicalOnly) {
+          listHost.appendChild(PM.ui.el('p', 'muted missing-hint',
+            season + ' 정보가 아직 없는 학교 ' + lacking.length + '곳은 세부 조건(전공·실기곡·수능최저·실기비율)을 알 수 없어 제외했습니다.'));
+        } else {
+          listHost.appendChild(PM.ui.list.renderMissing(lacking, { season: season, onSelect: renderDetail }));
+        }
+      }
+    }
+
     listHost.appendChild(PM.ui.disclaimerBar());
 
     var progressHost = document.getElementById('progress');

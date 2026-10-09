@@ -76,5 +76,27 @@
     return wrap;
   }
 
-  PM.ui.list = { render: render };
+  // 선택한 전형 시기(예: 정시)의 정보가 아직 없는 학교 목록. 목록에서 그냥 빠지면
+  // "그 시기 전형이 없는 학교"로 읽히므로 별도 묶음으로 보여준다.
+  function renderMissing(schools, opts) {
+    var o = opts || {};
+    var season = o.season || '';
+    var wrap = el('div', 'missing');
+    wrap.appendChild(el('h3', 'missing-title', season + ' 정보 없음 (' + schools.length + '곳)'));
+    wrap.appendChild(el('p', 'muted',
+      '아직 ' + season + ' 요강을 확인하지 못한 학교입니다. ' + season +
+      ' 전형이 없다는 뜻이 아니니 입학처에서 직접 확인하세요.'));
+    schools.forEach(function (s) {
+      var row = el('button', 'missing-row');
+      row.type = 'button';
+      row.appendChild(el('span', 'missing-name', s.name));
+      row.appendChild(PM.ui.badge(s.type, 'type'));
+      row.appendChild(el('span', 'muted', s.region + ' · ' + s.deptName));
+      row.addEventListener('click', function () { if (o.onSelect) o.onSelect(s.id); });
+      wrap.appendChild(row);
+    });
+    return wrap;
+  }
+
+  PM.ui.list = { render: render, renderMissing: renderMissing };
 })(window.PM);

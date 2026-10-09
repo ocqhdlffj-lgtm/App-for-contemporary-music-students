@@ -97,6 +97,27 @@
     }).join(', ');
   }
 
+  // 정시 전형이 하나라도 있는 학교 수 — 수집 현황 고지에 쓴다.
+  function jeongsiCount(schools) {
+    var n = 0;
+    (schools || []).forEach(function (s) {
+      if ((s.tracks || []).some(function (t) { return t.season === '정시'; })) n++;
+    });
+    return n;
+  }
+
+  // 정시는 수시와 달리 아직 못 모은 학교가 많다. 정시 정보가 없는 학교를 "정시가
+  // 없는 학교"로 오해하지 않도록 수집 현황을 목록 위에 항상 알린다.
+  function seasonNotice(schools, season) {
+    var n = jeongsiCount(schools);
+    var total = (schools || []).length;
+    var text = season === '정시'
+      ? '정시 정보를 넣은 학교는 ' + total + '곳 중 ' + n + '곳입니다. 나머지는 정시 요강을 확인하는 대로 추가하며, ' +
+        '아래 "정시 정보 없음" 목록의 학교는 정시가 없다는 뜻이 아니라 아직 확인하지 못했다는 뜻입니다.'
+      : '정시 정보는 ' + total + '곳 중 ' + n + '곳만 반영돼 있습니다. 위의 「정시」 버튼으로 모아 볼 수 있습니다.';
+    return el('p', 'season-notice', text);
+  }
+
   PM.ui.el = el;
   PM.ui.badge = badge;
   PM.ui.levelBadge = levelBadge;
@@ -104,4 +125,5 @@
   PM.ui.progressText = progressText;
   PM.ui.expansionNotice = expansionNotice;
   PM.ui.formatDates = formatDates;
+  PM.ui.seasonNotice = seasonNotice;
 })(window.PM);
