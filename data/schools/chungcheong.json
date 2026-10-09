@@ -64,6 +64,34 @@
         "checkedAt": "2026-09-16",
         "source": "https://www.ok.ac.kr/downloadContentsFile.do?key=5009&fileNo=2006"
       }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시모집",
+      "majors": ["기악", "보컬", "K-POP", "싱어송라이터", "작곡(MIDI)", "프로듀서", "음향엔지니어", "공연기획/연출", "클래식"],
+      "quota": { "실용음악과(정원내 일반전형)": 6 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": ["2027-01-27"],
+        "announce": "2027-02-02"
+      },
+      "ratio": { "실기": 100, "내신": 0, "수능": 0 },
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": true,
+        "notes": "수시1차·2차와 동일(수시와 동일). 2027학년도 신입생 모집요강 11장 '실기고사 종목 및 준비사항'은 수시/정시 구분 없이 공통 적용되며 9개 세부전공(기악/보컬/K-POP/싱어송라이터/작곡(MIDI)/프로듀서/음향엔지니어/공연기획·연출/클래식) 중 1개를 선택해 응시, 전공별 실기내용이 달라 공통값 산출 불가(세부 내용은 수시1차 notes 참조). 정시 모집인원은 정원내 일반전형 6명(p.10-11 표), 반영비율은 실용댄스과·실용음악과 실기 100%(500점)로 학생부·수능 미반영(p.16 '나. 정시모집'). 면접(실기)고사 2027-01-27, 원서접수 2027-01-04~01-20, 최초합격자 발표 2027-02-02, 합격자 등록 2027-02-10~02-12(p.12). 면접(실기)고사 불참자는 불합격 처리. 정시 미충원 또는 미등록 결원 시 2027-01-21~02-27 대학자율모집(면접 미실시). 수능최저학력기준에 관한 별도 명시는 요강에서 확인하지 못해 minCsat은 생략."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-10-08",
+        "source": "https://www.ok.ac.kr/DATA/contents/main/20260814.pdf"
+      }
     }
   ],
   "prepPoints": [

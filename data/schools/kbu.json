@@ -30,6 +30,34 @@
       },
       "competition": [],
       "verification": { "level": "확인됨", "checkedAt": "2026-09-16", "source": "https://efms.kbu.ac.kr/efms/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciwyOTg1OCxZ" }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시 일반전형 (실기위주)",
+      "majors": ["보컬"],
+      "quota": { "보컬": 4 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": ["2027-01-27"],
+        "announce": "2027-02-05"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "practical": {
+        "songCount": 1,
+        "songType": "자유곡",
+        "designatedSongs": null,
+        "accompaniment": "MR",
+        "durationMin": 2,
+        "sheetMusicRequired": true,
+        "notes": "2027학년도 신입생 모집요강(수시·정시 통합본) p.10 정시모집 모집인원(실용음악과(보컬) 일반전형(학생부 위주 열) 4명, 단 '정시모집 모집학과와 모집인원은 지원 및 등록결과에 따라 변경될 수 있으므로 홈페이지에서 개별 확인'), p.14 전형일정(정시 원서접수 2027-01-04~01-20, 서류제출 마감 01-21, 실기고사 01-27, 합격자 발표 02-05, 정시 충원합격자 발표 02-13~02-27, 등록금 납부 02-10~02-12), p.18 정시 일반전형 성적반영(학생부(교과) 20% + 실기 80%, 수능 미반영), p.43~45 실기고사 반영방법 기준. 실기고사 주제는 수시와 동일: 가요·Pop 중 자유곡 1곡(2분 내외, 상황에 따라 장르가 다른 추가 곡 요구 가능), 실기반주는 USB로 준비(CD 제출 불가), 가능한 반복되는 부분을 피해 2분 내외로 편집, 모든 곡은 암보로 연주하되 악보 5부 제출. 실기고사 성적 30점 이하 불합격, 불참자 불합격(성적사정 제외). 동점자 처리 1순위 실기고사 성적, 2순위 학생부 석차등급 우수자, 3순위 학생부 이수단위 합 높은 자. 실용음악과(보컬)은 정시 일반전형(학생부 위주) 지원자와 함께 대학수학능력시험 성적을 반영하지 않음(p.43). 전문대는 군 구분 없음. 수능최저학력기준 관련 문구는 확인하지 못해 minCsat 키를 비워둠(추측 금지). 정시 전형료 합계 50,000원(전형료 25,000+실기고사료 20,000+원서접수 대행수수료 5,000)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "확인됨",
+        "checkedAt": "2026-10-08",
+        "source": "https://efms.kbu.ac.kr/efms/ajx_json/UploadMgr/downloadRun.do?qcode=Q29udGVudE1nciwyOTg1OCxZ"
+      }
     }
   ],
   "prepPoints": [

@@ -64,6 +64,35 @@
         "checkedAt": "2026-09-17",
         "source": "https://www.gyu.ac.kr/ipsi/downloadBbsFile.do?atchmnflNo=28840"
       }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시모집 일반전형",
+      "majors": ["휴먼레저음악전공"],
+      "quota": { "전체": 1 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": [],
+        "announce": "2027-01-29"
+      },
+      "ratio": { "학생부": 100, "수능": 0, "실기": 0, "면접": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 신입생 모집요강(표지 2027학년도) 기준 정시모집 일반전형은 전체학과 학교생활기록부 100%(400점)만 반영, 실기고사·면접·수능 반영 없음(V.전형요소별 반영비율 p.14). 모집인원 1명은 라이프콘텐츠계열(휴먼레저음악전공·웰니스헬스케어전공) 합산 값으로 전공별 분리 불가(II.모집인원 p.10). 학생부 및 수능 최저학력기준·가산점 제도 없음(p.14 주석). 최초합격자 발표 2027-01-29 10:00 예정, 충원합격자 2027-02-13~02-27(p.8). 정시 자율모집은 2027-01-21~02-27 접수(별도 일정). 수시와 동일하게 실기 없는 학생부 100% 전형으로 scope 재검토 필요."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-10-08",
+        "source": "https://www.gyu.ac.kr/DATA/download/2027ipsi_2.pdf"
+      }
     }
   ],
   "prepPoints": [

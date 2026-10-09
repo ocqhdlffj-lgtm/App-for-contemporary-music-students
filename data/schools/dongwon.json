@@ -68,6 +68,35 @@
         "checkedAt": "2026-09-16",
         "source": "https://ipsi.tw.ac.kr/uploads/CONTENTS/site/ipsi/2027_%EB%8F%99%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90_%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%9B%B9%EC%9A%A9.pdf"
       }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시모집 일반전형 (실용음악과 실기)",
+      "majors": ["보컬", "기악", "작곡(뮤직 프로듀싱)", "싱어송라이터(작곡)", "힙합 프로듀서", "전자음악", "DJ", "음향 엔지니어", "멀티미디어"],
+      "quota": { "실용음악과": 3 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": ["2027-01-26", "2027-01-27"],
+        "announce": "2027-02-04"
+      },
+      "ratio": { "실기": 100, "수능": 0, "학생부": 0 },
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 신입생 정시모집 안내 PDF 기준(p.1 모집인원, p.2 전형일정, p.4~6). 실용음악과 실기점수 100%(1,000점), 수능최저 적용하지 않음, 면접 없음, 실기고사 미응시자는 불합격. 실기고사 일정은 '2027.01.26(화)~01.27(수)'로 표기되나 상세 일정 및 주요 사항은 추후 홈페이지 공지·변경 가능(p.2, p.5). 전공별 규정: 보컬/기악(기타·건반·베이스·드럼 그 외 악기) 자유곡 1곡(3분 내외, 대중음악 장르 무관); 작곡(뮤직 프로듀싱)·싱어송라이터·힙합 프로듀서·전자음악 자작곡 1곡(3분 내외, 악보 3부 또는 USB/작품설명서 A4 3부 제출); DJ 자유곡 DJing 퍼포먼스(3분 내외); 음향 엔지니어 어쿠스틱 악기 자유곡 연주(3분 내외)+본인 믹싱 마스터링 작업물 1곡 USB 및 작품설명서 제출; 멀티미디어 세로 숏폼 영상(1분 이내) 제출+가창 또는 악기 자유곡(3분 내외). 전공별로 곡수·형식·반주가 달라 공통 leaf 값은 null. 정시모집 모집인원은 변경될 수 있음(주4,5)."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-10-08",
+        "source": "https://ipsi.tw.ac.kr/uploads/CONTENTS/site/ipsi/2027_동원대학교_모집요강_정시_웹용.pdf"
+      }
     }
   ],
   "prepPoints": [

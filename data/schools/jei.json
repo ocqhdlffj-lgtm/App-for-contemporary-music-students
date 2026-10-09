@@ -30,6 +30,30 @@
       },
       "competition": [],
       "verification": { "level": "부분확인", "checkedAt": "2026-09-16", "source": "https://apply.jeiu.ac.kr:4443/apply/pdfDownloadView.do?menuSeq=43" }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시모집 대학자체기준 실기전형",
+      "majors": ["보컬", "피아노", "베이스", "드럼", "기타", "관현악기", "싱어송라이터", "작곡/컴퓨터음악", "뮤직테크놀로지", "음향제작"],
+      "quota": { "실용음악과": 6 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-20"],
+        "practical": ["2027-01-30"],
+        "announce": "2027-02-05"
+      },
+      "ratio": { "실기": 80, "내신": 20, "수능": 0 },
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 정시모집요강은 아직 미게시(2026-10-08 기준). 모집인원·일정·반영비율은 2027학년도 수시모집요강(재능대 입학처 게시본)에 함께 실린 정시 항목 기준이며 정시 모집요강 확정 시 재확인 필요. 반영비율은 요강상 수시1차/2차/정시 공통(학생부(교과)20%+실기80%). 실기 종목은 세부전공별로 상이하여 공통값 없음(수시와 동일 구성으로 추정되나 정시 요강에서 미확인). 수능최저학력기준 관련 문구는 미발견."
+      },
+      "competition": [],
+      "verification": { "level": "부분확인", "checkedAt": "2026-10-08", "source": "https://apply.jeiu.ac.kr:4443/apply/pdfDownloadView.do?menuSeq=43" }
     }
   ],
   "prepPoints": [

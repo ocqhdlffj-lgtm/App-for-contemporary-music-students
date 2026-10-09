@@ -51,8 +51,12 @@
 
     var progressHost = document.getElementById('progress');
     progressHost.textContent = '';
+    // 학교 등급은 "그 학교의 모든 전형 중 최저"라, 시기를 고르지 않은 전체 화면의 숫자는
+    // 수시·정시가 모두 확인된 학교만 센 엄격한 값이다. 시기를 고르면 그 시기 전형만
+    // 기준으로 센다(분모도 그 시기 정보가 있는 학교).
+    var basis = season ? PM.filter.apply(state.schools, { season: season }) : state.schools;
     progressHost.appendChild(PM.ui.el('div', 'progress-line',
-      PM.ui.progressText(state.schools) + ' · 기준일 ' + state.dataVersion));
+      (season ? season + ' ' : '') + PM.ui.progressText(basis) + ' · 기준일 ' + state.dataVersion));
     progressHost.appendChild(PM.ui.expansionNotice());
   }
 

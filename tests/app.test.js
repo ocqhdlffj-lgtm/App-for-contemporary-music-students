@@ -263,3 +263,26 @@ T.test('정시 버튼을 누르면 필터바를 다시 만들지 않고 목록�
     T.assert(screen.querySelector('.missing'), '정보 없는 학교 묶음이 나타나야 함');
   });
 });
+
+T.test('진행률은 고른 시기 전형만 기준으로 센다(정시를 고르면 정시 정보가 있는 학교만 분모)', function () {
+  withScreen(function (screen) {
+    PM.app._state.schools = jeongsiViewSchools();
+    PM.app._state.dataVersion = '테스트';
+    var progress = document.getElementById('progress');
+
+    PM.app._state.criteria = { season: '정시' };
+    PM.app._renderList();
+    T.assert(progress.textContent.indexOf('정시 세부 확인 0 / 1개교') >= 0,
+      '정시 화면의 진행률은 정시 정보가 있는 1개교 기준이어야 함: ' + progress.textContent);
+
+    PM.app._state.criteria = { season: '수시' };
+    PM.app._renderList();
+    T.assert(progress.textContent.indexOf('수시 세부 확인 0 / 2개교') >= 0, '수시 화면은 2개교 기준');
+
+    PM.app._state.criteria = {};
+    PM.app._renderList();
+    T.assert(progress.textContent.indexOf('세부 확인 0 / 2개교') >= 0
+      && progress.textContent.indexOf('수시 세부') < 0 && progress.textContent.indexOf('정시 세부') < 0,
+      '전체 화면은 시기 접두어 없이 전체 학교 기준');
+  });
+});
