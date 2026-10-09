@@ -64,6 +64,35 @@
         "checkedAt": "2026-09-16",
         "source": "https://admission.cau.ac.kr/file/pdfDown.pdf?sfn=20260805051607003_0c37226bf7e64ad79adafec6f6fdc72c.pdf&ofn=%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84+%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95_%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A9%28%EC%B5%9C%EC%A2%85%29.pdf"
       }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시 나군 글로벌예술학부 (수시 미등록 이월 시에만 모집)",
+      "majors": ["실용음악전공"],
+      "quota": { "글로벌예술학부": 0 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-07"],
+        "practical": [],
+        "announce": null
+      },
+      "ratio": null,
+      "minCsat": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 중앙대 정시모집요강(표지 '2027학년도 정시모집요강') p.17 모집인원 표(예술·체육, 캠퍼스 '다빈치' 표) 기준: 글로벌예술학부는 입학정원 13·학과별 기준정원 13·모집군 '나'이나 정시 모집인원은 '-'(수시 100% 모집단위). 수시 미등록 이월이 발생하는 경우에만 정시에서 선발할 수 있으며 이월 인원·선발 여부는 최종 모집인원 공고(2026-12-31 이후 입학처 홈페이지)에서 확정 — 정시 실기형(실기/실적)은 연극·영화·공간연출 등 서울·다빈치 타 학부 전용으로 이 학부는 실기 전형 모집이 없고, 실기 일정·방법은 미공고(확인 불가). 원서접수 2027-01-04(월) 10:00 ~ 01-07(목) 18:00(p.9)은 정시 전체 공통 일정. 정시모집은 모든 전형에서 수능최저학력기준을 적용하지 않음(p.7). 전형요소 반영비율은 이 학부에 대해 요강에 별도 기재 없어 ratio는 null. 최초합격자 발표일은 이 학부에 대해 확인하지 않음."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-10-08",
+        "source": "https://cdn013.negagea.net/dgsmidc/omr/seoul/web/univ_info2026/중앙대학교/중앙대학교_2027학년도_정시모집요강.pdf"
+      }
     }
   ],
   "prepPoints": [

@@ -38,6 +38,34 @@
         "checkedAt": "2026-09-17",
         "source": "https://admission.cs.ac.kr/api/guide/pdfview?GUBUN=1"
       }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시 수능(일반학생) (수시 미충원 인원 발생 시에만 선발)",
+      "majors": ["뮤직공연전공", "예술교육콘텐츠전공"],
+      "quota": { "뮤직공연예술학과": null },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-07"],
+        "practical": [],
+        "announce": "2027-01-21"
+      },
+      "ratio": { "수능": 60, "학생부": 40 },
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": null,
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 창신대 신입생 정시 모집요강(표지 '2027학년도 대학입학전형 신입생 정시 모집요강', 21쪽; 입학처 GUBUN=2 파일) II.모집단위 및 모집인원(p.2)·IV.전형방법(p.5-6) 기준. 예술대학 뮤직공연예술학과(뮤직공연전공/예술교육콘텐츠전공, 입학정원 25)는 정원내 일반학생 모집인원 칸이 비어 있으며, 표 하단 주석에 '수시모집 미충원 인원이 있는 경우에만 해당 전형 선발'이라 명시 — 이월 인원은 모집인원 공고(2026.12.30 예정)에서 확정되므로 quota는 null. 실기고사 없음(수능 일반학생 전형: 수능 60%+학생부 40%, 학교생활기록부 교과36+출결4=40). 수능 영역별: 국어·수학·영어 각 30%, 탐구 1과목 10%(합 100%), 한국사 가산점 최대 10점(등급별 차등), 수능 백분위 활용(영어·한국사는 등급). 일정: 원서접수 2027.1.4(월)~1.7(목)(마감일 18:00), 구비서류 ~1.13, 합격자 발표 2027.1.21(목) 10:00, 등록 2.10~2.12, 충원합격 2.13~2.17. 수능최저학력기준 유무는 확인하지 않아 minCsat 생략."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-10-08",
+        "source": "https://admission.cs.ac.kr/api/guide/pdfview?GUBUN=2"
+      }
     }
   ],
   "prepPoints": [

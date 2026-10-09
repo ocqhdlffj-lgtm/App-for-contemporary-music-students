@@ -35,6 +35,34 @@
         "checkedAt": "2026-09-17",
         "source": "https://cdn013.negagea.net/dgsmidc/omr/seoul/web/univ_info2026/%EB%82%98%EC%82%AC%EB%A0%9B%EB%8C%80%ED%95%99%EA%B5%90/%EB%82%98%EC%82%AC%EB%A0%9B%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84_%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf"
       }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시모집 (정시 모집요강 미게시 — 수시요강 모집시기별 인원 기준)",
+      "majors": [],
+      "quota": { "실용음악학과": 4 },
+      "schedule": {
+        "apply": null,
+        "practical": [],
+        "announce": null
+      },
+      "ratio": null,
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 나사렛대 정시모집요강은 아직 미게시(입학처 ipsi.kornu.ac.kr은 2026-10-08 기준 수시 공지만 노출). 모집인원은 2027학년도 수시모집요강 p.17 '2027학년도 모집인원' 표의 모집시기별(수시 26 / 정시 4, 정원내 합계 30)에서 확인한 값이며 최종 모집인원은 변경될 수 있다고 명시됨. 정시 전형명·일정·반영비율·실기 종목은 미확인(정시 요강 게시 후 확인 필요)이라 null/빈값 처리."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-10-08",
+        "source": "https://cdn013.negagea.net/dgsmidc/omr/seoul/web/univ_info2026/%EB%82%98%EC%82%AC%EB%A0%9B%EB%8C%80%ED%95%99%EA%B5%90/%EB%82%98%EC%82%AC%EB%A0%9B%EB%8C%80%ED%95%99%EA%B5%90_2027%ED%95%99%EB%85%84%EB%8F%84_%EC%88%98%EC%8B%9C%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95.pdf"
+      }
     }
   ],
   "prepPoints": [

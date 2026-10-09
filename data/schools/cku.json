@@ -38,6 +38,34 @@
         "checkedAt": "2026-09-17",
         "source": "https://www.cku.ac.kr/sites/iphak/atchmnfl/pdfView/6/temp_1780905720656100.pdf"
       }
+    },
+    {
+      "id": "jeongsi",
+      "season": "정시",
+      "name": "정시 다군 수능(일반전형) (수시 미충원 이월 시에만 모집)",
+      "majors": ["실용음악전공"],
+      "quota": { "실용음악전공": 0 },
+      "schedule": {
+        "apply": ["2027-01-04", "2027-01-07"],
+        "practical": [],
+        "announce": "2027-02-05"
+      },
+      "ratio": { "수능": 100 },
+      "practical": {
+        "songCount": null,
+        "songType": null,
+        "designatedSongs": [],
+        "accompaniment": null,
+        "durationMin": null,
+        "sheetMusicRequired": null,
+        "notes": "2027학년도 가톨릭관동대 정시 모집요강(표지 '2027학년도 정시 모집요강', 2026.8.31., 64쪽) II.전형별 모집인원(p.5)·수능(일반전형)(p.13-14) 기준: 실용음악전공(교직, 입학정원 20, 다군)은 수능(일반) '이월'과 학생부종합(일반) '이월'만 있고 정시 모집인원 계는 '-'(0). 수시모집 미충원 이월 발생 시에만 선발하며 이월 인원은 입학처 홈페이지 공지(원서접수 전 확인 필수). 실기고사 없음(p.7 정시 실기고사 일정은 스포츠레저학·스포츠재활의학·체육교육과만). 수능(일반전형) 전형방법: 수능 100%(1,000점)+한국사 가산점(8~10점). 학생부종합(일반전형) 이월 트랙은 별도이며 본 레코드에는 반영비율을 기재하지 않음. 일정: 원서접수 2027.1.4(월) 09:00 ~ 1.7(목) 23:30(서류제출 ~1.13), 합격자발표 2027.2.5(금) 15:00, 등록 2.10(수)~2.12(금). 수능최저학력기준 유무는 확인하지 않아 minCsat 생략."
+      },
+      "competition": [],
+      "verification": {
+        "level": "부분확인",
+        "checkedAt": "2026-10-08",
+        "source": "https://www.cku.ac.kr/sites/iphak/atchmnfl/pdfView/7/temp_1788166425614100.pdf"
+      }
     }
   ],
   "prepPoints": [
