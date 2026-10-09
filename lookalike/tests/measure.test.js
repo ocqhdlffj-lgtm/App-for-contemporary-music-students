@@ -56,12 +56,13 @@
 
   T.test('내보내기: 체크한 성공 사진만 평균, 출처 포함, 사진 없는 사람은 뺀다', function () {
     var v = function (x) { return { faceLength: x, jawWidth: 0, eyeTilt: -x, eyeRound: 0, eyeSize: 0.2, lipFull: 0 }; };
+    var raw = function (x) { return { faceRatio: 1.2 + x, jawRatio: 0.8, eyeTilt: 3, eyeOpen: 0.3, eyeWidth: 0.18, lipRatio: 0.4 }; };
     var celeb = { id: 'a' };
     var results = [
       { celeb: celeb, cands: [
-        { ok: true, checked: true, vector: v(0.2), page: 'p1', author: 'A', license: 'CC0' },
-        { ok: true, checked: true, vector: v(0.4), page: 'p2', author: 'B', license: 'CC BY 2.0' },
-        { ok: true, checked: false, vector: v(0.9), page: 'p3', author: 'C', license: 'CC0' },
+        { ok: true, checked: true, vector: v(0.2), raw: raw(0.1), page: 'p1', author: 'A', license: 'CC0' },
+        { ok: true, checked: true, vector: v(0.4), raw: raw(0.3), page: 'p2', author: 'B', license: 'CC BY 2.0' },
+        { ok: true, checked: false, vector: v(0.9), raw: raw(0.9), page: 'p3', author: 'C', license: 'CC0' },
         { ok: false, reason: '여러 명', page: 'p4' }
       ] },
       { celeb: { id: 'b' }, cands: [{ ok: false, reason: '얼굴 없음' }] }
@@ -73,6 +74,8 @@
     T.eq(data.a.vector.faceLength, 0.3);
     T.eq(data.a.vector.eyeTilt, -0.3);
     T.eq(data.a.sources.map(function (s) { return s.page; }), ['p1', 'p2']);
+    T.eq(data.a.raw.faceRatio, 1.4, '체크한 사진의 원래 측정값 평균(한계값으로 자르지 않음)');
+    T.eq(data.a.raw.eyeOpen, 0.3);
   });
 
   // 실제 측정 데이터가 들어 있어도 이 테스트들이 값을 지우지 않게 원래 값을 복원한다.
@@ -145,6 +148,7 @@
         T.assert(typeof m.vector[d] === 'number' && m.vector[d] >= -1 && m.vector[d] <= 1, id + '.' + d);
       });
       T.assert(m.n >= 1 && m.sources.length === m.n, id + ' n과 sources 수 불일치');
+      if (m.raw) T.assert(typeof m.raw.faceRatio === 'number' && typeof m.raw.eyeOpen === 'number', id + ' raw');
       m.sources.forEach(function (s) {
         T.assert(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(s.page), id + ' 출처 주소');
         T.assert(LA.measureTool.licenseOk(s.license), id + ' 라이선스 ' + s.license);

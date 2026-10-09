@@ -4,8 +4,8 @@
   // 찾고, 사용자 사진과 같은 방식(features.fromLandmarks)으로 잰다.
 
   var API = 'https://commons.wikimedia.org/w/api.php';
-  var MAX_USED = 5;       // 한 명당 평균 낼 최대 사진 수
-  var SEARCH_LIMIT = 20;  // 검색 후보 수
+  var MAX_USED = 8;       // 한 명당 평균 낼 최대 사진 수(많을수록 사진 한 장의 오차가 줄어든다)
+  var SEARCH_LIMIT = 40;  // 검색 후보 수
   var MIN_SIDE = 400;     // 원본이 이보다 작으면 제외
 
   // 커먼즈에는 자유 라이선스만 올라오지만, 상업 이용을 막는 NC·ND 계열은
@@ -86,14 +86,15 @@
       if (found.count > 1) return { ok: false, reason: '여러 명' };
       var a = LA.features.fromLandmarks(found.landmarks, found.width, found.height, found.blendshapes);
       if (a.warnings.length || a.unreliable.length) return { ok: false, reason: '정면·무표정 아님' };
-      return { ok: true, vector: a.vector };
+      return { ok: true, vector: a.vector, raw: a.raw };
     }).catch(function (e) { return { ok: false, reason: e.message || '실패' }; });
   }
 
+  // 평균. 키는 첫 항목의 것을 따른다(vector는 DIMS, raw는 측정 항목).
   function average(vectors) {
     var out = {};
-    LA.features.DIMS.forEach(function (d) {
-      out[d] = Math.round(1000 * vectors.reduce(function (s, v) { return s + v[d]; }, 0) / vectors.length) / 1000;
+    Object.keys(vectors[0]).forEach(function (d) {
+      out[d] = Math.round(10000 * vectors.reduce(function (s, v) { return s + v[d]; }, 0) / vectors.length) / 10000;
     });
     return out;
   }
@@ -106,6 +107,8 @@
       if (!used.length) return;
       data[r.celeb.id] = {
         vector: average(used.map(function (c) { return c.vector; })),
+        // 한계값(±1)에서 잘리기 전의 원래 측정값. 기준값·가중치를 다시 맞출 때 쓴다.
+        raw: average(used.map(function (c) { return c.raw; })),
         n: used.length,
         sources: used.map(function (c) { return { page: c.page, author: c.author, license: c.license }; })
       };
@@ -145,7 +148,7 @@
     function renderCands(r) {
       var used = 0;
       r.cands.forEach(function (c) { if (c.ok) used++; });
-      r.ui.st.textContent = used ? used + '장 측정 성공' : '쓸 수 있는 사진 없음';
+      r.ui.st.textContent = !used ? '쓸 수 있는 사진 없음' : used + '장 측정 성공' + (used < 3 ? ' (3장 미만 — 사진 한 장의 오차가 큼)' : '');
       r.ui.cands.textContent = '';
       r.cands.forEach(function (c) {
         if (!c.tried) return;
@@ -178,7 +181,7 @@
           var c = r.cands[i++];
           r.ui.st.textContent = '측정 중… (' + i + '/' + r.cands.length + ')';
           return measureOne(c, LA.detector).then(function (m) {
-            c.tried = true; c.ok = m.ok; c.reason = m.reason; c.vector = m.vector; c.checked = m.ok;
+            c.tried = true; c.ok = m.ok; c.reason = m.reason; c.vector = m.vector; c.raw = m.raw; c.checked = m.ok;
             if (m.ok) okCount++;
             return next();
           });
