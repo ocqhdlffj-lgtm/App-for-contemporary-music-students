@@ -94,6 +94,7 @@ h3 { font-size: 16px; margin: 0 0 8px; }
   background: var(--warn-bg); color: var(--warn-fg); border-radius: 10px;
   padding: 8px 12px; font-size: 13px; margin: 8px 0;
 }
+.info { background: var(--accent-soft); color: var(--fg); border-radius: 10px; padding: 8px 12px; font-size: 13px; margin: 8px 0; }
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; overflow: hidden;
   clip: rect(0 0 0 0); white-space: nowrap;

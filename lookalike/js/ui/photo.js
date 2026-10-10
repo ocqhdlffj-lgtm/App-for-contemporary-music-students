@@ -124,6 +124,7 @@
         status.textContent = '분석 완료! 분홍 점이 측정에 쓴 위치예요.';
         status.className = 'status ok';
         analysis.warnings.forEach(function (w) { after.appendChild(ui.el('p', 'warning', '⚠ ' + w)); });
+        (analysis.notes || []).forEach(function (n) { after.appendChild(ui.el('p', 'info', 'ℹ ' + n)); });
         after.appendChild(ui.button('btn primary', '다음 →', function () { handlers.onDone(analysis); }));
         pick.disabled = false;
         pick.textContent = '다른 사진으로 다시';

@@ -13,6 +13,7 @@
       '사진 각도·표정·거리 때문에 다르게 보일 수 있어요. 거울을 보고 다른 것만 바꿔 주세요.'));
 
     analysis.warnings.forEach(function (w) { root.appendChild(ui.el('p', 'warning', '⚠ ' + w)); });
+    (analysis.notes || []).forEach(function (n) { root.appendChild(ui.el('p', 'info', 'ℹ ' + n)); });
 
     var detected = LA.profile.answersFromVector(analysis.vector);
     var answers = {};

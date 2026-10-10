@@ -94,22 +94,46 @@
     return t;
   }
 
-  function measure(landmarks, width, height) {
-    var P = toPixels(landmarks, width || 1, height || 1);
+  // 픽셀 좌표 468점 → 원시 측정값 6개
+  function rawFromPixels(P) {
     var cheek = dist(P[IDX.cheekR], P[IDX.cheekL]);
     var eR = IDX.eyeR, eL = IDX.eyeL;
     var wR = dist(P[eR.outer], P[eR.inner]), wL = dist(P[eL.outer], P[eL.inner]);
     return {
-      raw: {
-        faceRatio: dist(P[IDX.top], P[IDX.chin]) / cheek,
-        jawRatio: dist(P[IDX.jawR], P[IDX.jawL]) / cheek,
-        eyeTilt: (eyeTiltDeg(P, eR) + eyeTiltDeg(P, eL)) / 2,
-        eyeOpen: (dist(P[eR.upper], P[eR.lower]) / wR + dist(P[eL.upper], P[eL.lower]) / wL) / 2,
-        eyeWidth: (wR + wL) / 2 / cheek,
-        lipRatio: dist(P[IDX.lipTop], P[IDX.lipBottom]) / dist(P[IDX.mouthR], P[IDX.mouthL])
-      },
-      pose: { rollDeg: rollOf(P) * 180 / Math.PI, yaw: yawOf(P) }
+      faceRatio: dist(P[IDX.top], P[IDX.chin]) / cheek,
+      jawRatio: dist(P[IDX.jawR], P[IDX.jawL]) / cheek,
+      eyeTilt: (eyeTiltDeg(P, eR) + eyeTiltDeg(P, eL)) / 2,
+      eyeOpen: (dist(P[eR.upper], P[eR.lower]) / wR + dist(P[eL.upper], P[eL.lower]) / wL) / 2,
+      eyeWidth: (wR + wL) / 2 / cheek,
+      lipRatio: dist(P[IDX.lipTop], P[IDX.lipBottom]) / dist(P[IDX.mouthR], P[IDX.mouthL])
     };
+  }
+
+  // 고개가 이만큼(도) 넘게 돌아가 있으면 정면으로 되돌려서 잰다. 그 아래는 사진에 찍힌
+  // 그대로 잰다 — 연예인 실측값(data/celebs-measured.js)이 그 방식으로 잰 값이라, 정면에
+  // 가까운 사진은 같은 방법으로 재야 비교 기준이 맞는다.
+  var CORRECT_MIN_DEG = 6;
+  // 이 이상 돌아간 사진은 가려진 쪽 랜드마크를 믿기 어려워 보정해도 경고한다.
+  var WARN_YAW_DEG = 35, WARN_PITCH_DEG = 30;
+  // 기준 얼굴과 맞춘 뒤 남은 오차가 이보다 크면 3D 추정을 믿지 않고 그대로 잰다.
+  var MAX_FIT_ERROR = 0.2;
+
+  function measure(landmarks, width, height) {
+    var W = width || 1, H = height || 1;
+    var P = toPixels(landmarks, W, H);
+    var pose = { rollDeg: rollOf(P) * 180 / Math.PI, yaw: yawOf(P), corrected: false };
+
+    // z가 있는 MediaPipe 결과이고 pose.js가 로드돼 있으면 3D 자세를 추정한다
+    if (LA.pose && LA.CANONICAL_3D && LA.pose.hasDepth(landmarks)) {
+      var est = LA.pose.estimate(landmarks, W, H);
+      pose.yawDeg = est.yawDeg; pose.pitchDeg = est.pitchDeg; pose.rollDeg3d = est.rollDeg; pose.fit = est.fit;
+      var off = Math.max(Math.abs(est.yawDeg), Math.abs(est.pitchDeg));
+      if (est.fit <= MAX_FIT_ERROR && off > CORRECT_MIN_DEG) {
+        P = LA.pose.frontal2D(landmarks, W, H, est);
+        pose.corrected = true;
+      }
+    }
+    return { raw: rawFromPixels(P), pose: pose };
   }
 
   // 원시 측정값 → -1~+1 벡터. ±2sd를 ±1로 잡고 그 밖은 잘라낸다.
@@ -144,7 +168,15 @@
     var m = measure(landmarks, width, height);
     var warnings = [];
     var unreliable = [];
-    if (Math.abs(m.pose.yaw - 0.5) > 0.08) {
+    var notes = [];
+    if (m.pose.yawDeg !== undefined) {
+      // 3D 자세를 추정할 수 있었던 경우: 보정했다면 알려 주고, 너무 돌아갔으면 경고한다
+      if (Math.abs(m.pose.yawDeg) > WARN_YAW_DEG || Math.abs(m.pose.pitchDeg) > WARN_PITCH_DEG) {
+        warnings.push('얼굴이 많이 돌아가 있어 결과가 부정확할 수 있어요. 정면 사진을 권장해요.');
+      } else if (m.pose.corrected) {
+        notes.push('고개가 살짝 돌아가 있어서 정면으로 보정해서 쟀어요.');
+      }
+    } else if (Math.abs(m.pose.yaw - 0.5) > 0.08) {
       warnings.push('얼굴이 옆으로 돌아가 있어 결과가 부정확할 수 있어요. 정면 사진을 권장해요.');
     }
     if (Math.abs(m.pose.rollDeg) > 20) {
@@ -161,7 +193,7 @@
     }
     return {
       vector: normalize(m.raw), raw: m.raw, pose: m.pose,
-      expression: ex, unreliable: unreliable, warnings: warnings
+      expression: ex, unreliable: unreliable, warnings: warnings, notes: notes
     };
   }
 
@@ -178,7 +210,7 @@
 
   LA.features = {
     IDX: IDX, BASE: BASE, DIMS: DIMS,
-    measure: measure, normalize: normalize, fromLandmarks: fromLandmarks,
+    measure: measure, rawFromPixels: rawFromPixels, normalize: normalize, fromLandmarks: fromLandmarks,
     expressionOf: expressionOf,
     faceShapeOf: faceShapeOf
   };
