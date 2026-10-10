@@ -10,21 +10,40 @@
     F.DIMS.forEach(function (d) { near(a[d], b[d], eps, d); });
   }
 
-  T.test('평균 얼굴 메시는 모든 특징이 0(평균)이고 계란형이다', function () {
-    var r = F.fromLandmarks(CANON, 1, 1);
-    F.DIMS.forEach(function (d) { near(r.vector[d], 0, 0.02, d); });
+  var AVG = window.LA_FIXTURE_AVERAGE;
+
+  T.test('기준 평균값을 그대로 넣으면 모든 특징이 0이다', function () {
+    var raw = {};
+    var map = { faceRatio: 'faceRatio', jawRatio: 'jawRatio', eyeTilt: 'eyeTilt', eyeOpen: 'eyeOpen', eyeWidth: 'eyeWidth', lipRatio: 'lipRatio' };
+    Object.keys(map).forEach(function (k) { raw[k] = F.BASE[k].mean; });
+    var v = F.normalize(raw);
+    F.DIMS.forEach(function (d) { T.eq(v[d] === 0 || Math.abs(v[d]) < 1e-9, true, d); });
+  });
+
+  T.test('메시 원본은 측정값이 유럽형 메시 값 그대로 나온다(기준이 바뀐 이유를 고정)', function () {
+    var m = F.measure(CANON, 1, 1).raw;
+    near(m.faceRatio, 1.2934, 0.002, 'faceRatio');
+    near(m.eyeOpen, 0.2655, 0.002, 'eyeOpen');
+    // 현재 기준(한국 연예인 15명 평균)에서는 메시가 길쭉한 얼굴이다
+    T.eq(F.faceShapeOf(F.fromLandmarks(CANON, 1, 1).vector), 'long');
+  });
+
+  T.test('평균 비율 얼굴은 얼굴 길이·턱 폭이 0이고 계란형이다', function () {
+    var r = F.fromLandmarks(AVG, 1, 1);
+    near(r.vector.faceLength, 0, 0.02, 'faceLength');
+    near(r.vector.jawWidth, 0, 0.05, 'jawWidth');
     T.eq(F.faceShapeOf(r.vector), 'oval');
     T.eq(r.warnings, []);
   });
 
   T.test('세로로 늘린 얼굴은 긴형이 된다', function () {
-    var r = F.fromLandmarks(CANON, 1, 1.15);
+    var r = F.fromLandmarks(AVG, 1, 1.15);
     T.assert(r.vector.faceLength > 0.45, 'faceLength ' + r.vector.faceLength);
     T.eq(F.faceShapeOf(r.vector), 'long');
   });
 
   T.test('가로로 넓힌 얼굴은 둥근형이 된다', function () {
-    var r = F.fromLandmarks(CANON, 1.12, 1);
+    var r = F.fromLandmarks(AVG, 1.12, 1);
     T.assert(r.vector.faceLength < -0.35, 'faceLength ' + r.vector.faceLength);
     T.eq(F.faceShapeOf(r.vector), 'round');
   });
@@ -49,7 +68,7 @@
   T.test('눈꼬리를 올리면 eyeTilt가 +, 내리면 -가 된다', function () {
     var I = F.IDX;
     var up = copy(CANON), down = copy(CANON);
-    var dy = 0.012;
+    var dy = 0.03;
     [I.eyeR.outer, I.eyeL.outer].forEach(function (i) { up[i][1] -= dy; down[i][1] += dy; });
     T.assert(F.fromLandmarks(up, 1, 1).vector.eyeTilt > 0.3, 'up');
     T.assert(F.fromLandmarks(down, 1, 1).vector.eyeTilt < -0.3, 'down');

@@ -116,7 +116,7 @@
     } finally { LA.CELEB_MEASURED = orig; LA.USE_MEASURED = origUse; }
   });
 
-  T.test('배포 기본값은 꺼짐', function () { T.eq(LA.USE_MEASURED, false); });
+  T.test('배포 기본값은 켜짐(스위치는 data/celebs-measured.js)', function () { T.eq(LA.USE_MEASURED, true); });
 
   T.test('깨진 측정값은 무시하고 태그 값을 쓴다', function () {
     var c = findCeleb('jennie');
@@ -124,35 +124,39 @@
     withMeasured(data, function () { T.eq(LA.match.measuredOf(c), null); });
   });
 
-  T.test('실측 비교에서는 한쪽으로 몰린 얼굴 길이·눈 둥글기의 비중이 낮다', function () {
-    var W = LA.match.MEASURED_WEIGHTS;
-    T.assert(W.faceLength < LA.profile.WEIGHTS.faceLength, 'faceLength');
-    T.assert(W.eyeRound < LA.profile.WEIGHTS.eyeRound, 'eyeRound');
-    T.eq(W.eyeTilt, LA.profile.WEIGHTS.eyeTilt);
-    var c = findCeleb('jennie');
-    var base = { faceLength: 0, jawWidth: 0, eyeTilt: 0, eyeRound: 0, eyeSize: 0, lipFull: 0 };
-    var longer = Object.assign({}, base, { faceLength: 1 });
-    var data = {}; data[c.id] = { vector: base, n: 1, sources: [] };
-    withMeasured(data, function () {
-      var r = LA.match.rank(longer, [c], { gender: 'all' })[0];
-      T.eq(Math.round(r.distance * 100) / 100, 0.5, '얼굴 길이 차이 1 × 가중치 0.25 → 거리 0.5');
-    });
-  });
-
-  T.test('실측 데이터 파일: 모든 id가 연예인 목록에 있고 출처·라이선스·벡터가 온전하다', function () {
+  T.test('실측 데이터 파일: 모든 id가 연예인 목록에 있고 출처·라이선스·측정값이 온전하다', function () {
     var ids = LA.CELEBS.map(function (c) { return c.id; });
+    var RAW = ['faceRatio', 'jawRatio', 'eyeTilt', 'eyeOpen', 'eyeWidth', 'lipRatio'];
     Object.keys(LA.CELEB_MEASURED).forEach(function (id) {
       var m = LA.CELEB_MEASURED[id];
       T.assert(ids.indexOf(id) >= 0, id + ' 연예인 목록에 없음');
-      LA.features.DIMS.forEach(function (d) {
-        T.assert(typeof m.vector[d] === 'number' && m.vector[d] >= -1 && m.vector[d] <= 1, id + '.' + d);
-      });
+      RAW.forEach(function (k) { T.assert(typeof m.raw[k] === 'number' && isFinite(m.raw[k]), id + '.raw.' + k); });
+      T.assert(m.raw.faceRatio > 0.8 && m.raw.faceRatio < 1.8, id + ' faceRatio 범위');
       T.assert(m.n >= 1 && m.sources.length === m.n, id + ' n과 sources 수 불일치');
-      if (m.raw) T.assert(typeof m.raw.faceRatio === 'number' && typeof m.raw.eyeOpen === 'number', id + ' raw');
       m.sources.forEach(function (s) {
         T.assert(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(s.page), id + ' 출처 주소');
         T.assert(LA.measureTool.licenseOk(s.license), id + ' 라이선스 ' + s.license);
         T.assert(s.author, id + ' 저작자');
+      });
+    });
+  });
+
+  T.test('실측 raw는 지금 기준값(BASE)으로 벡터가 계산된다', function () {
+    var c = findCeleb('jennie');
+    var raw = {};
+    Object.keys(LA.features.BASE).forEach(function (k) { raw[k] = LA.features.BASE[k].mean; });
+    var data = {}; data[c.id] = { raw: raw, n: 1, sources: [] };
+    withMeasured(data, function () {
+      var v = LA.match.celebVector(c);
+      LA.features.DIMS.forEach(function (d) { T.assert(Math.abs(v[d]) < 1e-9, d); });
+    });
+  });
+
+  T.test('실측 데이터 파일을 켜면 모든 벡터가 -1~+1 안의 숫자다', function () {
+    withMeasured(LA.CELEB_MEASURED, function () {
+      Object.keys(LA.CELEB_MEASURED).forEach(function (id) {
+        var v = LA.match.celebVector(findCeleb(id));
+        LA.features.DIMS.forEach(function (d) { T.assert(typeof v[d] === 'number' && v[d] >= -1 && v[d] <= 1, id + '.' + d); });
       });
     });
   });

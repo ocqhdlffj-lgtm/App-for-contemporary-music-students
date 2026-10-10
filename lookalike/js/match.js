@@ -12,29 +12,20 @@
     return Math.max(0, Math.min(100, Math.round(100 * (1 - d / ZERO_AT))));
   }
 
-  // 사진에서 직접 잰 값(data/celebs-measured.js)이 있으면 그걸 쓴다. 사용자
-  // 사진과 같은 방식으로 잰 값이라 인상 태그로 만든 값보다 훨씬 정확하다.
-  // 없는 연예인만 태그 값으로 대신한다.
+  // 사진에서 직접 잰 값(data/celebs-measured.js)이 있으면 그걸 쓴다. 사용자 사진과 같은
+  // 방식으로 잰 값이라, 사람이 붙인 인상 태그보다 근거가 낫다. 없는 연예인만 태그 값으로
+  // 대신한다. (정답 비교 자료가 없어 "더 정확하다"고 확인한 것은 아니다 — README 참고.)
+  // raw(한계값으로 자르기 전 측정값)가 있으면 지금 기준값(BASE)으로 벡터를 계산한다 —
+  // 기준값을 고치면 연예인 벡터도 같이 따라간다. raw가 없는 옛 형식은 vector를 그대로 쓴다.
   function measuredOf(c) {
     if (LA.USE_MEASURED !== true) return null;
     var m = (LA.CELEB_MEASURED || {})[c.id];
-    if (!m || !m.vector) return null;
-    var ok = LA.features.DIMS.every(function (d) { return typeof m.vector[d] === 'number'; });
-    return ok ? m.vector : null;
+    if (!m) return null;
+    var v = m.raw ? LA.features.normalize(m.raw) : m.vector;
+    if (!v) return null;
+    var ok = LA.features.DIMS.every(function (d) { return typeof v[d] === 'number' && isFinite(v[d]); });
+    return ok ? v : null;
   }
-
-  // 연예인 실측값과 비교할 때의 가중치. 실측 14명 중 얼굴 길이는 12명이 -0.7 이하
-  // (6명은 한계값 -1), 눈 둥글기는 10명이 +0.7 이상이었다. 연예인 사진은 행사에서
-  // 멀리 찍은 것이라 얼굴이 길게 보이지 않고(비율 1.15 이하), 사용자 셀카는 가까이서
-  // 찍어 1.3 근처로 나와 두 값의 기준이 어긋난다. 한쪽으로 몰린 두 축은 비교에서
-  // 비중을 낮추고, 거리 영향이 적은 눈꼬리·눈 크기·턱 폭·입술은 그대로 쓴다.
-  var MEASURED_WEIGHTS = (function () {
-    var w = {};
-    Object.keys(LA.profile.WEIGHTS).forEach(function (d) { w[d] = LA.profile.WEIGHTS[d]; });
-    w.faceLength = 0.25;
-    w.eyeRound = 0.5;
-    return w;
-  })();
 
   function celebVector(c) {
     var measured = measuredOf(c);
@@ -66,7 +57,7 @@
       .map(function (c) {
         var cv = celebVector(c);
         var measured = !!measuredOf(c);
-        var d = LA.profile.distance(v, cv, measured ? MEASURED_WEIGHTS : null);
+        var d = LA.profile.distance(v, cv);
         return { celeb: c, vector: cv, measured: measured, distance: d, score: scoreOf(d), common: commonTraits(v, cv) };
       })
       .sort(function (x, y) { return x.distance - y.distance; })
@@ -95,5 +86,5 @@
     return errors;
   }
 
-  LA.match = { rank: rank, celebVector: celebVector, measuredOf: measuredOf, MEASURED_WEIGHTS: MEASURED_WEIGHTS, scoreOf: scoreOf, commonTraits: commonTraits, validate: validate };
+  LA.match = { rank: rank, celebVector: celebVector, measuredOf: measuredOf, scoreOf: scoreOf, commonTraits: commonTraits, validate: validate };
 })(window.LA);

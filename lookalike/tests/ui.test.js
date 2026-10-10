@@ -103,7 +103,7 @@
     var fake = {
       load: function () { return Promise.resolve(); },
       detect: function () {
-        var lm = window.LA_FIXTURE_CANONICAL.map(function (p) { return { x: p[0], y: p[1] }; });
+        var lm = window.LA_FIXTURE_AVERAGE.map(function (p) { return { x: p[0], y: p[1] }; });
         // 픽스처는 정사각 좌표계라 가로세로 1:1로 넘긴다(실제 캔버스 크기와 무관).
         return Promise.resolve({ landmarks: lm, width: 1, height: 1 });
       }
@@ -144,7 +144,7 @@
   });
 
   T.test('확인 화면: 측정값이 미리 선택되고, 바꾼 답이 결과 벡터에 반영된다', function () {
-    var a = LA.features.fromLandmarks(window.LA_FIXTURE_CANONICAL, 1, 1, { mouthSmileLeft: 0.9, mouthSmileRight: 0.9 });
+    var a = LA.features.fromLandmarks(window.LA_FIXTURE_AVERAGE, 1, 1, { mouthSmileLeft: 0.9, mouthSmileRight: 0.9 });
     var got = null;
     var root = LA.ui.review.render(a, { onBack: function () {}, onDone: function (v) { got = v; } });
     var groups = root.querySelectorAll('.choices');
