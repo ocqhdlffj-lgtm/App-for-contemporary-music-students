@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>연예인 얼굴 특징 측정 도구</title>
+  <style>
+    body { font: 14px/1.6 system-ui, "Malgun Gothic", sans-serif; margin: 16px auto; max-width: 880px; padding: 0 16px; color: #1d1b20; }
+    h1 { font-size: 20px; }
+    .note { background: #fff4e5; color: #7a4100; padding: 10px 14px; border-radius: 10px; font-size: 13px; }
+    button { font: inherit; padding: 8px 14px; border-radius: 8px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+    button.primary { background: #ff4f8b; color: #fff; border-color: #ff4f8b; }
+    button:disabled { opacity: .5; cursor: default; }
+    .bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; align-items: center; }
+    .celeb { border: 1px solid #e5dde2; border-radius: 12px; padding: 10px 14px; margin-bottom: 10px; }
+    .celeb h3 { margin: 0 0 6px; font-size: 15px; }
+    .celeb .st { font-weight: 400; font-size: 12px; color: #6b6470; margin-left: 6px; }
+    .cands { display: flex; gap: 8px; flex-wrap: wrap; }
+    .cand { width: 120px; font-size: 11px; color: #6b6470; }
+    .cand img { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; display: block; }
+    .cand.bad img { opacity: .35; }
+    .cand label { display: flex; gap: 4px; align-items: flex-start; }
+    textarea { width: 100%; height: 160px; font: 12px/1.4 monospace; }
+    #log { font-size: 12px; color: #6b6470; }
+  </style>
+</head>
+<body>
+  <h1>연예인 얼굴 특징 측정 도구</h1>
+  <p class="note">
+    위키미디어 커먼즈에 올라온 <b>자유 라이선스 사진</b>만 검색해서 얼굴 특징 숫자(6개)를 잽니다.
+    사진은 저장하지 않고, 숫자와 출처·저작자·라이선스만 파일로 내보냅니다.
+    <b>다른 사람 사진이 섞일 수 있으니, 썸네일을 보고 본인 사진이 아닌 것은 체크를 풀어 주세요.</b>
+    인터넷 연결이 필요하고, 이 파일은 <code>lookalike/tools/</code> 안에서 열어야 합니다(상위 폴더의 스크립트를 불러옵니다).
+  </p>
+
+  <div class="bar">
+    <button id="start" class="primary" type="button">측정 시작</button>
+    <button id="export" type="button" disabled>결과 내보내기</button>
+    <span id="log"></span>
+  </div>
+  <div id="list"></div>
+
+  <h2 style="font-size:16px">내보내기 결과</h2>
+  <p class="note" style="background:#eef2ff;color:#1d1b20">
+    아래 내용을 통째로 복사해서 <code>lookalike/data/celebs-measured.js</code> 파일을 덮어쓰세요.
+  </p>
+  <textarea id="out" readonly placeholder="측정 후 '결과 내보내기'를 누르면 여기에 나옵니다"></textarea>
+  <div class="bar"><button id="copy" type="button">복사</button><a id="dl" download="celebs-measured.js" hidden>파일로 저장</a></div>
+
+  <script src="../js/ns.js"></script>
+  <script src="../js/features.js"></script>
+  <script src="../js/profile.js"></script>
+  <script src="../js/styling.js"></script>
+  <script src="../js/match.js"></script>
+  <script src="../data/celebs.js"></script>
+  <script src="../js/detector.js"></script>
+  <script src="measure.js"></script>
+  <script>LA.measureTool.start();</script>
+</body>
+</html>

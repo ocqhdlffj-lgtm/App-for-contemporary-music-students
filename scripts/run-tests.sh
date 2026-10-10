@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # tests/index.html 을 Chrome 헤드리스로 실행하고 결과를 출력한다.
+# 다른 테스트 페이지는 인자로 준다: bash scripts/run-tests.sh lookalike/tests/index.html
 # 종료코드: 0 = 전부 통과 / 1 = 실패 있음 또는 테스트 0건 / 2 = Chrome 실행 불가
 set -uo pipefail
 cd "$(dirname "$0")/.."
@@ -12,7 +13,8 @@ if [ ! -x "$CHROME" ]; then
 fi
 
 ROOT="$(pwd -W 2>/dev/null || pwd)"
-URL="file:///${ROOT}/tests/index.html"
+PAGE="${1:-tests/index.html}"
+URL="file:///${ROOT}/${PAGE}"
 
 DOM="$("$CHROME" --headless=new --disable-gpu --no-sandbox \
        --virtual-time-budget=15000 --dump-dom "$URL" 2>/dev/null)"
